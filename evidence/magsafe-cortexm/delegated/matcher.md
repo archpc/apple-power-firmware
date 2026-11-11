@@ -240,3 +240,22 @@ Open items: whether the 16-byte size gate suppresses true correspondences among
 large functions (`0xfbc8` et al.); whether mnemonic order alone is the right
 signal for the 30 probable pairs, which would be settled by comparing literals
 and callee multisets (available in `inventory3_*.json`, not used here).
+
+## Lead follow-up (2026-11-11): probable-band validation attempt — NEGATIVE
+
+`validate_probable.py` recomputed the 3.1.12→3.2.0 best-match scan (≥8
+instructions, |Δsize| ≤ 16, unique 1:1, 0.85 ≤ s < 0.983): 46 pairs. Literal-
+multiset Jaccard over function bodies flags 32/46 as "weak" (< 0.3). This
+measure is CONFOUNDED and was not used to confirm or refute any pair:
+
+- Function literal pools are dominated by pointers — in-image code addresses
+  shift wholesale on relink, and SRAM addresses (`0x2000xxxx`) relocate with
+  the BSS/data layout. Excluding only in-image-range words (first attempt)
+  changed nothing; the remaining disagreement is SRAM-pointer churn, not
+  evidence of different logic.
+- Verdict: literal-multiset agreement is not a usable validator at this
+  band. A callee-multiset comparison (BL target multisets, which survive
+  relink modulo the known per-region deltas) is the candidate replacement;
+  not yet run. The 30 "probable" pairs remain UNVERIFIED.
+- Artifact: `matcher/probable_validation.json` (46 pairs, per-pair literal
+  stats).
