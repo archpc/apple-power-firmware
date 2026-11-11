@@ -20,10 +20,12 @@ calling them all "the charger firmware" is what makes this confusing:
 | MagSafe 3 cable (A2363) | 3.2.0, bcdDevice 0x3200 | the cable, PID 0x7800 |
 | 70 W adapter | `1030030` | the brick, ID 0x701c |
 
-Each was independently confirmed. The MagSafe cable's 3.2.0 was recovered twice
-from different data: once from the register-derived `bcdDevice 0x3200` in HPM
-register `0x49`, and once from the in-file version quadruple of the downloaded
-3.2.0 SuperBinary. Those agree, so the previously "reported" 3.2.0 is now
+These are not equally established. The HPM and cable values are host-observed;
+the adapter's `1030030` is host-reported only, because no adapter firmware could
+be obtained. The cable's 3.2.0 comes from the in-file version quadruple of the
+downloaded SuperBinary; it agrees with `bcdDevice 0x3200` in HPM register `0x49`,
+but agreement between a header field and a register is consistency, not two
+independent recoveries. So the previously "reported" 3.2.0 is now
 OBSERVED rather than assumed.
 
 The charger is on the **MagSafe port (RID 5)**, not on any USB-C port, at
@@ -59,9 +61,10 @@ passes 6/6 checks on each, and the decisive arithmetic reconciles four-for-four:
 **Executable code identified.** The MagSafe payloads are not raw images: each is
 wrapped in a 384-byte `C99` header, and at offset `0x180` begins a Cortex-M
 vector table (`SP = 0x20002000`) immediately followed by Thumb-2 startup code at
-`0x10`. Load base is `0x00000000`. The 140 W control image has no wrapper and
-shows the same shape from offset 0, which is what makes the MagSafe reading
-trustworthy rather than a coincidence.
+`0x10`. The base is **OPEN**, not established as `0x00000000`: the 140 W control
+image shows a similar opening, but its pointers exceed its own payload, which rules
+out a base-zero mapping for that image without ruling out other bases. It does not
+corroborate the base-zero reading, and this report does not use it as support.
 
 **UVDM framing recovered from the kernel.** `AppleHPM::hpmIECSSendVDM` builds
 `[hdr][payload ≤ 28][4CC "VDMs"]` with `hdr = (sop & 3) << 4 | ceil(len/4)`.
@@ -107,7 +110,8 @@ Stated as open, not resolved:
 - Which VDM form carries UARP TLVs — kernel side is unstructured with a `VDMs`
   4CC; the updater service talks about SOP/SOP′ and VDOs. Both can be true.
 - The meaning of the one changed Apple vendor constant (`0x05AC0002` →
-  `0x05AC0000`) and of the two new control-message dispatchers in 3.2.0.
+  `0x05AC0000`) and of the two candidate tables of 15 and 13 cases in 3.2.0,
+  which are not shown to be control-message dispatchers at all.
 - What the three 32-byte `C99` header fields are; none equals a plain SHA-256 or
   CRC-32 of the image slice.
 - Whether the accessory verifies a signature at all, and whether any
@@ -116,11 +120,11 @@ Stated as open, not resolved:
 - Whether `accMode7AddressSpaceRead` can read accessory flash. The verb exists in
   Apple's code; authorization is untested.
 
-Closed since the last revision of this document: the entry-point question. The
-4-word block at image offset 0 is SP plus three code pointers, not a conventional
-Cortex-M vector table: the reset target at `0x111c` is a byte-copy leaf and
-Ghidra created no function containing any of the three pointer targets. Real
-entry is offset `0x10`.
+**OPEN**, not closed: the entry-point question. The 4-word block at image offset 0
+is SP plus three pointers of unconfirmed meaning. In 3.2.0 the word at offset `0x04`
+is `0x0001111d`, whose Thumb target `0x1111c` holds `0x4005xxxx` peripheral
+addresses, so that target is constant data and not a handler. Which code executes
+first remains unsettled; offset `0x10` is the empirical start, not a proven entry.
 
 Still open, and deliberately without a verdict: whether 3.2.0 is semantically
 equivalent to 3.1.12. `DIFF.md` retracts two earlier claims (the "rebuild, not
