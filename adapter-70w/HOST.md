@@ -62,12 +62,18 @@ and `…/Support/accessoryupdaterd`.
   `AppleModelNumber %@ from accessory does not match expected model number %@`,
   `initWithModelNumber:`, `findByAppleModelNumber:`. VID/PID gates exist only for
   the MagSafe and Dongle classes; there is no adapter VID/PID gate. OBSERVED.
-- **No literal `A2743`, `701C` or `28700`** in either binary (count 0). The
-  supported set is not a compiled table there. OBSERVED.
-- **The table lives in `uarpAccessories.plist`** under
-  `/private/var/db/accessoryupdater/`, which is `_accessoryupdater`-owned and
-  unreadable as a normal user. **Blocked** — whether A2743 is listed cannot be
-  checked without root.
+- **No literal `A2743`, `701C` or `28700`** in either on-disk binary (count 0).
+  The supported set is not a compiled table there. OBSERVED.
+- **`A2743` is, however, a compiled literal in CoreUARP** inside
+  `dyld_shared_cache_arm64e.28` (one occurrence, in a cstring block next to
+  `UARPUploaderUARP` selectors, alongside other `A####` model literals).
+  CoreUARP has no executable on disk — only `Resources/` — which is why a grep
+  of the two on-disk binaries missed it. So macOS does know the adapter as a
+  UARP target. OBSERVED, verified by the parent.
+- **The supported-accessory table was not located.** `uarpAccessories.plist`
+  under `/private/var/db/accessoryupdater/` returns ENOENT, not EACCES, so the
+  earlier statement that the table lives there is **unconfirmed**. The
+  directory interior is mode 711 and unreadable as a normal user. **Blocked**.
 - **Power-adapter classes exist:** `UARPPowerAdapter`, `UARPUSBPDUpdater`,
   `UARPAppleHPM`, `Apply staged assets to power adapter`,
   `Found a supported power adapter, check for update %@`,
@@ -100,7 +106,8 @@ accessoryupdaterd … Got the download meta data reply for
 
 ## 5. Open questions
 
-- Whether `uarpAccessories.plist` lists A2743 (root-only, blocked).
+- Where the supported-accessory table actually lives: `uarpAccessories.plist`
+  returned ENOENT, and the directory interior is unreadable without root. OPEN.
 - Whether staging would occur over a CC-only VDM channel
   (`TransportsSupported = ()`, `Metadata = {}` on the MagSafe port).
 - Which 4CC SMC keys feed each field, and whether the SMC or the HPM composes

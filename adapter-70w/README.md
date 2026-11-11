@@ -43,6 +43,13 @@ Evidence labels are the six used repo-wide: **OBSERVED**, **REPRODUCED**,
    and no local MobileAsset cache carries one. Scope and the exact wording of
    the negative are in `DISTRIBUTION.md`. The earlier "confirmed three ways"
    framing is REFUTED: it was one registry probed repeatedly.
+8. **The onboard firmware cannot be obtained today.** No image on disk, no
+   asset, no public payload. The only software read primitive (`CFUa` over the
+   PD link) is not gated on update mode host-side but is undocumented, needs an
+   entitlement-gated service, and addresses at most 64 KiB of a 128 KB flash.
+   The only documented full-flash read is SWD, gated by a chip-protection byte
+   and requiring the sealed mains adapter to be opened. See
+   `DUMP-FEASIBILITY.md`.
 
 ## Audit of the previous Fable session
 
@@ -72,6 +79,7 @@ IDENTITY.md      adapter model, regulatory IDs, controller evidence
 REGISTERS.md     HPM 0x30/0x43/0x47/0x48/0x49/0x4a/0x4f and the active RDO
 HOST.md          metadata provenance and the updater architecture
 DISTRIBUTION.md  what was searched for firmware and the exact negative scope
+DUMP-FEASIBILITY.md  whether the onboard image can be read, and the blockers
 OPEN.md          unresolved questions, blockers, what would settle each
 BRIEF.md         shared brief used by the delegated work
 scripts/registers.py       reproducible register/PDO/RDO decoder

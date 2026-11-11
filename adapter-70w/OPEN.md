@@ -21,13 +21,14 @@ Ordered by value per unit of cost. Nothing here is authorized by this document.
 
 ## Needs a decision or privilege
 
-5. **`uarpAccessories.plist`.** Whether A2743 is in the supported table cannot
-   be read as a normal user; the directory is `_accessoryupdater`-owned.
-   Blocked by privilege, not by evidence. Reading it would need explicit
-   approval and root.
-6. **Direct UARP-over-USB probe.** The accessor exists in
-   `UARPUpdaterServiceUSBPD`, but driving it is an update-path action. Not
-   attempted; would need a written command sequence and a rollback story.
+5. **Supported-accessory table.** `A2743` is a CoreUARP literal, so the model is
+   known, but the table path is unconfirmed (`uarpAccessories.plist` returned
+   ENOENT) and `/var/db/accessoryupdater` is unreadable without root. Blocked by
+   privilege; reading it would need explicit approval and root.
+6. **CFUa read outside the known pages.** The primitive is ungated host-side
+   (`DUMP-FEASIBILITY.md` §3), but exercising it sends undocumented reads to the
+   live adapter. Highest-value bounded experiment; needs explicit approval and a
+   spare unit. Page 27 is the smallest possible test.
 
 ## Needs hardware or a second unit
 
