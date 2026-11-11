@@ -1,0 +1,15 @@
+{
+  "claims": 38,
+  "evidence": "apple-power-firmware.pdf.evidence.json",
+  "evidence_sha256": "222ad181548b7afa04228a943925573fa536012b13c273c0f5060caa9acfa16c",
+  "generation": "5e5a6ac75c31782dbdc9a3c7ffedfbe3928edb52561e5b4b39d555e2804733d9",
+  "meta_sha256": "0a4141bf14e14d1dcf8c6f061d3a62fa45439d79bb03af34e703cc3fbb6c6682",
+  "output": "/Users/sein/.hermes/artifacts/apple-power-firmware/publication/current/apple-power-firmware.pdf",
+  "output_sha256": "5e5a6ac75c31782dbdc9a3c7ffedfbe3928edb52561e5b4b39d555e2804733d9",
+  "pages": 13,
+  "source": "/Users/sein/.hermes/artifacts/apple-power-firmware/report.typ",
+  "source_date_epoch": "1794355200",
+  "source_sha256": "82d0c2e441f9689b38c5418fafc024af95d60afcd3545d6099dcc9ddf23dbe0c",
+  "template_version": "1.2.0",
+  "typst": "typst 0.15.1 (unknown commit)"
+}
