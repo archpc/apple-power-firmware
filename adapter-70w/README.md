@@ -48,7 +48,9 @@ Evidence labels are the six used repo-wide: **OBSERVED**, **REPRODUCED**,
    PD link) is not gated on update mode host-side but is undocumented, needs an
    entitlement-gated service, and addresses at most 64 KiB of a 128 KB flash.
    The only documented full-flash read is SWD, gated by a chip-protection byte
-   and requiring the sealed mains adapter to be opened. See
+   and requiring the sealed mains adapter to be opened. The host already reads
+   the accessor's page 27 on connect (cable: 6, adapter: unknown), and the
+   transport is entitlement-gated to Apple-signed processes. See
    `DUMP-FEASIBILITY.md`.
 
 ## Audit of the previous Fable session

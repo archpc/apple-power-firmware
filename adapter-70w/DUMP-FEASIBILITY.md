@@ -69,6 +69,27 @@ accMode7AddressSpaceRead: 0x100002b30
   VDO), 28 (logs and log control), 40 (analytics). **No path walks application
   flash**; firmware movement is write-only via the `CFUs` stream.
 
+**Passive evidence that the primitive works outside update mode.** The host
+already exercises it. `accessoryupdaterd` logs `HW Revision updated (null) -> 6`
+for the attached A2363 cable and `HW Revision updated (null) -> unknown` for the
+A2743, seconds apart on the same connection. The cable's hardware-version query
+reads page 27 through this path with no update session, so the mechanism is
+live. For the adapter the field comes back unknown, which is consistent with
+either no page-27 response or a value the host does not map. It does not show
+that other pages are unreadable, and it means a manual page-27 read would add
+nothing.
+
+**No third-party client can issue the read.** The transport is owned by
+`accessoryupdaterd`, whose launchd plist registers the Mach services
+`com.apple.MobileAccessoryUpdater`, `com.apple.accessoryupdater.uarp` and
+`com.apple.accessoryupdater.uarp.standaloneCommandListener` (OBSERVED). The
+daemon imports `_clientHasEntitlement`, `_xpc_dictionary_get_audit_token` and
+`_getaudit_addr`, and logs `Client is not entitled` and `Connection from PID %d
+does not have the correct entitlement`. The required entitlements
+(`com.apple.accessoryupdater.uarp`; `com.apple.USBCEntitlement` plus
+`AppleHPMUserClient` for the HPM user client) are Apple-private. A process we
+can build cannot pass that check.
+
 Two hard limits follow from that arithmetic:
 
 1. The address space is **64 KiB**, exactly half the 128 KB flash. At most one
@@ -132,16 +153,21 @@ mains-powered adapter. **Prohibited by the task rules and unsafe.**
 
 ## 6. Safest feasible acquisition, in order
 
-1. **Passive, zero risk:** keep the host-side watch for
-   `com.apple.MobileAsset.UARP.A2743`. If Apple ever publishes, capture the asset
-   and verify against its manifest `_Measurement`. No device interaction.
-2. **Approval-gated, low risk, on a spare unit:** read page 27 only
-   (hardware-version VDO) to test whether `CFUa` reads answer outside Mode 7.
-   One 4-byte read, no state change, on an adapter that is not the only one
-   available. If that fails, stop; do not escalate to writes.
-3. **Approval-gated, bounded:** if (2) succeeds, read a small page outside the
-   four known ones to learn whether the map is a flash window, and stop at the
-   first error. Do not enter Mode 7 and do not write anything.
+1. **Passive, zero risk — implemented.** A daily watcher checks the mesu
+   manifest and `/System/Library/AssetsV2` for an A2743 asset and stays silent
+   unless one appears (cron `db05dacab515`, script
+   `~/.hermes/scripts/a2743-asset-watch.sh`, log
+   `~/.hermes/cache/a2743-asset-watch.log`). If Apple publishes, capture the
+   asset and verify against its manifest `_Measurement`.
+2. **Page 27 — already answered passively.** The host reads it on every
+   connect: cable returns 6, adapter returns unknown. Repeating it by hand adds
+   no information, and we cannot issue it anyway without the entitlement.
+3. **Approval-gated, bounded — the only remaining software experiment:** one
+   read of a single page outside 1/27/28/40, on a spare unit, to learn whether
+   the map is a flash window. Stop at the first error; never enter Mode 7 and
+   never write. Requires a client that can pass the entitlement check, which
+   does not currently exist outside Apple's binaries — so this is blocked in
+   practice as well as by policy.
 4. **Physical, only with a spare and explicit approval:** SWD dump on an
    unpowered, isolated board after confirming the protection byte is readable
    as OPEN. If PROTECTED, abandon: recovering to OPEN erases the image.

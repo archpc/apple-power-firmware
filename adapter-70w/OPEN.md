@@ -25,10 +25,12 @@ Ordered by value per unit of cost. Nothing here is authorized by this document.
    known, but the table path is unconfirmed (`uarpAccessories.plist` returned
    ENOENT) and `/var/db/accessoryupdater` is unreadable without root. Blocked by
    privilege; reading it would need explicit approval and root.
-6. **CFUa read outside the known pages.** The primitive is ungated host-side
-   (`DUMP-FEASIBILITY.md` §3), but exercising it sends undocumented reads to the
-   live adapter. Highest-value bounded experiment; needs explicit approval and a
-   spare unit. Page 27 is the smallest possible test.
+6. **CFUa read outside the known pages.** The primitive is ungated host-side but
+   reachable only through `accessoryupdaterd`, which rejects clients without the
+   Apple-private `com.apple.accessoryupdater.uarp` entitlement. Page 27 is
+   already read on connect (cable 6, adapter unknown), so the open question is
+   whether any page maps flash. Blocked by entitlement before policy; would need
+   an Apple-signed caller and explicit approval, on a spare unit.
 
 ## Needs hardware or a second unit
 
