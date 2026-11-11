@@ -17,9 +17,14 @@ import subprocess
 import sys
 
 fails = []
+ran = 0
+skipped = 0
 
 
 def case(cid, name, ok, detail=""):
+    global ran
+    if ok is not None:
+        ran += 1
     print(f"[{'PASS' if ok else 'FAIL'}] {cid} {name}" + (f": {detail}" if detail else ""))
     if not ok:
         fails.append(cid)
@@ -57,6 +62,8 @@ def main():
         for cid, name in (("R2","0x1111C vs 0x111C reset vector"),
                           ("R3","140 W payload vs pointer/load-base"),
                           ("R5","dispatcher fingerprint vs handlers")):
+            global skipped
+            skipped += 1
             print(f"[SKIP] {cid} {name}: firmware images absent")
     if have:
         v = imgs["3.2.0_10M13722"]
@@ -134,7 +141,12 @@ def main():
     case("R9", "DIFF findings vs REPORT conclusions", agree,
          "REPORT carries whole-image coverage and no regional figures")
 
-    print(f"\n{9 - len(fails)}/9 mandatory regression cases passed")
+    total = ran + skipped
+    if skipped:
+        print(f"\n{ran - len(fails)}/{total} cases ran and passed, {skipped} skipped "
+              f"(firmware absent). Skipped cases are not evidence of correctness.")
+    else:
+        print(f"\n{ran - len(fails)}/{total} mandatory regression cases passed")
     return 1 if fails else 0
 
 
