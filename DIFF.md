@@ -323,18 +323,24 @@ base is asserted.
   targets `0xaed0 0xae90 0xb154 0xaf08 0xaf50 0xaf72`, dispatch `mov pc,r0` at
   `0xa9d6`. 3.1.12 counterpart `0xaa10`, table `0xaa2c`, same case grouping.
 - **§3's "switch site 0xAA2A" was mislabelled for 3.1.8**: at `0xaa2a` the
-  bytes are `cmp r1,#0x28; bne 0xaa2e` — a compare chain in the
+  bytes are `cmp r1,#0x28; bne 0xaa2e` (bytes `28 29 00 d1`) — a compare
+  chain in the
   out-of-table cases, reached by fallthrough. `0xaa2a` is the 3.1.12
   dispatcher site. The earlier "not inside any Ghidra function" statements
   were true of the old analysis and are superseded by the seeded one.
 - Body extent: Ghidra's function body says 552 B, but flow continues through
   shared epilogue at `0xacd4/0xacd6`; `0xa9bc..0xacd7 = 796 B`. The 552 figure
   is an analysis-boundary artifact, not a semantic size.
-- Decompiler dataflow refutations (checked at instruction level):
-  `param_1[0x18] = &table` is wrong — the store at `0xaf76` writes the message
-  type (`r1`), not the table address; the `(*(code*)&table)(1)` branch does
-  not exist. Control-flow structure of the decompilation is otherwise
-  supported by decode.
+- Decompiler dataflow at `0xaf76`, settled after two conflicting delegated
+  reports and an independent audit: `adr r1,#4` at `0xa9d2` sets `r1` to the
+  table base `0xa9d8` before dispatch, and `r1` survives to
+  `str r1,[r4,#0x60]` (`r4` = `0x20001854`). The decompiler's original claim
+  `param_1[0x18] = &table` therefore STANDS; the intervening "writes the
+  message type" reading was **REFUTED**. The `blx r1` branch at `0xaf80`
+  exists (r0 = 0 or 1) but is reached only when `0x20001854[0x11] == 0`;
+  whether either path executes is **OPEN** (liveness, §11b above).
+  Control-flow structure of the decompilation is otherwise supported by
+  decode. (Audit: delegated/review/.)
 - **Liveness OPEN**: no BL, B.W, pointer word or halfword reference to
   `0xa9bc` (or `0xaa10`) exists in either image. The island `0xa9bc..0xb1a3`
   has zero static inbound edges, and three of its six case targets enter
@@ -361,12 +367,15 @@ Whether any is the successor of the 3.1.x control-message dispatcher:
 
 ### 11d. Cross-version match (first pass, many-to-many caveat)
 
-182 exact signatures shared by all three builds, covering 225/223/213
-functions. 3.1.8→3.1.12: 98.2 % exact. 3.1.12→3.2.0: 49.9 % strict,
-235 pairs at similarity ≥ 0.85, 195 3.2.0 functions without a counterpart
-(largest `0xfbc8`, 2,932 B). Max mnemonic-sequence multiplicity 14 (3.1.x)
-and 10 (3.2.0), so these counts are many-to-many upper bounds, consistent
-with §2's rule that no per-function semantic claim rests on them yet.
+Audit-corrected figures (the first-pass numbers were computed against a
+superseded 430-function 3.2.0 inventory): 181 exact signatures shared by all
+three builds, covering 224/222/209 functions. 3.1.8→3.1.12: 98.2 % exact.
+3.1.12→3.2.0: 49.9 % strict, 234 pairs at similarity ≥ 0.85, 189 3.2.0
+functions without a counterpart (largest `0xfbc8`, 2,932 B). Max
+mnemonic-sequence multiplicity 7 (3.2.0), so these counts are many-to-many
+upper bounds, consistent with §2's rule that no per-function semantic claim
+rests on them yet. (Reproduced by the auditor with `match.py` on current
+inventories: `delegated/review/match_result_audit.json`.)
 
 ### 11e. New evidence bounds
 
