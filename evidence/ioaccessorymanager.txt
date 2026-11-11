@@ -1,0 +1,647 @@
++-o Port-USB-C@3  <class AppleHPMInterfaceType10, id 0x100000adc, registered, matched, active, busy 0 (96 ms), retain 29>
+  | {
+  |   "IOAccessoryActivePowerMode" = 1
+  |   "PortTypeDescription" = "USB-C"
+  |   "FeaturesEnabled" = ("TRM","LDCM","Power In")
+  |   "IOPersonalityPublisher" = "com.apple.driver.AppleHPM"
+  |   "FW Version" = <00153100>
+  |   "ActiveCable" = No
+  |   "IOAccessoryPowerMode" = 3
+  |   "IOMatchCategory" = "IODefaultMatchCategory"
+  |   "ConnectionCount" = 0
+  |   "LDCM_StateDescription" = "Idle"
+  |   "IOAccessoryUSBConnectType" = 0
+  |   "Pin Configuration" = {"sbu1"=0,"tx1"=0,"rx2"=0,"tx2"=0,"sbu2"=0,"rx1"=0}
+  |   "IOMatchedAtBoot" = Yes
+  |   "IOProbeScore" = 110
+  |   "IOClass" = "AppleHPMInterfaceType10"
+  |   "IOAccessoryPowerCurrentLimits" = (0,0,0,0,0)
+  |   "LDCM_State" = 1
+  |   "IOGeneralInterest" = "IOCommand is not serializable"
+  |   "IOUserClientClass" = "IOAccessoryManagerUserClient"
+  |   "IOAccessoryPrimaryDevicePort" = 259
+  |   "Boot Flags" = <610310000160041e00000000>
+  |   "OpticalCable" = No
+  |   "Description" = "Port-USB-C@3"
+  |   "HPM Mode Block Active" = No
+  |   "CFBundleIdentifier" = "com.apple.driver.AppleHPM"
+  |   "BuiltIn" = Yes
+  |   "LDCM_UserOverrideActive" = No
+  |   "AppLoaded Count" = 1
+  |   "IOAccessoryManagerType" = 3
+  |   "TransportsProvisioned" = ("CC")
+  |   "Overcurrent Count" = 0
+  |   "LDCMPin" = 1
+  |   "IOAccessorySleepPowerCurrentLimit" = 0
+  |   "AuthorizationRequired" = No
+  |   "Metadata" = {}
+  |   "TransportsSupported" = ("CC","USB2","USB3","CIO","DisplayPort")
+  |   "IOAccessoryUSBConnectTypePublished" = 0
+  |   "CFBundleIdentifierKernel" = "com.apple.driver.AppleHPM"
+  |   "IOAccessoryUSBActive" = Yes
+  |   "IOAccessorySupportedPowerModes" = (1,3)
+  |   "UserAuthorizationStatusDescription" = "Not Required"
+  |   "HPDAsserted" = No
+  |   "PortDescription" = "Port-USB-C@3"
+  |   "ConnectionActive" = No
+  |   "DisplayPortPinAssignment" = 0
+  |   "PortType" = 2
+  |   "AutoMatched" = No
+  |   "PlugOrientation" = 0
+  |   "IOProviderClass" = "AppleHPMDeviceHAL"
+  |   "IOAccessoryID" = 100
+  |   "LDCMPinDescription" = "Reference"
+  |   "IOAccessoryUSBModeType" = 4
+  |   "FeaturesSupported" = ("TRM","LDCM","Power In")
+  |   "LDCM_LiquidDetected" = No
+  |   "IOAccessoryManagerSleepPower" = No
+  |   "IOFunctionParent000003C6" = <>
+  |   "IOPowerManagement" = {"DevicePowerState"=2,"CurrentPowerState"=2,"CapabilityFlags"=32768,"MaxPowerState"=2}
+  |   "LDCM_MeasurementStatusDescription" = "No Error"
+  |   "HChk" = <630000000000>
+  |   "PortNumber" = 3
+  |   "TransportsActive" = ()
+  |   "LDCM_MitigationsEnabled" = No
+  |   "Plug Event Count" = 1
+  |   "UserAuthorizationStatus" = 0
+  |   "AccessoryMode" = 0
+  |   "SOP UVDM Update Count" = 0
+  |   "LDCM_MeasurementStatus" = 0
+  |   "IOAccessoryDetect" = No
+  | }
+  | 
+  +-o CC  <class IOPortTransportStateCC, id 0x100000bae, registered, matched, active, busy 0 (0 ms), retain 9>
+  |   {
+  |     "TRM_TransportSupervised" = No
+  |     "ParentPortType" = 2
+  |     "ParentPortBuiltIn" = Yes
+  |     "ParentBuiltInPortType" = 2
+  |     "AuthenticationStatus" = 0
+  |     "HashStatus" = 0
+  |     "HashStatusDescription" = "Not Set"
+  |     "Index" = 0
+  |     "Tunneled" = No
+  |     "ParentPortTypeDescription" = "USB-C"
+  |     "TransportType" = 1
+  |     "AuthenticationStatusDescription" = "Idle"
+  |     "ParentBuiltInPortNumber" = 3
+  |     "IOUserClientClass" = "IOPortTransportUserClient"
+  |     "ParentPortNumber" = 3
+  |     "DriverStatusDescription" = "Not Monitored"
+  |     "AuthorizationRequired" = No
+  |     "Metadata" = {}
+  |     "AuthenticationRequired" = No
+  |     "TransportTypeDescription" = "CC"
+  |     "AuthorizationStatus" = 0
+  |     "ParentBuiltInPortTypeDescription" = "USB-C"
+  |     "TransportDescription" = "Port-USB-C@3/CC"
+  |     "DriverStatus" = 0
+  |     "IOGeneralInterest" = "IOCommand is not serializable"
+  |     "Active" = No
+  |     "AuthorizationStatusDescription" = "Not Required"
+  |   }
+  |   
+  +-o LDCM  <class AppleHPMLDCMType2, id 0x100000baf, registered, matched, active, busy 0 (3 ms), retain 10>
+  | | {
+  | |   "ParentPortType" = 2
+  | |   "StateDescription" = "Hardware Controlled"
+  | |   "ParentBuiltInPortType" = 2
+  | |   "ArchitectureVersion" = 4
+  | |   "FeatureTypeDescription" = "LDCM"
+  | |   "MitigationsEnabled" = No
+  | |   "FeatureType" = 2
+  | |   "LiquidDetected" = No
+  | |   "ParentPortTypeDescription" = "USB-C"
+  | |   "MitigationsStatus" = 0
+  | |   "ParentBuiltInPortNumber" = 3
+  | |   "IOUserClientClass" = "IOPortFeatureLDCMUserClient"
+  | |   "ParentPortNumber" = 3
+  | |   "UserOverrideActive" = No
+  | |   "State" = 0
+  | |   "Metadata" = {}
+  | |   "FirmwareVersion" = "003.0115"
+  | |   "MeasurementStatus" = 0
+  | |   "Description" = "Port-USB-C@3/LDCM"
+  | |   "ParentBuiltInPortTypeDescription" = "USB-C"
+  | |   "HardwareVersion" = 1
+  | |   "Data" = <0000b879b804b0c9df0868737cfaf7ffffff0000572757270300621c7a1ca14ea34e06200820a0e59919c04d9919792043ff0000005c13>
+  | |   "MitigationsSupported" = No
+  | |   "MeasurementStatusDescription" = "No Error"
+  | | }
+  | | 
+  | +-o IOPortFeatureLDCMUserClient  <class IOPortFeatureLDCMUserClient, id 0x100001622, !registered, !matched, active, busy 0, retain 5>
+  |     {
+  |       "IOUserClientDefaultLocking" = Yes
+  |       "IOUserClientCreator" = "pid 664, liquiddetectiond"
+  |       "IOUserClientDefaultLockingSingleThreadExternalMethod" = Yes
+  |       "IOUserClientEntitlements" = "com.apple.iokit.IOPortFamily"
+  |       "IOUserClientDefaultLockingSetProperties" = Yes
+  |     }
+  |     
+  +-o Power In  <class IOPortFeaturePowerIn, id 0x100000c7d, registered, matched, active, busy 0 (1 ms), retain 9>
+  |   {
+  |     "Active" = No
+  |     "ParentPortTypeDescription" = "USB-C"
+  |     "Metadata" = {}
+  |     "Description" = "Port-USB-C@3/Power In"
+  |     "ParentBuiltInPortNumber" = 3
+  |     "IOUserClientClass" = "IOPortFeatureUserClient"
+  |     "FeatureTypeDescription" = "Power In"
+  |     "ParentPortType" = 2
+  |     "ParentBuiltInPortType" = 2
+  |     "ParentPortNumber" = 3
+  |     "FeatureType" = 3
+  |     "ParentBuiltInPortTypeDescription" = "USB-C"
+  |   }
+  |   
+  +-o IOAccessoryManagerUserClient  <class IOAccessoryManagerUserClient, id 0x100001651, !registered, !matched, active, busy 0, retain 5>
+      {
+        "IOUserClientCreator" = "pid 668, accessoryd"
+        "IOUserClientDefaultLocking" = Yes
+      }
+      
+
++-o Port-USB-C@1  <class AppleHPMInterfaceType10, id 0x100000726, registered, matched, active, busy 0 (74 ms), retain 29>
+  | {
+  |   "IOAccessoryActivePowerMode" = 1
+  |   "PortTypeDescription" = "USB-C"
+  |   "FeaturesEnabled" = ("TRM","LDCM","Power In")
+  |   "IOPersonalityPublisher" = "com.apple.driver.AppleHPM"
+  |   "FW Version" = <00153100>
+  |   "ActiveCable" = No
+  |   "IOAccessoryPowerMode" = 3
+  |   "IOMatchCategory" = "IODefaultMatchCategory"
+  |   "ConnectionCount" = 1
+  |   "LDCM_StateDescription" = "Idle"
+  |   "IOAccessoryUSBConnectType" = 0
+  |   "Pin Configuration" = {"sbu1"=0,"tx1"=0,"rx2"=0,"tx2"=0,"sbu2"=0,"rx1"=0}
+  |   "IOMatchedAtBoot" = Yes
+  |   "IOProbeScore" = 110
+  |   "IOClass" = "AppleHPMInterfaceType10"
+  |   "IOAccessoryPowerCurrentLimits" = (0,0,0,0,0)
+  |   "LDCM_State" = 1
+  |   "IOGeneralInterest" = "IOCommand is not serializable"
+  |   "IOUserClientClass" = "IOAccessoryManagerUserClient"
+  |   "IOAccessoryPrimaryDevicePort" = 1
+  |   "Boot Flags" = <610313000160041e00000000>
+  |   "OpticalCable" = No
+  |   "Description" = "Port-USB-C@1"
+  |   "HPM Mode Block Active" = No
+  |   "CFBundleIdentifier" = "com.apple.driver.AppleHPM"
+  |   "BuiltIn" = Yes
+  |   "LDCM_UserOverrideActive" = No
+  |   "AppLoaded Count" = 1
+  |   "IOAccessoryManagerType" = 3
+  |   "TransportsProvisioned" = ("CC")
+  |   "Overcurrent Count" = 0
+  |   "LDCMPin" = 1
+  |   "IOAccessorySleepPowerCurrentLimit" = 0
+  |   "AuthorizationRequired" = No
+  |   "Metadata" = {}
+  |   "TransportsSupported" = ("CC","USB2","USB3","CIO","DisplayPort")
+  |   "IOAccessoryUSBConnectTypePublished" = 0
+  |   "CFBundleIdentifierKernel" = "com.apple.driver.AppleHPM"
+  |   "IOAccessoryUSBActive" = Yes
+  |   "IOAccessorySupportedPowerModes" = (1,3)
+  |   "UserAuthorizationStatusDescription" = "Not Required"
+  |   "HPDAsserted" = No
+  |   "PortDescription" = "Port-USB-C@1"
+  |   "ConnectionActive" = No
+  |   "DisplayPortPinAssignment" = 0
+  |   "IOFunctionParent000003C4" = <>
+  |   "PortType" = 2
+  |   "AutoMatched" = No
+  |   "PlugOrientation" = 0
+  |   "IOProviderClass" = "AppleHPMDeviceHAL"
+  |   "IOAccessoryID" = 100
+  |   "LDCMPinDescription" = "Reference"
+  |   "IOAccessoryUSBModeType" = 4
+  |   "FeaturesSupported" = ("TRM","LDCM","Power In")
+  |   "LDCM_LiquidDetected" = No
+  |   "IOAccessoryManagerSleepPower" = No
+  |   "HChk" = <630000000000>
+  |   "IOPowerManagement" = {"DevicePowerState"=2,"CurrentPowerState"=2,"CapabilityFlags"=32768,"MaxPowerState"=2}
+  |   "LDCM_MeasurementStatusDescription" = "No Error"
+  |   "PortNumber" = 1
+  |   "TransportsActive" = ()
+  |   "LDCM_MitigationsEnabled" = No
+  |   "Plug Event Count" = 2
+  |   "UserAuthorizationStatus" = 0
+  |   "AccessoryMode" = 0
+  |   "SOP UVDM Update Count" = 0
+  |   "LDCM_MeasurementStatus" = 0
+  |   "IOAccessoryDetect" = No
+  | }
+  | 
+  +-o LDCM  <class AppleHPMLDCMType2, id 0x100000bb8, registered, matched, active, busy 0 (10 ms), retain 10>
+  | | {
+  | |   "ParentPortType" = 2
+  | |   "StateDescription" = "Hardware Controlled"
+  | |   "ParentBuiltInPortType" = 2
+  | |   "ArchitectureVersion" = 4
+  | |   "FeatureTypeDescription" = "LDCM"
+  | |   "MitigationsEnabled" = No
+  | |   "FeatureType" = 2
+  | |   "LiquidDetected" = No
+  | |   "ParentPortTypeDescription" = "USB-C"
+  | |   "MitigationsStatus" = 0
+  | |   "ParentBuiltInPortNumber" = 1
+  | |   "IOUserClientClass" = "IOPortFeatureLDCMUserClient"
+  | |   "ParentPortNumber" = 1
+  | |   "UserOverrideActive" = No
+  | |   "State" = 0
+  | |   "Metadata" = {}
+  | |   "FirmwareVersion" = "003.0115"
+  | |   "MeasurementStatus" = 0
+  | |   "Description" = "Port-USB-C@1/LDCM"
+  | |   "ParentBuiltInPortTypeDescription" = "USB-C"
+  | |   "HardwareVersion" = 1
+  | |   "Data" = <0000a939c0009052e70214542301aaffffff00003b2737271300621c681c6c4e724ed11fce1f40889a1900ab98199abe42ff0000003b13>
+  | |   "MitigationsSupported" = No
+  | |   "MeasurementStatusDescription" = "No Error"
+  | | }
+  | | 
+  | +-o IOPortFeatureLDCMUserClient  <class IOPortFeatureLDCMUserClient, id 0x10000164a, !registered, !matched, active, busy 0, retain 5>
+  |     {
+  |       "IOUserClientDefaultLocking" = Yes
+  |       "IOUserClientCreator" = "pid 664, liquiddetectiond"
+  |       "IOUserClientDefaultLockingSingleThreadExternalMethod" = Yes
+  |       "IOUserClientEntitlements" = "com.apple.iokit.IOPortFamily"
+  |       "IOUserClientDefaultLockingSetProperties" = Yes
+  |     }
+  |     
+  +-o CC  <class IOPortTransportStateCC, id 0x100000bb9, registered, matched, active, busy 0 (43 ms), retain 9>
+  |   {
+  |     "TRM_TransportSupervised" = No
+  |     "ParentPortType" = 2
+  |     "ParentPortBuiltIn" = Yes
+  |     "ParentBuiltInPortType" = 2
+  |     "AuthenticationStatus" = 0
+  |     "HashStatus" = 0
+  |     "HashStatusDescription" = "Not Set"
+  |     "Index" = 0
+  |     "Tunneled" = No
+  |     "ParentPortTypeDescription" = "USB-C"
+  |     "TransportType" = 1
+  |     "AuthenticationStatusDescription" = "Idle"
+  |     "ParentBuiltInPortNumber" = 1
+  |     "IOUserClientClass" = "IOPortTransportUserClient"
+  |     "ParentPortNumber" = 1
+  |     "DriverStatusDescription" = "Not Monitored"
+  |     "AuthorizationRequired" = No
+  |     "Metadata" = {}
+  |     "AuthenticationRequired" = No
+  |     "TransportTypeDescription" = "CC"
+  |     "AuthorizationStatus" = 0
+  |     "ParentBuiltInPortTypeDescription" = "USB-C"
+  |     "TransportDescription" = "Port-USB-C@1/CC"
+  |     "DriverStatus" = 0
+  |     "IOGeneralInterest" = "IOCommand is not serializable"
+  |     "Active" = No
+  |     "AuthorizationStatusDescription" = "Not Required"
+  |   }
+  |   
+  +-o Power In  <class IOPortFeaturePowerIn, id 0x100000be0, registered, matched, active, busy 0 (5 ms), retain 9>
+  |   {
+  |     "Active" = No
+  |     "ParentPortTypeDescription" = "USB-C"
+  |     "Metadata" = {}
+  |     "Description" = "Port-USB-C@1/Power In"
+  |     "ParentBuiltInPortNumber" = 1
+  |     "IOUserClientClass" = "IOPortFeatureUserClient"
+  |     "FeatureTypeDescription" = "Power In"
+  |     "ParentPortType" = 2
+  |     "ParentBuiltInPortType" = 2
+  |     "ParentPortNumber" = 1
+  |     "FeatureType" = 3
+  |     "ParentBuiltInPortTypeDescription" = "USB-C"
+  |   }
+  |   
+  +-o IOAccessoryManagerUserClient  <class IOAccessoryManagerUserClient, id 0x100001650, !registered, !matched, active, busy 0, retain 5>
+      {
+        "IOUserClientCreator" = "pid 668, accessoryd"
+        "IOUserClientDefaultLocking" = Yes
+      }
+      
+
++-o Port-USB-C@2  <class AppleHPMInterfaceType10, id 0x1000006f6, registered, matched, active, busy 0 (101 ms), retain 29>
+  | {
+  |   "IOAccessoryActivePowerMode" = 1
+  |   "PortTypeDescription" = "USB-C"
+  |   "FeaturesEnabled" = ("TRM","LDCM","Power In")
+  |   "IOPersonalityPublisher" = "com.apple.driver.AppleHPM"
+  |   "FW Version" = <00153100>
+  |   "ActiveCable" = No
+  |   "IOAccessoryPowerMode" = 3
+  |   "IOMatchCategory" = "IODefaultMatchCategory"
+  |   "ConnectionCount" = 0
+  |   "LDCM_StateDescription" = "Idle"
+  |   "IOAccessoryUSBConnectType" = 0
+  |   "Pin Configuration" = {"sbu1"=0,"tx1"=0,"rx2"=0,"tx2"=0,"sbu2"=0,"rx1"=0}
+  |   "IOMatchedAtBoot" = Yes
+  |   "IOProbeScore" = 110
+  |   "IOClass" = "AppleHPMInterfaceType10"
+  |   "IOAccessoryPowerCurrentLimits" = (0,0,0,0,0)
+  |   "LDCM_State" = 1
+  |   "IOGeneralInterest" = "IOCommand is not serializable"
+  |   "IOUserClientClass" = "IOAccessoryManagerUserClient"
+  |   "IOAccessoryPrimaryDevicePort" = 258
+  |   "Boot Flags" = <810400000100101e00000000>
+  |   "OpticalCable" = No
+  |   "Description" = "Port-USB-C@2"
+  |   "HPM Mode Block Active" = No
+  |   "CFBundleIdentifier" = "com.apple.driver.AppleHPM"
+  |   "BuiltIn" = Yes
+  |   "LDCM_UserOverrideActive" = No
+  |   "AppLoaded Count" = 1
+  |   "IOAccessoryManagerType" = 3
+  |   "TransportsProvisioned" = ("CC")
+  |   "Overcurrent Count" = 0
+  |   "LDCMPin" = 1
+  |   "IOAccessorySleepPowerCurrentLimit" = 0
+  |   "AuthorizationRequired" = No
+  |   "Metadata" = {}
+  |   "TransportsSupported" = ("CC","USB2","USB3","CIO","DisplayPort")
+  |   "IOAccessoryUSBConnectTypePublished" = 0
+  |   "CFBundleIdentifierKernel" = "com.apple.driver.AppleHPM"
+  |   "IOAccessoryUSBActive" = Yes
+  |   "IOAccessorySupportedPowerModes" = (1,3)
+  |   "UserAuthorizationStatusDescription" = "Not Required"
+  |   "HPDAsserted" = No
+  |   "PortDescription" = "Port-USB-C@2"
+  |   "ConnectionActive" = No
+  |   "DisplayPortPinAssignment" = 0
+  |   "PortType" = 2
+  |   "AutoMatched" = No
+  |   "PlugOrientation" = 0
+  |   "IOProviderClass" = "AppleHPMDeviceHAL"
+  |   "IOAccessoryID" = 100
+  |   "LDCMPinDescription" = "Reference"
+  |   "IOAccessoryUSBModeType" = 4
+  |   "IOFunctionParent000003C5" = <>
+  |   "FeaturesSupported" = ("TRM","LDCM","Power In")
+  |   "LDCM_LiquidDetected" = No
+  |   "IOAccessoryManagerSleepPower" = No
+  |   "HChk" = <000000000000>
+  |   "IOPowerManagement" = {"DevicePowerState"=2,"CurrentPowerState"=2,"CapabilityFlags"=32768,"MaxPowerState"=2}
+  |   "LDCM_MeasurementStatusDescription" = "No Error"
+  |   "PortNumber" = 2
+  |   "TransportsActive" = ()
+  |   "LDCM_MitigationsEnabled" = No
+  |   "Plug Event Count" = 1
+  |   "UserAuthorizationStatus" = 0
+  |   "AccessoryMode" = 0
+  |   "SOP UVDM Update Count" = 0
+  |   "LDCM_MeasurementStatus" = 0
+  |   "IOAccessoryDetect" = No
+  | }
+  | 
+  +-o CC  <class IOPortTransportStateCC, id 0x100000ba7, registered, matched, active, busy 0 (5 ms), retain 9>
+  |   {
+  |     "TRM_TransportSupervised" = No
+  |     "ParentPortType" = 2
+  |     "ParentPortBuiltIn" = Yes
+  |     "ParentBuiltInPortType" = 2
+  |     "AuthenticationStatus" = 0
+  |     "HashStatus" = 0
+  |     "HashStatusDescription" = "Not Set"
+  |     "Index" = 0
+  |     "Tunneled" = No
+  |     "ParentPortTypeDescription" = "USB-C"
+  |     "TransportType" = 1
+  |     "AuthenticationStatusDescription" = "Idle"
+  |     "ParentBuiltInPortNumber" = 2
+  |     "IOUserClientClass" = "IOPortTransportUserClient"
+  |     "ParentPortNumber" = 2
+  |     "DriverStatusDescription" = "Not Monitored"
+  |     "AuthorizationRequired" = No
+  |     "Metadata" = {}
+  |     "AuthenticationRequired" = No
+  |     "TransportTypeDescription" = "CC"
+  |     "AuthorizationStatus" = 0
+  |     "ParentBuiltInPortTypeDescription" = "USB-C"
+  |     "TransportDescription" = "Port-USB-C@2/CC"
+  |     "DriverStatus" = 0
+  |     "IOGeneralInterest" = "IOCommand is not serializable"
+  |     "Active" = No
+  |     "AuthorizationStatusDescription" = "Not Required"
+  |   }
+  |   
+  +-o LDCM  <class AppleHPMLDCMType2, id 0x100000bab, registered, matched, active, busy 0 (15 ms), retain 10>
+  | | {
+  | |   "ParentPortType" = 2
+  | |   "StateDescription" = "Hardware Controlled"
+  | |   "ParentBuiltInPortType" = 2
+  | |   "ArchitectureVersion" = 4
+  | |   "FeatureTypeDescription" = "LDCM"
+  | |   "MitigationsEnabled" = No
+  | |   "FeatureType" = 2
+  | |   "LiquidDetected" = No
+  | |   "ParentPortTypeDescription" = "USB-C"
+  | |   "MitigationsStatus" = 0
+  | |   "ParentBuiltInPortNumber" = 2
+  | |   "IOUserClientClass" = "IOPortFeatureLDCMUserClient"
+  | |   "ParentPortNumber" = 2
+  | |   "UserOverrideActive" = No
+  | |   "State" = 0
+  | |   "Metadata" = {}
+  | |   "FirmwareVersion" = "003.0115"
+  | |   "MeasurementStatus" = 0
+  | |   "Description" = "Port-USB-C@2/LDCM"
+  | |   "ParentBuiltInPortTypeDescription" = "USB-C"
+  | |   "HardwareVersion" = 1
+  | |   "Data" = <0000e17aeb0038c6e9fa2015540b5d00000000003e273c271000691c741c8e4e944e0020182000989a19209b9819645d43ff0000005113>
+  | |   "MitigationsSupported" = No
+  | |   "MeasurementStatusDescription" = "No Error"
+  | | }
+  | | 
+  | +-o IOPortFeatureLDCMUserClient  <class IOPortFeatureLDCMUserClient, id 0x10000163e, !registered, !matched, active, busy 0, retain 5>
+  |     {
+  |       "IOUserClientDefaultLocking" = Yes
+  |       "IOUserClientCreator" = "pid 664, liquiddetectiond"
+  |       "IOUserClientDefaultLockingSingleThreadExternalMethod" = Yes
+  |       "IOUserClientEntitlements" = "com.apple.iokit.IOPortFamily"
+  |       "IOUserClientDefaultLockingSetProperties" = Yes
+  |     }
+  |     
+  +-o Power In  <class IOPortFeaturePowerIn, id 0x100000c39, registered, matched, active, busy 0 (15 ms), retain 9>
+  |   {
+  |     "Active" = No
+  |     "ParentPortTypeDescription" = "USB-C"
+  |     "Metadata" = {}
+  |     "Description" = "Port-USB-C@2/Power In"
+  |     "ParentBuiltInPortNumber" = 2
+  |     "IOUserClientClass" = "IOPortFeatureUserClient"
+  |     "FeatureTypeDescription" = "Power In"
+  |     "ParentPortType" = 2
+  |     "ParentBuiltInPortType" = 2
+  |     "ParentPortNumber" = 2
+  |     "FeatureType" = 3
+  |     "ParentBuiltInPortTypeDescription" = "USB-C"
+  |   }
+  |   
+  +-o IOAccessoryManagerUserClient  <class IOAccessoryManagerUserClient, id 0x100001652, !registered, !matched, active, busy 0, retain 5>
+      {
+        "IOUserClientCreator" = "pid 668, accessoryd"
+        "IOUserClientDefaultLocking" = Yes
+      }
+      
+
++-o Port-MagSafe 3@1  <class AppleHPMInterfaceType11, id 0x10000078e, registered, matched, active, busy 0 (13 ms), retain 24>
+  | {
+  |   "IOAccessoryActivePowerMode" = 1
+  |   "PortTypeDescription" = "MagSafe 3"
+  |   "FeaturesEnabled" = ("Power In")
+  |   "IOPersonalityPublisher" = "com.apple.driver.AppleHPM"
+  |   "FW Version" = <00153100>
+  |   "ActiveCable" = No
+  |   "IOAccessoryPowerMode" = 3
+  |   "IOMatchCategory" = "IODefaultMatchCategory"
+  |   "ConnectionCount" = 1
+  |   "IOAccessoryUSBConnectType" = 0
+  |   "Pin Configuration" = {"sbu1"=0,"tx1"=0,"rx2"=0,"tx2"=0,"sbu2"=0,"rx1"=0}
+  |   "IOMatchedAtBoot" = Yes
+  |   "IOProbeScore" = 110
+  |   "IOClass" = "AppleHPMInterfaceType11"
+  |   "IOAccessoryPowerCurrentLimits" = (0,0,0,0,0)
+  |   "IOGeneralInterest" = "IOCommand is not serializable"
+  |   "IOUserClientClass" = "IOAccessoryManagerUserClient"
+  |   "IOAccessoryPrimaryDevicePort" = 261
+  |   "Boot Flags" = <610310000160041e00000000>
+  |   "OpticalCable" = No
+  |   "Description" = "Port-MagSafe 3@1"
+  |   "HPM Mode Block Active" = No
+  |   "CFBundleIdentifier" = "com.apple.driver.AppleHPM"
+  |   "BuiltIn" = Yes
+  |   "AppLoaded Count" = 1
+  |   "IOAccessoryManagerType" = 3
+  |   "TransportsProvisioned" = ("CC")
+  |   "Overcurrent Count" = 0
+  |   "IOAccessoryManagerAllowedFeatures" = 0
+  |   "IOAccessorySleepPowerCurrentLimit" = 0
+  |   "AuthorizationRequired" = No
+  |   "Metadata" = {}
+  |   "TransportsSupported" = ()
+  |   "IOAccessoryUSBConnectTypePublished" = 0
+  |   "CFBundleIdentifierKernel" = "com.apple.driver.AppleHPM"
+  |   "IOAccessoryUSBActive" = Yes
+  |   "IOAccessorySupportedPowerModes" = (1,3)
+  |   "UserAuthorizationStatusDescription" = "Not Required"
+  |   "HPDAsserted" = No
+  |   "PortDescription" = "Port-MagSafe 3@1"
+  |   "ConnectionActive" = Yes
+  |   "DisplayPortPinAssignment" = 0
+  |   "PortType" = 17
+  |   "AutoMatched" = No
+  |   "PlugOrientation" = 1
+  |   "IOProviderClass" = "AppleHPMDeviceHAL"
+  |   "IOAccessoryID" = 18446744073709551615
+  |   "IOAccessoryUSBModeType" = 4
+  |   "FeaturesSupported" = ("Power In")
+  |   "IOAccessoryManagerSleepPower" = No
+  |   "HChk" = <630000000000>
+  |   "IOPowerManagement" = {"DevicePowerState"=2,"CurrentPowerState"=2,"CapabilityFlags"=32768,"MaxPowerState"=2}
+  |   "PortNumber" = 1
+  |   "TransportsActive" = ("CC")
+  |   "Plug Event Count" = 2
+  |   "UserAuthorizationStatus" = 0
+  |   "AccessoryMode" = 0
+  |   "ConnectionUUID" = "84E4CF7D-5A87-4C02-BFCC-33D6D04DD95B"
+  |   "SOP UVDM Update Count" = 0
+  |   "IOAccessoryDetect" = Yes
+  |   "IOFunctionParent000003C8" = <>
+  | }
+  | 
+  +-o Power In  <class IOPortFeaturePowerIn, id 0x100000b9f, registered, matched, active, busy 0 (3 ms), retain 15>
+  | | {
+  | |   "Active" = No
+  | |   "ParentPortTypeDescription" = "MagSafe 3"
+  | |   "Metadata" = {}
+  | |   "Description" = "Port-MagSafe 3@1/Power In"
+  | |   "ParentBuiltInPortNumber" = 1
+  | |   "IOUserClientClass" = "IOPortFeatureUserClient"
+  | |   "FeatureTypeDescription" = "Power In"
+  | |   "ParentPortType" = 17
+  | |   "ParentBuiltInPortType" = 17
+  | |   "ParentPortNumber" = 1
+  | |   "FeatureType" = 3
+  | |   "ParentBuiltInPortTypeDescription" = "MagSafe 3"
+  | | }
+  | | 
+  | +-o USB-PD [*]  <class IOPortFeaturePowerSource, id 0x10001037b, registered, matched, active, busy 0 (0 ms), retain 12>
+  | |   {
+  | |     "PowerSourceType" = 0
+  | |     "ParentPortTypeDescription" = "MagSafe 3"
+  | |     "Metadata" = {}
+  | |     "Description" = "Port-MagSafe 3@1/Power In/USB-PD"
+  | |     "ParentBuiltInPortNumber" = 1
+  | |     "Priority" = 1000
+  | |     "ParentFeatureType" = 3
+  | |     "PowerSourceOptions" = [{"Max Current (mA)"=2980,"Max Power (mW)"=44700,"UUID"="51FF8623-EA7B-422F-990F-1B9AA1284AFA","Voltage (mV)"=15000,"Class"="IOPortFeaturePowerSourceOptionFixed"},{"Max Current (mA)"=3390,"Max Power (mW)"=67800,"UUID"="71144955-7680-4635-B52F-319AED3FBA9D","Voltage (mV)"=20000,"Class"="IOPortFeaturePowerSourceOptionFixed"},{"Max Current (mA)"=2960,"Max Power (mW)"=14800,"UUID"="2D889CCD-A3FB-4A9D-B834-35DDFBCAB5AB","Voltage (mV)"=5000,"Class"="IOPortFeaturePowerSourceOptionFixed"},{"Max Current (mA)"=2970,"Max Power (mW)"=26730,"UUID"="953AD6B5-61AD-4ABA-8B71-BBD839690434","Voltage (mV)"=9000,"Class"="IOPortFeaturePowerSourceOptionFixed"}]
+  | |     "PowerSourceName" = "USB-PD"
+  | |     "Owner" = "IOService:/AppleARMPE/arm-io@10F00000/AppleSoCIO/smc@8C600000/AppleASCWrapV6/iop-smc-nub/RTBuddy(SMC)/SMCEndpoint1/AppleSMCKeysEndpoint/smc-charger-util/AppleSMCChargerUtil"
+  | |     "WinningPowerSourceOption" = {"Max Current (mA)"=3390,"Max Power (mW)"=67800,"UUID"="71144955-7680-4635-B52F-319AED3FBA9D","Voltage (mV)"=20000,"Class"="IOPortFeaturePowerSourceOptionFixed"}
+  | |     "ParentPortType" = 17
+  | |     "ParentBuiltInPortType" = 17
+  | |     "ParentPortNumber" = 1
+  | |     "ParentBuiltInPortTypeDescription" = "MagSafe 3"
+  | |   }
+  | |   
+  | +-o Brick ID  <class IOPortFeaturePowerSource, id 0x10001037c, registered, matched, active, busy 0 (1 ms), retain 9>
+  |     {
+  |       "PowerSourceType" = 0
+  |       "ParentPortTypeDescription" = "MagSafe 3"
+  |       "Metadata" = {}
+  |       "Description" = "Port-MagSafe 3@1/Power In/Brick ID"
+  |       "ParentBuiltInPortNumber" = 1
+  |       "Priority" = 18446744073709551116
+  |       "ParentFeatureType" = 3
+  |       "PowerSourceOptions" = [{"Max Current (mA)"=500,"Max Power (mW)"=2500,"UUID"="C7998E4C-DC9F-4A25-AE88-F5F0F475F15E","Voltage (mV)"=5000,"Class"="IOPortFeaturePowerSourceOptionFixed"}]
+  |       "PowerSourceName" = "Brick ID"
+  |       "Owner" = "IOService:/AppleARMPE/arm-io@10F00000/AppleSoCIO/smc@8C600000/AppleASCWrapV6/iop-smc-nub/RTBuddy(SMC)/SMCEndpoint1/AppleSMCKeysEndpoint/smc-charger-util/AppleSMCChargerUtil"
+  |       "ParentPortType" = 17
+  |       "ParentBuiltInPortType" = 17
+  |       "ParentPortNumber" = 1
+  |       "ParentBuiltInPortTypeDescription" = "MagSafe 3"
+  |     }
+  |     
+  +-o CC  <class IOPortTransportStateCC, id 0x100000ba1, registered, matched, active, busy 0 (9 ms), retain 10>
+  |   {
+  |     "TRM_TransportSupervised" = No
+  |     "ParentPortType" = 17
+  |     "ParentPortBuiltIn" = Yes
+  |     "ParentBuiltInPortType" = 17
+  |     "AuthenticationStatus" = 0
+  |     "HashStatus" = 0
+  |     "HashStatusDescription" = "Not Set"
+  |     "Index" = 0
+  |     "Tunneled" = No
+  |     "ParentPortTypeDescription" = "MagSafe 3"
+  |     "TransportType" = 1
+  |     "AuthenticationStatusDescription" = "Idle"
+  |     "ParentBuiltInPortNumber" = 1
+  |     "IOUserClientClass" = "IOPortTransportUserClient"
+  |     "ParentPortNumber" = 1
+  |     "DriverStatusDescription" = "Not Monitored"
+  |     "AuthorizationRequired" = No
+  |     "Metadata" = {"Product ID (SOP1)"=30720,"Vendor ID (SOP1)"=1452}
+  |     "Product ID (SOP1)" = 30720
+  |     "AuthenticationRequired" = No
+  |     "TransportTypeDescription" = "CC"
+  |     "Vendor ID (SOP1)" = 1452
+  |     "AuthorizationStatus" = 0
+  |     "ParentBuiltInPortTypeDescription" = "MagSafe 3"
+  |     "TransportDescription" = "Port-MagSafe 3@1/CC"
+  |     "DriverStatus" = 0
+  |     "IOGeneralInterest" = "IOCommand is not serializable"
+  |     "Active" = Yes
+  |     "AuthorizationStatusDescription" = "Not Required"
+  |   }
+  |   
+  +-o IOAccessoryManagerUserClient  <class IOAccessoryManagerUserClient, id 0x100001653, !registered, !matched, active, busy 0, retain 5>
+      {
+        "IOUserClientCreator" = "pid 668, accessoryd"
+        "IOUserClientDefaultLocking" = Yes
+      }
+      
+

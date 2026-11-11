@@ -1,0 +1,7 @@
+a=0xb0f0 literals=20
+b=0xb18c literals=14
+intersection (13): [0, 1, 4, 14, 32, 33, 62, 84, 85, 88, 105, 444, 460]
+only a (7): [3, 8, 10, 19, 80, 92, 1024]
+only b (1): [28]
+shared excluding trivial (11): [4, 14, 32, 33, 62, 84, 85, 88, 105, 444, 460]
+RECONCILES

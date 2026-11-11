@@ -1,0 +1,76 @@
+{
+ "3.1.8": {
+  "reset": "0x10f7d",
+  "tgt": "0x10f7c",
+  "containing_fn": null,
+  "prev_fn": [
+   "0x10aa8",
+   "FUN_00010aa8",
+   "0x10abb"
+  ],
+  "next_fn": "0x129f0",
+  "first12": [
+   "0x10f7c: lsls r0, r2, 6",
+   "0x10f7e: movs r0, 0",
+   "0x10f80: adds r0, r2, r3",
+   "0x10f82: movs r0, 0",
+   "0x10f84: movs r4, r7",
+   "0x10f86: ands r3, r0",
+   "0x10f88: asrs r1, r5, 4",
+   "0x10f8a: movs r0, r0",
+   "0x10f8c: b 0x107a0",
+   "0x10f8e: b 0x10f92",
+   "0x10f90: b 0x11194",
+   "0x10f92: b 0x10f96"
+  ]
+ },
+ "3.1.12": {
+  "reset": "0x10ffd",
+  "tgt": "0x10ffc",
+  "containing_fn": null,
+  "prev_fn": [
+   "0x10b28",
+   "FUN_00010b28",
+   "0x10b3b"
+  ],
+  "next_fn": "0x12a9c",
+  "first12": [
+   "0x10ffc: lsls r0, r2, 6",
+   "0x10ffe: movs r0, 0",
+   "0x11000: adds r0, r2, r3",
+   "0x11002: movs r0, 0",
+   "0x11004: movs r4, r7",
+   "0x11006: ands r3, r0",
+   "0x11008: asrs r1, r5, 4",
+   "0x1100a: movs r0, r0",
+   "0x1100c: b 0x10820",
+   "0x1100e: b 0x11012",
+   "0x11010: b 0x11214",
+   "0x11012: b 0x11016"
+  ]
+ },
+ "3.2.0": {
+  "reset": "0x1111d",
+  "tgt": "0x1111c",
+  "containing_fn": null,
+  "prev_fn": [
+   "0x10c4c",
+   "FUN_00010c4c",
+   "0x10c5f"
+  ],
+  "next_fn": "0x12c4c",
+  "first12": [
+   "0x1111c: lsrs r0, r0, 0x1c",
+   "0x1111e: ands r5, r0",
+   "0x11120: lsrs r0, r0, 0x1e",
+   "0x11122: ands r5, r0",
+   "0x11124: lsrs r0, r0, 0x20",
+   "0x11126: strh r0, [r0]",
+   "0x11128: invalid",
+   "0x1112c: subs r3, 0x58",
+   "0x1112e: movs r1, r0",
+   "0x11130: add r0, sp, 0xc4",
+   "0x11132: ldr r1, [sp, 0x78]"
+  ]
+ }
+}

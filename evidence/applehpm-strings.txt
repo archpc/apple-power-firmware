@@ -1,0 +1,2393 @@
+0xfffffe00074b6b58	AppleHPMIECS
+0xfffffe00074b6b65	site.AppleHPMIECS
+0xfffffe00074b6b77	121111121222121211112112122222122
+0xfffffe00074b6b99	hpmlog
+0xfffffe00074b6ba0	HPM Address
+0xfffffe00074b6baf	Route String
+0xfffffe00074b6bbc	AppleHPMInterfaceType1
+0xfffffe00074b6bd3	site.AppleHPMInterfaceType1
+0xfffffe00074b6bef	121111121222121211111121111121222222221122111111121221111222222122221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211222221111111111111111111111111111111222222222222222211111111111111111111111111112111111121211221111111111111111111111111111112222222222222111111111111111111111111111111211111111122222222222221212222222122121121
+0xfffffe00074b6e84	hpm-class-type
+0xfffffe00074b6e93	%s::%s(0x%x@0x%x): AppleHPMInterfaceType1::setPowerStateHPM(@0x%x) = Setting power state to 0x%x
+
+
+0xfffffe00074b6ef6	setPowerStateHPM
+0xfffffe00074b6f07	%s::%s(0x%x@0x%x): AppleHPMInterfaceType1::setPowerStateHPM(@0x%x) - SSPS executed, status = 0x%x
+
+
+0xfffffe00074b6f6b	%s::%s(0x%x@0x%x): AppleHPMInterfaceType1::communicateDPHPDChange(@0x%x) - Unused in this class
+
+
+0xfffffe00074b6fcd	communicateDPHPDChange
+0xfffffe00074b6fe4	%s::%s(0x%x@0x%x): AppleHPMInterfaceType1::communicateDPIRQ(@0x%x) - Unused in this class
+
+
+0xfffffe00074b7040	communicateDPIRQ
+0xfffffe00074b7051	%s::%s(0x%x@0x%x): AppleHPMInterfaceType1::configureDP(@0x%x) - failed to get interface: AV=%p DP=%p
+
+
+0xfffffe00074b70b8	setupDPController
+0xfffffe00074b70ca	%s::%s(0x%x@0x%x): AppleHPMInterfaceType1::configureDP(@0x%x) - powering on DP
+
+
+0xfffffe00074b711b	configureDP
+0xfffffe00074b7127	%s::%s(0x%x@0x%x): AppleHPMInterfaceType1::configureUSBRemoteWakeup(@0x%x) - Called with args 0x%x
+
+
+0xfffffe00074b718c	configureUSBRemoteWakeup
+0xfffffe00074b71a5	function-connect_DIG
+0xfffffe00074b71ba	Vendor ID (SOP)
+0xfffffe00074b71ca	Product ID (SOP)
+0xfffffe00074b71db	Vendor ID (SOP1)
+0xfffffe00074b71ec	Product ID (SOP1)
+0xfffffe00074b71fe	AppleHPMInterfaceType17
+0xfffffe00074b7216	site.AppleHPMInterfaceType17
+0xfffffe00074b7233	1211111212221212111111211111212222222211221111111212211112222221222212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112222211111111111111111111111111111112222222222222222111111111111111111111111111121111111212112211111111111111111111111111111122222222222221111111111111111111111111111112111111111222222222222212122222221221211221111
+0xfffffe00074b74cc	%s::%s(0x%x@0x%x): AppleHPMInterfaceType17::start
+
+
+0xfffffe00074b7500	start
+0xfffffe00074b7506	%s::%s(0x%x@0x%x): AppleHPMInterface::initSingleHPM - Failed to get workloop
+
+
+0xfffffe00074b7555	%s::%s(0x%x@0x%x): AppleHPMInterfaceType17::start - Failed to get spmi provider
+
+
+0xfffffe00074b75a7	I2C Read Failed
+0xfffffe00074b75b7	%s::%s(0x%x@0x%x): AppleHPMInterfaceType17::start - Failed to create interrupt source
+
+0xfffffe00074b760e	AppleHPMInterfaceType16
+0xfffffe00074b7626	%s::%s(0x%x@0x%x): AppleHPMInterfaceType17:setupMatchingForUFP can't find AppleHPMInterfaceType16
+
+
+0xfffffe00074b768a	setupMatchingForUFP
+0xfffffe00074b769e	AppleHPMARMI2C
+0xfffffe00074b76ad	site.AppleHPMARMI2C
+0xfffffe00074b76c1	1211111212221212111121121222221211211122
+0xfffffe00074b76ea	compatible
+0xfffffe00074b76f5	usbc,cd3217
+0xfffffe00074b7701	iic-retry-interval-override-ms
+0xfffffe00074b7720	AppleHPMARMI2C::start - i2c retry interval set to: %u ms
+
+0xfffffe00074b775a	AppleHPMARMI2C::start - Unable to read hpmlog boot-arg
+
+0xfffffe00074b7792	AppleHPMARMI2C::start - hpmlog boot-arg: 0x%X
+
+0xfffffe00074b77c1	hpmI2CRetries
+0xfffffe00074b77cf	AppleHPMARMI2C::start - hpmI2CRetries boot-arg: %u ms
+
+0xfffffe00074b7806	hpmI2CRetryInterval
+0xfffffe00074b781a	AppleHPMARMI2C::start - hpmI2CRetryInterval boot-arg: %u ms
+
+0xfffffe00074b7857	iicProvider
+0xfffffe00074b7863	hpm-iic-addr
+0xfffffe00074b7874	AppleHPMARMI2C::start - no Rid found, defaulting to 0
+
+0xfffffe00074b78ab	hpmI2CNonCompliant
+0xfffffe00074b78be	AppleHPMARMI2C::start - hpmI2CNonCompliant boot-arg: %u
+
+0xfffffe00074b78f7	usbc,sn201202x,iic
+0xfffffe00074b790a	HPM Mode Register on Boot
+0xfffffe00074b7924	AppleHPMBusController
+0xfffffe00074b793a	site.AppleHPMBusController
+0xfffffe00074b7955	12111112122212121111112
+0xfffffe00074b796d	AppleHPMBusController::start - being called
+
+0xfffffe00074b799a	Expected HPM Controllers
+0xfffffe00074b79b3	Actual HPM Controllers
+0xfffffe00074b79ca	HPM Interrupt Enabled
+0xfffffe00074b79e0	Sleeping HPM Controllers
+0xfffffe00074b79f9	HPM Interrupt Disabled (Sleep)
+0xfffffe00074b7a18	AppleHPMBusController::setActiveHPMCount - Active HPM Counter Altered, new Active = 0x%x, expected = 0x%x
+
+0xfffffe00074b7a83	AppleHPMCommandGate
+0xfffffe00074b7a97	site.AppleHPMCommandGate
+0xfffffe00074b7ab0	1211121111
+0xfffffe00074b7abb	AppleHPMDeviceHALType4
+0xfffffe00074b7ad2	site.AppleHPMDeviceHALType4
+0xfffffe00074b7aee	121111121222121212212
+0xfffffe00074b7b04	AppleHPMDeviceHALType4::parseInterrupts - LDCM VBus event detected
+
+0xfffffe00074b7b48	AppleHPMDevice
+0xfffffe00074b7b57	site.AppleHPMDevice
+0xfffffe00074b7b6b	121111121222121212
+0xfffffe00074b7b7e	Address
+0xfffffe00074b7b8a	Version
+0xfffffe00074b7b92	Vendor ID
+0xfffffe00074b7b9c	Device ID
+0xfffffe00074b7ba6	Board ID
+0xfffffe00074b7baf	UUID
+0xfffffe00074b7bb4	Revision
+0xfffffe00074b7bbd	Revision ID
+0xfffffe00074b7bc9	ForceMode
+0xfffffe00074b7bd3	ForceUpdateMode
+0xfffffe00074b7be3	ForceCIOTeardown
+0xfffffe00074b7bf4	AppleHPMAIDType1
+0xfffffe00074b7c05	site.AppleHPMAIDType1
+0xfffffe00074b7c1b	121111121222121211111121111121222222221122111111121221121
+0xfffffe00074b7c55	AppleHPMAIDType1::getHPMCommsBus - failed to get communication bus service, no messages will be sent
+0xfffffe00074b7cba	AppleHPMBusDevice
+0xfffffe00074b7ccc	site.AppleHPMBusDevice
+0xfffffe00074b7ce3	121111121222121211
+0xfffffe00074b7cf6	AppleHPMInterfaceType10
+0xfffffe00074b7d0e	site.AppleHPMInterfaceType10
+0xfffffe00074b7d2b	121111121222121211111121111121222222221122111111121221111222222122221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211222221111111111111111111111111111111222222222222222211111111111111111111111111112111111121211221111111111111111111111111111112222222222222111111111111111111111111111111211111111122222222222221212222222122121122
+0xfffffe00074b7fc0	HPM Mode Block Active
+0xfffffe00074b7fd6	%s::%s(0x%x@0x%x): AppleHPMInterfaceType10::start
+
+
+0xfffffe00074b800a	%s::%s(0x%x@0x%x): AppleHPMInterfaceType10::start(@0x%x) - no command gate
+
+
+0xfffffe00074b8057	%s::%s(0x%x@0x%x): AppleHPMInterfaceType10::poweredStart(@0x%x) - start
+
+
+0xfffffe00074b80a1	poweredStart
+0xfffffe00074b80ae	%s::%s(0x%x@0x%x): AppleHPMInterfaceType10::forcePortEvaluation(@0x%x) - Start
+
+
+0xfffffe00074b80ff	forcePortEvaluation
+0xfffffe00074b8113	%s::%s(0x%x@0x%x): AppleHPMInterfaceType10::startUSBTimer(@0x%x) - called
+
+
+0xfffffe00074b815f	startUSBTimer
+0xfffffe00074b816d	%s::%s(0x%x@0x%x): AppleHPMInterfaceType10::stopUSBTimer(@0x%x) - called
+
+
+0xfffffe00074b81b8	stopUSBTimer
+0xfffffe00074b81c5	%s::%s(0x%x@0x%x): AppleHPMInterfaceType10::tUSBTimeout(@0x%x) - called
+
+
+0xfffffe00074b820f	tUSBTimeout
+0xfffffe00074b821b	%s::%s(0x%x@0x%x): AppleHPMInterfaceType10::tUSBTimeout(@0x%x) - Waiting for USB Timedout After 10 seconds
+
+
+0xfffffe00074b8288	%s::%s(0x%x@0x%x): AppleHPMInterfaceType10::starttAMETimeoutTimer(@0x%x) - called
+
+
+0xfffffe00074b82dc	starttAMETimeoutTimer
+0xfffffe00074b82f2	%s::%s(0x%x@0x%x): AppleHPMInterfaceType10::stoptAMETimeoutTimer(@0x%x) - called
+
+
+0xfffffe00074b8345	stoptAMETimeoutTimer
+0xfffffe00074b835a	%s::%s(0x%x@0x%x): AppleHPMInterfaceType10::tAMETimeout(@0x%x) - called
+
+
+0xfffffe00074b83a4	tAMETimeout
+0xfffffe00074b83b0	%s::%s(0x%x@0x%x): AppleHPMInterfaceType10::forceUSB23On(@0x%x) - force usb23 on, setting fWaitingForUSB to true
+
+
+0xfffffe00074b8423	forceUSB23On
+0xfffffe00074b8430	%s::%s(0x%x@0x%x): AppleHPMInterfaceType10::forceUSB23On(@0x%x) - advertise unplug
+
+
+0xfffffe00074b8485	%s::%s(0x%x@0x%x): AppleHPMInterfaceType10::turnOnVbus(0x%x) - setting fWaitingForUSB to false
+
+
+0xfffffe00074b84e6	turnOnVbus
+0xfffffe00074b84f1	AppleHPMInterfaceType10::overrideHPMMode -- enforce=%d, keepRoleAndOrientation=%d, dataStatus=%u, status=%u
+
+0xfffffe00074b855e	Forced Status Reg
+0xfffffe00074b8570	Forced Data Status Reg
+0xfffffe00074b8587	%s::%s(0x%x@0x%x): AppleHPMInterfaceType10::configureUSBRemoteWakeup(@0x%x) - Called with args 0x%x
+
+
+0xfffffe00074b85ed	%s::%s(0x%x@0x%x): AppleHPMInterface::setInterruptMask(@0x%x) - start
+
+
+0xfffffe00074b8635	setInterruptMask
+0xfffffe00074b8646	site.AppleHPMInterfaceType16
+0xfffffe00074b8663	121111121222121211111121111121222222221122111111121221111222222122221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211222221111111111111111111111111111111222222222222222211111111111111111111111111112111111121211221111111111111111111111111111112222222222222111111111111111111111111111111211111111122222222222221212222222122121122211212
+0xfffffe00074b88fe	%s::%s(0x%x@0x%x): AppleHPMInterfaceType16::start
+
+
+0xfffffe00074b8932	%s::%s(0x%x@0x%x): AppleHPMInterfaceType16::start - Failed to allocate DC2 IOIES
+
+
+0xfffffe00074b8985	%s::%s(0x%x@0x%x): AppleHPMInterfaceType16::start failed to get fHALType5
+
+
+0xfffffe00074b89d1	setupHAL
+0xfffffe00074b89da	%s::%s(0x%x@0x%x): AppleHPMInterfaceType16::start fHALType5 %p
+
+
+0xfffffe00074b8a1b	%s::%s(0x%x@0x%x): AppleHPMInterfaceType16::setInterruptMask(@0x%x) - start
+
+
+0xfffffe00074b8a69	%s::%s(0x%x@0x%x): AppleHPMInterfaceType16::processInterruptEvents(@0x%x) - Start
+
+
+0xfffffe00074b8abd	processInterruptEvents
+0xfffffe00074b8ad4	%s::%s(0x%x@0x%x): AppleHPMInterfaceType16::processInterruptEvents(@0x%x) - Ridge Ready Event
+
+
+0xfffffe00074b8b34	%s::%s(0x%x@0x%x): AppleHPMInterfaceType16::processInterruptEvents(@0x%x) - Ridge Ready
+
+
+0xfffffe00074b8b8e	%s::%s(0x%x@0x%x): AppleHPMInterfaceType16::processInterruptEvents(@0x%x) - No Data Status at UFP
+
+
+0xfffffe00074b8bf2	%s::%s(0x%x@0x%x): AppleHPMInterfaceType16::processInterruptEvents(@0x%x) - RREC %x RRaDC %x
+
+
+0xfffffe00074b8c51	%s::%s(0x%x@0x%x): DP 
+
+0xfffffe00074b8c69	sendDataControl2
+0xfffffe00074b8c7a	%s::%s(0x%x@0x%x): USB4 
+
+0xfffffe00074b8c94	%s::%s(0x%x@0x%x): TBT 
+
+0xfffffe00074b8cad	%s::%s(0x%x@0x%x):  <<< 
+
+
+0xfffffe00074b8cc8	%s::%s(0x%x@0x%x): AppleHPMInterfaceType16::configureUSB2PortObject(@0x%x) - Forcing USB2 UFP data role for optical cable
+
+
+0xfffffe00074b8d44	configureUSB2PortObject
+0xfffffe00074b8d5c	%s::%s(0x%x@0x%x): AppleHPMInterface::configureUSB2PortObject(@0x%x) - Changing USB2 Datarole in IOPort to fUSBDfp = 0x%x
+
+
+0xfffffe00074b8dd8	%s::%s(0x%x@0x%x): AppleHPMInterface::configureUSB2PortObject(@0x%x) - USB2 added and ready
+
+
+0xfffffe00074b8e36	%s::%s(0x%x@0x%x): AppleHPMInterface::configureUSB2PortObject(@0x%x) - WARNING: USB2 notifier was not created
+
+
+0xfffffe00074b8ea6	%s::%s(0x%x@0x%x): AppleHPMInterface::configureUSB2PortObject(@0x%x) - WARNING: USB2 already exists
+
+
+0xfffffe00074b8f0c	AppleHPMUserClient
+0xfffffe00074b8f1f	site.AppleHPMUserClient
+0xfffffe00074b8f37	121111121222121211111111111111
+0xfffffe00074b8f56	root
+0xfffffe00074b8f5b	com.apple.USBCEntitlement
+0xfffffe00074b8f75	AppleHPMUserClient::initWithTask - User client does NOT have kIOClientPrivilegeAdministrator
+
+0xfffffe00074b8fd3	AppleHPMUserClient::initWithTask - User client does NOT have entitlement: com.apple.USBCEntitlement
+
+0xfffffe00074b9038	AppleTCControllerSingleTransport
+0xfffffe00074b9059	site.AppleTCControllerSingleTransport
+0xfffffe00074b907f	12111112122212121111112111112122222222112211111112122111122222212222121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122222111111111111111111111111111111122222222222222221111111111111111111111111111211111112121121
+0xfffffe00074b92a1	hpm-transport-type
+0xfffffe00074b92b4	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::start(@0x%x) - Start
+
+
+0xfffffe00074b9300	hpmDebugFlags
+0xfffffe00074b930e	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::start(@0x%x) - Enabling Debug, Flags = 0x%x
+
+
+0xfffffe00074b9371	hpmForcePlugUpsideDown
+0xfffffe00074b9388	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::start(@0x%x) - Pins will be set in the upsidedown orientation.
+
+
+0xfffffe00074b93fe	-restore
+0xfffffe00074b9407	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::start(@0x%x) - In Restore
+
+
+0xfffffe00074b9458	IONVRAM
+0xfffffe00074b9460	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::start(@0x%x) - IONVRAM check failed
+
+
+0xfffffe00074b94bb	/options
+0xfffffe00074b94c4	boot-command
+0xfffffe00074b94d1	upgrade
+0xfffffe00074b94d9	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::start(@0x%x) - In OTA
+
+
+0xfffffe00074b9526	AppLoaded Count
+0xfffffe00074b9536	Overcurrent Count
+0xfffffe00074b9548	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::Start - Failed to find Bus Controller, trying older method
+
+
+0xfffffe00074b95ba	dock
+0xfffffe00074b95bf	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::Start - failed to match on dock
+
+
+0xfffffe00074b9616	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::Start - Failed to get dockPhandle
+
+
+0xfffffe00074b966f	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::Start - Failed to get interrupt provider
+
+
+0xfffffe00074b96cf	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::Start - Warning: No I2C Interface
+
+
+0xfffffe00074b9728	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::Start - Super failed to start
+
+
+0xfffffe00074b977d	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::Start - Failed to get workloop
+
+
+0xfffffe00074b97d3	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::Start(@0x%x) - Failed to get command gate
+
+
+0xfffffe00074b9834	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::Start(@0x%x) - no interrupt source found
+
+
+0xfffffe00074b9894	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::Start(@0x%x) - Interrupt added to workloop
+
+
+0xfffffe00074b98f6	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::Start(@0x%x) - no interrupt source found to add
+
+
+0xfffffe00074b996d	sbu1
+0xfffffe00074b9972	sbu2
+0xfffffe00074b9977	Pin Configuration
+0xfffffe00074b9989	function-hdmi_hpd
+0xfffffe00074b999b	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::Start(@0x%x) - No gpio function
+
+
+0xfffffe00074b99f2	HPDAsserted
+0xfffffe00074b99fe	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::setAccessoryID(@0x%x) - Start
+
+
+0xfffffe00074b9a53	setAccessoryID
+0xfffffe00074b9a62	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::setAccessoryID(@0x%x) - Status = 0x%x accessoryID = 0x%x
+
+
+0xfffffe00074b9ad2	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::evaluateHpd(0x%x) - HPD = 0x%x
+
+
+0xfffffe00074b9b28	evaluateHpd
+0xfffffe00074b9b34	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::evaluateHpd(0x%x) - fhpdgpio not found
+
+
+0xfffffe00074b9b92	primary-port-id
+0xfffffe00074b9ba2	%s::%s(0x%x@0x%x): AppleTCController::configureDPPortObject(@0x%x) - Failed to activate DP transport!
+
+
+0xfffffe00074b9c0a	configureDPPortObjectStatic
+0xfffffe00074b9c26	%s::%s(0x%x@0x%x): AppleTCControllerSingleTransport::setPinConfiguration(@0x%x) - Could not reconfigure pin configuration dictionary
+
+
+0xfffffe00074b9cad	setPinConfiguration
+0xfffffe00074b9cc1	AppleTCControllerType15
+0xfffffe00074b9cd9	site.AppleTCControllerType15
+0xfffffe00074b9cf6	1211111212221212111111211111212222222211221111111212211112222221222212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112222211111111111111111111111111111112222222222222222111111111111111111111111111121111111212111121
+0xfffffe00074b9f1a	%s::%s(0x%x@0x%x): AppleTCControllerType15::start
+
+
+0xfffffe00074b9f4e	%s::%s(0x%x@0x%x): AppleTCControllerType15::start(@0x%x) - no command gate
+
+
+0xfffffe00074b9f9b	%s::%s(0x%x@0x%x): AppleTCControllerType15::setInterruptMask(@0x%x) - start
+
+
+0xfffffe00074b9fe9	%s::%s(0x%x@0x%x): AppleTCControllerType15::processInterruptEvents(@0x%x) - Start
+
+
+0xfffffe00074ba03d	%s::%s(0x%x@0x%x): AppleTCControllerType15::processInterruptEvents(@0x%x) - interrupts = 0x%x 0x%x 0x%x
+
+
+0xfffffe00074ba0a7	%s::%s(0x%x@0x%x): AppleTCControllerType15::processInterruptEvents(@0x%x) - AppLoaded, reinit
+
+
+0xfffffe00074ba107	%s::%s(0x%x@0x%x): AppleTCControllerType15::processInterruptEvents(@0x%x) - Processing interrupt buffer
+
+
+0xfffffe00074ba171	Plug Event Count
+0xfffffe00074ba182	Status Reg
+0xfffffe00074ba18d	Data Status Reg
+0xfffffe00074ba19d	CF VID Status Reg
+0xfffffe00074ba1af	%s::%s(0x%x@0x%x): AppleTCControllerType15::processInterruptEvents(@0x%x) - Not notifying drivers of state, fRestore = 0x%x and interruptCountAppLoaded = 0x%x
+
+
+0xfffffe00074ba250	%s::%s(0x%x@0x%x): AppleTCControllerType15::processInterruptEvents(@0x%x) - status or datastatus set, process registers
+
+
+0xfffffe00074ba2ca	%s::%s(0x%x@0x%x): AppleTCControllerType15::processInterruptEvents(@0x%x) - Adjusting HPM power state to active
+
+
+0xfffffe00074ba33c	%s::%s(0x%x@0x%x): AppleTCControllerType15::processInterruptEvents(@0x%x) - Adjusting HPM power state to active unplugged
+
+
+0xfffffe00074ba3b8	%s::%s(0x%x@0x%x): AppleTCControllerType15::processInterruptEvents(@0x%x) - Adjusting HPM power state to sleep
+
+
+0xfffffe00074ba429	%s::%s(0x%x@0x%x): AppleTCControllerType15::hpmInterruptAction(@0x%x) - Interrupt Recieved
+
+
+0xfffffe00074ba486	hpmInterruptAction
+0xfffffe00074ba499	%s::%s(0x%x@0x%x): AppleTCControllerType15::forcePortEvaluation(@0x%x) - Start
+
+
+0xfffffe00074ba4ea	AppleHPMLDCMType2
+0xfffffe00074ba4fc	site.AppleHPMLDCMType2
+0xfffffe00074ba513	121111121222121211111121111211221212222222212212121211111121212
+0xfffffe00074ba553	AppleHPMDeviceHALType5
+0xfffffe00074ba56a	site.AppleHPMDeviceHALType5
+0xfffffe00074ba586	AppleHPMDeviceHAL::setBRDataControl - WARNING: Abnormal Data Control Length = 0x%x
+
+0xfffffe00074ba5da	AppleHPMDeviceHALType5::writeDataControl2 returned 0x%x
+
+0xfffffe00074ba613	AppleHPMDeviceHALType5::getUSBConfigBuffer %02x %02x %02x %02x
+
+0xfffffe00074ba653	AppleHPMDeviceHALType5::writeUSBConfigBuffer %02x %02x %02x %02x
+
+0xfffffe00074ba695	AppleHPMDeviceHALType2
+0xfffffe00074ba6ac	site.AppleHPMDeviceHALType2
+0xfffffe00074ba6c8	AppleHPMLDCMType3
+0xfffffe00074ba6da	site.AppleHPMLDCMType3
+0xfffffe00074ba6f1	AppleHPMLDCM::setVbusPresent - called setting %x
+
+0xfffffe00074ba723	setmitigations called with 0x%x
+
+0xfffffe00074ba744	AppleHPMLDCM
+0xfffffe00074ba751	site.AppleHPMLDCM
+0xfffffe00074ba763	hpmLDCMMitigationsDisable
+0xfffffe00074ba77d	AppleHPMLDCM::start - Mitigations disable = 0x%x
+
+0xfffffe00074ba7af	hpmLDCMEnableWaveAndPeriodic
+0xfffffe00074ba7cc	AppleHPMLDCM::start - Periodic data gathering enable = 0x%x
+
+0xfffffe00074ba809	%02x%01x.%02x%01x.%02x
+0xfffffe00074ba820	AppleHPMLDCM::start - couldn't allocate status buffer, failing start
+
+0xfffffe00074ba866	AppleHPMLDCM::start - couldn't allocate temp status buffer, failing start
+
+0xfffffe00074ba8b1	AppleHPMLDCM::start - couldn't allocate periodic buffer, failing start
+
+0xfffffe00074ba8f9	AppleHPMLDCM::start - couldn't allocate waveform buffer, failing start
+
+0xfffffe00074ba941	AppleHPMLDCM::start - couldn't find communications bus, failing start
+
+0xfffffe00074ba988	AppleHPMLDCM::start - couldn't get workloop failing start
+
+0xfffffe00074ba9c3	AppleHPMLDCM::start - Failed to get command gate
+
+0xfffffe00074ba9f5	AppleHPMLDCM::start - unexpected provider
+
+0xfffffe00074baa20	%s - LDCM Interrupt triggered
+
+0xfffffe00074baa3f	ldcmInterruptAction
+0xfffffe00074baa53	AppleHPMLDCM::enableLDCMMitigation - Mitigation enable = 0x%x
+
+0xfffffe00074baa92	AppleHPMLDCM::getHPMCommsBus - failed to get communication bus service, no messages will be sent
+0xfffffe00074baaf3	AppleHPMLDCM::getLDCMStatusRegister - Invalid ret length of 0x%x retry = 0x%x
+
+0xfffffe00074bab42	AppleHPMLDCM::getLDCMStatusRegister - invalid buffer length, data gathering aborted
+
+0xfffffe00074bab97	AppleHPMLDCM::isVoltageDetected - raw 0x%x
+
+0xfffffe00074babc3	AppleHPMLDCM::getVbusPresent - called returning false
+
+0xfffffe00074babfa	AppleHPMLDCM::disableOVPInterrupt - disabling ldcm ovp error
+
+0xfffffe00074bac38	AppleHPMInterface
+0xfffffe00074bac4a	site.AppleHPMInterface
+0xfffffe00074bac61	12111112122212121111112111112122222222112211111112122111122222212222121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122222111111111111111111111111111111122222222222222221111111111111111111111111111211111112121122111111111111111111111111111111222222222222211111111111111111111111111111121111111112222222222222121222222212212
+0xfffffe00074baef2	%s::%s(0x%x@0x%x): AppleHPMInterface::start(@0x%x) - Start
+
+
+0xfffffe00074baf2f	%s::%s(0x%x@0x%x): AppleHPMInterface::genericStart(@0x%x) - Start
+
+
+0xfffffe00074baf73	genericStart
+0xfffffe00074baf80	%s::%s(0x%x@0x%x): AppleHPMInterface::genericStart(@0x%x) - Enabling Debug, Flags = 0x%x
+
+
+0xfffffe00074bafdb	hpmAIDDis
+0xfffffe00074bafe5	%s::%s(0x%x@0x%x): AppleTCController::genericStart(@0x%x) - Disabling AID
+
+
+0xfffffe00074bb031	hpmAllowUsb3Restore
+0xfffffe00074bb045	%s::%s(0x%x@0x%x): AppleHPMInterface::genericStart(@0x%x) - ***allow usb3 restores: %u***
+
+
+0xfffffe00074bb0a1	hpmDisableAppleUVDMSOP
+0xfffffe00074bb0b8	%s::%s(0x%x@0x%x): AppleHPMInterface::genericStart(@0x%x) - disable USBPD SOP nub publishing set 0x%X
+
+
+0xfffffe00074bb120	hpmDisableAppleUVDMSOPp
+0xfffffe00074bb138	%s::%s(0x%x@0x%x): AppleHPMInterface::genericStart(@0x%x) - disable USBPD SOPp nub publishing set 0x%X
+
+
+0xfffffe00074bb1a1	hpmSSAMTest
+0xfffffe00074bb1ad	%s::%s(0x%x@0x%x): AppleHPMInterface::genericStart(@0x%x) - Enabling SSAM testing, Flags = 0x%x
+
+
+0xfffffe00074bb20f	%s::%s(0x%x@0x%x): AppleHPMInterface::genericStart(@0x%x) - In Restore
+
+
+0xfffffe00074bb258	-hpmUnplugForceUpdateMode
+0xfffffe00074bb272	%s::%s(0x%x@0x%x): AppleHPMInterface::genericStart(@0x%x) - Allow unplugs when in ForceUpdateMode
+
+
+0xfffffe00074bb2d6	-hpmForceAllowUSB3
+0xfffffe00074bb2e9	%s::%s(0x%x@0x%x): AppleHPMInterface::genericStart(@0x%x) - Force allow USB3
+
+
+0xfffffe00074bb338	/chosen/handoff
+0xfffffe00074bb348	boot_type
+0xfffffe00074bb352	%s::%s(0x%x@0x%x): Tetheredrestore = 0x%x
+
+
+0xfffffe00074bb37e	%s::%s(0x%x@0x%x): Tetheredrestore value evaluation failed, setting fRestore = false
+
+
+0xfffffe00074bb3d5	%s::%s(0x%x@0x%x): in Tethered restore
+
+
+0xfffffe00074bb3fe	%s::%s(0x%x@0x%x): tetheredrestore not found assuming not tethered
+
+
+0xfffffe00074bb443	%s::%s(0x%x@0x%x): entry not found, forcing tethered flow
+
+
+0xfffffe00074bb47f	%s::%s(0x%x@0x%x): AppleHPMInterface::genericStart(@0x%x) - IONVRAM check failed
+
+
+0xfffffe00074bb4d2	%s::%s(0x%x@0x%x): AppleHPMInterface::genericStart(@0x%x) - In OTA
+
+
+0xfffffe00074bb517	SOP UVDM Update Count
+0xfffffe00074bb52d	%s::%s(0x%x@0x%x): AppleHPMInterface::genericStart - HPMV1
+
+
+0xfffffe00074bb56a	commonStartPhase1
+0xfffffe00074bb57c	%s::%s(0x%x@0x%x): AppleHPMInterface::genericStart - Super failed to start
+
+
+0xfffffe00074bb5c9	%s::%s(0x%x@0x%x): AppleHPMInterface::commonStartPhase2 - Failed to create fDriverStatusInterrupt
+
+
+0xfffffe00074bb62d	commonStartPhase2
+0xfffffe00074bb63f	%s::%s(0x%x@0x%x): AppleHPMInterface::genericStart(@0x%x) - CC transport failed!
+
+
+0xfffffe00074bb692	%s::%s(0x%x@0x%x): AppleHPMInterface::genericStart - failed to match on dock
+
+
+0xfffffe00074bb6e1	initInterruptManager
+0xfffffe00074bb6f6	%s::%s(0x%x@0x%x): AppleHPMInterface::genericStart - Failed to get dockPhandle
+
+
+0xfffffe00074bb747	%s::%s(0x%x@0x%x): AppleHPMInterface::genericStart - Failed to get interrupt provider
+
+
+0xfffffe00074bb79f	%s::%s(0x%x@0x%x): AppleHPMInterface::initInterruptManager - Failed to get workloop
+
+
+0xfffffe00074bb7f5	%s::%s(0x%x@0x%x): AppleHPMInterface::initInterruptManager - Failed to get command gate
+
+
+0xfffffe00074bb84f	%s::%s(0x%x@0x%x): AppleHPMInterface::initInterruptManager - LDCM not started, setting up matcher
+
+
+0xfffffe00074bb8b3	%s::%s(0x%x@0x%x): AppleHPMInterface::initSingleHPM - Failed to get i2c provider
+
+
+0xfffffe00074bb906	initSingleHPM
+0xfffffe00074bb914	%s::%s(0x%x@0x%x): AppleHPMInterface::initSingleHPM - failed to match on dock
+
+
+0xfffffe00074bb964	%s::%s(0x%x@0x%x): AppleHPMInterface::initSingleHPM - Failed to get dockPhandle
+
+
+0xfffffe00074bb9b6	%s::%s(0x%x@0x%x): AppleHPMInterface::initSingleHPM - Failed to get command gate
+
+
+0xfffffe00074bba09	interrupt-type
+0xfffffe00074bba18	interrupts
+0xfffffe00074bba23	%s::%s(0x%x@0x%x): AppleHPMInterface::initSingleHPM - Missing interrupt-type property, doing legacy interrupt handling, no SPMI sleep/wake support
+
+
+0xfffffe00074bbab8	%s::%s(0x%x@0x%x): AppleHPMInterface::initSingleHPM - Missing interrupt property, Check the EDT, AppleHPM will not be fully functional
+
+
+0xfffffe00074bbb41	%s::%s(0x%x@0x%x): AppleHPMInterface::initSingleHPM - interrupt-type and interrupts not equal length, things will not work. No SPMI slee/wake support
+
+
+0xfffffe00074bbbd9	%s::%s(0x%x@0x%x): AppleHPMInterface::initSingleHPM - interrupt-type isn't 32-byte aligned no interrupts at all.
+
+
+0xfffffe00074bbc4c	%s::%s(0x%x@0x%x): AppleHPMInterface::initSingleHPM - LDCM not started, setting up matcher
+
+
+0xfffffe00074bbca9	%s::%s(0x%x@0x%x): AppleHPMInterface::setupPowerManagement(@0x%x) - Power registration failed! with status = 0x%x
+
+
+0xfffffe00074bbd1d	setupPowerManagement
+0xfffffe00074bbd32	%s::%s(0x%x@0x%x): AppleHPMInterface::getManagerType(@0x%x) - ERROR: _armHPMNub doesn't exist!
+
+
+0xfffffe00074bbd93	getManagerType
+0xfffffe00074bbda2	supports-trm
+0xfffffe00074bbdaf	supports-usb-rm
+0xfffffe00074bbdbf	%s::%s(0x%x@0x%x): AppleHPMInterface::getTransportEnabled(@0x%x) - Called for transporttype 0x%x
+
+
+0xfffffe00074bbe22	getTransportEnabled
+0xfffffe00074bbe36	%s::%s(0x%x@0x%x): AppleHPMInterface::handleAccessoryDetect(@0x%x) - Start
+
+
+0xfffffe00074bbe83	handleAccessoryDetect
+0xfffffe00074bbe99	%s::%s(0x%x@0x%x): AppleHPMInterface::setAccessoryID(@0x%x) - Start
+
+
+0xfffffe00074bbedf	%s::%s(0x%x@0x%x): AppleHPMInterface::setAccessoryID(@0x%x) - Status = 0x%x accessoryID = 0x%x
+
+
+0xfffffe00074bbf40	LDCMTestCommand
+0xfffffe00074bbf50	%s::%s(0x%x@0x%x): AppleHPMInterface::hpmInterruptAction(@0x%x) - Interrupt Recieved
+
+
+0xfffffe00074bbfa7	%s::%s(0x%x@0x%x): AppleHPMInterface::getSecondaryMuxConfig(@0x%x) - start
+
+
+0xfffffe00074bbff4	getSecondaryMuxConfig
+0xfffffe00074bc00a	%s::%s(0x%x@0x%x): AppleHPMInterface::processInterruptEvents(@0x%x) - Start
+
+
+0xfffffe00074bc058	%s::%s(0x%x@0x%x): AppleHPMInterface::processInterruptEvents(@0x%x) - AppLoaded, reinit OR first int process = 1
+
+
+0xfffffe00074bc0cb	%s::%s(0x%x@0x%x): AppleHPMInterface::processInterruptEvents(@0x%x) - Processing interrupt buffer
+
+
+0xfffffe00074bc12f	SOPMfgString
+0xfffffe00074bc13c	SOPVID
+0xfffffe00074bc143	SOPPID
+0xfffffe00074bc14a	%s::%s(0x%x@0x%x): AppleHPMInterface::processInterruptEvents(@0x%x) - Not notifying drivers of state, fRestore = 0x%x and interruptCountAppLoaded = 0x%x
+
+
+0xfffffe00074bc1e5	%s::%s(0x%x@0x%x): AppleHPMInterface::processInterruptEvents(@0x%x) - status or datastatus set, process registers
+
+
+0xfffffe00074bc259	%s::%s(0x%x@0x%x): AppleHPMInterface::processInterruptEvents(@0x%x) - Adjusting HPM power state to active
+
+
+0xfffffe00074bc2c5	%s::%s(0x%x@0x%x): AppleHPMInterface::processInterruptEvents(@0x%x) - Adjusting HPM power state to active unplugged
+
+
+0xfffffe00074bc33b	%s::%s(0x%x@0x%x): AppleHPMInterface::processInterruptEvents(@0x%x) - Adjusting HPM power state to sleep
+
+
+0xfffffe00074bc3a6	%s::%s(0x%x@0x%x): AppleHPMInterfaceType::processStatusRegisters(@0x%x) - exiting tametimeout early
+
+
+0xfffffe00074bc40c	processStatusRegisters
+0xfffffe00074bc423	%s::%s(0x%x@0x%x): AppleHPMInterface::processStatusRegisters(@0x%x) - advertise unplug
+
+
+0xfffffe00074bc47c	%s::%s(0x%x@0x%x): AppleHPMInterface::processStatusRegisters(@0x%x) - fWaitingForUSB = 0x%x, fOverrideHPMMode = 0x%x
+
+
+0xfffffe00074bc4f3	%s::%s(0x%x@0x%x): AppleHPMInterface::setCurrentModeFlags(@0x%x) - Process data and status register
+
+
+0xfffffe00074bc559	setCurrentModeFlags
+0xfffffe00074bc56d	%s::%s(0x%x@0x%x): AppleHPMInterface::setCurrentModeFlags(@0x%x) - forcing usb2 + ufp for debug
+
+
+0xfffffe00074bc5cf	%s::%s(0x%x@0x%x): AppleHPMInterface::setCurrentModeFlags(@0x%x) - OTA upgrade check
+
+
+0xfffffe00074bc626	%s::%s(0x%x@0x%x): AppleHPMInterface::setCurrentModeFlags(@0x%x) - Removing port forcing and clearing flags, fisOTA = 0x%x, fRestore = 0x%x
+
+
+0xfffffe00074bc6b4	%s::%s(0x%x@0x%x): AppleHPMInterface::setCurrentModeFlags(@0x%x) - Assuming forced DFU, fRestore = 0x%x
+
+
+0xfffffe00074bc71e	%s::%s(0x%x@0x%x): AppleHPMInterface::setCurrentModeFlags(@0x%x) - ***Mode changed to UFPf, boot-arg likely, fRestore = 0x%x***
+
+
+0xfffffe00074bc7a0	Kart Device
+0xfffffe00074bc7ac	Kart Error Status
+0xfffffe00074bc7be	%s::%s(0x%x@0x%x): %s -- SOP nub terminating
+
+
+0xfffffe00074bc7ed	%s::%s(0x%x@0x%x): %s -- SOPP nub terminating
+
+
+0xfffffe00074bc81d	%s::%s(0x%x@0x%x): AppleHPMInterface::setCurrentModeFlags(@0x%x) - No plug detected, all flags cleared
+
+
+0xfffffe00074bc886	%s::%s(0x%x@0x%x): Attaching and starting SOP
+
+
+0xfffffe00074bc8b6	processModeFlags
+0xfffffe00074bc8c7	Product ID
+0xfffffe00074bc8d2	%s::%s(0x%x@0x%x): Attaching and starting SOPp
+
+
+0xfffffe00074bc903	%s::%s(0x%x@0x%x): AppleHPMInterface::processModeFlags(0x%x) - Kart mode looks ok, sending message
+
+
+0xfffffe00074bc968	%s::%s(0x%x@0x%x): AppleHPMInterface::processModeFlags(0x%x) - Kart mode skipping message due to forced disconnect
+
+
+0xfffffe00074bc9dd	%s::%s(0x%x@0x%x): AppleHPMInterface::sendDpStatusUpdates(@0x%x) - HPD = %i
+
+
+0xfffffe00074bca2b	sendDpStatusUpdates
+0xfffffe00074bca3f	%s::%s(0x%x@0x%x): AppleHPMInterface::sendDpStatusUpdates(@0x%x) - IRQ = %i
+
+
+0xfffffe00074bca8d	%s::%s(0x%x@0x%x): AppleHPMInterface::clearDpIRQ(@0x%x) - clearing DP IRQ
+
+0xfffffe00074bcad8	clearDpIRQ
+0xfffffe00074bcae3	%s::%s(0x%x@0x%x): AppleHPMInterface::resetDataControl(@0x%x)
+
+
+0xfffffe00074bcb23	resetDataControl
+0xfffffe00074bcb34	%s::%s(0x%x@0x%x): AppleHPMInterface::setPowerState(@0x%x) = Setting power state to 0x%x
+
+
+0xfffffe00074bcb8f	setPowerState
+0xfffffe00074bcb9d	%s::%s(0x%x@0x%x): AppleHPMInterface::setPowerState(@0x%x) - Status != Success, setPowerStateHPM failed!
+
+
+0xfffffe00074bcc08	%s::%s(0x%x@0x%x): AppleHPMInterface::setPowerStateHPM(@0x%x) = Setting power state to 0x%x
+
+
+0xfffffe00074bcc66	%s::%s(0x%x@0x%x): AppleHPMInterface::setPowerStateHPM(@0x%x) - SSPS executed, status = 0x%x
+
+
+0xfffffe00074bccc5	%s::%s(0x%x@0x%x): AppleHPMInterface::setPowerStateHPM(@0x%x) - SSPS transition to 0x%x skipped, waiting for USB
+
+
+0xfffffe00074bcd38	%s::%s(0x%x@0x%x): SSPS blocked due to forced usb device role and UFPf
+
+
+0xfffffe00074bcd81	%s::%s(0x%x@0x%x): AppleHPMInterface::forcePortEvaluation(@0x%x) - Start
+
+
+0xfffffe00074bcdcc	%s::%s(0x%x@0x%x): AppleHPMInterface::readReg(@0x%x) - Reading 0x%x with Length of 0x%x
+
+
+0xfffffe00074bce26	readReg
+0xfffffe00074bce2e	%s::%s(0x%x@0x%x): AppleHPMInterface::readReg(@0x%x) - Timed out with retries = 0x%x
+
+
+0xfffffe00074bce85	%s::%s(0x%x@0x%x): AppleHPMInterface::readReg(@0x%x) - Read completed after 0x%x retries
+
+
+0xfffffe00074bcee0	%s::%s(0x%x@0x%x): AppleHPMInterface::readRegWithLength(@0x%x) - Reading 0x%x with Length of 0x%x
+
+
+0xfffffe00074bcf44	readRegWithLength
+0xfffffe00074bcf56	%s::%s(0x%x@0x%x): AppleHPMInterface::readRegWithLength(@0x%x) - Timed out with retries = 0x%x
+
+
+0xfffffe00074bcfb7	%s::%s(0x%x@0x%x): AppleHPMInterface::readRegWithLength(@0x%x) - Read completed after 0x%x retries
+
+
+0xfffffe00074bd01c	0x%x
+0xfffffe00074bd021	%s::%s(0x%x@0x%x): AppleHPMInterface::writeReg(@0x%x) - Writing to register 0x%x with Data %s
+
+
+0xfffffe00074bd081	writeReg
+0xfffffe00074bd08a	%s::%s(0x%x@0x%x): AppleHPMInterface::execute4Cc(@0x%x) - 4cc = %s
+
+
+0xfffffe00074bd0cf	execute4Cc
+0xfffffe00074bd0da	%s::%s(0x%x@0x%x): AppleHPMInterface::setPinConfiguration(@0x%x) - ERROR INVALID PIN CONFIG FOR DP MULTIFUNCTION
+
+
+0xfffffe00074bd14d	%s::%s(0x%x@0x%x): AppleHPMInterface::setPinConfiguration(@0x%x) - No pin config set, no data connection
+
+
+0xfffffe00074bd1b8	%s::%s(0x%x@0x%x): AppleHPMInterface::setPinConfiguration(@0x%x) - Could not reconfigure pin configuration dictionary
+
+
+0xfffffe00074bd230	%s::%s(0x%x@0x%x): AppleHPMInterface::configureUSBRemoteWakeup(@0x%x) - Called with args 0x%x
+
+
+0xfffffe00074bd290	%s::%s(0x%x@0x%x): AppleHPMInterface::callPlatformFunction(0x%x) - prst called with 0, setting it to 1
+
+
+0xfffffe00074bd2f9	callPlatformFunction
+0xfffffe00074bd30e	%s::%s(0x%x@0x%x): AppleHPMInterface::callPlatformFunction(0x%x) - prst called with 1, setting it to 2
+
+
+0xfffffe00074bd377	%s::%s(0x%x@0x%x): AppleHPMInterface::callPlatformFunction(0x%x) - prst called with 255, setting it to 0
+
+
+0xfffffe00074bd3e2	%s::%s(0x%x@0x%x): AppleHPMInterface::callPlatformFunction(0x%x) - prst called with 0x%x, which is unknown, not executing reset
+
+
+0xfffffe00074bd464	%s::%s(0x%x@0x%x): AppleHPMInterface::callPlatformFunction(0x%x) - prst called no valid data
+
+
+0xfffffe00074bd4c3	%s::%s(0x%x@0x%x): AppleHPMInterface::callPlatformFunction(0x%x) - exit called with %d
+
+
+0xfffffe00074bd51c	%s::%s(0x%x@0x%x): AppleHPMInterface::callPlatformFunction(0x%x) - exit called no valid data
+
+
+0xfffffe00074bd57b	%s::%s(0x%x@0x%x): AppleHPMInterface::callPlatformFunction(0x%x) - igvb called with %d
+
+
+0xfffffe00074bd5d4	%s::%s(0x%x@0x%x): AppleHPMInterface::callPlatformFunction(0x%x) - igvb called no valid data
+
+
+0xfffffe00074bd633	%s::%s(0x%x@0x%x): AppleHPMInterface::repeaterReset(@0x%x) - Called with target 0x%x
+
+
+0xfffffe00074bd68a	repeaterReset
+0xfffffe00074bd698	%s::%s(0x%x@0x%x): AppleHPMInterface::ignoreVbusLoss(@0x%x) - Called with arg 0x%x
+
+
+0xfffffe00074bd6ed	ignoreVbusLoss
+0xfffffe00074bd6fc	function-orientation
+0xfffffe00074bd711	%s::%s(0x%x@0x%x): AppleHPMInterface::usbDataMonitor(@0x%x) - No orientation function
+
+
+0xfffffe00074bd769	usbDataMonitor
+0xfffffe00074bd778	function-usb_dmonitor
+0xfffffe00074bd78e	%s::%s(0x%x@0x%x): AppleHPMInterface::usbDataMonitor(@0x%x) - No data monitor function
+
+
+0xfffffe00074bd7e7	%s::%s(0x%x@0x%x): AppleHPMInterface::usbDataDetect(@0x%x) - No orientation function
+
+
+0xfffffe00074bd83e	usbDataDetect
+0xfffffe00074bd84c	%s::%s(0x%x@0x%x): AppleHPMInterface::usbDataDetect(@0x%x) - No data monitor function
+
+
+0xfffffe00074bd8a4	%s::%s(0x%x@0x%x): AppleHPMInterface::usbDataConnect(@0x%x) - No orientation function
+
+
+0xfffffe00074bd8fc	usbDataConnect
+0xfffffe00074bd90b	function-usb_dconnect
+0xfffffe00074bd921	%s::%s(0x%x@0x%x): AppleHPMInterface::usbDataConnect(@0x%x) - No data connect function
+
+
+0xfffffe00074bd97a	%s::%s(0x%x@0x%x): AppleHPMInterface::disablePort(@0x%x) - port disable aborted, length of buffers wrong
+
+
+0xfffffe00074bd9e5	disablePort
+0xfffffe00074bd9f1	Exit PD Mode TX Identity
+0xfffffe00074bda0a	Exit PD Mode DRST Data
+0xfffffe00074bda21	%s::%s(0x%x@0x%x): AppleHPMInterface::exitPDMode(@0x%x) - DRST complete - status = 0x%08x
+
+
+0xfffffe00074bda7d	exitPDMode
+0xfffffe00074bda88	USB2
+0xfffffe00074bda8f	USB3
+0xfffffe00074bda94	as UFP
+0xfffffe00074bda9b	as DFP
+0xfffffe00074bdaa2	DP [HPD=%X,IRQ=%X]
+0xfffffe00074bdab9	LegacyTBT
+0xfffffe00074bdac3	%s::%s(0x%x@0x%x): AppleHPMInterface::printConnectedTransports(@0x%x) - setting %s %s %s | %s | %s, %s | as connected
+
+
+0xfffffe00074bdb3b	printConnectedTransports
+0xfffffe00074bdb54	function-recovery_status_output
+0xfffffe00074bdb74	%s::%s(0x%x@0x%x): AppleHPMInterface::configureRecoveryStatus(@0x%x) - Driving Low
+
+
+0xfffffe00074bdbc9	configureRecoveryStatus
+0xfffffe00074bdbe1	%s::%s(0x%x@0x%x): AppleHPMInterface::configureRecoveryStatus(@0x%x) - EDT entry not found
+
+
+0xfffffe00074bdc3e	%s::%s(0x%x@0x%x): AppleHPMInterface::rtPanicHandler(@0x%x) - RT panic, incrementing count
+
+
+0xfffffe00074bdc9b	rtPanicHandler
+0xfffffe00074bdcaa	%s::%s(0x%x@0x%x): AppleHPMInterface::rtPanicHandler(@0x%x) - Byte 0 of register 0x5d = 0x%x
+
+
+0xfffffe00074bdd09	C Count
+0xfffffe00074bdd11	atcrt%u
+0xfffffe00074bdd19	Kart Mode Enabled
+0xfffffe00074bdd2b	%s::%s(0x%x@0x%x): AppleHPMInterface::enableOptions(0x%x) - enabling kart
+
+
+0xfffffe00074bdd77	enableOptions
+0xfffffe00074bdd85	%s::%s(0x%x@0x%x): AppleHPMInterface::enableOptions(0x%x) - Kart mode looks ok, sending message
+
+
+0xfffffe00074bdde7	%s::%s(0x%x@0x%x): AppleHPMInterface::enableOptions(0x%x) - Kart mode skipping message due to forced disconnect
+
+
+0xfffffe00074bde59	%s::%s(0x%x@0x%x): AppleHPMInterface::enableOptions(0x%x) - kart already enabled
+
+
+0xfffffe00074bdeac	%s::%s(0x%x@0x%x): AppleHPMInterface::isDeviceKartCapable(0x%x) - valid sop entries %x
+
+
+0xfffffe00074bdf05	isDeviceKartCapable
+0xfffffe00074bdf19	%s::%s(0x%x@0x%x): AppleHPMInterface::isDeviceKartCapable(0x%x) - returning %x
+
+
+0xfffffe00074bdf6a	%s::%s(0x%x@0x%x): AppleHPMInterface::isCableKartCapable(0x%x) - role is wrong, issuing discovery on sop'
+
+
+0xfffffe00074bdfd6	isCableKartCapable
+0xfffffe00074bdfe9	%s::%s(0x%x@0x%x): AppleHPMInterface::isCableKartCapable(0x%x) - valid sop' entries = %x
+
+
+0xfffffe00074be044	%s::%s(0x%x@0x%x): AppleHPMInterface::isCableKartCapable - sopp valid >=  4 actual = 0x%x cableType = 0x%x
+
+
+0xfffffe00074be0b1	%s::%s(0x%x@0x%x): AppleHPMInterface::isCableKartCapable(0x%x) - passive cable detected
+
+
+0xfffffe00074be10b	%s::%s(0x%x@0x%x): AppleHPMInterface::isCableKartCapable(0x%x) - active cable detected
+
+
+0xfffffe00074be164	%s::%s(0x%x@0x%x): AppleHPMInterface::isCableKartCapable(0x%x) - returning %x
+
+
+0xfffffe00074be1b4	%s::%s(0x%x@0x%x): AppleHPMInterface::challengeCrypto(@0x%x) - Start hpmv1 = 0x%x
+
+
+0xfffffe00074be208	challengeCrypto
+0xfffffe00074be218	%s::%s(0x%x@0x%x): AppleHPMInterface::challengeCrypto(@0x%x) - Starting HPMV2 execution
+
+
+0xfffffe00074be272	%s::%s(0x%x@0x%x): AppleHPMInterface::challengeCrypto(@0x%x) - HPMV2 buffer[0] = 0x%08x
+
+
+0xfffffe00074be2cc	%s::%s(0x%x@0x%x): AppleHPMInterface::challengeCrypto(@0x%x) - Warning: truncating input, length is too long
+
+
+0xfffffe00074be33b	%s::%s(0x%x@0x%x): AppleHPMInterface::challengeCrypto(@0x%x) - Warning: CRYm returned !CMD, aborting
+
+
+0xfffffe00074be3a2	%s::%s(0x%x@0x%x): AppleHPMInterface::challengeCrypto(@0x%x) - CRYm exeucted and took ~%u ms
+
+
+0xfffffe00074be401	%s::%s(0x%x@0x%x): AppleHPMInterface::challengeCrypto(@0x%x) - CRYm aborting after ~%u ms
+
+
+0xfffffe00074be45d	%s::%s(0x%x@0x%x): AppleHPMInterface::challengeCrypto(@0x%x) - Warning: CRYm timed out after ~%u, aborting
+
+
+0xfffffe00074be4ca	%s::%s(0x%x@0x%x): AppleHPMInterface::challengeCrypto(@0x%x) - Aborting due to previous errors
+
+
+0xfffffe00074be52b	%s::%s(0x%x@0x%x): AppleHPMInterface::challengeCrypto(@0x%x) - Warning: Failed reading data with status = 0x%x, aborting
+
+
+0xfffffe00074be5a6	%s::%s(0x%x@0x%x): AppleHPMInterface::challengeCrypto(@0x%x) - Warning: Unexpected command retval 0x%x, returning invalid
+
+
+0xfffffe00074be622	%s::%s(0x%x@0x%x): AppleHPMInterface::challengeCrypto(@0x%x) - HPMV1 crypto called
+
+
+0xfffffe00074be677	%s::%s(0x%x@0x%x): AppleHPMInterface::challengeCrypto(@0x%x) - HPMV1 locating function
+
+
+0xfffffe00074be6d0	function-challenge_crypto
+0xfffffe00074be6ea	%s::%s(0x%x@0x%x): AppleHPMInterface::challengeCrypto(@0x%x) - HPMV1 Function NOT found, non-fatal
+
+
+0xfffffe00074be74f	%s::%s(0x%x@0x%x): AppleHPMInterface::challengeCrypto(@0x%x) - HPMV1 function located
+
+
+0xfffffe00074be7a7	%s::%s(0x%x@0x%x): AppleHPMInterface::challengeCrypto(@0x%x) - HPMV1 function handle found, executing
+
+
+0xfffffe00074be80f	site.TriStarCompanionChallengeCryptoIn
+0xfffffe00074be83a	site.TriStarCompanionChallengeCryptoOut
+0xfffffe00074be865	%s::%s(0x%x@0x%x): AppleHPMInterface::challengeCrypto(@0x%x) - HPMV1 function handle NOT found
+
+
+0xfffffe00074be8c6	%s::%s(0x%x@0x%x): AppleHPMInterface::createDPPortObject(@0x%x) - dp is not setup
+
+
+0xfffffe00074be91a	createDPPortObject
+0xfffffe00074be92d	%s::%s(0x%x@0x%x): AppleHPMInterface::createDPPortObject(@0x%x) - dp transport allocation failed
+
+
+0xfffffe00074be990	%s::%s(0x%x@0x%x): AppleHPMInterface::createDPPortObject(@0x%x) - dp is setup
+
+
+0xfffffe00074be9e0	%s::%s(0x%x@0x%x): AppleHPMInterface::configureDPPortObject(@0x%x) - Failed to activate DP transport!
+
+
+0xfffffe00074bea48	configureDPPortObject
+0xfffffe00074bea5e	%s::%s(0x%x@0x%x): AppleHPMInterface::configureDPPortObject(@0x%x) - Failed to activate tunneled transport, no tbthandle
+
+
+0xfffffe00074bead9	%s::%s(0x%x@0x%x): AppleHPMInterface::createUSB2PortObject(@0x%x) - Setting up USB2 port object
+
+
+0xfffffe00074beb3b	createUSB2PortObject
+0xfffffe00074beb50	%s::%s(0x%x@0x%x): AppleHPMInterface::createUSB2PortObject(@0x%x) - USB2 is setup
+
+
+0xfffffe00074beba4	%s::%s(0x%x@0x%x): AppleHPMInterface::setUSB2PortObjectInactive(@0x%x) - usb2handle setting inactive
+
+
+0xfffffe00074bec0b	setUSB2PortObjectInactive
+0xfffffe00074bec25	%s::%s(0x%x@0x%x): AppleHPMInterface::setUSB2PortObjectInactive(@0x%x) - usb2handle NULL!
+
+
+0xfffffe00074bec81	%s::%s(0x%x@0x%x): AppleHPMInterface::createUSB3PortObject(@0x%x) - creating usb3 port object tunnelAdapterType=%d
+
+
+0xfffffe00074becf6	createUSB3PortObject
+0xfffffe00074bed0b	%s::%s(0x%x@0x%x): AppleHPMInterface::createUSB3PortObject(@0x%x) - Error
+
+
+0xfffffe00074bed57	%s::%s(0x%x@0x%x): AppleHPMInterface::createUSB3PortObject(@0x%x) - USB3 is setup
+
+
+0xfffffe00074bedab	%s::%s(0x%x@0x%x): AppleHPMInterface::configureUSB3PortObject(@0x%x) - Changing USB3 Datarole in IOPort to fUSBDfp = 0x%x
+
+
+0xfffffe00074bee27	configureUSB3PortObject
+0xfffffe00074bee3f	%s::%s(0x%x@0x%x): AppleHPMInterface::configureUSB3PortObject(@0x%x) - USB3 added and ready
+
+
+0xfffffe00074bee9d	%s::%s(0x%x@0x%x): AppleHPMInterface::configureUSB3PortObject(@0x%x) - WARNING: USB3 notifier was not created
+
+
+0xfffffe00074bef0d	%s::%s(0x%x@0x%x): AppleHPMInterface::configureUSB3PortObject(@0x%x) - Failed to activate USB transport!
+
+
+0xfffffe00074bef78	%s::%s(0x%x@0x%x): AppleHPMInterface::configureUSB3PortObject(@0x%x) - USB3 already provisioned
+
+
+0xfffffe00074befda	%s::%s(0x%x@0x%x): AppleHPMInterface::configureUSB3PortObject(@0x%x) - Failed to activate tunneled transport, no tbthandle
+
+
+0xfffffe00074bf057	%s::%s(0x%x@0x%x): AppleHPMInterface::createPCIePortObject(@0x%x) - pcie is not setup
+
+
+0xfffffe00074bf0af	createPCIePortObject
+0xfffffe00074bf0c4	%s::%s(0x%x@0x%x): AppleHPMInterface::createPCIePortObject(@0x%x) - pcie transport allocation failed
+
+
+0xfffffe00074bf12b	%s::%s(0x%x@0x%x): AppleHPMInterface::createPCIePortObject(@0x%x) - pcie is setup
+
+
+0xfffffe00074bf17f	%s::%s(0x%x@0x%x): AppleHPMInterface::configurePCIePortObject(@0x%x) - Failed to activate tunneled transport, no tbthandle
+
+
+0xfffffe00074bf1fc	configurePCIePortObject
+0xfffffe00074bf214	%s::%s(0x%x@0x%x): AppleHPMInterface::createTBTPortObject(@0x%x) - tbt is setup
+
+
+0xfffffe00074bf266	createTBTPortObject
+0xfffffe00074bf27a	AsymmetricModeSupportedBit
+0xfffffe00074bf295	%s::%s(0x%x@0x%x): AppleHPMInterface::configureTBTPortObject(@0x%x) - Failed to activate transport!
+
+
+0xfffffe00074bf2fb	configureTBTPortObject
+0xfffffe00074bf312	%s::%s(0x%x@0x%x): AppleHPMInterface::configureTBTPortObject(@0x%x) - CIO already provisioned
+
+
+0xfffffe00074bf372	acio-parent
+0xfffffe00074bf37e	IOTBTTunnelClientInterfaceManager
+0xfffffe00074bf3a0	%s::%s(0x%x@0x%x): AppleHPMInterface::createTunnelHandles(@0x%x) - metaCast failed!
+
+
+0xfffffe00074bf3f6	createTunnelManager
+0xfffffe00074bf40a	%s::%s(0x%x@0x%x): AppleHPMInterface::createTunnelHandles(@0x%x) - Tunnel manager already exists
+
+
+0xfffffe00074bf46d	%s::%s(0x%x@0x%x): AppleHPMInterface::createTunnelHandles(@0x%x) - failed to create tunnel manager!
+
+
+0xfffffe00074bf4d3	%s::%s(0x%x@0x%x): AppleHPMInterface::createTunnelClient(@0x%x) - Client already exists for type 0x%x
+
+
+0xfffffe00074bf53b	createTunnelClient
+0xfffffe00074bf54e	%s::%s(0x%x@0x%x): AppleHPMInterface::createTunnelClient(@0x%x) - Tunnel manager does not exist, not creating
+
+
+0xfffffe00074bf5be	%s::%s(0x%x@0x%x): AppleHPMInterface::createTunnelClient(@0x%x) - Tunnel client failed for type 0x%x, index 0x%x
+
+
+0xfffffe00074bf631	%s::%s(0x%x@0x%x): AppleHPMInterface::createTunnelClientCallBacks(@0x%x) - Tunnel client call back created successfully
+
+
+0xfffffe00074bf6ab	createTunnelClientCallBacks
+0xfffffe00074bf6c7	%s::%s(0x%x@0x%x): AppleHPMInterface::createTunnelClientCallBacks(@0x%x) setStateChangeCallbackWithParams - Tunnel client call back created successfully
+
+
+0xfffffe00074bf762	%s::%s(0x%x@0x%x): AppleHPMInterface::createTunnelClientCallBacks(@0x%x) - Tunnel client does not exist!
+
+
+0xfffffe00074bf7cd	%s::%s(0x%x@0x%x): AppleHPMInterface::setupDP1Client(@0x%x) - Tunnel DP1 client does not exist!
+
+
+0xfffffe00074bf82f	setupDP1Client
+0xfffffe00074bf83e	%s::%s(0x%x@0x%x): AppleHPMInterface::setupDP2Client(@0x%x) - Tunnel DP2 client does not exist!
+
+
+0xfffffe00074bf8a0	setupDP2Client
+0xfffffe00074bf8af	%s::%s(0x%x@0x%x): AppleHPMInterface::setupDP3Client(@0x%x) - Tunnel DP3 client does not exist!
+
+
+0xfffffe00074bf911	setupDP3Client
+0xfffffe00074bf920	%s::%s(0x%x@0x%x): AppleHPMInterface::setupDP4Client(@0x%x) - Tunnel DP4 client does not exist!
+
+
+0xfffffe00074bf982	setupDP4Client
+0xfffffe00074bf991	%s::%s(0x%x@0x%x): AppleHPMInterface::setupPCIClient(@0x%x) - Tunnel PCI client does not exist!
+
+
+0xfffffe00074bf9f3	setupPCIClient
+0xfffffe00074bfa02	%s::%s(0x%x@0x%x): AppleHPMInterface::setupUSBTunnelClient(@0x%x) - Tunnel USB client does not exist!
+
+
+0xfffffe00074bfa6a	setupUSBTunnelClient
+0xfffffe00074bfa7f	%s::%s(0x%x@0x%x): AppleHPMInterface::setupUSBType2TunnelClient(@0x%x) - Tunnel USB Type2 client does not exist!
+
+
+0xfffffe00074bfaf2	setupUSBType2TunnelClient
+0xfffffe00074bfb0c	%s::%s(0x%x@0x%x): AppleHPMInterface::tunnelClientChangeWithParams(@0x%x)
+
+
+0xfffffe00074bfb58	tunnelClientChangeWithParams
+0xfffffe00074bfb75	%s::%s(0x%x@0x%x): AppleHPMInterface::tunnelClientChangeWithParams(@0x%x) with non USB Type2 object... Quiting...
+
+
+0xfffffe00074bfbe9	%s::%s(0x%x@0x%x): AppleHPMInterface::tunnelClientChangeWithParams(@0x%x) - usb Type2 client ping, Handle(%d)
+
+
+0xfffffe00074bfc59	%s::%s(0x%x@0x%x): AppleTCController::tunnelClientChangeWithParams(@0x%x) - dropping usb Type2 Handle(%d/%d)
+
+
+0xfffffe00074bfcc8	%s::%s(0x%x@0x%x): AppleHPMInterface::tunnelClientChange(@0x%x) - dp1 client ping
+
+
+0xfffffe00074bfd1c	tunnelClientChange
+0xfffffe00074bfd2f	%s::%s(0x%x@0x%x): AppleHPMInterface::tunnelClientChange(@0x%x) - dp2 client ping
+
+
+0xfffffe00074bfd83	%s::%s(0x%x@0x%x): AppleHPMInterface::tunnelClientChange(@0x%x) - dp3 client ping
+
+
+0xfffffe00074bfdd7	%s::%s(0x%x@0x%x): AppleHPMInterface::tunnelClientChange(@0x%x) - dp4 client ping
+
+
+0xfffffe00074bfe2b	%s::%s(0x%x@0x%x): AppleHPMInterface::tunnelClientChange(@0x%x) - pci client ping
+
+
+0xfffffe00074bfe7f	%s::%s(0x%x@0x%x): AppleHPMInterface::tunnelClientChange(@0x%x) - usb client ping
+
+
+0xfffffe00074bfed3	%s::%s(0x%x@0x%x): AppleHPMInterface::tunnelClientChange(@0x%x) with USB Type2 object... Quiting...
+
+
+0xfffffe00074bff39	%s::%s(0x%x@0x%x): AppleHPMInterface::setLDCMLiquidDetected(0x%x) - called with liquidDetected = 0x%x
+
+
+0xfffffe00074bffa1	setLDCMLiquidDetected
+0xfffffe00074bffb7	%s::%s(0x%x@0x%x): AppleHPMInterface::setLDCMMitigationsEnabled(0x%x) - called with mitigationsEnabled = 0x%x
+
+
+0xfffffe00074c0027	setLDCMMitigationsEnabled
+0xfffffe00074c0041	%s::%s(0x%x@0x%x): AppleHPMInterface::setLDCMUserOverrideActive(0x%x) - called with userOverrideActive = 0x%x
+
+
+0xfffffe00074c00b1	setLDCMUserOverrideActive
+0xfffffe00074c00cb	%s::%s(0x%x@0x%x): AppleHPMInterface::setLDCMState(0x%x) - called with state = 0x%x
+
+
+0xfffffe00074c0121	setLDCMState
+0xfffffe00074c012e	function-LDCMpower
+0xfffffe00074c0141	%s::%s(0x%x@0x%x): AppleHPMInterface::setLDCMState(0x%x) - Could not assign power control, returning Error
+
+
+0xfffffe00074c01ae	%s::%s(0x%x@0x%x): AppleHPMInterface::setLDCMState(0x%x) - Could not find iicProvider, returning Error
+
+
+0xfffffe00074c0217	%s::%s(0x%x@0x%x): AppleHPMInterface::setLDCMState(0x%x) - idle state ovp - %lldns, %lldns, %lldns 0x%x 0x%x
+
+
+0xfffffe00074c0286	%s::%s(0x%x@0x%x): AppleHPMInterface::setLDCMPin(0x%x) - called with pin = 0x%x
+
+
+0xfffffe00074c02d8	setLDCMPin
+0xfffffe00074c02e3	function-LDCM_Mux_Sel0
+0xfffffe00074c02fa	%s::%s(0x%x@0x%x): AppleHPMInterface::setLDCMPin(0x%x) - Could not assign muxsel0, returning Error
+
+
+0xfffffe00074c035f	%s::%s(0x%x@0x%x): AppleHPMInterface::setLDCMPin(0x%x) - Could not find iicProvider, returning Error
+
+
+0xfffffe00074c03c6	function-LDCM_Mux_Sel1
+0xfffffe00074c03dd	%s::%s(0x%x@0x%x): AppleHPMInterface::setLDCMPin(0x%x) - Could not assign muxsel1, returning Error
+
+
+0xfffffe00074c0442	%s::%s(0x%x@0x%x): AppleHPMInterface::setLDCMPin(0x%x) - ref already set, skipping
+
+
+0xfffffe00074c0497	%s::%s(0x%x@0x%x): AppleHPMInterface::setLDCMPin(0x%x) - trace already set, skipping
+
+
+0xfffffe00074c04ee	%s::%s(0x%x@0x%x): AppleHPMInterface::setLDCMPin(0x%x) - loopback already set, skipping
+
+
+0xfffffe00074c0548	%s::%s(0x%x@0x%x): AppleHPMInterface::setLDCMPin(0x%x) - already Hi-Z, skipping
+
+
+0xfffffe00074c059a	%s::%s(0x%x@0x%x): AppleHPMInterface::setLDCMPin fDebugFlags & kLDCMDebugSelectSBU:0x%x - kIOPortUSBCLDCMPinTrace case
+
+
+0xfffffe00074c0613	%s::%s(0x%x@0x%x): AppleHPMInterface::setLDCMPin(0x%x) - ACE Debug already set, skipping
+
+
+0xfffffe00074c066e	%s::%s(0x%x@0x%x): AppleHPMInterface::setLDCMPin(0x%x) - ACE Debug cannot be set. Missing boot-args.
+
+
+0xfffffe00074c06d5	%s::%s(0x%x@0x%x): AppleHPMInterface::setLDCMPin(0x%x) - unknown pin value, returning unsupported
+
+
+0xfffffe00074c0739	%s::%s(0x%x@0x%x): AppleHPMInterface::setLDCMPin(0x%x) - LDCM unsupported
+
+
+0xfffffe00074c0785	%s::%s(0x%x@0x%x): AppleHPMInterface::setLDCMPinsInternal(0x%x) - setting sel0 to 0x%x, sel1 to 0x%x
+
+
+0xfffffe00074c07ec	setLDCMPinsInternal
+0xfffffe00074c0800	%s::%s(0x%x@0x%x): AppleHPMInterface::ldcmInterruptAction(0x%x) - Start
+
+
+0xfffffe00074c084a	function-ldcmInvalid
+0xfffffe00074c085f	AAPL,phandle
+0xfffffe00074c086c	AppleHPMInterface::resolvePHandle - failed after apple,phandle
+
+0xfffffe00074c08ac	AppleHPMInterface::resolvePHandle - failed after trying to get key property
+
+0xfffffe00074c08f9	AppleHPMInterface::resolvePHandle - failed after property matching
+
+0xfffffe00074c093d	AppleHPMInterface::resolvePHandle - failed after service matching
+
+0xfffffe00074c0980	AppleHPMInterface::resolvePHandle - failed waiting for service
+
+0xfffffe00074c09c0	hpm,aid-controller
+0xfffffe00074c09d3	IOHibernateState
+0xfffffe00074c09e4	AppleHPMInterface::powerStateWillChangeTo - Waking from hibernate
+
+0xfffffe00074c0a27	%s::%s(0x%x@0x%x): AppleHPMInterface::startAnalyticsTimer(@0x%x) - called
+
+
+0xfffffe00074c0a73	startAnalyticsTimer
+0xfffffe00074c0a87	%s::%s(0x%x@0x%x): AppleHPMInterface::startAnalyticsTimer(@0x%x) - NO TIMER! ERROR
+
+
+0xfffffe00074c0adc	%s::%s(0x%x@0x%x): AppleHPMInterface::stopAnalyticsTimer(@0x%x) - called
+
+
+0xfffffe00074c0b27	stopAnalyticsTimer
+0xfffffe00074c0b3a	triggerAnalytics
+0xfffffe00074c0b4b	HChk
+0xfffffe00074c0b50	%s::%s(0x%x@0x%x): AppleHPMInterface::setupMatchingForLDCM - matcher failed to setup, no LDCM
+
+
+0xfffffe00074c0bb0	setupMatchingForLDCM
+0xfffffe00074c0bc5	%s::%s(0x%x@0x%x): AppleHPMInterface::setupMatchingForLDCM - Failed to allocate callback, LDCM wont' work properly
+
+
+0xfffffe00074c0c3a	%s::%s(0x%x@0x%x): LDCM not started, service not of AppleHPMLDCM
+
+
+0xfffffe00074c0c7d	assignLDCMHandle
+0xfffffe00074c0c8e	%s::%s(0x%x@0x%x): service and provider matched
+
+
+0xfffffe00074c0cc0	%s::%s(0x%x@0x%x): service did NOT match, belongs to different node
+
+
+0xfffffe00074c0d06	%s::%s(0x%x@0x%x): AppleHPMInterface::usbChangeNotification: kIOPortTransportState_Message_DriverStatusChange
+
+0xfffffe00074c0d75	usbChangeNotification
+0xfffffe00074c0d8b	%s::%s(0x%x@0x%x): AppleHPMInterface::driverStatusInterrupt
+
+0xfffffe00074c0dc8	driverStatusInterrupt
+0xfffffe00074c0dde	%s::%s(0x%x@0x%x): AppleHPMInterface::driverStatusInterrupt: turnOnVbus
+
+0xfffffe00074c0e27	%s::%s(0x%x@0x%x): called with tr = 0x%x dev = 0x%x opt = 0x%x
+
+
+0xfffffe00074c0e68	changeSSAMTransmitReceiver
+0xfffffe00074c0e83	%s::%s(0x%x@0x%x): Updating SSAM Connection
+
+
+0xfffffe00074c0eb1	updateSSAMConnection
+0xfffffe00074c0ec6	%s::%s(0x%x@0x%x): Updating SSAM connection with header 0x%x and data 0x%x
+
+
+0xfffffe00074c0f13	reconfigureSSAM
+0xfffffe00074c0f23	%s::%s(0x%x@0x%x): cable is captive
+
+
+0xfffffe00074c0f49	%s::%s(0x%x@0x%x): cable is not captive
+
+
+0xfffffe00074c0f73	%s::%s(0x%x@0x%x): no sop data, can't tell if captive, setting true by default
+
+
+0xfffffe00074c0fc4	USB Device Mode Forced
+0xfffffe00074c0fdb	Boot Flags
+0xfffffe00074c0fe6	FW Version
+0xfffffe00074c0ff1	IOPortTransportProtocolAppleUVDM
+0xfffffe00074c1012	%s::%s(0x%x@0x%x): AppleHPM terminating AUVDM
+
+
+0xfffffe00074c1042	handleAppleUVDMEnumUpdated
+0xfffffe00074c105d	AppleHPMInterfaceType14
+0xfffffe00074c1075	site.AppleHPMInterfaceType14
+0xfffffe00074c1092	12111112122212121111112111112122222222112211111112122111122222212222121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122222111111111111111111111111111111122222222222222221111111111111111111111111111211111112121122111111111111111111111111111111222222222222211111111111111111111111111111121111111112222222222222121222222212212112212
+0xfffffe00074c1329	%s::%s(0x%x@0x%x): AppleHPMInterfaceType14::start
+
+
+0xfffffe00074c135d	%s::%s(0x%x@0x%x): AppleHPMInterfaceType14::startRoleswapTimeoutTimer(@0x%x) - called
+
+
+0xfffffe00074c13b5	startRoleswapTimeoutTimer
+0xfffffe00074c13cf	%s::%s(0x%x@0x%x): AppleHPMInterfaceType14::stopRoleswapTimeoutTimer(@0x%x) - called
+
+
+0xfffffe00074c1426	stopRoleswapTimeoutTimer
+0xfffffe00074c143f	%s::%s(0x%x@0x%x): AppleHPMInterfaceType14::roleswapTimeoutCallback - swap waited, retrying
+
+
+0xfffffe00074c149d	roleswapTimeoutCallback
+0xfffffe00074c14b5	%s::%s(0x%x@0x%x): AppleHPMInterfaceType14::roleswapTimeoutCallback - swapping failed either rejected or cmd failure, status = 0x%x
+
+
+0xfffffe00074c153b	AppleTCControllerType12
+0xfffffe00074c1553	site.AppleTCControllerType12
+0xfffffe00074c1570	1211111212221212111111211111212222222211221111111212211112222221222212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112222211111111111111111111111111111112222222222222222111111111111111111111111111121111111212111122
+0xfffffe00074c1794	hpmMuxSet
+0xfffffe00074c179e	%s::%s(0x%x@0x%x): AppleTCControllerType12::start - Overriding mux settings 0x%x
+
+
+0xfffffe00074c17f1	forceUSB3
+0xfffffe00074c17fb	%s::%s(0x%x@0x%x): AppleTCControllerType12::start - Overriding USB3 settings 0x%x
+
+
+0xfffffe00074c184f	Mux State
+0xfffffe00074c1859	function-cio_mux
+0xfffffe00074c186a	%s::%s(0x%x@0x%x): AppleTCControllerType12::createUSB3PortObject(@0x%x) - creating usb3 port object tunnelAdapterType=%d
+
+
+0xfffffe00074c18e5	%s::%s(0x%x@0x%x): AppleTCController::createUSB3PortObject(@0x%x) - Error
+
+
+0xfffffe00074c1931	%s::%s(0x%x@0x%x): AppleTCController::createUSB3PortObject(@0x%x) - USB3 is setup
+
+
+0xfffffe00074c1985	%s::%s(0x%x@0x%x): AppleTCController::configureUSB3PortObject(@0x%x) - Changing USB3 Datarole in IOPort to fUSBDfp = 0x%x
+
+
+0xfffffe00074c1a01	%s::%s(0x%x@0x%x): AppleTCController::configureUSB3PortObject(@0x%x) - Failed to activate USB transport!
+
+
+0xfffffe00074c1a6c	%s::%s(0x%x@0x%x): AppleTCController::configureUSB3PortObject(@0x%x) - USB3 already provisioned
+
+
+0xfffffe00074c1ace	%s::%s(0x%x@0x%x): AppleTCController::configureUSB3PortObject(@0x%x) - Failed to activate tunneled transport, no tbthandle
+
+
+0xfffffe00074c1b4b	PDPowerRoleSource
+0xfffffe00074c1b5d	AppleHPMARMSPMI
+0xfffffe00074c1b6d	site.AppleHPMARMSPMI
+0xfffffe00074c1b82	12111112122212121111211212222212112111111122
+0xfffffe00074c1baf	hpmOverrideRTPC
+0xfffffe00074c1bbf	%s: Overriding RTPC timeout, setting to 0x%d ms
+
+0xfffffe00074c1bf0	virtual bool AppleHPMARMSPMI::start(IOService *)
+0xfffffe00074c1c21	%s: default RTPC timeout, setting to 0x%d ms
+
+0xfffffe00074c1c4f	hpmRTPCDisable
+0xfffffe00074c1c5e	HPM RTPC Enabled
+0xfffffe00074c1c6f	HPM In RTPC
+0xfffffe00074c1c7b	%s: Disabling RTPC
+
+0xfffffe00074c1c8f	AppleHPMARMSPMI::start - Missing interrupt-type property, doing legacy interrupt handling, no SPMI sleep/wake support
+
+0xfffffe00074c1d06	AppleHPMARMSPMI::start - Missing interrupt property, Check the EDT, AppleHPM will not be fully functional
+
+0xfffffe00074c1d71	AppleHPMARMSPMI::start - interrupt-type and interrupts not equal length, things will not work. No SPMI slee/wake support
+
+0xfffffe00074c1deb	AppleHPMARMSPMI::start - interrupt-type isn't 32-byte aligned no interrupts at all.
+
+0xfffffe00074c1e40	AppleHPMARMSPMI::start - failed to register sleep event int
+
+0xfffffe00074c1e7d	AppleHPMARMSPMI::start - failed to register wake event int
+
+0xfffffe00074c1eb9	AppleHPMARMSPMI::start - RTPC disabled due to missing events or timers
+
+0xfffffe00074c1f01	AppleHPMARMSPMI::writeIECSReg - 0x%X exceeding max length of 64
+
+0xfffffe00074c1f42	AppleHPMARMSPMI::readIECSReg - 0x%X exceeding max length of 64
+
+0xfffffe00074c1f82	AppleHPMARMSPMI::writeRegs - Transaction aborted due to SPMI Driver sleeping
+
+0xfffffe00074c1fd0	AppleHPMARMSPMI::readRegs - WARNING: Actual register length for addr 0x%x is shorter than expected, expected 0x%x, IECS returned 0x%x
+
+0xfffffe00074c2057	AppleHPMARMSPMI::readRegs - Transaction aborted due to SPMI Driver sleeping
+
+0xfffffe00074c20a4	usbc,sn201202x,spmi
+0xfffffe00074c20b8	usbc,cbtl1702,spmi
+0xfffffe00074c20cb	acc-hal-type
+0xfffffe00074c20d8	hpm-exit-dfu
+0xfffffe00074c20e5	ADFU
+0xfffffe00074c20ea	AppleHPMARMSPMI::sendHPMReset(@0x%x) - Workaround entry found, resetting port
+
+0xfffffe00074c213d	AppleHPMARMSPMI::sendHPMReset(@0x%x) - Workaround successful, out of ADFU
+
+0xfffffe00074c2188	Mode after GAID
+0xfffffe00074c2198	RTPC disabled due to spmi acks
+0xfffffe00074c21b7	AppleHPMARMSPMI::failureRegisterDump - Mode = 0x%x 0x%x 0x%x 0x%x
+
+0xfffffe00074c21fa	AppleHPMARMSPMI::failureRegisterDump - [Reg 0x2d] = 0x%x 0x%x 0x%x 0x%x
+
+0xfffffe00074c2243	AppleTCControllerType10
+0xfffffe00074c225b	site.AppleTCControllerType10
+0xfffffe00074c2278	%s::%s(0x%x@0x%x): AppleTCControllerType10::start
+
+
+0xfffffe00074c22ac	USB PID
+0xfffffe00074c22b4	%s::%s(0x%x@0x%x): AppleTCControllerType10::start(@0x%x) - no command gate
+
+
+0xfffffe00074c2301	%s::%s(0x%x@0x%x): AppleTCControllerType10::poweredStart(@0x%x) - start
+
+
+0xfffffe00074c234b	%s::%s(0x%x@0x%x): AppleTCControllerType10::forcePortEvaluation(@0x%x) - Start
+
+
+0xfffffe00074c239c	%s::%s(0x%x@0x%x): AppleTCControllerType10::forcePortEvaluation(@0x%x) - Defer failed, interrupts and messages may not have been sent
+
+
+0xfffffe00074c2424	%s::%s(0x%x@0x%x): AppleTCControllerType10::startUSBTimer(@0x%x) - called
+
+
+0xfffffe00074c2470	%s::%s(0x%x@0x%x): AppleTCControllerType10::stopUSBTimer(@0x%x) - called
+
+
+0xfffffe00074c24bb	%s::%s(0x%x@0x%x): AppleTCControllerType10::tUSBTimeout(@0x%x) - called
+
+
+0xfffffe00074c2505	%s::%s(0x%x@0x%x): AppleTCControllerType10::tUSBTimeout(@0x%x) - Waiting for USB Timedout After 10 seconds
+
+
+0xfffffe00074c2572	%s::%s(0x%x@0x%x): AppleTCControllerType10::starttAMETimeoutTimer(@0x%x) - called
+
+
+0xfffffe00074c25c6	%s::%s(0x%x@0x%x): AppleTCControllerType10::stoptAMETimeoutTimer(@0x%x) - called
+
+
+0xfffffe00074c2619	%s::%s(0x%x@0x%x): AppleTCControllerType10::tAMETimeout(@0x%x) - called
+
+
+0xfffffe00074c2663	%s::%s(0x%x@0x%x): AppleTCControllerType10::forceUSB23On(@0x%x) - force usb23 on, setting fWaitingForUSB to true
+
+
+0xfffffe00074c26d6	%s::%s(0x%x@0x%x): AppleTCControllerType10::forceUSB23On(@0x%x) - advertise unplug
+
+
+0xfffffe00074c272b	%s::%s(0x%x@0x%x): AppleTCControllerType10::turnOnVbus(0x%x) - setting fWaitingForUSB to false
+
+
+0xfffffe00074c278c	AppleTCControllerType10::overrideHPMMode -- enforce=%d, keepRoleAndOrientation=%d, dataStatus=%u, status=%u
+
+0xfffffe00074c27f9	%s::%s(0x%x@0x%x): AppleTCController::configureUSBRemoteWakeup(@0x%x) - Called with args 0x%x
+
+
+0xfffffe00074c2859	AppleHCPM
+0xfffffe00074c2863	site.AppleHCPM
+0xfffffe00074c2872	1211111212221212111121121222221
+0xfffffe00074c2892	%x.%x.%x
+0xfffffe00074c289b	*%x.%x.%x
+0xfffffe00074c28a5	E%x.%x.%x
+0xfffffe00074c28af	*E%x.%x.%x
+0xfffffe00074c28ba	BLVersion
+0xfffffe00074c28c4	App1Version
+0xfffffe00074c28d0	App2Version
+0xfffffe00074c28df	Unsupported emulation register 0x%x
+
+0xfffffe00074c2904	AppleHCPM::hpmCmdWrite@ %d -- cmd 0x%x not implemented
+
+0xfffffe00074c293c	AppleTCControllerType14
+0xfffffe00074c2954	site.AppleTCControllerType14
+0xfffffe00074c2971	%s::%s(0x%x@0x%x): AppleTCControllerType14::start
+
+
+0xfffffe00074c29a5	%s::%s(0x%x@0x%x): AppleTCControllerType14::hpmInterruptAction(@0x%x) - Interrupt Recieved
+
+
+0xfffffe00074c2a02	%s::%s(0x%x@0x%x): AppleTCControllerType14::processInterruptEvents(@0x%x) - Start
+
+
+0xfffffe00074c2a56	%s::%s(0x%x@0x%x): AppleTCControllerType14::processInterruptEvents(@0x%x) - interrupts = 0x%x 0x%x 0x%x
+
+
+0xfffffe00074c2ac0	%s::%s(0x%x@0x%x): AppleTCController::processInterruptEvents(@0x%x) - AppLoaded, reinit
+
+
+0xfffffe00074c2b1a	%s::%s(0x%x@0x%x): AppleTCController::processInterruptEvents(@0x%x) - Processing interrupt buffer
+
+
+0xfffffe00074c2b7e	%s::%s(0x%x@0x%x): AppleTCController::processInterruptEvents(@0x%x) - Not notifying drivers of state, fRestore = 0x%x and interruptCountAppLoaded = 0x%x
+
+
+0xfffffe00074c2c19	%s::%s(0x%x@0x%x): AppleTCController::processInterruptEvents(@0x%x) - status or datastatus set, process registers
+
+
+0xfffffe00074c2c8d	%s::%s(0x%x@0x%x): AppleTCController::processInterruptEvents(@0x%x) - Adjusting HPM power state to active
+
+
+0xfffffe00074c2cf9	%s::%s(0x%x@0x%x): AppleTCController::processInterruptEvents(@0x%x) - Adjusting HPM power state to active unplugged
+
+
+0xfffffe00074c2d6f	%s::%s(0x%x@0x%x): AppleTCController::processInterruptEvents(@0x%x) - Adjusting HPM power state to sleep
+
+
+0xfffffe00074c2dda	AppleHPMInterfaceType18
+0xfffffe00074c2df2	site.AppleHPMInterfaceType18
+0xfffffe00074c2e0f	1211111212221212111111211111212222222211221111111212211112222221222212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112212112222211111111111111111111111111111112222222222222222111111111111111111111111111121111111212112211111111111111111111111111111122222222222221111111111111111111111111111112111111111222222222222212122222221221211222222222221
+0xfffffe00074c30ae	%s::%s(0x%x@0x%x): AppleHPMInterfaceType18::start
+
+
+0xfffffe00074c30e2	%s::%s(0x%x@0x%x): AppleHPMInterfaceType18::start(@0x%x) - no command gate
+
+
+0xfffffe00074c312f	%s::%s(0x%x@0x%x): AppleHPMInterfaceType18::poweredStart(@0x%x) - start
+
+
+0xfffffe00074c3179	%s::%s(0x%x@0x%x): AppleHPMInterfaceType18::setInterruptMask(@0x%x) - start
+
+
+0xfffffe00074c31c7	%s::%s(0x%x@0x%x): AppleHPMInterfaceType18::processInterruptEvents(@0x%x) - Start
+
+
+0xfffffe00074c321b	DP Port Hint
+0xfffffe00074c3228	PortNumber
+0xfffffe00074c3233	%s::%s(0x%x@0x%x): portNum:%u, isDFP:%u, active:%u, dpModeActive:%u, dpSID_SOPp:%u, dpMode:0x%x, dpTRX:0x%x
+
+
+0xfffffe00074c32a1	processDPSIDStatusRegister
+0xfffffe00074c32bc	%s::%s(0x%x@0x%x): portNum:%u, soppNumValid:0x%x, productType:0x%x, usbSpeed:0x%x
+
+
+0xfffffe00074c3310	%s::%s(0x%x@0x%x): portNum:%u, isDFP:%u, dpTRX:0x%x
+
+
+0xfffffe00074c3346	%s::%s(0x%x@0x%x): AppleHPMInterface::startCableDiscoveryTimeoutTimer(@0x%x) - called
+
+
+0xfffffe00074c339e	startCableDiscoveryTimeoutTimer
+0xfffffe00074c33be	%s::%s(0x%x@0x%x): AppleHPMInterface::startCableDiscoveryTimeoutTimer(@0x%x) - NO TIMER! ERROR
+
+
+0xfffffe00074c341f	%s::%s(0x%x@0x%x): AppleHPMInterface::stopCableDiscoveryTimeoutTimer(@0x%x) - called
+
+
+0xfffffe00074c3476	stopCableDiscoveryTimeoutTimer
+0xfffffe00074c3495	%s::%s(0x%x@0x%x): AppleHPMInterfaceType18::tCableDiscoveryTimeoutCallback(@0x%x) - called
+
+
+0xfffffe00074c34f2	tCableDiscoveryTimeoutCallback
+0xfffffe00074c3511	AppleTCControllerType2
+0xfffffe00074c3528	site.AppleTCControllerType2
+0xfffffe00074c3544	12111112122212121111112111112122222222112211111112122111122222212222121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122222111111111111111111111111111111122222222222222221111111111111111111111111111211111112121111212
+0xfffffe00074c3769	function-mux_flip_front
+0xfffffe00074c3781	%s::%s(0x%x@0x%x): AppleTCControllerType2::configureDP(@0x%x) - muxing to front
+
+
+0xfffffe00074c37d3	function-mux_flip_back
+0xfffffe00074c37ea	%s::%s(0x%x@0x%x): AppleTCControllerType2::configureDP(@0x%x) - muxing to back
+
+
+0xfffffe00074c383b	AppleHPMInterfaceType15
+0xfffffe00074c3853	site.AppleHPMInterfaceType15
+0xfffffe00074c3870	121111121222121211111121111121222222221122111111121221111222222122221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211222221111111111111111111111111111111222222222222222211111111111111111111111111112111111121211221111111111111111111111111111112222222222222111111111111111111111111111111211111111122222222222221212222222122121122122
+0xfffffe00074c3b08	%s::%s(0x%x@0x%x): AppleHPMInterfaceType15::start
+
+
+0xfffffe00074c3b3c	%s::%s(0x%x@0x%x): AppleHPMInterfaceType15::startRoleswapTimeoutTimer(@0x%x) - called
+
+
+0xfffffe00074c3b94	%s::%s(0x%x@0x%x): AppleHPMInterfaceType15::stopRoleswapTimeoutTimer(@0x%x) - called
+
+
+0xfffffe00074c3beb	%s::%s(0x%x@0x%x): AppleHPMInterfaceType15::roleswapTimeoutCallback - swap waited, retrying
+
+
+0xfffffe00074c3c49	%s::%s(0x%x@0x%x): AppleHPMInterfaceType15::roleswapTimeoutCallback - swapping failed either rejected or cmd failure, status = 0x%x
+
+
+0xfffffe00074c3ccf	%s::%s(0x%x@0x%x): AppleHPMInterfaceType15::repeaterReset(@0x%x) - Called with target 0x%x
+
+
+0xfffffe00074c3d2c	AppleHPMInterfaceType3
+0xfffffe00074c3d43	site.AppleHPMInterfaceType3
+0xfffffe00074c3d5f	12111112122212121111112111112122222222112211111112122111122222212222121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122222111111111111111111111111111111122222222222222221111111111111111111111111111211111112121122111111111111111111111111111111222222222222211111111111111111111111111111121111111112222222222222121222222212212112112
+0xfffffe00074c3ff6	%s::%s(0x%x@0x%x): AppleHPMInterfaceType3::start
+
+
+0xfffffe00074c4029	%s::%s(0x%x@0x%x): AppleHPMInterfaceType3::startRoleswapTimeoutTimer(@0x%x) - called
+
+
+0xfffffe00074c4080	%s::%s(0x%x@0x%x): AppleHPMInterfaceType3::stopRoleswapTimeoutTimer(@0x%x) - called
+
+
+0xfffffe00074c40d6	%s::%s(0x%x@0x%x): AppleHPMInterfaceType3::roleswapTimeoutCallback - swap waited, retrying
+
+
+0xfffffe00074c4133	%s::%s(0x%x@0x%x): AppleHPMInterfaceType3::roleswapTimeoutCallback - swapping failed either rejected or cmd failure, status = 0x%x
+
+
+0xfffffe00074c41b8	AppleTCController
+0xfffffe00074c41ca	site.AppleTCController
+0xfffffe00074c41e1	121111121222121211111121111121222222221122111111121221111222222122221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211222221111111111111111111111111111111222222222222222211111111111111111111111111112111111121211
+0xfffffe00074c4401	%s::%s(0x%x@0x%x): AppleTCController::start(@0x%x) - Start
+
+
+0xfffffe00074c443e	%s::%s(0x%x@0x%x): AppleTCController::genericStart(@0x%x) - Start
+
+
+0xfffffe00074c4482	%s::%s(0x%x@0x%x): AppleTCController::genericStart(@0x%x) - Enabling Debug, Flags = 0x%x
+
+
+0xfffffe00074c44dd	%s::%s(0x%x@0x%x): AppleTCController::genericStart(@0x%x) - ***allow usb3 restores: %u***
+
+
+0xfffffe00074c4539	%s::%s(0x%x@0x%x): AppleTCController::genericStart(@0x%x) - disable USBPD SOP nub publishing set 0x%X
+
+
+0xfffffe00074c45a1	%s::%s(0x%x@0x%x): AppleTCController::genericStart(@0x%x) - disable USBPD SOPp nub publishing set 0x%X
+
+
+0xfffffe00074c460a	%s::%s(0x%x@0x%x): AppleTCController::genericStart(@0x%x) - In Restore
+
+
+0xfffffe00074c4653	%s::%s(0x%x@0x%x): AppleTCController::genericStart(@0x%x) - Allow unplugs when in ForceUpdateMode
+
+
+0xfffffe00074c46b7	%s::%s(0x%x@0x%x): AppleTCController::genericStart(@0x%x) - Force allow USB3
+
+
+0xfffffe00074c4706	%s::%s(0x%x@0x%x): AppleTCController::genericStart(@0x%x) - IONVRAM check failed
+
+
+0xfffffe00074c4759	%s::%s(0x%x@0x%x): AppleTCController::genericStart(@0x%x) - In OTA
+
+
+0xfffffe00074c479e	%s::%s(0x%x@0x%x): AppleTCController::genericStart - HPMV1
+
+
+0xfffffe00074c47db	%s::%s(0x%x@0x%x): AppleTCController::genericStart - Super failed to start
+
+
+0xfffffe00074c4828	%s::%s(0x%x@0x%x): AppleTCController::commonStartPhase2 - Failed to create fDriverStatusInterrupt
+
+
+0xfffffe00074c488c	%s::%s(0x%x@0x%x): AppleTCController::genericStart(@0x%x) - CC transport failed!
+
+
+0xfffffe00074c48df	%s::%s(0x%x@0x%x): AppleTCController::genericStart - failed to match on dock
+
+
+0xfffffe00074c492e	%s::%s(0x%x@0x%x): AppleTCController::genericStart - Failed to get dockPhandle
+
+
+0xfffffe00074c497f	%s::%s(0x%x@0x%x): AppleTCController::genericStart - Failed to get interrupt provider
+
+
+0xfffffe00074c49d7	%s::%s(0x%x@0x%x): AppleTCController::initInterruptManager - Failed to get workloop
+
+
+0xfffffe00074c4a2d	%s::%s(0x%x@0x%x): AppleTCController::initInterruptManager - Failed to get command gate
+
+
+0xfffffe00074c4a87	%s::%s(0x%x@0x%x): AppleTCController::initInterruptManager - LDCM not started, setting up matcher
+
+
+0xfffffe00074c4aeb	%s::%s(0x%x@0x%x): AppleTCController::initSingleHPM - Failed to get i2c provider
+
+
+0xfffffe00074c4b3e	%s::%s(0x%x@0x%x): AppleTCController::initSingleHPM - failed to match on dock
+
+
+0xfffffe00074c4b8e	%s::%s(0x%x@0x%x): AppleTCController::initSingleHPM - Failed to get dockPhandle
+
+
+0xfffffe00074c4be0	%s::%s(0x%x@0x%x): AppleTCController::initSingleHPM - Failed to get workloop
+
+
+0xfffffe00074c4c2f	%s::%s(0x%x@0x%x): AppleTCController::initSingleHPM - Failed to get command gate
+
+
+0xfffffe00074c4c82	%s::%s(0x%x@0x%x): AppleTCController::initSingleHPM - Missing interrupt-type property, doing legacy interrupt handling, no SPMI sleep/wake support
+
+
+0xfffffe00074c4d17	%s::%s(0x%x@0x%x): AppleTCController::initSingleHPM - Missing interrupt property, Check the EDT, AppleHPM will not be fully functional
+
+
+0xfffffe00074c4da0	%s::%s(0x%x@0x%x): AppleTCController::initSingleHPM - interrupt-type and interrupts not equal length, things will not work. No SPMI slee/wake support
+
+
+0xfffffe00074c4e38	%s::%s(0x%x@0x%x): AppleTCController::initSingleHPM - interrupt-type isn't 32-byte aligned no interrupts at all.
+
+
+0xfffffe00074c4eab	%s::%s(0x%x@0x%x): AppleTCController::initSingleHPM - LDCM not started, setting up matcher
+
+
+0xfffffe00074c4f08	%s::%s(0x%x@0x%x): AppleTCController::setupPowerManagement(@0x%x) - Power registration failed! with status = 0x%x
+
+
+0xfffffe00074c4f7c	%s::%s(0x%x@0x%x): AppleTCController::getManagerType(@0x%x) - ERROR: _armHPMNub doesn't exist!
+
+
+0xfffffe00074c4fdd	%s::%s(0x%x@0x%x): AppleTCController::getTransportEnabled(@0x%x) - Called for transporttype 0x%x
+
+
+0xfffffe00074c5040	%s::%s(0x%x@0x%x): AppleTCController::handleAccessoryDetect(@0x%x) - Start
+
+
+0xfffffe00074c508d	%s::%s(0x%x@0x%x): AppleTCController::setAccessoryID(@0x%x) - Start
+
+
+0xfffffe00074c50d3	%s::%s(0x%x@0x%x): AppleTCController::setAccessoryID(@0x%x) - Status = 0x%x accessoryID = 0x%x
+
+
+0xfffffe00074c5134	%s::%s(0x%x@0x%x): AppleTCController::hpmInterruptAction(@0x%x) - Interrupt Recieved
+
+
+0xfffffe00074c518b	%s::%s(0x%x@0x%x): AppleTCController::getSecondaryMuxConfig(@0x%x) - start
+
+
+0xfffffe00074c51d8	%s::%s(0x%x@0x%x): AppleTCController::setInterruptMask(@0x%x) - start
+
+
+0xfffffe00074c5220	%s::%s(0x%x@0x%x): AppleTCController::getAndClearInterrupt(@0x%x) - start
+
+
+0xfffffe00074c526c	getAndClearInterrupt
+0xfffffe00074c5281	%s::%s(0x%x@0x%x): AppleTCController::processInterruptEvents(@0x%x) - Start
+
+
+0xfffffe00074c52cf	%s::%s(0x%x@0x%x): AppleTCController::processInterruptEvents(@0x%x) - interrupts = 0x%x 0x%x 0x%x
+
+
+0xfffffe00074c5333	%s::%s(0x%x@0x%x): AppleTCControllerType::processStatusRegisters(@0x%x) - exiting tametimeout early
+
+
+0xfffffe00074c5399	%s::%s(0x%x@0x%x): AppleTCController::processStatusRegisters(@0x%x) - advertise unplug
+
+
+0xfffffe00074c53f2	%s::%s(0x%x@0x%x): AppleTCController::processStatusRegisters(@0x%x) - fWaitingForUSB = 0x%x, fOverrideHPMMode = 0x%x
+
+
+0xfffffe00074c5469	%s::%s(0x%x@0x%x): AppleTCController::setCurrentModeFlags(@0x%x) - Process data and status register
+
+
+0xfffffe00074c54cf	%s::%s(0x%x@0x%x): AppleTCController::setCurrentModeFlags(@0x%x) - forcing usb2 + ufp for debug
+
+
+0xfffffe00074c5531	%s::%s(0x%x@0x%x): AppleTCController::setCurrentModeFlags(@0x%x) - OTA upgrade check
+
+
+0xfffffe00074c5588	%s::%s(0x%x@0x%x): AppleTCController::setCurrentModeFlags(@0x%x) - Removing port forcing and clearing flags, fisOTA = 0x%x, fRestore = 0x%x
+
+
+0xfffffe00074c5616	%s::%s(0x%x@0x%x): AppleTCController::setCurrentModeFlags(@0x%x) - Assuming forced DFU, fRestore = 0x%x
+
+
+0xfffffe00074c5680	%s::%s(0x%x@0x%x): AppleTCController::setCurrentModeFlags(@0x%x) - ***Mode changed to UFPf, boot-arg likely, fRestore = 0x%x***
+
+
+0xfffffe00074c5702	%s::%s(0x%x@0x%x): AppleTCController::setCurrentModeFlags(@0x%x) - No plug detected, all flags cleared
+
+
+0xfffffe00074c576b	%s::%s(0x%x@0x%x): AppleTCController::processModeFlags(0x%x) - Kart mode looks ok, sending message
+
+
+0xfffffe00074c57d0	%s::%s(0x%x@0x%x): AppleTCController::processModeFlags(0x%x) - Kart mode skipping message due to forced disconnect
+
+
+0xfffffe00074c5845	%s::%s(0x%x@0x%x): AppleTCController::sendDpStatusUpdates(@0x%x) - HPD = %i
+
+
+0xfffffe00074c5893	%s::%s(0x%x@0x%x): AppleTCController::sendDpStatusUpdates(@0x%x) - IRQ = %i
+
+
+0xfffffe00074c58e1	%s::%s(0x%x@0x%x): AppleTCController::clearDpIRQ(@0x%x) - clearing DP IRQ
+
+0xfffffe00074c592c	%s::%s(0x%x@0x%x): AppleTCController::clearDpIRQ(@0x%x) - clearing DP IRQ failed, no memory
+
+0xfffffe00074c5989	%s::%s(0x%x@0x%x): AppleTCController::resetDataControl(@0x%x)
+
+
+0xfffffe00074c59c9	%s::%s(0x%x@0x%x): AppleTCController::resetDataControl(@0x%x) - clearing Data Control
+
+0xfffffe00074c5a20	%s::%s(0x%x@0x%x): AppleTCController::setPowerState(@0x%x) = Setting power state to 0x%x
+
+
+0xfffffe00074c5a7b	%s::%s(0x%x@0x%x): AppleTCController::setPowerState(@0x%x) - Status != Success, setPowerStateHPM failed!
+
+
+0xfffffe00074c5ae6	%s::%s(0x%x@0x%x): AppleTCController::setPowerStateHPM(@0x%x) = Setting power state to 0x%x
+
+
+0xfffffe00074c5b44	%s::%s(0x%x@0x%x): AppleTCController::setPowerStateHPM(@0x%x) - SSPS executed, status = 0x%x
+
+
+0xfffffe00074c5ba3	%s::%s(0x%x@0x%x): AppleTCController::setPowerStateHPM(@0x%x) - SSPS transition to 0x%x skipped, waiting for USB
+
+
+0xfffffe00074c5c16	%s::%s(0x%x@0x%x): AppleTCController::forcePortEvaluation(@0x%x) - Start
+
+
+0xfffffe00074c5c61	%s::%s(0x%x@0x%x): AppleTCController::readReg(@0x%x) - Reading 0x%x with Length of 0x%x
+
+
+0xfffffe00074c5cbb	%s::%s(0x%x@0x%x): AppleTCController::readReg(@0x%x) - Timed out with retries = 0x%x
+
+
+0xfffffe00074c5d12	%s::%s(0x%x@0x%x): AppleTCController::readReg(@0x%x) - Read completed after 0x%x retries
+
+
+0xfffffe00074c5d6d	%s::%s(0x%x@0x%x): AppleTCController::readRegWithLength(@0x%x) - Reading 0x%x with Length of 0x%x
+
+
+0xfffffe00074c5dd1	%s::%s(0x%x@0x%x): AppleTCController::readRegWithLength(@0x%x) - Timed out with retries = 0x%x
+
+
+0xfffffe00074c5e32	%s::%s(0x%x@0x%x): AppleTCController::readRegWithLength(@0x%x) - Read completed after 0x%x retries
+
+
+0xfffffe00074c5e97	%s::%s(0x%x@0x%x): AppleTCController::writeReg(@0x%x) - Writing to register 0x%x with Data %s
+
+
+0xfffffe00074c5ef7	%s::%s(0x%x@0x%x): AppleTCController::execute4Cc(@0x%x) - 4cc = %s
+
+
+0xfffffe00074c5f3c	%s::%s(0x%x@0x%x): AppleTCController::setPinConfiguration(@0x%x) - ERROR INVALID PIN CONFIG FOR DP MULTIFUNCTION
+
+
+0xfffffe00074c5faf	%s::%s(0x%x@0x%x): AppleTCController::setPinConfiguration(@0x%x) - No pin config set, no data connection
+
+
+0xfffffe00074c601a	%s::%s(0x%x@0x%x): AppleTCController::setPinConfiguration(@0x%x) - Could not reconfigure pin configuration dictionary
+
+
+0xfffffe00074c6092	%s::%s(0x%x@0x%x): AppleTCController::callPlatformFunction(0x%x) - prst called with 0, setting it to 1
+
+
+0xfffffe00074c60fb	%s::%s(0x%x@0x%x): AppleTCController::callPlatformFunction(0x%x) - prst called with 1, setting it to 2
+
+
+0xfffffe00074c6164	%s::%s(0x%x@0x%x): AppleTCController::callPlatformFunction(0x%x) - prst called with 255, setting it to 0
+
+
+0xfffffe00074c61cf	%s::%s(0x%x@0x%x): AppleTCController::callPlatformFunction(0x%x) - prst called with 0x%x, which is unknown, not executing reset
+
+
+0xfffffe00074c6251	%s::%s(0x%x@0x%x): AppleTCController::callPlatformFunction(0x%x) - prst called no valid data
+
+
+0xfffffe00074c62b0	%s::%s(0x%x@0x%x): AppleTCController::callPlatformFunction(0x%x) - exit called with %d
+
+
+0xfffffe00074c6309	%s::%s(0x%x@0x%x): AppleTCController::callPlatformFunction(0x%x) - exit called no valid data
+
+
+0xfffffe00074c6368	%s::%s(0x%x@0x%x): AppleTCController:callPlatformFunction(0x%x) - setSleepState called with %d
+
+
+0xfffffe00074c63c9	%s::%s(0x%x@0x%x): AppleTCController:callPlatformFunction(0x%x) - setSleepState called with no valid data
+
+
+0xfffffe00074c6435	%s::%s(0x%x@0x%x): AppleTCController::repeaterReset(@0x%x) - Called with target 0x%x
+
+
+0xfffffe00074c648c	%s::%s(0x%x@0x%x): AppleTCController::usbDataMonitor(@0x%x) - No orientation function
+
+
+0xfffffe00074c64e4	%s::%s(0x%x@0x%x): AppleTCController::usbDataMonitor(@0x%x) - No data monitor function
+
+
+0xfffffe00074c653d	%s::%s(0x%x@0x%x): AppleTCController::usbDataDetect(@0x%x) - No orientation function
+
+
+0xfffffe00074c6594	%s::%s(0x%x@0x%x): AppleTCController::usbDataDetect(@0x%x) - No data monitor function
+
+
+0xfffffe00074c65ec	%s::%s(0x%x@0x%x): AppleTCController::usbDataConnect(@0x%x) - No orientation function
+
+
+0xfffffe00074c6644	%s::%s(0x%x@0x%x): AppleTCController::usbDataConnect(@0x%x) - No data connect function
+
+
+0xfffffe00074c669d	%s::%s(0x%x@0x%x): AppleTCController::disablePort(@0x%x) - port disable aborted, length of buffers wrong
+
+
+0xfffffe00074c6708	%s::%s(0x%x@0x%x): AppleTCController::exitPDMode(@0x%x) - DRST complete - status = 0x%08x
+
+
+0xfffffe00074c6764	%s::%s(0x%x@0x%x): AppleTCController::printConnectedTransports(@0x%x) - setting %s %s %s | %s | %s, %s | as connected
+
+
+0xfffffe00074c67dc	%s::%s(0x%x@0x%x): AppleTCController::configureRecoveryStatus(@0x%x) - Driving Low
+
+
+0xfffffe00074c6831	%s::%s(0x%x@0x%x): AppleTCController::configureRecoveryStatus(@0x%x) - EDT entry not found
+
+
+0xfffffe00074c688e	%s::%s(0x%x@0x%x): AppleTCController::rtPanicHandler(@0x%x) - RT panic, incrementing count
+
+
+0xfffffe00074c68eb	%s::%s(0x%x@0x%x): AppleTCController::rtPanicHandler(@0x%x) - Byte 0 of register 0x5d = 0x%x
+
+
+0xfffffe00074c694a	%s::%s(0x%x@0x%x): AppleTCController::enableOptions(0x%x) - enabling kart
+
+
+0xfffffe00074c6996	%s::%s(0x%x@0x%x): AppleTCController::enableOptions(0x%x) - Kart mode looks ok, sending message
+
+
+0xfffffe00074c69f8	%s::%s(0x%x@0x%x): AppleTCController::enableOptions(0x%x) - Kart mode skipping message due to forced disconnect
+
+
+0xfffffe00074c6a6a	%s::%s(0x%x@0x%x): AppleTCController::enableOptions(0x%x) - kart already enabled
+
+
+0xfffffe00074c6abd	%s::%s(0x%x@0x%x): AppleTCController::isDeviceKartCapable(0x%x) - valid sop entries %x
+
+
+0xfffffe00074c6b16	%s::%s(0x%x@0x%x): AppleTCController::isDeviceKartCapable(0x%x) - returning %x
+
+
+0xfffffe00074c6b67	%s::%s(0x%x@0x%x): AppleTCController::isCableKartCapable(0x%x) - role is wrong, issuing discovery on sop'
+
+
+0xfffffe00074c6bd3	%s::%s(0x%x@0x%x): AppleTCController::isCableKartCapable(0x%x) - valid sop' entries = %x
+
+
+0xfffffe00074c6c2e	%s::%s(0x%x@0x%x): AppleTCController::isCableKartCapable - sopp valid >=  4 actual = 0x%x cableType = 0x%x
+
+
+0xfffffe00074c6c9b	%s::%s(0x%x@0x%x): AppleTCController::isCableKartCapable(0x%x) - passive cable detected
+
+
+0xfffffe00074c6cf5	%s::%s(0x%x@0x%x): AppleTCController::isCableKartCapable(0x%x) - active cable detected
+
+
+0xfffffe00074c6d4e	%s::%s(0x%x@0x%x): AppleTCController::isCableKartCapable(0x%x) - returning %x
+
+
+0xfffffe00074c6d9e	%s::%s(0x%x@0x%x): AppleTCController::challengeCrypto(@0x%x) - Start hpmv1 = 0x%x
+
+
+0xfffffe00074c6df2	%s::%s(0x%x@0x%x): AppleTCController::challengeCrypto(@0x%x) - Starting HPMV2 execution
+
+
+0xfffffe00074c6e4c	%s::%s(0x%x@0x%x): AppleTCController::challengeCrypto(@0x%x) - HPMV2 buffer[0] = 0x%08x
+
+
+0xfffffe00074c6ea6	%s::%s(0x%x@0x%x): AppleTCController::challengeCrypto(@0x%x) - Warning: truncating input, length is too long
+
+
+0xfffffe00074c6f15	%s::%s(0x%x@0x%x): AppleTCController::challengeCrypto(@0x%x) - Warning: CRYm returned !CMD, aborting
+
+
+0xfffffe00074c6f7c	%s::%s(0x%x@0x%x): AppleTCController::challengeCrypto(@0x%x) - CRYm exeucted and took ~%u ms
+
+
+0xfffffe00074c6fdb	%s::%s(0x%x@0x%x): AppleTCController::challengeCrypto(@0x%x) - CRYm aborting after ~%u ms
+
+
+0xfffffe00074c7037	%s::%s(0x%x@0x%x): AppleTCController::challengeCrypto(@0x%x) - Warning: CRYm timed out after ~%u, aborting
+
+
+0xfffffe00074c70a4	%s::%s(0x%x@0x%x): AppleTCController::challengeCrypto(@0x%x) - Aborting due to previous errors
+
+
+0xfffffe00074c7105	%s::%s(0x%x@0x%x): AppleTCController::challengeCrypto(@0x%x) - Warning: Failed reading data with status = 0x%x, aborting
+
+
+0xfffffe00074c7180	%s::%s(0x%x@0x%x): AppleTCController::challengeCrypto(@0x%x) - Warning: Unexpected command retval 0x%x, returning invalid
+
+
+0xfffffe00074c71fc	%s::%s(0x%x@0x%x): AppleTCController::challengeCrypto(@0x%x) - HPMV1 crypto called
+
+
+0xfffffe00074c7251	%s::%s(0x%x@0x%x): AppleTCController::challengeCrypto(@0x%x) - HPMV1 locating function
+
+
+0xfffffe00074c72aa	%s::%s(0x%x@0x%x): AppleTCController::challengeCrypto(@0x%x) - HPMV1 Function NOT found, non-fatal
+
+
+0xfffffe00074c730f	%s::%s(0x%x@0x%x): AppleTCController::challengeCrypto(@0x%x) - HPMV1 function located
+
+
+0xfffffe00074c7367	%s::%s(0x%x@0x%x): AppleTCController::challengeCrypto(@0x%x) - HPMV1 function handle found, executing
+
+
+0xfffffe00074c73cf	%s::%s(0x%x@0x%x): AppleTCController::challengeCrypto(@0x%x) - HPMV1 function handle NOT found
+
+
+0xfffffe00074c7430	%s::%s(0x%x@0x%x): AppleTCController::createDPPortObject(@0x%x) - dp is not setup
+
+
+0xfffffe00074c7484	%s::%s(0x%x@0x%x): AppleTCController::createDPPortObject(@0x%x) - dp transport allocation failed
+
+
+0xfffffe00074c74e7	%s::%s(0x%x@0x%x): AppleTCController::createDPPortObject(@0x%x) - dp is setup
+
+
+0xfffffe00074c7537	%s::%s(0x%x@0x%x): AppleTCController::configureDPPortObject(@0x%x) - Failed to activate tunneled transport, no tbthandle
+
+
+0xfffffe00074c75b2	%s::%s(0x%x@0x%x): AppleTCController::createUSB2PortObject(@0x%x) - Setting up USB2 port object
+
+
+0xfffffe00074c7614	%s::%s(0x%x@0x%x): AppleTCController::createUSB2PortObject(@0x%x) - USB2 is setup
+
+
+0xfffffe00074c7668	%s::%s(0x%x@0x%x): AppleTCController::configureUSB2PortObject(@0x%x) - Changing USB2 Datarole in IOPort to fUSBDfp = 0x%x
+
+
+0xfffffe00074c76e4	%s::%s(0x%x@0x%x): AppleTCController::configureUSB2PortObject(@0x%x) - USB2 added and ready
+
+
+0xfffffe00074c7742	%s::%s(0x%x@0x%x): AppleTCController::configureUSB2PortObject(@0x%x) - WARNING: USB2 notifier was not created
+
+
+0xfffffe00074c77b2	%s::%s(0x%x@0x%x): AppleTCController::configureUSB2PortObject(@0x%x) - WARNING: USB2 already exists
+
+
+0xfffffe00074c7818	%s::%s(0x%x@0x%x): AppleTCController::setUSB2PortObjectInactive(@0x%x) - usb2handle setting inactive
+
+
+0xfffffe00074c787f	%s::%s(0x%x@0x%x): AppleTCController::setUSB2PortObjectInactive(@0x%x) - usb2handle NULL!
+
+
+0xfffffe00074c78db	%s::%s(0x%x@0x%x): AppleTCController::createUSB3PortObject(@0x%x) - creating usb3 port object tunnelAdapterType=%d
+
+
+0xfffffe00074c7950	%s::%s(0x%x@0x%x): AppleTCController::configureUSB3PortObject(@0x%x) - USB3 added and ready
+
+
+0xfffffe00074c79ae	%s::%s(0x%x@0x%x): AppleTCController::configureUSB3PortObject(@0x%x) - WARNING: USB3 notifier was not created
+
+
+0xfffffe00074c7a1e	%s::%s(0x%x@0x%x): AppleTCController::createPCIePortObject(@0x%x) - pcie is not setup
+
+
+0xfffffe00074c7a76	%s::%s(0x%x@0x%x): AppleTCController::createPCIePortObject(@0x%x) - pcie transport allocation failed
+
+
+0xfffffe00074c7add	%s::%s(0x%x@0x%x): AppleTCController::createPCIePortObject(@0x%x) - pcie is setup
+
+
+0xfffffe00074c7b31	%s::%s(0x%x@0x%x): AppleTCController::configurePCIePortObject(@0x%x) - Failed to activate tunneled transport, no tbthandle
+
+
+0xfffffe00074c7bae	%s::%s(0x%x@0x%x): AppleTCController::createTBTPortObject(@0x%x) - tbt is setup
+
+
+0xfffffe00074c7c00	%s::%s(0x%x@0x%x): AppleTCController::configureTBTPortObject(@0x%x) - Failed to activate transport!
+
+
+0xfffffe00074c7c66	%s::%s(0x%x@0x%x): AppleTCController::configureTBTPortObject(@0x%x) - CIO already provisioned
+
+
+0xfffffe00074c7cc6	%s::%s(0x%x@0x%x): AppleTCController::createTunnelHandles(@0x%x) - metaCast failed!
+
+
+0xfffffe00074c7d1c	%s::%s(0x%x@0x%x): AppleTCController::createTunnelHandles(@0x%x) - Tunnel manager already exists
+
+
+0xfffffe00074c7d7f	%s::%s(0x%x@0x%x): AppleTCController::createTunnelHandles(@0x%x) - failed to create tunnel manager!
+
+
+0xfffffe00074c7de5	%s::%s(0x%x@0x%x): AppleTCController::createTunnelClient(@0x%x) - Client already exists for type 0x%x
+
+
+0xfffffe00074c7e4d	%s::%s(0x%x@0x%x): AppleTCController::createTunnelClient(@0x%x) - Tunnel manager does not exist, not creating
+
+
+0xfffffe00074c7ebd	%s::%s(0x%x@0x%x): AppleTCController::createTunnelClient(@0x%x) - Tunnel client failed for type 0x%x, index 0x%x
+
+
+0xfffffe00074c7f30	%s::%s(0x%x@0x%x): AppleTCController::createTunnelClientCallBacks(@0x%x) - Tunnel client call back created successfully
+
+
+0xfffffe00074c7faa	%s::%s(0x%x@0x%x): AppleTCController::createTunnelClientCallBacks(@0x%x) - Tunnel client does not exist!
+
+
+0xfffffe00074c8015	%s::%s(0x%x@0x%x): AppleTCController::setupDP1Client(@0x%x) - Tunnel DP1 client does not exist!
+
+
+0xfffffe00074c8077	%s::%s(0x%x@0x%x): AppleTCController::setupDP2Client(@0x%x) - Tunnel DP2 client does not exist!
+
+
+0xfffffe00074c80d9	%s::%s(0x%x@0x%x): AppleTCController::setupPCIClient(@0x%x) - Tunnel PCI client does not exist!
+
+
+0xfffffe00074c813b	%s::%s(0x%x@0x%x): AppleTCController::setupUSBTunnelClient(@0x%x) - Tunnel USB client does not exist!
+
+
+0xfffffe00074c81a3	%s::%s(0x%x@0x%x): AppleTCController::setupUSBType2TunnelClient(@0x%x) - Tunnel USB Type2 client does not exist!
+
+
+0xfffffe00074c8216	%s::%s(0x%x@0x%x): AppleTCController::tunnelClientChangeWithParams(@0x%x) with non USB Type2 object... Quiting...
+
+
+0xfffffe00074c828a	%s::%s(0x%x@0x%x): AppleTCController::tunnelClientChangeWithParams(@0x%x) - usb Type2 client ping, Handle(%d)
+
+
+0xfffffe00074c82fa	%s::%s(0x%x@0x%x): AppleTCController::tunnelClientChange(@0x%x) - dp1 client ping
+
+
+0xfffffe00074c834e	%s::%s(0x%x@0x%x): AppleTCController::tunnelClientChange(@0x%x) - dp2 client ping
+
+
+0xfffffe00074c83a2	%s::%s(0x%x@0x%x): AppleTCController::tunnelClientChange(@0x%x) - pci client ping
+
+
+0xfffffe00074c83f6	%s::%s(0x%x@0x%x): AppleTCController::tunnelClientChange(@0x%x) - usb client ping
+
+
+0xfffffe00074c844a	%s::%s(0x%x@0x%x): AppleTCController::tunnelClientChange(@0x%x) with USB Type2 object... Quiting...
+
+
+0xfffffe00074c84b0	%s::%s(0x%x@0x%x): AppleTCController::setLDCMLiquidDetected(0x%x) - called with liquidDetected = 0x%x
+
+
+0xfffffe00074c8518	%s::%s(0x%x@0x%x): AppleTCController::setLDCMMitigationsEnabled(0x%x) - called with mitigationsEnabled = 0x%x
+
+
+0xfffffe00074c8588	%s::%s(0x%x@0x%x): AppleTCController::setLDCMUserOverrideActive(0x%x) - called with userOverrideActive = 0x%x
+
+
+0xfffffe00074c85f8	%s::%s(0x%x@0x%x): AppleTCController::setLDCMState(0x%x) - called with state = 0x%x
+
+
+0xfffffe00074c864e	%s::%s(0x%x@0x%x): AppleTCController::setLDCMState(0x%x) - Could not assign power control, returning Error
+
+
+0xfffffe00074c86bb	%s::%s(0x%x@0x%x): AppleTCController::setLDCMState(0x%x) - Could not find iicProvider, returning Error
+
+
+0xfffffe00074c8724	%s::%s(0x%x@0x%x): AppleTCController::setLDCMState(0x%x) - idle state ovp - %lldns, %lldns, %lldns 0x%x 0x%x
+
+
+0xfffffe00074c8793	%s::%s(0x%x@0x%x): AppleTCController::setLDCMPin(0x%x) - called with pin = 0x%x
+
+
+0xfffffe00074c87e5	%s::%s(0x%x@0x%x): AppleTCController::setLDCMPin(0x%x) - Could not assign muxsel0, returning Error
+
+
+0xfffffe00074c884a	%s::%s(0x%x@0x%x): AppleTCController::setLDCMPin(0x%x) - Could not find iicProvider, returning Error
+
+
+0xfffffe00074c88b1	%s::%s(0x%x@0x%x): AppleTCController::setLDCMPin(0x%x) - Could not assign muxsel1, returning Error
+
+
+0xfffffe00074c8916	%s::%s(0x%x@0x%x): AppleTCController::setLDCMPin(0x%x) - ref already set, skipping
+
+
+0xfffffe00074c896b	%s::%s(0x%x@0x%x): AppleTCController::setLDCMPin(0x%x) - trace already set, skipping
+
+
+0xfffffe00074c89c2	%s::%s(0x%x@0x%x): AppleTCController::setLDCMPin(0x%x) - loopback already set, skipping
+
+
+0xfffffe00074c8a1c	%s::%s(0x%x@0x%x): AppleTCController::setLDCMPin(0x%x) - already Hi-Z, skipping
+
+
+0xfffffe00074c8a6e	%s::%s(0x%x@0x%x): AppleTCController::setLDCMPin fDebugFlags & kLDCMDebugSelectSBU:0x%x - kIOPortUSBCLDCMPinTrace case
+
+
+0xfffffe00074c8ae7	%s::%s(0x%x@0x%x): AppleTCController::setLDCMPin(0x%x) - ACE Debug already set, skipping
+
+
+0xfffffe00074c8b42	%s::%s(0x%x@0x%x): AppleTCController::setLDCMPin(0x%x) - ACE Debug cannot be set. Missing boot-args.
+
+
+0xfffffe00074c8ba9	%s::%s(0x%x@0x%x): AppleTCController::setLDCMPin(0x%x) - unknown pin value, returning unsupported
+
+
+0xfffffe00074c8c0d	%s::%s(0x%x@0x%x): AppleTCController::setLDCMPin(0x%x) - LDCM unsupported
+
+
+0xfffffe00074c8c59	%s::%s(0x%x@0x%x): AppleTCController::setLDCMPinsInternal(0x%x) - setting sel0 to 0x%x, sel1 to 0x%x
+
+
+0xfffffe00074c8cc0	%s::%s(0x%x@0x%x): AppleTCController::ldcmInterruptAction(0x%x) - Start
+
+
+0xfffffe00074c8d0a	AppleTCController::resolvePHandle - failed after apple,phandle
+
+0xfffffe00074c8d4a	AppleTCController::resolvePHandle - failed after trying to get key property
+
+0xfffffe00074c8d97	AppleTCController::resolvePHandle - failed after property matching
+
+0xfffffe00074c8ddb	AppleTCController::resolvePHandle - failed after service matching
+
+0xfffffe00074c8e1e	AppleTCController::resolvePHandle - failed waiting for service
+
+0xfffffe00074c8e5e	%s::%s(0x%x@0x%x): AppleTCController::startAnalyticsTimer(@0x%x) - called
+
+
+0xfffffe00074c8eaa	%s::%s(0x%x@0x%x): AppleTCController::startAnalyticsTimer(@0x%x) - NO TIMER!! ERROR
+
+
+0xfffffe00074c8f00	%s::%s(0x%x@0x%x): AppleTCController::stopAnalyticsTimer(@0x%x) - called
+
+
+0xfffffe00074c8f4b	%s::%s(0x%x@0x%x): AppleTCController::setupMatchingForLDCM - matcher failed to setup, no LDCM
+
+
+0xfffffe00074c8fab	%s::%s(0x%x@0x%x): AppleTCController::setupMatchingForLDCM - Failed to allocate callback, LDCM wont' work properly
+
+
+0xfffffe00074c9020	%s::%s(0x%x@0x%x): service and provider did NOT match, belongs to different node
+
+
+0xfffffe00074c9073	%s::%s(0x%x@0x%x): AppleTCController::usbChangeNotification: kIOPortTransportState_Message_DriverStatusChange
+
+0xfffffe00074c90e2	%s::%s(0x%x@0x%x): AppleTCController::driverStatusInterrupt
+
+0xfffffe00074c911f	%s::%s(0x%x@0x%x): AppleTCController::driverStatusInterrupt: turnOnVbus
+
+0xfffffe00074c9168	AppleHPMARM
+0xfffffe00074c9174	site.AppleHPMARM
+0xfffffe00074c9185	12111112122212121111211212222212112
+0xfffffe00074c91a9	AppleSMC
+0xfffffe00074c91b2	AppleHPMARM can't find AppleSMCFamily
+
+0xfffffe00074c91d9	AppleHPMARM can't find AppleSMC
+
+0xfffffe00074c91fa	AppleHPMARM::startSMCDelayUVDM -- SMC key write failed 0x%x
+
+0xfffffe00074c9237	AppleTCControllerType11
+0xfffffe00074c924f	site.AppleTCControllerType11
+0xfffffe00074c926c	121111121222121211111121111121222222221122111111121221111222222122221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211221211222221111111111111111111111111111111222222222222222211111111111111111111111111112111111121211112
+0xfffffe00074c948f	%s::%s(0x%x@0x%x): AppleTCControllerType11::start
+
+
+0xfffffe00074c94c3	%s::%s(0x%x@0x%x): AppleTCControllerType11::start(@0x%x) - no command gate
+
+
+0xfffffe00074c9510	%s::%s(0x%x@0x%x): AppleTCControllerType11::poweredStart(@0x%x) - start
+
+
+0xfffffe00074c955a	%s::%s(0x%x@0x%x): AppleTCControllerType11::forcePortEvaluation(@0x%x) - Start
+
+
+0xfffffe00074c95ab	%s::%s(0x%x@0x%x): AppleTCControllerType11::forcePortEvaluation(@0x%x) - Defer failed, interrupts and messages may not have been sent
+
+
+0xfffffe00074c9633	%s::%s(0x%x@0x%x): AppleTCControllerType11::setInterruptMask(@0x%x) - start
+
+
+0xfffffe00074c9681	AppleHPMInterfaceType11
+0xfffffe00074c9699	site.AppleHPMInterfaceType11
+0xfffffe00074c96b6	12111112122212121111112111112122222222112211111112122111122222212222121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122121122222111111111111111111111111111111122222222222222221111111111111111111111111111211111112121122111111111111111111111111111111222222222222211111111111111111111111111111121111111112222222222222121222222212212112
+0xfffffe00074c994a	%s::%s(0x%x@0x%x): AppleHPMInterfaceType11::start
+
+
+0xfffffe00074c997e	%s::%s(0x%x@0x%x): AppleHPMInterfaceType11::start(@0x%x) - no command gate
+
+
+0xfffffe00074c99cb	%s::%s(0x%x@0x%x): AppleHPMInterfaceType11::poweredStart(@0x%x) - start
+
+
+0xfffffe00074c9a15	%s::%s(0x%x@0x%x): AppleTCControllerType10hal::forcePortEvaluation(@0x%x) - Start
+
+
+0xfffffe00074c9a69	%s::%s(0x%x@0x%x): AppleHPMInterfaceType11::setInterruptMask(@0x%x) - start
+
+
+0xfffffe00074c9ab7	0123456789ABCDEF
+0xfffffe00074c9ac8	AppleHPMDeviceHALType3
+0xfffffe00074c9adf	site.AppleHPMDeviceHALType3
+0xfffffe00074c9afb	AppleTCControllerType1
+0xfffffe00074c9b12	site.AppleTCControllerType1
+0xfffffe00074c9b2e	%s::%s(0x%x@0x%x): AppleTCControllerType1::setPowerStateHPM(@0x%x) = Setting power state to 0x%x
+
+
+0xfffffe00074c9b91	%s::%s(0x%x@0x%x): AppleTCControllerType1::setPowerStateHPM(@0x%x) - SSPS executed, status = 0x%x
+
+
+0xfffffe00074c9bf5	%s::%s(0x%x@0x%x): AppleTCControllerType1::communicateDPHPDChange(@0x%x) - Unused in this class
+
+
+0xfffffe00074c9c57	%s::%s(0x%x@0x%x): AppleTCControllerType1::communicateDPIRQ(@0x%x) - Unused in this class
+
+
+0xfffffe00074c9cb3	%s::%s(0x%x@0x%x): AppleTCControllerType1::configureDP(@0x%x) - failed to get interface: AV=%p DP=%p
+
+
+0xfffffe00074c9d1a	%s::%s(0x%x@0x%x): AppleTCControllerType1::configureDP(@0x%x) - powering off DP
+
+
+0xfffffe00074c9d6c	%s::%s(0x%x@0x%x): AppleTCControllerType1::configureDP(@0x%x) - powering on DP
+
+
+0xfffffe00074c9dbd	%s::%s(0x%x@0x%x): AppleTCControllerType1::configureUSBRemoteWakeup(@0x%x) - Called with args 0x%x
+
+
+0xfffffe00074c9e22	AppleHPMDeviceHAL
+0xfffffe00074c9e34	site.AppleHPMDeviceHAL
+0xfffffe00074c9e4b	12111112122212121221
+0xfffffe00074c9e60	AppleHPMDeviceHAL::readReg - read FAILED! to ADDR = 0x%x
+
+0xfffffe00074c9e9a	AppleHPMDeviceHAL::setDataStatus - WARNING: Abnormal DataStatus Length = 0x%x
+
+0xfffffe00074c9ee9	AppleHPMDeviceHAL::setStatus - WARNING: Abnormal Status Length = 0x%x
+
+0xfffffe00074c9f30	AppleHPMDeviceHAL::setPDStatus - no data, buffer or struct is null
+
+0xfffffe00074c9f74	AppleHPMDeviceHAL::setRxMIDBSOPStar - no data, buffer or struct is null
+
+0xfffffe00074c9fbd	AppleHPM
+0xfffffe00074c9fc6	site.AppleHPM
+0xfffffe00074c9fd4	121111121222121211112112122222
+0xfffffe00074c9ff3	AppleHPMEmbedded
+0xfffffe00074ca004	site.AppleHPMEmbedded
+0xfffffe00074ca01a	AppleHPM.kext/Contents/PlugIns/AppleHPMLib.plugin
+0xfffffe00074ca04c	12A1DCCF-CF7A-4775-BEE5-9C4319F4CD2B
+0xfffffe00074ca071	IOCFPlugInTypes
+0xfffffe00074ca081	AppleHPM runtime power conservation disabled.
+
+0xfffffe00074ca0b0	aUFC
+0xfffffe00074ca0b5	sUFC
+0xfffffe00074ca0ba	mUFC
+0xfffffe00074ca0bf	pUFC
+0xfffffe00074ca0c4	AppleHPM::atomic4cc -- UBaS/SAlr/NSup detected
+
+0xfffffe00074ca0f4	AppleHPM::atomic4cc -- PD3 alert message WA error 0x%X
+
+0xfffffe00074ca12c	AppleTCControllerAssignableTransport
+0xfffffe00074ca151	site.AppleTCControllerAssignableTransport
+0xfffffe00074ca17b	%s::%s(0x%x@0x%x): AppleTCControllerAssignableTransport::probe - matchingclass = 0x%x
+
+
+0xfffffe00074ca1d3	probe
+0xfffffe00074ca1d9	%s::%s(0x%x@0x%x): AppleTCControllerAssignableTransport::probe - failed!
+
+
+0xfffffe00074ca224	%s::%s(0x%x@0x%x): AppleTCControllerAssignableTransport::start(@0x%x) - Start
+
+
+0xfffffe00074ca274	%s::%s(0x%x@0x%x): AppleTCControllerAssignableTransport::poweredStart(@0x%x) - start
+
+
+0xfffffe00074ca2cb	%s::%s(0x%x@0x%x): AppleTCControllerAssignableTransport::configureTBTPortObject(@0x%x) - Failed to activate transport!
+
+
+0xfffffe00074ca344	%s::%s(0x%x@0x%x): AppleTCControllerAssignableTransport::configureTBTPortObject(@0x%x) - CIO already provisioned
+
+
+0xfffffe00074ca3b7	%s::%s(0x%x@0x%x): AppleTCControllerAssignableTransport::createUSB3PortObject(@0x%x) - creating usb3 port object tunnelAdapterType=%d
+
+
+0xfffffe00074ca460	USBw
+0xfffffe00074ca480		
+
+0xfffffe00074ca488		
+
+0xfffffe00074ca490	SWUFSWDFġ겠
+0xfffffe00074ca4c0	I2C CCG3APP 
+0xfffffe00074ca4f8		`ab
+0xfffffe00074ca502	def䌡䑍
+0xfffffe00074ca510	ABRT

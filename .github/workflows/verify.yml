@@ -1,0 +1,32 @@
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # Proprietary Apple firmware is not committed, so the numeric checks that
+      # need it report SKIP with a named reason. Everything else must pass.
+      - name: Document and claim consistency
+        run: |
+          python3 scripts/verify_docs.py .
+          python3 scripts/verify_claims.py .
+      - name: Mandatory regressions (document-level cases only in CI)
+        run: python3 scripts/regress_release.py .
+      - name: Show what CI cannot check
+        run: |
+          echo "SKIPPED IN CI (needs locally retained firmware images):"
+          echo "  - firmware image hashes"
+          echo "  - PDO table invariant"
+          echo "  - literal-set reconciliation"
+          echo "  - dispatcher census"
+          echo "  - function coverage"
+          echo "  - R2/R3/R5 byte-level arithmetic"

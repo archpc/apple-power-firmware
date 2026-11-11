@@ -1,0 +1,80 @@
+Power:
+
+    Battery Information:
+
+      Model Information:
+          Serial Number: F8YHSRN024V0000VD5
+          Device Name: bq40z651
+          Pack Lot Code: 0x0000
+          PCB Lot Code: 0x0000
+          Firmware Version: 0x00000b00
+          Hardware Revision: 0x0100
+          Cell Revision: 0x271d
+      Charge Information:
+          The battery’s charge is below the warning level: No
+          Fully Charged: Yes
+          Charging: No
+          State of Charge (%): 100
+      Health Information:
+          Cycle Count: 33
+          Condition: Normal
+          Maximum Capacity: 99%
+
+    System Power Settings:
+
+      AC Power:
+          System Sleep Timer (Minutes): 0
+          Disk Sleep Timer (Minutes): 0
+          Display Sleep Timer (Minutes): 10
+          Sleep on Power Button: Yes
+          Wake on LAN: Yes
+          Current Power Source: Yes
+          Hibernate Mode: 3
+          High Power Mode: No
+          Low Power Mode: No
+          Prioritize Network Reachability Over Sleep: No
+      Battery Power:
+          System Sleep Timer (Minutes): 1
+          Disk Sleep Timer (Minutes): 10
+          Display Sleep Timer (Minutes): 5
+          Sleep on Power Button: Yes
+          Wake on LAN: No
+          Hibernate Mode: 3
+          High Power Mode: No
+          Low Power Mode: No
+          Prioritize Network Reachability Over Sleep: No
+          Reduce Brightness: Yes
+
+    Hardware Configuration:
+
+      UPS Installed: No
+
+    AC Charger Information:
+
+      Connected: Yes
+      ID: 0x701c
+      Wattage (W): 68
+      Family: 0xe000400a
+      Serial Number: F16HS109YFA000000P
+      Name: 70W USB-C Power Adapter 
+      Manufacturer: Apple Inc.
+      Hardware Version: 1.0
+      Firmware Version: 1030030
+      Charging: No
+
+    Power Events:
+
+        Next Scheduled Events:
+
+              appPID: 981
+              Type: Wake
+              Scheduled By: com.apple.alarm.user-invisible-com.apple.calaccessd.travelEngine.periodicRefreshTimer
+              Time: 11/11/26, 11:42 AM
+              UserVisible: 0
+
+              appPID: 544
+              Type: Wake
+              Scheduled By: com.apple.alarm.user-invisible-com.apple.osanalytics.hardhighengagementtimer
+              Time: 11/11/26, 6:59 PM
+              UserVisible: 0
+
