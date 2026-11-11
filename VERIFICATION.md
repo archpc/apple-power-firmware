@@ -95,10 +95,10 @@ shared/union constant mislabelling) was found by the user and re-derived.
 | field | value |
 |---|---|
 | file | `publication/apple-power-firmware.pdf` |
-| generation id | `552a3e6f895d97f0` |
-| SHA-256 | `552a3e6f895d97f0ca47812593c47a90a768323c7e4a3654f36bc857f327fcb8` |
-| pages | 6, no blank pages |
-| text layer | 8328 selectable characters |
+| generation id | `1848b3a363df46de` |
+| SHA-256 | `1848b3a363df46dedc69f9147eb3cfb3c9c6368ef7dcb4215f03da0b05d5a168` |
+| pages | 9, no blank pages |
+| text layer | 13697 selectable characters |
 | template | research-pdf v1.2.0, Typst 0.15.1 |
 | evidence | 23 claims, 71 refs, all resolved |
 | determinism | two builds, byte-identical |
@@ -141,7 +141,7 @@ the final commit message.
 | verified commit | `c1fe423739e43abf82247a38c65285040c0c87d9` |
 | CI (GitHub Actions, `verify`) | pass — `verify_docs` 6 passed / 5 skipped, `verify_claims` 23 claims, `regress_release` document-level cases pass |
 | local suite on the same commit | `verify_docs` 11/11, `verify_claims` 23 claims / 71 refs, `regress_release` 9/9 |
-| PDF | `552a3e6f895d97f0`, SHA-256 `552a3e6f895d97f0ca47812593c47a90a768323c7e4a3654f36bc857f327fcb8` |
+| PDF | `1848b3a363df46de`, SHA-256 `1848b3a363df46dedc69f9147eb3cfb3c9c6368ef7dcb4215f03da0b05d5a168` |
 
 CI and the local suite differ only in the six checks that need the firmware images,
 which are not committed; CI names each skipped check in its log rather than
@@ -177,3 +177,17 @@ and arithmetic and is now recomputed from the table: 13 FIXED, 11 RESTATED,
 Limitation recorded: the ban check only covers three conclusion regions, so a stale
 sentence reintroduced elsewhere is caught by the presence check on the corrected
 text, not by the ban.
+
+## 10. Report expanded (post-merge)
+
+The first publication was six pages of claim register — it satisfied the evidence
+gate and communicated almost nothing. The report was rebuilt as a research narrative
+of nine pages: the three firmware objects, the host power path, acquisition, the
+container format recovered from Apple's own parser, image anatomy, the cross-version
+observations table, the three 2026 claims examined one by one, the host stack, the
+security posture, limits and method. The claim register moved to Appendix A, where it
+still carries a marker per claim and still validates.
+
+The `research-pdf` skill was unfrozen by request: its status line now treats the
+content model as open while the 1.2.0 visual system stays fixed (`--selfcheck` still
+passes, tokens unchanged). New baseline approved after inspecting the changed pages.

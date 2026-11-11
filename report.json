@@ -1,10 +1,10 @@
 {
  "title": "Apple USB-C and MagSafe 3 power path",
- "subtitle": "Host controllers, cable firmware, and the UARP transport",
+ "subtitle": "Three processors, three firmware objects, one name",
  "kind": "Research Report",
  "topic": "Reverse engineering \u00b7 Apple power accessories",
  "report_id": "RR-2026-1114",
- "version": "1.0",
+ "version": "1.1",
  "date": "2026-11-11",
  "classification": "Internal",
  "baseline": "MagSafe 3 \u00b7 3.1.8",
@@ -14,6 +14,6 @@
  "prepared_by": "Sein",
  "source": "Apple public UARP assets, hpmdiagnose register dumps, IORegistry captures",
  "short_title": "Apple power path",
- "standfirst": "Three firmware objects separated, three cable releases extracted, and the cross-version facts established without modifying any device.",
+ "standfirst": "The cable's three releases extracted, the container format recovered from Apple's own parser, and the cross-version facts established without touching a device.",
  "section_breaks": false
 }
