@@ -441,7 +441,7 @@
    "id": "C19",
    "kind": "observed",
    "statement": "70 W adapter firmware was not found by three enumeration methods (mesu path probes, Pallas lookup with a control type, and a broad type sweep); this is a scoped negative, not proof of nonexistence.",
-   "where": "FIRMWARE.md, NEXT.md, README.md",
+   "where": "FIRMWARE.md, README.md",
    "refs": [
     {
      "type": "record",
@@ -452,11 +452,6 @@
      "type": "record",
      "path": "FIRMWARE.md",
      "quote": "\"not found\" for `UARP_A2743` across 11 path shapes; Apple's Pallas registry (`gdmf /v2/assets`) returns `AssetType not found f"
-    },
-    {
-     "type": "record",
-     "path": "NEXT.md",
-     "quote": "not get **8. 70 W adapter firmware.** Blocked hard. Apple's Pallas registry has no `UARP.A2743` asset type, and `mesu` has no"
     },
     {
      "type": "record",
@@ -489,7 +484,7 @@
     {
      "type": "record",
      "path": "NEXT.md",
-     "quote": "ve **6. Ask the accessory for its version through Accessory Mode 7.** The host service has `accMode7StagedFwVersion:` and `acc"
+     "quote": "Accessory Mode 7 readback"
     }
    ],
    "open_reason": "unsettled on available evidence; see DIFF.md limitations"
@@ -720,7 +715,7 @@
     {
      "type": "record",
      "path": "DIFF.md",
-     "quote": "**3.2.0 dropped it** (pool retained with 4\n  reordered states)"
+     "quote": "**3.2.0 dropped it** (lead-verified: 1/1/0 hits), pool retained with 4\n  reordered states."
     }
    ]
   },

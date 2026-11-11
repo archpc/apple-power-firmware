@@ -5,6 +5,7 @@ One copy of each build, no duplicates.
 ```
 current/apple-power-firmware.pdf   the shipped build (9 pages)
 prior/claim-register-6pp.pdf       the superseded first publication (6 pages)
+prior/27-claim-9pp.pdf             the superseded 27-claim build (9 pages)
 ```
 
 `current/` holds exactly one file: the PDF that best represents this research
@@ -27,7 +28,7 @@ python3 ~/.hermes/skills/research/research-pdf/scripts/build.py \
   --out publication/current/apple-power-firmware.pdf --inspect
 ```
 
-Generation identifiers: current `1848b3a363df46de`, prior `552a3e6f895d97f0`. The
+Generation identifiers: current `ded164badf4e89cf` (37 claims, 9 pages), prior `1848b3a363df46de` (27 claims), first `552a3e6f895d97f0`. The
 evidence sidecars (`*.build.json`, `*.evidence.json`) are generated at build time
 and are gitignored; the PDF carries its own provenance in the git history.
 

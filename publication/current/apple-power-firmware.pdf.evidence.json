@@ -1,0 +1,773 @@
+{
+  "claims": [
+    {
+      "id": "C01",
+      "kind": "observed",
+      "refs": [
+        {
+          "path": "evidence/ioaccessorymanager.txt",
+          "quote": "urceOptionFixed\"},{\"Max Current (mA)\"=3390,\"Max Power (mW)\"=67800,\"UUID\"=\"71144955-7680-4635-B52F-319AED3FBA9D\",\"Voltage (mV)",
+          "type": "record"
+        },
+        {
+          "path": "REPORT.md",
+          "quote": "ort (RID 5)**, not on any USB-C port, at **20 V \u00d7 3.390 A = 67.80 W**. Two things remain **OPEN**: whether 3.2.0 is semanticall",
+          "type": "record"
+        },
+        {
+          "path": "HARDWARE.md",
+          "quote": "2.970 A / 26.73 W 15 V / 2.980 A / 44.70 W 20 V / 3.390 A / 67.80 W WinningPowerSourceOption: 20 V / 3.390 A / 67.80 W ``` A se",
+          "type": "record"
+        },
+        {
+          "path": "README.md",
+          "quote": "ts on RID 5 / `Port-MagSafe 3@1`; contract 20 V \u00d7 3.390 A = 67.80 W; `AuthenticationRequired = No` on that port. - **Three firm",
+          "type": "record"
+        },
+        {
+          "path": "PROTOCOL.md",
+          "quote": "| 26.73 W | | 15 V | 2.980 A | 44.70 W | | 20 V | 3.390 A | 67.80 W \u2190 selected | Separate `Brick ID` source at 5 V / 0.5 A / 2.",
+          "type": "record"
+        }
+      ],
+      "statement": "The charger negotiates 20 V at 3.390 A (67.80 W) on the MagSafe port.",
+      "where": "HARDWARE.md, PROTOCOL.md, README.md, REPORT.md"
+    },
+    {
+      "id": "C02",
+      "kind": "observed",
+      "refs": [
+        {
+          "path": "evidence/hpm-regs.json",
+          "quote": "{ \"0x0\": { \"rid\": \"0x0\", \"route\": \"0x0\", \"addr\": \"0x0c\", \"regs\": { \"0x00\":",
+          "type": "record"
+        },
+        {
+          "path": "HARDWARE.md",
+          "quote": "is the MagSafe controller. `hpmdiagnose` enumerates exactly RID 0, 1, 2, 5. Port numbers: USB-C ports are `PortNumber` 1, 2, 3; Mag",
+          "type": "record"
+        },
+        {
+          "path": "REPORT.md",
+          "quote": "port controller | `FW003.115.00` | the Mac (four instances: RID 0, 1, 2, 5) | | MagSafe 3 cable (A2363) | 3.2.0, bcdDevice 0x3200 |",
+          "type": "record"
+        }
+      ],
+      "statement": "Four HPM controllers are present at RID 0, 1, 2 and 5; RID 5 carries the MagSafe port.",
+      "where": "HARDWARE.md, REPORT.md"
+    },
+    {
+      "id": "C03",
+      "kind": "observed",
+      "refs": [
+        {
+          "path": "evidence/applehpm-decompiled.md",
+          "quote": "nub is the HPM controller's firmware (0x00.0x15.0x31 = 003.115.00), not the adapter's 1030030.",
+          "type": "record"
+        },
+        {
+          "path": "HARDWARE.md",
+          "quote": "e these. The user-supplied note that \"HPM identification is FW003.115.00, distinct from adapter firmware\" is OBSERVED and the distin",
+          "type": "record"
+        },
+        {
+          "path": "REPORT.md",
+          "quote": "sion | who owns it | |---|---|---| | HPM port controller | `FW003.115.00` | the Mac (four instances: RID 0, 1, 2, 5) | | MagSafe 3 c",
+          "type": "record"
+        },
+        {
+          "path": "README.md",
+          "quote": "fe cable 3.2.0 (PID `0x7800`, bcdDevice `0x3200`), adapter `1030030` (ID `0x701c`). These are not revisions of one image. - **U",
+          "type": "record"
+        },
+        {
+          "path": "FIRMWARE.md",
+          "quote": "ence/firmware-acquisition-notes.md`. **The 70 W adapter (fw 1030030) has no publicly obtainable firmware.** Negative result con",
+          "type": "record"
+        }
+      ],
+      "statement": "HPM controller firmware FW003.115.00, the MagSafe cable at 3.2.0 and the adapter value 1030030 are three distinct objects, not revisions of one image.",
+      "where": "FIRMWARE.md, HARDWARE.md, README.md, REPORT.md"
+    },
+    {
+      "id": "C04",
+      "kind": "derived",
+      "refs": [
+        {
+          "path": "scripts/uarp_superbinary.py",
+          "quote": "x18 payloadMetaDataOffset +0x1c payloadMetaDataLength +0x20 payloadDataOffset +0x24 payloadLength SuperBinary metadata TLVs follow the pa",
+          "type": "record"
+        },
+        {
+          "path": "README.md",
+          "quote": "iner format recovered from Apple's own parser** (OBSERVED): 44-byte header, 40-byte payload records, TLV metadata; all four acq",
+          "type": "record"
+        }
+      ],
+      "statement": "The UARP SuperBinary container is a 44-byte header with 40-byte payload records; dataOffset plus dataLength reconciles in all four files.",
+      "where": "README.md"
+    },
+    {
+      "id": "C05",
+      "kind": "observed",
+      "refs": [
+        {
+          "path": "firmware/MANIFEST.txt",
+          "quote": "0_10M13722/AssetData/Firmware.acsw/A2363FirmwareMobileAsset.uarp sha256 a2d7ac53ac79a0c9e22f6fab789ae65bb301601eb92b6b7d2cff",
+          "type": "record"
+        },
+        {
+          "path": "FIRMWARE.md",
+          "quote": "7039151d2a72` | Provenance: each SHA-1 matches Apple's own `_Measurement` field in the manifest that served it (`shasum -a 1` reprod",
+          "type": "record"
+        },
+        {
+          "path": "REPORT.md",
+          "quote": "ublic CDN, each SHA-1 matched against Apple's own manifest `_Measurement`, and hashed. This is the first time this project could com",
+          "type": "record"
+        },
+        {
+          "path": "README.md",
+          "quote": "3.1.8, 3.1.12, 3.2.0, each SHA-1 matching Apple's manifest `_Measurement`; per-image SHA-256 in `SHA256SUMS`. - **Power-negotiation",
+          "type": "record"
+        }
+      ],
+      "statement": "Three MagSafe 3 releases were acquired and each SHA-1 matches Apple's manifest _Measurement.",
+      "where": "FIRMWARE.md, README.md, REPORT.md"
+    },
+    {
+      "id": "C06",
+      "kind": "derived",
+      "refs": [
+        {
+          "path": "evidence/pdo-decode.txt",
+          "quote": "opies) 3.1.8 @0x136E4: 5.00V/3.00A 9.00V/3.00A 15.00V/3.00A 20.00V/3.00A 3.1.12 @0x13764: 5.00V/3.00A 9.00V/3.00A 15.00V/3.00A 20.00",
+          "type": "record"
+        },
+        {
+          "path": "DIFF.md",
+          "quote": "|---|---|---| | 3.1.8 | `0x136E4` | `0x137D4` | | 3.1.12 | `0x13764` | `0x13854` | | 3.2.0 | `0x13894` | `0x13984` | Content id",
+          "type": "record"
+        },
+        {
+          "path": "README.md",
+          "quote": "ee releases** (REPRODUCED): 5.00 / 9.00 / 15.00 / 20.00 V @ 3.00 A, two copies per image, addresses move. - **One Apple SVID l",
+          "type": "record"
+        },
+        {
+          "path": "TESTING.md",
+          "quote": "ble invariant | all builds carry `5.00/9.00/15.00/20.00 V @ 3.00 A` | yes | | literal sets disjoint | `28` is 3.2.0-only; inte",
+          "type": "record"
+        }
+      ],
+      "statement": "The power-negotiation table content (5/9/15/20 V at 3.00 A) is identical in all builds while its address moves.",
+      "where": "DIFF.md, README.md, TESTING.md"
+    },
+    {
+      "id": "C07",
+      "kind": "observed",
+      "refs": [
+        {
+          "path": "DIFF.md",
+          "quote": "05AC0005` | 2 | 2 | 2 | | `0x05AC0002` | 1 | 1 | **0** | | `0x05AC0000` | 6 | 6 | **7** | Exactly one literal changes across the t",
+          "type": "record"
+        },
+        {
+          "path": "DIFF.md",
+          "quote": "`0x05AC8106` | 1 | 1 | 1 | | `0x05AC0005` | 2 | 2 | 2 | | `0x05AC0002` | 1 | 1 | **0** | | `0x05AC0000` | 6 | 6 | **7** | Exactly",
+          "type": "record"
+        },
+        {
+          "path": "REPORT.md",
+          "quote": "e. - The meaning of the one changed Apple vendor constant (`0x05AC0002` \u2192 `0x05AC0000`) and of the two candidate tables of 15 and",
+          "type": "record"
+        },
+        {
+          "path": "README.md",
+          "quote": "ple SVID literal changes** across the releases (OBSERVED): `0x05AC0002` \u2192 `0x05AC0000`. Meaning OPEN. - **Dispatcher census** (REP",
+          "type": "record"
+        }
+      ],
+      "statement": "Exactly one Apple SVID literal changes across the three releases: 0x05AC0002 disappears and 0x05AC0000 gains an occurrence.",
+      "where": "DIFF.md, README.md, REPORT.md"
+    },
+    {
+      "id": "C08",
+      "kind": "derived",
+      "refs": [
+        {
+          "path": "evidence/functionmatch/literal_sets.txt",
+          "quote": "88, 105, 444, 460] only a (7): [3, 8, 10, 19, 80, 92, 1024] only b (1): [28] shared excluding trivial (11): [4, 14, 32, 33, 62",
+          "type": "record"
+        },
+        {
+          "path": "DIFF.md",
+          "quote": "637 chars | ``` shared : 4 14 32 33 62 84 85 88 105 444 460 (11 values) only in 3.1.12 : 3 8 10 19 80 92 1024 (7 values) only in 3.",
+          "type": "record"
+        }
+      ],
+      "statement": "Between 3.1.12 and 3.2.0 the compared bodies share 11 non-trivial literals, lose 7 and gain 1; 28 is present only in 3.2.0.",
+      "where": "DIFF.md"
+    },
+    {
+      "id": "C09",
+      "kind": "observed",
+      "refs": [
+        {
+          "path": "FIRMWARE.md",
+          "quote": "at was an address error: the vector `0x0001111d` clears to `0x1111c`, and image offset `0x1111c` is constant data, while `0x111",
+          "type": "record"
+        },
+        {
+          "path": "FIRMWARE.md",
+          "quote": "at was an address error: the vector `0x0001111d` clears to `0x1111c`, and image offset `0x1111c` is constant data, while `0x111",
+          "type": "record"
+        }
+      ],
+      "statement": "The vector word at 0x0001111d points to 0x1111c, which is constant data and not a reset handler.",
+      "where": "FIRMWARE.md"
+    },
+    {
+      "id": "C10",
+      "kind": "observed",
+      "refs": [
+        {
+          "path": "FIRMWARE.md",
+          "quote": "header payloadLength A2452 payloadDataOffset 0x84 + length 0xea00 = 0xea84 = header payloadLength ``` Four-for-four on offset",
+          "type": "record"
+        },
+        {
+          "path": "FIRMWARE.md",
+          "quote": "header payloadLength A2452 payloadDataOffset 0x84 + length 0xea00 = 0xea84 = header payloadLength ``` Four-for-four on offset",
+          "type": "record"
+        }
+      ],
+      "statement": "The 140 W control image's pointers 0xec89 and 0xec71 exceed its 0xea00 payload, which rules out a base-zero mapping only; a non-zero base such as 0x400 would place them inside.",
+      "where": "FIRMWARE.md"
+    },
+    {
+      "id": "C11",
+      "kind": "derived",
+      "refs": [
+        {
+          "path": "PROTOCOL.md",
+          "quote": "ed byte exactly: with SOP selector 2 and a 4-byte payload, `(2 << 4) | ceil(4/4)` = `0x21`. **REPRODUCED** for that datum, checked by `scrip",
+          "type": "record"
+        },
+        {
+          "path": "PROTOCOL.md",
+          "quote": "^ \"VDMs\" payload word 0x05ACA001 little-endian ``` - header 0x21 = SOP selector 2, VDO count 1 \u2014 matches `(sop=2)<<4 | ceil(",
+          "type": "record"
+        }
+      ],
+      "statement": "The frame header formula (sop<<4)|ceil(bytes/4) reproduces the observed 0x21 for SOP selector 2 and a 4-byte payload; the meaning of the sop field outside the observed selector set is open.",
+      "where": "PROTOCOL.md"
+    },
+    {
+      "id": "C12",
+      "kind": "observed",
+      "refs": [
+        {
+          "path": "evidence/dispatcher-census.json",
+          "quote": "{ \"3.1.8\": [ { \"site\": \"0x26c4\", \"table\": \"0x26c8\", \"cases\": 10, \"unique\": 4, \"dominant\": \"0x2c78\", \"dominant_share\":",
+          "type": "record"
+        },
+        {
+          "path": "DIFF.md",
+          "quote": "sus.json`. | build | dispatchers | case-count profile | the 14-case table | |---|---|---|---| | 3.1.8 | 14 | 10,7,9,12,9,7,8,7,",
+          "type": "record"
+        },
+        {
+          "path": "README.md",
+          "quote": "sus** (REPRODUCED): 14 / 14 / 10 `mov pc` dispatch sites; a 14-case table present in both 3.1.x builds and not detected in 3.2.",
+          "type": "record"
+        }
+      ],
+      "statement": "A 14-case mov-pc dispatch table with 6 unique targets and 8 of 14 cases to one target is present in both 3.1.x builds and is not detected in 3.2.0.",
+      "where": "DIFF.md, README.md"
+    },
+    {
+      "id": "C12b",
+      "kind": "open",
+      "open_reason": "unsettled on available evidence; see DIFF.md limitations",
+      "refs": [
+        {
+          "path": "DIFF.md",
+          "quote": "table; the dominant targets of the two 3.2.0 switches are `0x0554A` and `0x05704`. Earlier wording \u2014 \"the shared handler chang",
+          "type": "record"
+        },
+        {
+          "path": "DIFF.md",
+          "quote": "minant targets of the two 3.2.0 switches are `0x0554A` and `0x05704`. Earlier wording \u2014 \"the shared handler changed\", \"a semant",
+          "type": "record"
+        }
+      ],
+      "statement": "The 15-case and 13-case tables in 3.2.0 are candidates only; no correspondence to the 3.1.x switch is shown.",
+      "where": "DIFF.md"
+    },
+    {
+      "id": "C13",
+      "kind": "observed",
+      "refs": [
+        {
+          "path": "DIFF.md",
+          "quote": "ts largest tables being 15 and 13 cases. **OBSERVED.** \"The dispatcher disappeared\" is **REFUTED**. - Exactly one Apple SVID literal changes a",
+          "type": "record"
+        },
+        {
+          "path": "REPORT.md",
+          "quote": "lent to 3.1.12. `DIFF.md` retracts two earlier claims (the \"rebuild, not patch\" reading of 5.9 % window overlap, and a preliminary functio",
+          "type": "record"
+        }
+      ],
+      "statement": "Claims that 3.2.0 replaced or reorganised the dispatcher, or is a rebuild rather than a patch, are withdrawn.",
+      "where": "REPORT.md"
+    },
+    {
+      "id": "C14",
+      "kind": "inferred",
+      "refs": [
+        {
+          "path": "DIFF.md",
+          "quote": "**INFERRED.** - An earlier revision called this region \"the UVDM builder\" and asserted the change was \"not in the builder itself\". *",
+          "type": "record"
+        },
+        {
+          "path": "DIFF.md",
+          "quote": "**INFERRED.** - An earlier revision called this region \"the UVDM builder\" and asserted the change was \"not in the builder itself\". *",
+          "type": "record"
+        }
+      ],
+      "statement": "The Apple SVID literal sites are not established as a UVDM builder; that identification remains unverified.",
+      "where": "DIFF.md"
+    },
+    {
+      "id": "C15",
+      "kind": "observed",
+      "refs": [
+        {
+          "path": "DIFF.md",
+          "quote": ".0 is a rebuild, not a patch.\"** **REFUTED.** Inferred from 5.9 % aligned 16-byte window overlap against 73.1 % for 3.1.8\u21923.1",
+          "type": "record"
+        },
+        {
+          "path": "DIFF.md",
+          "quote": ".0 is a rebuild, not a patch.\"** **REFUTED.** Inferred from 5.9 % aligned 16-byte window overlap against 73.1 % for 3.1.8\u21923.1",
+          "type": "record"
+        },
+        {
+          "path": "REPORT.md",
+          "quote": "cts two earlier claims (the \"rebuild, not patch\" reading of 5.9 % window overlap, and a preliminary function pairing) and doc",
+          "type": "record"
+        }
+      ],
+      "statement": "The 5.9 % / 73.1 % aligned-window overlap figures measure layout; the inference from them to a rewrite is refuted.",
+      "where": "DIFF.md, REPORT.md"
+    },
+    {
+      "id": "C16",
+      "kind": "derived",
+      "refs": [
+        {
+          "path": "scripts/coverage.py",
+          "quote": "\": (\"inventory_320.tsv\", \"A2363_3.2.0_10M13722_base0.bin\")} EXPECTED = {\"3.1.8\": 38.8, \"3.1.12\": 39.4, \"3.2.0\": 43.3} def spans(",
+          "type": "record"
+        },
+        {
+          "path": "DIFF.md",
+          "quote": "ted | coverage | |---|---|---|---| | 3.1.8 | 300 | 15,279 | 38.8 % | | 3.1.12 | 303 | 15,568 | 39.4 % | | 3.2.0 | 296 | 17,249",
+          "type": "record"
+        },
+        {
+          "path": "REPORT.md",
+          "quote": "ts between revisions. The standing limitation is coverage \u2014 38.8 / 39.4 / 43.3 % of each image lies inside analysed function",
+          "type": "record"
+        },
+        {
+          "path": "README.md",
+          "quote": "ree big-endian `u16`. ## Limitations - **Ghidra coverage is 38.8 / 39.4 / 43.3 %** of image bytes. The control-message switc",
+          "type": "record"
+        },
+        {
+          "path": "TESTING.md",
+          "quote": "ble in 3.1.x, absent in 3.2.0 | yes | | function coverage | 38.8 / 39.4 / 43.3 % whole-image | yes | ## Recorded results Run",
+          "type": "record"
+        }
+      ],
+      "statement": "Ghidra function coverage is 38.8 / 39.4 / 43.3 % of image bytes, and the switch and literal sites lie outside the analysed set.",
+      "where": "DIFF.md, README.md, REPORT.md, TESTING.md"
+    },
+    {
+      "id": "C17",
+      "kind": "observed",
+      "refs": [
+        {
+          "path": "DIFF.md",
+          "quote": "ing about hard-reset handling: per the USB-PD specification Hard_Reset is a vSafe0V protocol action with no MessageType, so a 9\u201322",
+          "type": "record"
+        },
+        {
+          "path": "DIFF.md",
+          "quote": "ing about hard-reset handling: per the USB-PD specification Hard_Reset is a vSafe0V protocol action with no MessageType, so a 9\u201322",
+          "type": "record"
+        }
+      ],
+      "statement": "Hard-reset handling change is refuted: Hard_Reset has no MessageType, so a 9-22 message-type switch cannot speak to it.",
+      "where": "DIFF.md"
+    },
+    {
+      "id": "C18",
+      "kind": "open",
+      "open_reason": "unsettled on available evidence; see DIFF.md limitations",
+      "refs": [
+        {
+          "path": "DIFF.md",
+          "quote": "erest outside the analysed set. - Whether a soft\u2192hard reset escalation exists. **OPEN.** - Any host-observable behavioural differe",
+          "type": "record"
+        },
+        {
+          "path": "DIFF.md",
+          "quote": "erest outside the analysed set. - Whether a soft\u2192hard reset escalation exists. **OPEN.** - Any host-observable behavioural differe",
+          "type": "record"
+        }
+      ],
+      "statement": "No soft-to-hard reset escalation ladder was found; the question stays open across all three images.",
+      "where": "DIFF.md"
+    },
+    {
+      "id": "C19",
+      "kind": "observed",
+      "refs": [
+        {
+          "path": "evidence/firmware-acquisition-notes.md",
+          "quote": "`https://gdmf.apple.com/v2/assets` (POST) | **200 / 404** | Pallas asset query \u2014 this is the live one | | `https://gdmf.apple.",
+          "type": "record"
+        },
+        {
+          "path": "FIRMWARE.md",
+          "quote": "\"not found\" for `UARP_A2743` across 11 path shapes; Apple's Pallas registry (`gdmf /v2/assets`) returns `AssetType not found f",
+          "type": "record"
+        },
+        {
+          "path": "README.md",
+          "quote": "firmware is not publicly obtainable** (OBSERVED via Apple's Pallas registry and CDN enumeration). `1030030` remains a host-rep",
+          "type": "record"
+        }
+      ],
+      "statement": "70 W adapter firmware was not found by three enumeration methods (mesu path probes, Pallas lookup with a control type, and a broad type sweep); this is a scoped negative, not proof of nonexistence.",
+      "where": "FIRMWARE.md, README.md"
+    },
+    {
+      "id": "C20",
+      "kind": "open",
+      "open_reason": "unsettled on available evidence; see DIFF.md limitations",
+      "refs": [
+        {
+          "path": "SECURITY.md",
+          "quote": "cessory only accepts a flash write while it is in Accessory Mode 7 having been driven through `kAccMode7FirmwareCommandManifes",
+          "type": "record"
+        },
+        {
+          "path": "SECURITY.md",
+          "quote": "cessory only accepts a flash write while it is in Accessory Mode 7 having been driven through `kAccMode7FirmwareCommandManifes",
+          "type": "record"
+        },
+        {
+          "path": "REPORT.md",
+          "quote": "h implements Discover-Identity VDO parsing, Apple Accessory Mode 7, and CFU firmware commands, with distinct `UARPMagSafeCable",
+          "type": "record"
+        },
+        {
+          "path": "NEXT.md",
+          "quote": "Accessory Mode 7 readback",
+          "type": "record"
+        }
+      ],
+      "statement": "Signature enforcement below the manifest hash, anti-rollback, and whether the Mode 7 read verb can touch flash are all open.",
+      "where": "NEXT.md, REPORT.md, SECURITY.md"
+    },
+    {
+      "id": "C21",
+      "kind": "observed",
+      "refs": [
+        {
+          "path": "evidence/hpmdiagnose-raw.txt",
+          "quote": "HPM at RID 0x0 Route 0x0 Address 0x0c : 0x00 0x04 0x28000000 0x01 0x04",
+          "type": "record"
+        },
+        {
+          "path": "HARDWARE.md",
+          "quote": "serClient`. Access to `AppleHPMUserClient` is gated by that entitlement, which third-party code cannot obtain, so the capability is",
+          "type": "record"
+        },
+        {
+          "path": "SECURITY.md",
+          "quote": "-class = AppleHPMUserClient ``` OBSERVED via `codesign -d --entitlements`. `AppleHPMUserClient` is gated by `com.apple.USBCEntitlem",
+          "type": "record"
+        },
+        {
+          "path": "REPORT.md",
+          "quote": "l four HPM controllers via `/usr/bin/hpmdiagnose`, which is entitlement-gated but not root-gated. - Complete MagSafe cable firmware",
+          "type": "record"
+        }
+      ],
+      "statement": "hpmdiagnose reads the full HPM register file unprivileged; access is entitlement-gated, not root-gated.",
+      "where": "HARDWARE.md, REPORT.md, SECURITY.md"
+    },
+    {
+      "id": "C22",
+      "kind": "open",
+      "open_reason": "unsettled on available evidence; see DIFF.md limitations",
+      "refs": [
+        {
+          "path": "DIFF.md",
+          "quote": "erted without checking), **REFUTED** (checked and false), **OPEN** (unsettled on available evidence). No semantic or behavio",
+          "type": "record"
+        },
+        {
+          "path": "REPORT.md",
+          "quote": "A = 67.80 W**. Two things remain **OPEN**: whether 3.2.0 is semantically equivalent to 3.1.12, and whether any host-observable behavioural diff",
+          "type": "record"
+        },
+        {
+          "path": "DIFF.md",
+          "quote": "oss all three. **REPRODUCED.** Withheld: - Whether 3.2.0 is semantically equivalent to 3.1.12. **OPEN** \u2014 undeterminable at 39 % coverage with",
+          "type": "record"
+        }
+      ],
+      "statement": "Semantic equivalence of 3.2.0 to 3.1.12 is undeterminable at the achieved coverage and is open.",
+      "where": "DIFF.md, REPORT.md"
+    },
+    {
+      "id": "C23",
+      "kind": "open",
+      "open_reason": "unsettled on available evidence; see DIFF.md limitations",
+      "refs": [
+        {
+          "path": "FIRMWARE.md",
+          "quote": "Which code executes first",
+          "type": "record"
+        },
+        {
+          "path": "REPORT.md",
+          "quote": "the entry-point question",
+          "type": "record"
+        }
+      ],
+      "statement": "The entry-point question is OPEN: offset 0x10 is the empirical start, not a proven entry, and 0x1111c holds peripheral addresses.",
+      "where": "REPORT.md"
+    },
+    {
+      "id": "C24",
+      "kind": "observed",
+      "refs": [
+        {
+          "path": "FIRMWARE.md",
+          "quote": ", `0x0000ec71`, `0x0000ec71`, code at `0x10`. **It does not corroborate the base-0 reading.** That image's payload length is `0xea00`, and `0x",
+          "type": "record"
+        },
+        {
+          "path": "REPORT.md",
+          "quote": "o mapping for that image without ruling out other bases. It does not corroborate the base-zero reading, and this report does not use it as s",
+          "type": "record"
+        }
+      ],
+      "statement": "The 140 W control image does not corroborate a base-zero layout for the MagSafe images.",
+      "where": "REPORT.md"
+    },
+    {
+      "id": "C25",
+      "kind": "observed",
+      "refs": [
+        {
+          "path": "FIRMWARE.md",
+          "quote": "ence/firmware-acquisition-notes.md`. **The 70 W adapter (fw 1030030) has no publicly obtainable firmware.** Negative result con",
+          "type": "record"
+        },
+        {
+          "path": "REPORT.md",
+          "quote": "70 W adapter | `1030030` | the brick, ID 0x701c | These are not equally established. The HPM and cable values are host-observed; the adapter's",
+          "type": "record"
+        }
+      ],
+      "statement": "The three firmware objects are not equally established: the adapter value is host-reported only, and the cable version is a single in-file source consistent with register 0x49.",
+      "where": "REPORT.md"
+    },
+    {
+      "id": "C26",
+      "kind": "derived",
+      "refs": [
+        {
+          "path": "evidence/dispatcher-census.json",
+          "quote": "\", \"0xea96\", \"0xe81a\", \"0xe8d6\", \"0xe82e\", \"0xf478\" ] } ], \"3.2.0\": [ { \"site\": \"0x267a\", \"table\": \"0x267c\", \"cases\": 10, \"un",
+          "type": "record"
+        },
+        {
+          "path": "README.md",
+          "quote": "C0000`. Meaning OPEN. - **Dispatcher census** (REPRODUCED): 14 / 14 / 10 `mov pc` dispatch sites; a 14-case table present in both 3.",
+          "type": "record"
+        }
+      ],
+      "statement": "3.2.0 contains 10 detected mov-pc dispatch sites, not 15.",
+      "where": "README.md"
+    },
+    {
+      "id": "C28",
+      "kind": "derived",
+      "refs": [
+        {
+          "path": "DIFF.md",
+          "quote": "Lead re-derived all five relations byte-exactly on all three payloads",
+          "type": "record"
+        }
+      ],
+      "statement": "The C99 inner header is a two-record SHA-256/CRC-32 hash chain over the payload body, record 3, record 4, plus a header self-hash; all five relations reproduce byte-exactly on all three payloads.",
+      "where": "report"
+    },
+    {
+      "id": "C29",
+      "kind": "derived",
+      "refs": [
+        {
+          "path": "DIFF.md",
+          "quote": "the flat base0 images equal `payload[0x180:]`",
+          "type": "record"
+        }
+      ],
+      "statement": "The flat base0 images equal payload[0x180:] \u2014 the 384-byte C99 header is stripped in extraction, not absent from the asset.",
+      "where": "report"
+    },
+    {
+      "id": "C30",
+      "kind": "derived",
+      "refs": [
+        {
+          "path": "DIFF.md",
+          "quote": "SHA-256 (FIPS 180-4 K table + IV, twice per image) and a complete secp256r1",
+          "type": "record"
+        }
+      ],
+      "statement": "SHA-256 (FIPS 180-4 K table + IV, twice per image) and a complete secp256r1 parameter block (p, b, Gx, Gy, n) are present in all three images.",
+      "where": "report"
+    },
+    {
+      "id": "C31",
+      "kind": "inferred",
+      "refs": [
+        {
+          "path": "DIFF.md",
+          "quote": "second-stage switch has a verified successor",
+          "type": "record"
+        }
+      ],
+      "statement": "The 3.1.x dispatcher's second-stage 17-case switch has a verified 3.2.0 successor (0xad2a/0xad7e/0xab64) whose only structural change is the index width (ldrb -> ldrh).",
+      "where": "report"
+    },
+    {
+      "id": "C32",
+      "kind": "open",
+      "open_reason": "unsettled on available evidence; see DIFF.md limitations",
+      "refs": [
+        {
+          "path": "DIFF.md",
+          "quote": "The 3.1.x dispatcher island is very likely a stale/dead copy",
+          "type": "record"
+        }
+      ],
+      "statement": "The 3.1.x dispatcher island has zero static inbound edges and even mov pc table targets (ARM-state request on v7-M); it is very likely a stale or dead copy, and the live dispatcher's location is open.",
+      "where": "report"
+    },
+    {
+      "id": "C33",
+      "kind": "observed",
+      "refs": [
+        {
+          "path": "DIFF.md",
+          "quote": "`ble` \u2192 `bls` and `bgt` \u2192 `bhi` after",
+          "type": "record"
+        }
+      ],
+      "statement": "Of the 155 non-stub calibrated 1:1 pairs 3.1.12->3.2.0, 124 are identical modulo relink and 31 are substantive, including a signed->unsigned comparison change (0xa018->0xa020).",
+      "where": "report"
+    },
+    {
+      "id": "C34",
+      "kind": "observed",
+      "refs": [
+        {
+          "path": "DIFF.md",
+          "quote": "No Accept transmit, no\n  timer arm, no CC/PHY write in the decoded body",
+          "type": "record"
+        }
+      ],
+      "statement": "The 3.1.x dispatcher default arm (including Soft_Reset, case 13) rebuilds the source-cap buffer and sets a port state byte; no Accept transmit or CC/PHY write is decoded in that body.",
+      "where": "report"
+    },
+    {
+      "id": "C35",
+      "kind": "observed",
+      "refs": [
+        {
+          "path": "DIFF.md",
+          "quote": "**3.2.0 dropped it** (lead-verified: 1/1/0 hits), pool retained with 4\n  reordered states.",
+          "type": "record"
+        }
+      ],
+      "statement": "The FSM state-name string spm_host_src_hardreset exists in 3.1.8 and 3.1.12 and is absent from 3.2.0, whose pool retains four reordered states.",
+      "where": "report"
+    },
+    {
+      "id": "C36",
+      "kind": "open",
+      "open_reason": "unsettled on available evidence; see DIFF.md limitations",
+      "refs": [
+        {
+          "path": "DIFF.md",
+          "quote": "\"no anti-rollback\" is **NOT claimed** \u2014 **OPEN**",
+          "type": "record"
+        }
+      ],
+      "statement": "No version-threshold constant or cmp.w instruction exists in any image; at 46-56% function coverage this negative is bounded, not conclusive \u2014 anti-rollback is unresolved.",
+      "where": "report"
+    },
+    {
+      "id": "C37",
+      "kind": "observed",
+      "refs": [
+        {
+          "path": "DIFF.md",
+          "quote": "a real SVDM dispatcher exists at 3.1.8\n  `0xb34c`",
+          "type": "record"
+        }
+      ],
+      "statement": "VDMs is one 4CC command tag among many; UARP uses CFUa/CFUp/CFUs as runtime 4CC arguments. The cable images contain an SVDM dispatcher (0xb34c) with no 4CC compare; CFU consumption below the app image is open.",
+      "where": "report"
+    }
+  ],
+  "generation": "ded164badf4e89cf236a10bd11b28cfa014c3eaf8eeaef52e996fe048bc32b8e",
+  "report_id": "RR-2026-1114",
+  "root": ".",
+  "schema": "research-evidence/1",
+  "validation": {
+    "by_kind": {
+      "derived": 9,
+      "inferred": 2,
+      "observed": 19,
+      "open": 7
+    },
+    "claims": 37,
+    "content_sha256": "082ce8865d1724eda949c5294181d4ca4f7a5774428e30bb4aed2084014d5add",
+    "ref_classes": {
+      "artifact": 0,
+      "commit": 0,
+      "external": 0,
+      "file": 0,
+      "record": 88,
+      "run": 0
+    },
+    "refs": 88,
+    "report_id": "RR-2026-1114",
+    "schema": "research-evidence/1",
+    "verification": "record-level; binaries, symbols and addresses are not re-examined"
+  }
+}
