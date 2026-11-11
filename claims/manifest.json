@@ -586,6 +586,89 @@
     ]
    },
    "disposition": "open"
+  },
+  {
+   "id": "C23",
+   "statement": "The entry-point question is OPEN: offset 0x10 is the empirical start, not a proven entry, and 0x1111c holds peripheral addresses.",
+   "label": "OPEN",
+   "primary": {
+    "path": "FIRMWARE.md",
+    "quote": "Which code executes first"
+   },
+   "occurrences": [
+    {
+     "doc": "REPORT.md",
+     "quote": "the entry-point question"
+    }
+   ],
+   "relations": {},
+   "disposition": "corrected",
+   "bans": [
+    "Real\nentry is offset",
+    "Closed since the last revision of this document: the entry-point"
+   ]
+  },
+  {
+   "id": "C24",
+   "statement": "The 140 W control image does not corroborate a base-zero layout for the MagSafe images.",
+   "label": "REFUTED",
+   "primary": {
+    "path": "FIRMWARE.md",
+    "quote": "corroborate the base-0"
+   },
+   "occurrences": [
+    {
+     "doc": "REPORT.md",
+     "quote": "does not corroborate"
+    }
+   ],
+   "relations": {},
+   "disposition": "corrected",
+   "bans": [
+    "trustworthy rather than a coincidence",
+    "makes the MagSafe reading"
+   ]
+  },
+  {
+   "id": "C25",
+   "statement": "The three firmware objects are not equally established: the adapter value is host-reported only, and the cable version is a single in-file source consistent with register 0x49.",
+   "label": "OBSERVED",
+   "primary": {
+    "path": "FIRMWARE.md",
+    "quote": "1030030"
+   },
+   "occurrences": [
+    {
+     "doc": "REPORT.md",
+     "quote": "not equally established"
+    }
+   ],
+   "relations": {},
+   "disposition": "corrected",
+   "bans": [
+    "Each was independently confirmed",
+    "recovered twice"
+   ]
+  },
+  {
+   "id": "C26",
+   "statement": "3.2.0 contains 10 detected mov-pc dispatch sites, not 15.",
+   "label": "REPRODUCED",
+   "primary": {
+    "path": "evidence/dispatcher-census.json",
+    "quote": "3.2.0"
+   },
+   "occurrences": [
+    {
+     "doc": "README.md",
+     "quote": "14 / 14 / 10"
+    }
+   ],
+   "relations": {},
+   "disposition": "corrected",
+   "bans": [
+    "with 15 sites"
+   ]
   }
  ]
 }

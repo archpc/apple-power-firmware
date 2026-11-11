@@ -252,7 +252,7 @@ Issued:
 
 - A 14-case table with 6 unique targets and 8/14 to one target is present in
   3.1.8 and 3.1.12 and not detected in 3.2.0. **OBSERVED.**
-- The `mov pc` dispatch mechanism survives in 3.2.0 with 15 sites, its largest
+- The `mov pc` dispatch mechanism survives in 3.2.0 with 10 detected sites, its largest
   tables being 15 and 13 cases. **OBSERVED.** "The dispatcher disappeared" is
   **REFUTED**.
 - Exactly one Apple SVID literal changes across the releases. **OBSERVED.**
