@@ -1,0 +1,29 @@
+# Proprietary Apple firmware: retained locally, never redistributed.
+# Provenance and hashes are published; the binaries are not.
+firmware/*
+!firmware/MANIFEST.txt
+*.uarp
+*.zip
+
+# Large extracted analysis products
+kexts/
+host/
+evidence/kernelcache*
+evidence/*.lzfse
+evidence/*.bin
+
+# Scratch and machine-local state
+__pycache__/
+*.pyc
+.cache/
+.DS_Store
+*.log
+*.tmp
+
+# Generated publication sidecars carry absolute build paths
+publication/*.build.json
+publication/*.build.log
+publication/*.evidence.json
+
+# Keep the provenance manifest despite excluding the binaries
+!firmware/MANIFEST.txt
