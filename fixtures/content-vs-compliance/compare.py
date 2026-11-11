@@ -51,11 +51,15 @@ def structure(typ):
 
 def main():
     d = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(__file__))
+    pub = os.path.normpath(os.path.join(d, "..", "..", "publication"))
+    # One canonical copy of each build lives under publication/; this fixture
+    # holds sources and judgement only, never a second copy of a PDF.
     rows, ok = [], True
-    for name, label, expect_pages in (
-            ("claim-register-6pp", "six-page claim register", 6),
-            ("research-narrative-9pp", "nine-page research narrative", 9)):
-        pdf = os.path.join(d, name + ".pdf")
+    for name, label, expect_pages, rel in (
+            ("claim-register-6pp", "six-page claim register", 6, "prior/claim-register-6pp.pdf"),
+            ("research-narrative-9pp", "nine-page research narrative", 9,
+             "current/apple-power-firmware.pdf")):
+        pdf = os.path.join(pub, rel)
         pages, chars = measure(pdf)
         st = structure(os.path.join(d, name + ".typ"))
         rows.append((label, pages, chars, st))

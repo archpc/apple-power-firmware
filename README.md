@@ -81,6 +81,8 @@ EXTRACTION-NOTES.md    BootKC extraction method and validation
 DISPOSITION.md         every Fable review finding and its resolution
 TESTING.md             what the checks assert and how to run them
 REVIEW-FABLE.md        independent documentation audit (retained verbatim)
+publication/           one copy of each build: current/ shipped, prior/ superseded
+fixtures/              judgement fixtures (sources only; PDFs live in publication/)
 scripts/               extraction, analysis and verification scripts
 evidence/              captured outputs, dumps, census and match data
 firmware/              NOT COMMITTED: proprietary images, see FIRMWARE.md
