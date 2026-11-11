@@ -32,6 +32,14 @@ Run against the local artifact tree with images present:
 Run without `firmware/images` (the CI condition): the six document checks pass and
 the five numeric checks report SKIP with `images absent`.
 
+## Cross-skill fixture
+
+`~/.hermes/skills/research/research-pdf/fixtures/content-vs-compliance/` preserves
+this project's first publication (six pages, claim register) beside the rebuild
+(nine pages, narrative). Both passed the publication gate; the first was still a
+poor report. The fixture is a judgement aid for skill changes, not a check, and its
+`compare.py` deliberately emits no score.
+
 ## Deliberate non-checks
 
 - **No assertion that any firmware claim is true.** These checks verify that the
