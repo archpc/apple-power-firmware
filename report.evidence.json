@@ -618,6 +618,138 @@
      "quote": "C0000`. Meaning OPEN. - **Dispatcher census** (REPRODUCED): 14 / 14 / 10 `mov pc` dispatch sites; a 14-case table present in both 3."
     }
    ]
+  },
+  {
+   "id": "C28",
+   "kind": "derived",
+   "statement": "The C99 inner header is a two-record SHA-256/CRC-32 hash chain over the payload body, record 3, record 4, plus a header self-hash; all five relations reproduce byte-exactly on all three payloads.",
+   "where": "report",
+   "refs": [
+    {
+     "type": "record",
+     "path": "DIFF.md",
+     "quote": "Lead re-derived all five relations byte-exactly on all three payloads"
+    }
+   ]
+  },
+  {
+   "id": "C29",
+   "kind": "derived",
+   "statement": "The flat base0 images equal payload[0x180:] \u2014 the 384-byte C99 header is stripped in extraction, not absent from the asset.",
+   "where": "report",
+   "refs": [
+    {
+     "type": "record",
+     "path": "DIFF.md",
+     "quote": "the flat base0 images equal `payload[0x180:]`"
+    }
+   ]
+  },
+  {
+   "id": "C30",
+   "kind": "derived",
+   "statement": "SHA-256 (FIPS 180-4 K table + IV, twice per image) and a complete secp256r1 parameter block (p, b, Gx, Gy, n) are present in all three images.",
+   "where": "report",
+   "refs": [
+    {
+     "type": "record",
+     "path": "DIFF.md",
+     "quote": "SHA-256 (FIPS 180-4 K table + IV, twice per image) and a complete secp256r1"
+    }
+   ]
+  },
+  {
+   "id": "C31",
+   "kind": "inferred",
+   "statement": "The 3.1.x dispatcher's second-stage 17-case switch has a verified 3.2.0 successor (0xad2a/0xad7e/0xab64) whose only structural change is the index width (ldrb -> ldrh).",
+   "where": "report",
+   "refs": [
+    {
+     "type": "record",
+     "path": "DIFF.md",
+     "quote": "second-stage switch has a verified successor"
+    }
+   ]
+  },
+  {
+   "id": "C32",
+   "kind": "open",
+   "statement": "The 3.1.x dispatcher island has zero static inbound edges and even mov pc table targets (ARM-state request on v7-M); it is very likely a stale or dead copy, and the live dispatcher's location is open.",
+   "where": "report",
+   "refs": [
+    {
+     "type": "record",
+     "path": "DIFF.md",
+     "quote": "The 3.1.x dispatcher island is very likely a stale/dead copy"
+    }
+   ],
+   "open_reason": "unsettled on available evidence; see DIFF.md limitations"
+  },
+  {
+   "id": "C33",
+   "kind": "observed",
+   "statement": "Of the 155 non-stub calibrated 1:1 pairs 3.1.12->3.2.0, 124 are identical modulo relink and 31 are substantive, including a signed->unsigned comparison change (0xa018->0xa020).",
+   "where": "report",
+   "refs": [
+    {
+     "type": "record",
+     "path": "DIFF.md",
+     "quote": "`ble` \u2192 `bls` and `bgt` \u2192 `bhi` after"
+    }
+   ]
+  },
+  {
+   "id": "C34",
+   "kind": "observed",
+   "statement": "The 3.1.x dispatcher default arm (including Soft_Reset, case 13) rebuilds the source-cap buffer and sets a port state byte; no Accept transmit or CC/PHY write is decoded in that body.",
+   "where": "report",
+   "refs": [
+    {
+     "type": "record",
+     "path": "DIFF.md",
+     "quote": "No Accept transmit, no\n  timer arm, no CC/PHY write in the decoded body"
+    }
+   ]
+  },
+  {
+   "id": "C35",
+   "kind": "observed",
+   "statement": "The FSM state-name string spm_host_src_hardreset exists in 3.1.8 and 3.1.12 and is absent from 3.2.0, whose pool retains four reordered states.",
+   "where": "report",
+   "refs": [
+    {
+     "type": "record",
+     "path": "DIFF.md",
+     "quote": "**3.2.0 dropped it** (pool retained with 4\n  reordered states)"
+    }
+   ]
+  },
+  {
+   "id": "C36",
+   "kind": "open",
+   "statement": "No version-threshold constant or cmp.w instruction exists in any image; at 46-56% function coverage this negative is bounded, not conclusive \u2014 anti-rollback is unresolved.",
+   "where": "report",
+   "refs": [
+    {
+     "type": "record",
+     "path": "DIFF.md",
+     "quote": "\"no anti-rollback\" is **NOT claimed** \u2014 **OPEN**"
+    }
+   ],
+   "open_reason": "unsettled on available evidence; see DIFF.md limitations"
+  },
+  {
+   "id": "C37",
+   "kind": "observed",
+   "statement": "VDMs is one 4CC command tag among many; UARP uses CFUa/CFUp/CFUs as runtime 4CC arguments. The cable images contain an SVDM dispatcher (0xb34c) with no 4CC compare; CFU consumption below the app image is open.",
+   "where": "report",
+   "refs": [
+    {
+     "type": "record",
+     "path": "DIFF.md",
+     "quote": "a real SVDM dispatcher exists at 3.1.8\n  `0xb34c`"
+    }
+   ]
   }
  ]
 }

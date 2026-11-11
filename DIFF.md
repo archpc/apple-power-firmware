@@ -535,3 +535,63 @@ on-curve: the embedded-public-key reading is **REFUTED**; its role is
   guarded to address `< 0x40000`. No hashing or compare inside it; integrity
   enforcement therefore lives elsewhere (the hash chain of §13b is the
   candidate, but nothing OBSERVED wires them together yet).
+
+## 14. Fourth wave: per-pair semantic diff and reset handling
+
+Delegated evidence: `delegated/semantics/`, `delegated/resetmap/`. Lead
+spot-verifications marked.
+
+### 14a. 3.1.12 → 3.2.0 pair classes (155 non-stub calibrated 1:1 pairs)
+
+- 147/155 (94.8 %) show a decoded instruction-level difference; 124 (80 %)
+  are identical once branch/call displacements are masked (relink signature);
+  31 (20 %) substantive: field-offset changes 14+6 combined, immediate
+  changes 2+2, register 2, sequence edits 2, signedness 1, indexed-vs-fixed
+  load 1, reordering 1, size change 1 (decoder desync excluded).
+- Displacement deltas are uniform within a pair (18/20), clustered at
+  −2/−4/+0x20/+7 — layout change, not isolated edits.
+- Headline (lead-verified at instruction level): `0xa018 → 0xa020`,
+  s = 1.0 in the matcher, yet `ble` → `bls` and `bgt` → `bhi` after
+  `cmp r4,r0`: a signed→unsigned comparison change. **Matcher caveat
+  (OBSERVED):** `canon()` collapses every conditional branch to `cbr`, so
+  condition-signature changes are invisible to the calibrated matcher by
+  construction; they must come from the decode pass. Raw-word literal
+  multiset checks are **REFUTED as a validator** (5 flagged pairs are packed
+  Thumb instructions, not literals).
+- The `0x1df0` tail diff is a decoder desync (re-verified from 0x1e74) and
+  is excluded.
+
+### 14b. Soft_Reset and escalation
+
+- Premise corrected: `0xb154` (3.1.8; `0xb1a8` in 3.1.12) is the **default
+  arm** taken by 8 of the 14 types (11, 13, 14, 15, 16, 17, 20, 21),
+  including Soft_Reset (13). Body: rebuild + install a 28-byte source-cap
+  buffer at `0x200002b0+0x268`, `port+0x45 := 0x10`, keyed
+  `(port<<8)|9` timer lookup, event word update. **No Accept transmit, no
+  timer arm, no CC/PHY write in the decoded body** — the spec-mandated
+  Accept reply for Soft_Reset is absent from the decoded arm.
+- Three anomalies mark the island as a foreign fragment: +8 over-pop
+  epilogue vs frame, two never-initialised stack slots stored to globals,
+  and **even table entries consumed by `mov pc,r0`** — on v7-M an even value
+  in `mov pc` requests ARM state, which would fault. The 3.1.x dispatcher
+  island is very likely a stale/dead copy (previously OPEN, now INFERRED
+  with this evidence); the live dispatcher, if any, is elsewhere.
+- Soft→hard escalation: **OPEN** (bounded negative: timer machinery
+  `0x1178`/`0xa450` located; no decoded callback reaches a register write).
+- Hard-reset evidence: FSM state-name pool headed `"SPM FSM"` contains
+  `spm_host_src_hardreset` in 3.1.8 (`0x12d94`) and 3.1.12 (`0x12e14`);
+  **3.2.0 dropped it** (lead-verified: 1/1/0 hits), pool retained with 4
+  reordered states. Name liveness **OPEN** (no pointer xref to the pool).
+
+### 14c. 3.2.0 switch semantics
+
+- The three unmatched 3.2.0 switches are arg- or struct-indexed with distinct
+  shapes; "the 3.1.x dispatcher split into control+data switches" is **not
+  supported** by the spans (two start at 2, one crosses the 15/16 boundary).
+  Three layer-distinct handlers fits the evidence better. All four entries
+  are pointer-reached (no BL caller).
+- Out-of-table cases in 3.1.x (INFERRED): 2 = timer arm+release; 3 = mask
+  clears + timer arm; 0x28 = one-shot latch + state 2 + timer; 0x3d =
+  `0x31a0(1,0x29)` state 41; 0x41 = memset of `0x20001a10+0x28` (0x2c B) +
+  state 0x1e then the second-stage switch. 0x28/0x3d/0x41 exceed the PD type
+  range → device-specific control codes.
