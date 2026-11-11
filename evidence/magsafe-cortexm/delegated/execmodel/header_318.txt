@@ -1,0 +1,33 @@
+languageID=ARM:LE:32:Cortex
+language=ARM:LE:32:Cortex
+cspec=default
+imageBase=00000000
+memory=00000000..00014607 size=83464
+bytes@0x0=002000207d0f0100a10f0100a10f0100
+word[0]@0x0=0x20002000
+word[1]@0x4=0x00010f7d
+word[2]@0x8=0x00010fa1
+word[3]@0xc=0x00010fa1
+hdr 0x0 codeUnit=none ins=- func=-
+hdr 0x4 codeUnit=addr 00010f7d ins=- func=-
+hdr 0x8 codeUnit=addr 00010fa1 ins=- func=-
+hdr 0xc codeUnit=addr 00010fa1 ins=- func=-
+--- target 0x10f7c
+  bytes=90010020d01800203c0003402911000008e400e000e100e080bb000078120020
+  functionContaining=NONE
+  dataAt=NONE
+  insBefore=lsls r0,r2,#0x6
+  disassemble()->lsls r0,r2,#0x6
+  functionAtAfter=NONE
+  next=00010f7e
+  dwords=0x20000190 0x200018d0 0x4003003c 0x00001129 0xe000e408 0xe000e100 0x0000bb80 0x20001278
+--- target 0x10fa0
+  bytes=0402054004030540000f0540800f054000080080fffffeff9439010080a90300
+  functionContaining=NONE
+  dataAt=NONE
+  insBefore=lsls r4,r0,#0x8
+  disassemble()->lsls r4,r0,#0x8
+  functionAtAfter=NONE
+  next=00010fa2
+  dwords=0x40050204 0x40050304 0x40050f00 0x40050f80 0x80000800 0xfffeffff 0x00013994 0x0003a980
+ptrishRuns(0x20/0xe0/0x40 top byte, >=2 words) in 0x10f00..0x11050: [0x10f08+2] [0x10f14+2] [0x10f34+6] [0x10f5c+6] [0x10f7c+3] [0x10f8c+2] [0x10f98+6]

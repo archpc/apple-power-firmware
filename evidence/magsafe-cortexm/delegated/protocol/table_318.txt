@@ -1,0 +1,44 @@
+image firmware/images/A2363_3.1.8_10M569_base0.bin  size 83464 (0x14608)
+
+case table @ 0xa9d8, 14 little-endian words
+  [ 0] 0x0a9d8 = 0x0000aed0  in_image=True  even=True  align4=True 
+  [ 1] 0x0a9dc = 0x0000ae90  in_image=True  even=True  align4=True 
+  [ 2] 0x0a9e0 = 0x0000b154  in_image=True  even=True  align4=True 
+  [ 3] 0x0a9e4 = 0x0000af08  in_image=True  even=True  align4=True 
+  [ 4] 0x0a9e8 = 0x0000b154  in_image=True  even=True  align4=True 
+  [ 5] 0x0a9ec = 0x0000b154  in_image=True  even=True  align4=True 
+  [ 6] 0x0a9f0 = 0x0000b154  in_image=True  even=True  align4=True 
+  [ 7] 0x0a9f4 = 0x0000b154  in_image=True  even=True  align4=True 
+  [ 8] 0x0a9f8 = 0x0000b154  in_image=True  even=True  align4=True 
+  [ 9] 0x0a9fc = 0x0000ae90  in_image=True  even=True  align4=True 
+  [10] 0x0aa00 = 0x0000af50  in_image=True  even=True  align4=True 
+  [11] 0x0aa04 = 0x0000b154  in_image=True  even=True  align4=True 
+  [12] 0x0aa08 = 0x0000b154  in_image=True  even=True  align4=True 
+  [13] 0x0aa0c = 0x0000af72  in_image=True  even=True  align4=False
+  [14] 0x0aa10 = 0xd0002c01  in_image=False even=False align4=False   <-- slot after the table
+
+unique targets in the 14 slots (6): 0xae90, 0xaed0, 0xaf08, 0xaf50, 0xaf72, 0xb154
+
+branch-reference census
+  0x0ae90: 0 total, 0 within +/-0x4000  []
+  0x0aed0: 1 total, 1 within +/-0x4000  ['0x0aecc:B<cond>']
+  0x0af08: 0 total, 0 within +/-0x4000  []
+  0x0af50: 0 total, 0 within +/-0x4000  []
+  0x0af72: 0 total, 0 within +/-0x4000  []
+  0x0b154: 0 total, 0 within +/-0x4000  []
+  0x0a9d6: 0 total, 0 within +/-0x4000  []
+  0x0aa2a: 0 total, 0 within +/-0x4000  []
+  0x0acd4: 47 total, 47 within +/-0x4000  ['0x0aa14:B', '0x0aa38:B', '0x0aa3e:B', '0x0aa5a:B', '0x0aa60:B', '0x0aa76:B', '0x0aa8e:B', '0x0aaaa:B', '0x0aab8:B', '0x0aace:B']
+  0x0aa1c: 1 total, 1 within +/-0x4000  ['0x0a9ce:B<cond>']
+
+raw word / halfword occurrences
+  0x0ae90: word 2 @ ['0xa9dc', '0xa9fc']   half 3 @ ['0xa9dc', '0xa9fc', '0xb3bd']
+  0x0aed0: word 1 @ ['0xa9d8']   half 3 @ ['0xa9d8', '0xb2df', '0x10091']
+  0x0af08: word 1 @ ['0xa9e4']   half 1 @ ['0xa9e4']
+  0x0af50: word 1 @ ['0xaa00']   half 1 @ ['0xaa00']
+  0x0af72: word 1 @ ['0xaa0c']   half 1 @ ['0xaa0c']
+  0x0b154: word 8 @ ['0xa9e0', '0xa9e8', '0xa9ec', '0xa9f0', '0xa9f4', '0xa9f8']   half 8 @ ['0xa9e0', '0xa9e8', '0xa9ec', '0xa9f0', '0xa9f4', '0xa9f8', '0xaa04', '0xaa08']
+  0x0a9d6: word 0 @ []   half 0 @ []
+  0x0aa2a: word 0 @ []   half 0 @ []
+  0x0acd4: word 0 @ []   half 0 @ []
+  0x0aa1c: word 0 @ []   half 5 @ ['0x2c09', '0xa443', '0xc899', '0xf297', '0x125d5']

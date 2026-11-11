@@ -289,3 +289,91 @@ mean. Neither step was performed here.
 - Subagent claims corrected here: "uncovered 61 % is data" (**REFUTED**), "PDO
   table at a fixed address" (**REFUTED**), "`0xB154` shared handler"
   (**OBSERVED** true for 3.1.8).
+
+## 11. Seeded Cortex-M re-analysis (supersedes §3/§4 detection limits)
+
+Pipeline: Ghidra 12.1.4 headless, `-processor ARM:LE:32:Cortex -cspec default`
+(same `ARM7_le.sla` as v7 but `ARMCortex.pspec` with `TMode=1` default, external
+name `armv7e-m`). Census-derived seeds were first DIAGNOSED per address
+(unit type, containing function, inbound refs, decode attempt —
+`scripts/ghidra/DiagSeeds.java`); only seeds proven to be decodable code were
+created, and only units proven wrong (with before/after evidence in the seed
+log) were cleared. BL/B.W xref maps came from `scripts/ghidra/bl_xref.py`.
+Delegated verification: `evidence/magsafe-cortexm/delegated/execmodel.md`,
+`protocol.md`, `xversion.md`.
+
+### 11a. Coverage (REPRODUCED)
+
+| build | functions | coverage | prior generic-v7 |
+|---|---|---|---|
+| 3.1.8 | 444 | 46.4 % | 300 / 38.8 % |
+| 3.1.12 | 436 | 45.2 % | 303 / 39.4 % |
+| 3.2.0 | 423 | 56.2 % | 296 / 43.3 % |
+
+Two independent 3.1.8 runs produce identical inventories except the `0x10`
+function body length (4 vs 8 B). `0x10` stays **CANDIDATE** startup entry; the
+reset-vector words still land in the pointer table at `0x10f4c..` and decode as
+nothing (`REFUTED` as code, again). Addresses remain file offsets; no runtime
+base is asserted.
+
+### 11b. The control-message dispatcher, corrected (OBSERVED unless noted)
+
+- 3.1.8 entry `0xa9bc`, guard `subs r0,#9; cmp r0,#0xd`, table `0xa9d8` with
+  exactly 14 entries (`0xaa10` = `0xd0002c01`, not a pointer), six unique
+  targets `0xaed0 0xae90 0xb154 0xaf08 0xaf50 0xaf72`, dispatch `mov pc,r0` at
+  `0xa9d6`. 3.1.12 counterpart `0xaa10`, table `0xaa2c`, same case grouping.
+- **§3's "switch site 0xAA2A" was mislabelled for 3.1.8**: at `0xaa2a` the
+  bytes are `cmp r1,#0x28; bne 0xaa2e` — a compare chain in the
+  out-of-table cases, reached by fallthrough. `0xaa2a` is the 3.1.12
+  dispatcher site. The earlier "not inside any Ghidra function" statements
+  were true of the old analysis and are superseded by the seeded one.
+- Body extent: Ghidra's function body says 552 B, but flow continues through
+  shared epilogue at `0xacd4/0xacd6`; `0xa9bc..0xacd7 = 796 B`. The 552 figure
+  is an analysis-boundary artifact, not a semantic size.
+- Decompiler dataflow refutations (checked at instruction level):
+  `param_1[0x18] = &table` is wrong — the store at `0xaf76` writes the message
+  type (`r1`), not the table address; the `(*(code*)&table)(1)` branch does
+  not exist. Control-flow structure of the decompilation is otherwise
+  supported by decode.
+- **Liveness OPEN**: no BL, B.W, pointer word or halfword reference to
+  `0xa9bc` (or `0xaa10`) exists in either image. The island `0xa9bc..0xb1a3`
+  has zero static inbound edges, and three of its six case targets enter
+  foreign stack frames. Inferred (not established): scheduling via a
+  function-pointer/callback mechanism invisible to static xref, or a
+  stale/duplicated copy. Do not call it "the live control-message handler".
+- Callee deltas 3.1.8→3.1.12 are NOT uniform (the subagent claim of a
+  uniform +0x54 shift is **REFUTED**): 14 callees are address-identical;
+  table-adjacent code moved +0x54; the large handler `0xd904→0xd984` moved
+  +0x80.
+- Case-value → USB-PD message-type mapping (9=DR_Swap … 22=Get_Sink_Cap_Ext
+  under standard PD numbering; earlier draft numbering in this document was
+  off by one) remains **INFERRED**; no in-image constant names a type.
+  Out-of-table cases 2, 3, 0x28, 0x3d, 0x41: **OPEN**.
+
+### 11c. 3.2.0 (OBSERVED)
+
+The 14-case 9–22 table is absent (`REFUTED` both "unchanged" and "the
+dispatcher disappeared"). Three switches with different guards and message
+index sources exist: entries `0x4b78` (8 cases, span 2–9), `0x50fc` (13 cases,
+span 2–14), and `0x4eca` (15 cases, span 3–17, reached only indirectly).
+Whether any is the successor of the 3.1.x control-message dispatcher:
+**OPEN**.
+
+### 11d. Cross-version match (first pass, many-to-many caveat)
+
+182 exact signatures shared by all three builds, covering 225/223/213
+functions. 3.1.8→3.1.12: 98.2 % exact. 3.1.12→3.2.0: 49.9 % strict,
+235 pairs at similarity ≥ 0.85, 195 3.2.0 functions without a counterpart
+(largest `0xfbc8`, 2,932 B). Max mnemonic-sequence multiplicity 14 (3.1.x)
+and 10 (3.2.0), so these counts are many-to-many upper bounds, consistent
+with §2's rule that no per-function semantic claim rests on them yet.
+
+### 11e. New evidence bounds
+
+The largest uncovered 3.1.8 region `0x10abc..0x129f0` (7,988 B) is a
+coherent code island with prologues at `0x10ac0/0x10b30/0x12938/0x129c8`,
+an `"NVM0"`-tagged descriptor table at `0x10f4c`, and no external caller —
+like the dispatcher island, statically unreachable. Roughly 22.7 kB of the
+image (27 %) contains coherent `push {…,lr}` bodies outside the analysed
+function set; 4.4 kB are strings. Reachability of these islands is **OPEN**
+and bounds every claim in §11.

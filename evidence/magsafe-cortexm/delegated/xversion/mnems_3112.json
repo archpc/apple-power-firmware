@@ -1,0 +1,873 @@
+[
+{"addr":"0x170","size":50,"n":25,"name":"FUN_00000170","mnems":"push lsls bne mov orrs lsls beq cmp beq mov ldrb strb adds adds subs bne pop lsrs beq mov ldmia stmia subs bne b"}
+,
+{"addr":"0x1a2","size":16,"n":8,"name":"FUN_000001a2","mnems":"cmp beq mov strb adds subs bne bx"}
+,
+{"addr":"0x1b2","size":30,"n":15,"name":"FUN_000001b2","mnems":"push mov movs cmp beq ldrb ldrb cmp bne subs adds adds b movs pop"}
+,
+{"addr":"0x1d0","size":818,"n":406,"name":"FUN_000001d0","mnems":"push sub mov ldrb cmp bne b mov mov movs str lsls str movs str lsls str movs str mov str cmp beq mov subs cmp bhi mov add ldrb lsls add movs subs cmp bhi movs muls adds ldrb adds cmp bne uxtb subs cmp bmi ldr ands lsls b cmp bne ldr b mov subs cmp bhi add ldrb lsls add ldr ands cmp bne b cmp bne b cmp beq b ldr b ldr movs mov mov b ldr ands lsls b mov ldr ands mov lsls lsrs cmp beq cmp bne adds movs bics ldr adds b cmp beq ldr bl b ldmia ldr orrs cmp bpl b lsls lsrs cmp bne b movs b lsls lsrs beq b movs orrs movs b movs b ldr ldr b ldrb adds b lsls bpl b movs orrs movs b ldr lsls bics adds b ldr lsls orrs b lsls ldr lsls bics orrs b ldmia add strb ldr movs mov blx ldr adds str b movs orrs movs bics b movs mov bics ands cmp bne movs b ldmia lsls lsrs movs cmp bls b mov add ldrb lsls add ldr str b ldr ands ldr orrs ldmia ldr b movs ands ldmia lsrs uxtb str cmp str str bne cmp beq ldrb cmp beq adds movs ldrb adds cmp bne b movs lsls b ldr lsls b ldr orrs lsls lsrs cmp beq cmp bne adds movs bics ldr adds b ldmia movs lsls mov bpl cmp mov beq cmp beq cmp beq cmp bne ldr b ldr b ldr cmp bne ldr asrs adds eors ldr mov bl ldr adds str movs b movs orrs mov b lsrs uxtb str b ldr b ldr b mov ldr mov mov bl ldr adds str mov b ldr strh b ldr str asrs str b movs lsrs uxtb cmp str blt mov cmp bge mov ldr cmp bge str str subs mov ldr adds str ldr ldr ldr movs mov blx subs bne ldr subs str mov ldr ldr b ldr ldrb movs cmp str beq movs str cmp bpl ldr cmp bcs adds ldr ldr movs mov blx ldr ldrb adds cmp bne ldr adds str ldr ldr cmp bcs ldr cmp beq cmp beq subs mov ldr adds str ldr ldr movs mov blx subs bne ldr subs str ldr ldr ldrb adds cmp beq b movs str ldr add pop"}
+,
+{"addr":"0x564","size":140,"n":69,"name":"FUN_00000564","mnems":"push sub str mov str lsls bpl ldr b ldr add adds movs mvns cmp str str beq lsls lsrs str movs ldr str mov mov mov bl mov ldr mov muls subs ldrb strb ldr adds adds cmp mov bls mov ldr ldr cmp bpl lsrs uxtb uxtb cmp bls ldr movs strb adds adds uxtb cmp bhi b ldr lsls bne movs strb adds movs uxtb movs"}
+,
+{"addr":"0x5f0","size":240,"n":120,"name":"FUN_000005f0","mnems":"lsls cmp str str beq ldrb tst beq cmp ldr beq ldr movs ldr mov blx adds adds ldrb cmp ldr mov bne b movs b cmp beq movs adds ldrb adds cmp bne adds mov movs ldr ands lsrs uxtb cmp str str bne cmp ble ldr ands str beq movs b ldr ands b movs add strb subs cmp ldr blt ldr add movs mov blx subs bne ldr ldr cmp ldr bne cmp beq ldrb cmp beq ldr movs mov mov blx adds ldrb cmp mov bne ldr adds mov ldr blx ldr cmp beq ldr cmp ble add movs strb subs cmp ldr blt ldr add movs mov blx subs bne b mov mov add pop"}
+,
+{"addr":"0x704","size":68,"n":33,"name":"FUN_00000704","mnems":"push sub mov str ldr str movs lsls bics movs subs mov adcs cmp bcs mov str mov mov mov bl cmp beq cmp beq ldr cmp beq mov movs strb add pop"}
+,
+{"addr":"0x74c","size":46,"n":22,"name":"FUN_0000074c","mnems":"push mov ldr cmp beq ldr cmp blt mov mov bl ldr adds str ldr subs str b movs mvns mov pop"}
+,
+{"addr":"0x77a","size":26,"n":12,"name":"FUN_0000077a","mnems":"sub push sub str add str bl add pop pop add bx"}
+,
+{"addr":"0x794","size":42,"n":21,"name":"FUN_00000794","mnems":"push cmp beq mov ldrb cmp beq strb subs adds adds cmp bne b movs mov strb adds cmp bne pop"}
+,
+{"addr":"0x7be","size":50,"n":25,"name":"FUN_000007be","mnems":"push mov ldrb rsbs adcs movs cmp beq cmp beq adds movs ldrb rsbs adcs movs bics subs adds cmp beq cmp mov bne pop"}
+,
+{"addr":"0x7f0","size":64,"n":31,"name":"FUN_000007f0","mnems":"push mov cmp bls adds cmp bls cmp beq mov ldrb strb adds adds subs bne b bcs cmp beq subs subs ldrb strb subs bne b mov bl mov pop"}
+,
+{"addr":"0x830","size":26,"n":12,"name":"FUN_00000830","mnems":"push asrs eors subs asrs eors subs bl eors eors subs pop"}
+,
+{"addr":"0x84a","size":52,"n":26,"name":"FUN_0000084a","mnems":"push muls muls adds lsrs lsrs mov muls adds uxth muls uxth muls lsrs adds lsrs adds uxth muls adds lsrs adds lsls uxth adds pop"}
+,
+{"addr":"0x880","size":186,"n":93,"name":"FUN_00000880","mnems":"push movs cmp beq cmp beq lsrs orrs lsrs orrs lsrs orrs lsrs orrs lsrs orrs mvns lsrs ldr ands subs ldr lsrs ands ands adds lsrs adds ldr ands ldr muls lsrs lsrs orrs lsrs orrs lsrs orrs lsrs orrs lsrs orrs mvns lsrs ldr ands subs lsrs ands ands adds lsrs adds ldr ands ldr muls lsrs subs cmp bhi bne mov b mvns adds adds mov lsrs movs subs lsls movs lsrs lsls adds mvns adds asrs mov ands subs lsls orrs movs ands adds bcc lsls adds mov pop"}
+,
+{"addr":"0x94c","size":56,"n":26,"name":"FUN_0000094c","mnems":"push mov cmp bne movs bl movs movs ldr cmp bmi mov lsrs movs ands bne movs eors lsls beq ldrb bl movs subs b pop"}
+,
+{"addr":"0x988","size":30,"n":13,"name":"FUN_00000988","mnems":"push mov ldr ldr blx ldr blx ldr bl ldr blx bl pop"}
+,
+{"addr":"0xb50","size":8,"n":3,"name":"FUN_00000b50","mnems":"mrs cpsid bx"}
+,
+{"addr":"0xb58","size":6,"n":2,"name":"FUN_00000b58","mnems":"msr bx"}
+,
+{"addr":"0xb60","size":8,"n":4,"name":"FUN_00000b60","mnems":"adds lsrs beq subs"}
+,
+{"addr":"0xb68","size":10,"n":5,"name":"FUN_00000b68","mnems":"bne mov mov mov bx"}
+,
+{"addr":"0xbac","size":96,"n":45,"name":"FUN_00000bac","mnems":"bl bl movs lsls ldr ldr bics str lsls ldr orrs str lsls ldr bics str lsls ldr orrs str lsls ldr ldr bics str lsls ldr bics str ldr ldr ands movs lsls adds str ldr ldr ands lsls adds str ldr bl b"}
+,
+{"addr":"0xc20","size":12,"n":6,"name":"FUN_00000c20","mnems":"ldr ldr movs mvns str b"}
+,
+{"addr":"0xc34","size":464,"n":217,"name":"FUN_00000c34","mnems":"push mov ldr subs ldrb cmp bhi mov add ldrb lsls add movs lsls ldr str isb pop cmp bcc lsls ldr adds movs mvns ldr ldr b ldr ldr ldr str movs strb movs lsls ldr str isb pop ldr ldr ldr blx str pop bl stc adds movs eors movs push sub mrs cpsid ldr movs strb ldr ldr str orrs str bl ldr ldr ldr movs subs str sbcs str blt ldr ldr subs sbcs blt str ldr str str str ldr ldr str movs adds ldrb cmp beq movs lsls str ldr ldrb add strb lsls adds ldr ldr bl subs sbcs blt movs lsls adds add mov ldr ldr mov bl ldrb str lsls str adds add str movs mov bl ldr str str str ldr ldr ldrb ldr strb ldr ldr blx b bl ldr ldr bl mov mov ldr ldr orrs beq ldr ldr subs sbcs ldr lsls subs ldr sbcs blt mov cmp bgt movs b ldr lsls ldr ldr adds uxth str ldr ldr subs sbcs bge str ldr mov adds bl ldr subs str beq ldr adds str ldr adcs str ldr ldr strb ldr msr add pop ldr bl bl movs ands cbz movs adds movs adds movs lsls movs asrs movs lsls movs adds movs"}
+,
+{"addr":"0xe08","size":54,"n":25,"name":"FUN_00000e08","mnems":"push mrs cpsid ldr ldr ldr ldr uxth str subs bpl ldr adds asrs ldr ldr ldr adds str adcs str msr ldr ldr pop"}
+,
+{"addr":"0xe50","size":26,"n":11,"name":"FUN_00000e50","mnems":"push bl ldr ldr asrs bl lsls lsrs adds asrs pop"}
+,
+{"addr":"0xf10","size":24,"n":9,"name":"FUN_00000f10","mnems":"mov ldr bl mov bl bl mov adds movs"}
+,
+{"addr":"0xf28","size":80,"n":34,"name":"FUN_00000f28","mnems":"push cmp beq mov ldrb cmp beq mrs cpsid mov bl ldr ldr cmp beq cmp beq ldrb cmp beq ldrb cmp bne movs strb bl lsls ldr str isb msr pop ldr bl"}
+,
+{"addr":"0xf84","size":30,"n":14,"name":"FUN_00000f84","mnems":"push ldrb cmp beq pop movs strb ldrb ldr mov adds ldr bl pop"}
+,
+{"addr":"0x10a4","size":102,"n":51,"name":"FUN_000010a4","mnems":"push str str mov mov ldrb lsls adds adds cmp mov bcs ldr ldrb ldrb ldr mov ldr blx cmp bne mov ldrb mov mov cmp bcs mov ldr ldrb ldrb ldr ldr blx cmp bne mov mov b mov cmp beq ldr ldrb ldrb strb ldr strb mov b pop"}
+,
+{"addr":"0x110a","size":70,"n":35,"name":"FUN_0000110a","mnems":"push str mov mov ldrb ldrb cmp bne pop ldr strb ldrb adds strb uxtb subs cmp beq ldr ldrb subs lsrs ldrb ldr blx cmp beq ldr ldrb ldrb strb ldr strb mov b"}
+,
+{"addr":"0x1150","size":40,"n":19,"name":"FUN_00001150","mnems":"push ldrb cmp beq ldr ldrb strb ldrb subs strb lsls beq uxtb ldr ldrb strb movs bl pop"}
+,
+{"addr":"0x1178","size":146,"n":66,"name":"FUN_00001178","mnems":"push sub str str mov movs lsls mrs cpsid str ldr ldrb adds str ldrb ldr ldr cmp bne movs b movs lsls ldr ldrb ldrb cmp bls strb cmp beq lsls adds str asrs mov ldr bl lsls lsrs str adds asrs str bl adds str ldr str ldr adcs str ldr movs ldr ldr mov bl bl ldr msr sxtb add pop ldr bl"}
+,
+{"addr":"0x1244","size":82,"n":37,"name":"FUN_00001244","mnems":"movs adds ldr ldrb cmp beq movs lsls ldr ldrb lsls ldr adds ldr mrs cpsid ldr str str ldr ldrb cmp bne movs lsls ldr str msr bx mrs cpsid ldr movs str str msr bx"}
+,
+{"addr":"0x12a8","size":106,"n":49,"name":"FUN_000012a8","mnems":"push mov movs lsls mrs cpsid str ldr str ldr movs str adds ldrb ldrb movs cmp beq ldrb cmp beq adds b subs strb ldrb uxtb ldrb strb ldrb ldr ldr strb movs lsls adds ldr movs bl ldrb ldr ldrb strb bl ldr strb ldr msr pop"}
+,
+{"addr":"0x131c","size":64,"n":29,"name":"FUN_0000131c","mnems":"push movs str ldr ldr str mrs cpsid ldr cmp beq str ldr cmp bne str mov str ldr ldr msr cmp beq svc mrs cpsid ldr b pop"}
+,
+{"addr":"0x1360","size":46,"n":19,"name":"FUN_00001360","mnems":"push mrs cpsid ldr cmp bne ldr str cmp beq ldr bl b movs str msr pop ldr bl"}
+,
+{"addr":"0x1394","size":14,"n":6,"name":"FUN_00001394","mnems":"push mov ldr adds bl pop"}
+,
+{"addr":"0x13a8","size":14,"n":6,"name":"FUN_000013a8","mnems":"push mov ldr adds bl pop"}
+,
+{"addr":"0x13bc","size":38,"n":18,"name":"FUN_000013bc","mnems":"push add movs strb ldr ldr str ldr mov bl strb add ldrb cmp bne svc b pop"}
+,
+{"addr":"0x13ec","size":20,"n":9,"name":"FUN_000013ec","mnems":"push ldr movs strb movs strb ldr bl pop"}
+,
+{"addr":"0x1400","size":62,"n":29,"name":"FUN_00001400","mnems":"mrs cpsid cmp beq cmp beq cmp bne ldr ldr orrs str b ldr ldr bics str ldr bics b ldr ldr bics str ldr orrs str msr bx"}
+,
+{"addr":"0x1460","size":52,"n":26,"name":"FUN_00001460","mnems":"push movs mvns ldr cmp beq ldrb lsrs eors lsls lsrs ldr eors movs ands lsrs eors lsls ldr lsrs eors adds subs b mvns pop"}
+,
+{"addr":"0x1498","size":4,"n":2,"name":"FUN_00001498","mnems":"movs bx"}
+,
+{"addr":"0x1550","size":2,"n":1,"name":"FUN_00001550","mnems":"bx"}
+,
+{"addr":"0x1554","size":26,"n":11,"name":"FUN_00001554","mnems":"push mov movs movs bl adds ldr movs mov bl pop"}
+,
+{"addr":"0x1574","size":306,"n":153,"name":"FUN_00001574","mnems":"push sub movs cmp beq ldr rev add str adds b movs cmp beq add ldr adds ldr adds ldr movs mov rors lsrs eors movs rors eors adds ldr movs mov rors lsrs eors movs rors eors adds str adds b movs mvns movs cmp beq add adds ldr lsls str adds b movs ldr str str str cmp beq movs ldr mov rors movs mov rors eors movs mov rors eors str lsls ldr ldr ldr adds adds str ldr ldr str str eors movs ldr mov rors str ldr bics add ldr str lsls str movs ldr mov adds beq add adds ldr str subs b ands orrs ldr adds ldr adds ldr adds str ldr ldr ands ands eors lsrs ldr orrs movs rors ldr eors eors adds adds str ldr adds ldr ldr b movs cmp beq ldr add adds lsls ldr adds str adds b add pop"}
+,
+{"addr":"0x16ac","size":56,"n":27,"name":"FUN_000016ac","mnems":"push mov mov mov adds cmp beq ldrb ldr adds str strb ldr adds str ldr cmp bne mov mov bl movs str adds subs b pop"}
+,
+{"addr":"0x16e4","size":90,"n":42,"name":"FUN_000016e4","mnems":"push mov add movs strb add movs strb ldr movs mov bl movs lsls ldr cmp beq mov adds ands cmp beq add movs mov bl b str rev str adds mov bl movs cmp beq ldr rev str adds b pop"}
+,
+{"addr":"0x173e","size":46,"n":23,"name":"FUN_0000173e","mnems":"push lsls subs adds adds movs mvns subs bmi lsls adds adds ldr ldr cmp bhi mov mov bcs mov pop movs pop"}
+,
+{"addr":"0x176c","size":10,"n":4,"name":"FUN_0000176c","mnems":"push movs bl pop"}
+,
+{"addr":"0x1776","size":42,"n":21,"name":"FUN_00001776","mnems":"push movs cmp beq ldmia ldmia subs subs cmp bhi movs b movs cmp beq mov stmia subs b mov pop"}
+,
+{"addr":"0x17a0","size":44,"n":22,"name":"FUN_000017a0","mnems":"push movs mov cmp beq ldr ldr subs subs str cmp bhi movs b movs cmp beq mov adds b mov pop"}
+,
+{"addr":"0x17cc","size":86,"n":43,"name":"FUN_000017cc","mnems":"push str str str movs ldr cmp beq str lsls ldr ldrh movs ldr cmp beq lsls ldrh muls movs mov mov orrs beq uxth adds ldrh adds strh lsrs adds lsrs b adds adds b ldr adds str ldr adds b pop"}
+,
+{"addr":"0x1822","size":24,"n":12,"name":"FUN_00001822","mnems":"movs adds cmp beq ldr cmp mov beq movs bx movs bx"}
+,
+{"addr":"0x183c","size":286,"n":134,"name":"FUN_0000183c","mnems":"push sub str mov mov add movs movs mov mov bl movs mov mov ldr bl add bl cmp beq add ldr add str adds b add adds add movs ldr bl add bl movs cmp beq add ldr add str adds b add str adds add str movs str ldr ldr blx mov str add str ldr str blx add mov blx ldr mov adds ldr str mov ldr blx movs ldr mov mov mov bl mov ldr blx adds movs mov mov ldr ldr blx ldr mov blx movs mov ldr mov bl movs lsls add add cmp bne mov ldr movs mov bl cmp ble add add cmp bne mov ldr movs mov bl movs eors b add add cmp bne mov movs cmp beq ldr str adds b add pop"}
+,
+{"addr":"0x1970","size":12,"n":5,"name":"FUN_00001970","mnems":"push movs movs bl pop"}
+,
+{"addr":"0x197c","size":86,"n":40,"name":"FUN_0000197c","mnems":"push sub mov mov str str add movs ldr mov mov blx add str mov mov blx add ldr mov blx add movs mov mov bl mov bl cmp bne movs str lsls ldr add add bl cmp beq add"}
+,
+{"addr":"0x19d2","size":224,"n":94,"name":"FUN_000019d2","mnems":"ldrb lsls bne add bl add ldrb lsls bne add bl b add ldrb lsls bne add bl add ldrb lsls bne add bl b add mov mov bl mov mov bl cmp beq ldr orrs str b add add bl cmp blt add add mov bl mov bl add add bl cmp beq add mov bl b add mov mov bl mov mov bl cmp beq ldr orrs str b add add mov bl mov bl add add bl cmp beq add mov bl b add movs ldr bl ldr mov add pop"}
+,
+{"addr":"0x1ab8","size":34,"n":17,"name":"FUN_00001ab8","mnems":"push adds movs movs cmp bmi lsls ldr lsrs adds str movs ands subs subs b pop"}
+,
+{"addr":"0x1ada","size":44,"n":22,"name":"FUN_00001ada","mnems":"push movs mov cmp beq ldr ldr adds adds str cmp bcc movs b movs cmp beq mov adds b mov pop"}
+,
+{"addr":"0x1b08","size":68,"n":32,"name":"FUN_00001b08","mnems":"push mov movs mov cmp beq ldr ldr adds adds str cmp bcc movs b movs cmp beq mov adds b cmp bne ldr mov bl cmp blt ldr mov bl pop"}
+,
+{"addr":"0x1b50","size":24,"n":10,"name":"FUN_00001b50","mnems":"push mov movs bl cmp beq ldr mov bl pop"}
+,
+{"addr":"0x1b6c","size":82,"n":39,"name":"FUN_00001b6c","mnems":"push sub str str str mov add mov mov bl add ldr mov mov str ldr mov blx mov mov ldr blx mov mov mov blx ldr mov ldr mov bl adds ldr adds mov mov blx add pop"}
+,
+{"addr":"0x1bc4","size":122,"n":53,"name":"FUN_00001bc4","mnems":"push sub mov mov mov mov bl cmp beq movs mov mov b mov bl cmp beq movs mov mov bl add pop mov adds mov adds add str bl add mov mov mov bl add ldr ldr mov bl cmp beq add mov mov mov bl b movs movs mov bl b"}
+,
+{"addr":"0x1c44","size":8,"n":3,"name":"FUN_00001c44","mnems":"push mov bl"}
+,
+{"addr":"0x1c4c","size":18,"n":8,"name":"FUN_00001c4c","mnems":"cmp beq adds mov bl pop movs pop"}
+,
+{"addr":"0x1c60","size":92,"n":42,"name":"FUN_00001c60","mnems":"push sub mov mov mov bl cmp beq movs mov mov bl b str add mov mov mov bl add str ldr mov mov blx add mov mov ldr blx ldr mov mov bl mov adds ldr mov mov blx add ldr"}
+,
+{"addr":"0x1cbc","size":40,"n":17,"name":"FUN_00001cbc","mnems":"mov mov bl cmp beq add ldr mov mov bl b movs movs ldr bl add pop"}
+,
+{"addr":"0x1cf0","size":256,"n":122,"name":"FUN_00001cf0","mnems":"push sub movs lsls muls ldr adds ldr str mov adds str movs str muls ldr str adds mov adds movs mov str bl movs lsls str adds ldrh cmp beq ldrh adds movs bl b movs movs bl movs lsls adds ldrh cmp beq ldrh adds movs bl b movs movs bl movs mov adds movs strb ldr lsls ldr adds movs lsls adds movs str bl str ldrb cmp beq ldr strb lsls ldr ldr ldr adds lsls adds str mov adds ldr ldr ldr movs cmp beq lsls str str movs str ldr str ldr str b lsls str str ldr str ldr str ldr str str ldr adds ldr ldr orrs str ldr ands str ldr movs bics"}
+,
+{"addr":"0x1df0","size":268,"n":131,"name":"FUN_00001df0","mnems":"str ldr movs orrs str movs str lsls bl ldr movs str orrs movs bics str ldr movs str orrs movs bics str ldr movs bics str movs ldr muls str ldr str adds movs ldr strh adds strh movs mov bl mov mov bl ldr ldr ands str movs lsls ldr orrs str ldr lsls ldr bics str movs lsls ldr bics str ldr ldr bics str movs muls ldr adds movs strb ldr ldr adds adds str ldr str ldr ldr ldr str movs str ldr mvns str adds str str str str str ldr ldr str str str str ldr str movs str ldr lsls str ldr str ldr ldr ands str ldr uxth str ldr ldr orrs str ldr str movs ldr strb ldr strb add pop"}
+,
+{"addr":"0x1f88","size":18,"n":8,"name":"FUN_00001f88","mnems":"strb movs movs strb movs strb bl pop"}
+,
+{"addr":"0x1fa0","size":40,"n":18,"name":"FUN_00001fa0","mnems":"push movs lsls ldr ldrb cmp beq movs mov bl mov bl ldr strb adds movs strb pop"}
+,
+{"addr":"0x1fd0","size":26,"n":12,"name":"FUN_00001fd0","mnems":"push movs lsls muls ldr adds movs ldrb cmp beq bl pop"}
+,
+{"addr":"0x1ff0","size":376,"n":180,"name":"FUN_00001ff0","mnems":"push sub ldr str adds ldr str adds str ldr adds movs mvns str movs cmp beq ldrb cmp beq movs ldr movs str cmp beq b mov ldrb str uxtb movs mov bl subs cmp bcc cmp bne subs cmp bhi movs movs mov bl cmp bne ldr adds ldrb ldr ldrb cmp beq ldrb cmp mov ldr beq movs ldr cmp bne movs mov bl cmp bne movs ldr cmp bne mov ldrb cmp bne ldrb cmp beq mov bl cmp bne ldr adds ldrb cmp mov ldr beq subs cmp bhi movs lsls ldr tst beq movs lsls adds adds ldr adds str adds b ldr adds movs movs lsls subs beq ldr adds movs ldrb subs cmp bhi ldrb cmp beq adds ldr ldrb cmp mov beq b ldr ldrb cmp beq ldr adds movs cmp beq ldrb cmp beq uxtb bl adds adds b movs str ldr add pop movs cmp beq uxtb movs bl adds b ldr adds movs cmp beq movs strb uxtb movs movs mov bl movs mov bl adds adds b"}
+,
+{"addr":"0x2178","size":124,"n":60,"name":"FUN_00002178","mnems":"push sub ldr adds ldr adds movs mvns movs ldr str str cmp beq ldrb cmp beq ldr ldr movs lsls str adds ldr movs bics str str adds ldrb cmp bne ldrb cmp bne str bl ldr str ldr movs lsls bics str ldr str movs ldr str bl ldr ldr movs lsls adds adds adds b add pop"}
+,
+{"addr":"0x2204","size":1360,"n":639,"name":"FUN_00002204","mnems":"push sub mov movs lsls muls ldr adds movs ldrb cmp beq movs ldrb ldrb movs ldrb mov adds str mov adds str cmp ldr str beq b str ldrb str ldr str mov bl str strh uxth subs cmp bcs mov movs b movs ldrb cmp beq b adds movs strb mov bl mov bl b movs mov mov bl movs mov mov bl mov movs str str mov mov bl mov ldrh add strh ldr ldrb mov adds ldrb cmp beq ldrb cmp beq ldr cmp beq b cmp beq ldrb cmp beq b cmp bne ldr rsbs adcs add adds ldrb cmp bne b mov movs ldr mov bl movs strb movs mov b ldr cmp beq b ldr cmp beq cmp bne b mov adds cmp ldr bne movs mov bl movs mov bl movs movs mov bl movs mov bl movs strb mov bl b str movs ldrb cmp beq cmp bne mov adds movs ldr strb strb b ldr cmp bne ldr mov str bl ldr cmp bne mov adds movs muls ldr adds ldrb adds movs strb ldr ldr ldr movs mov blx movs movs sxtb str ldr ldr lsls bne b ldr mov bl mov mov ldr blx ldr ldr subs cmp beq ldrb cmp bne b mov adds strb ldr mov bl ldr ldr ldr movs movs mov blx b ldrb cmp str str beq ldr mov bl cmp bne movs mov bl ldrh ldr cmp ldr beq b ldr movs lsls movs ldr mov mov blx cmp bne b movs muls ldr adds ldrb cmp bne adds ldrb cmp bne b str movs ldr bl ldr cmp bne adds mov ldr strb ldr ldr mov blx ldr ldr ldr mov mov mov blx movs strb b ldr lsls ldr bne b strh movs mov bl movs muls ldr adds movs strb ldrh str mov bl cmp ldr bne b cmp beq lsrs lsrs ldr uxtb subs uxth cmp bhi cmp beq uxtb movs lsls adds cmp bcs cmp beq cmp beq cmp bhi subs cmp bhi cmp beq mov adds movs strb ldr strb movs ldr strb movs mov b cmp bne movs ldr bl movs lsls adds cmp beq cmp bne ldr b movs ldr strb movs ldr bl ldr mov adds bl cmp bls b mov cmp beq cmp bne bl mov movs ldrb cmp bhi mov mov adds ldr ldrb strb ldr ldrb cmp beq movs ldrb cmp bne adds ldrb cmp beq ldrb cmp bne str movs ldrb cmp bls movs movs ldr mov bl b movs mov bl b ldr ldrb lsls ldr ldr mov blx b ldr cmp bne ldr mov bl mov bl ldr ldr ldr movs b movs muls ldr adds ldrb cmp bne b movs mov bl cmp beq b movs strh b ldr ldr ldr movs lsls mov blx ldr ldrb mov bl movs mov bl ldrb mov subs cmp bhi cmp bne movs muls ldr adds movs strb movs mov bl mov bl movs ldrb cmp bne b ldr cmp bne b str mov adds movs adds ldrb cmp beq ldrb cmp bne ldr lsls bpl mov adds movs lsls adds movs ldr bl ldrb cmp bne ldr lsls bmi ldr lsls bpl ldr bl ldr lsls bpl movs ldrb cmp bne ldr bl mov adds mov bl mov cmp bls b lsls adr ldr ldrb lsls ldr ldr ldr mov mov blx movs ldrb cmp bcc ldr cmp beq str movs add movs mov mov bl cmp bne adds str b add pop movs muls ldr adds strb ldr mov blx movs mov bl movs ldr strb movs ldrb cmp beq movs ldr strb b adds movs strb movs movs mov bl b movs mov b movs strb ldr ldr mov blx movs movs mov bl b"}
+,
+{"addr":"0x26c4","size":2,"n":1,"name":"FUN_000026c4","mnems":"mov"}
+,
+{"addr":"0x2908","size":20,"n":9,"name":"FUN_00002908","mnems":"push movs lsls muls ldr adds adds bl pop"}
+,
+{"addr":"0x2938","size":26,"n":10,"name":"FUN_00002938","mnems":"push mrs cpsid ldr bl ldr movs strb msr pop"}
+,
+{"addr":"0x295c","size":228,"n":110,"name":"FUN_0000295c","mnems":"push cmp bls movs pop mov mov mov bne ldr ldrb cmp bne movs lsls muls ldr adds movs ldrb cmp beq movs pop str movs str bl movs ldrb movs cmp beq ldrb cmp beq movs ldrb cmp beq cmp ldr bne b ldr cmp ldr beq cmp bne movs ldrb cmp beq cmp bne cmp beq cmp bne cmp beq movs ldrb cmp bcc movs adds ldrb cmp beq ldrb cmp bne ldrb cmp bne mov bl ldr add strh ldrb ldrb cmp beq mov adds ldrb cmp beq mov adds movs strb ldr strb str cmp beq ldr movs bl lsls mov bl movs pop movs pop"}
+,
+{"addr":"0x2a48","size":20,"n":9,"name":"FUN_00002a48","mnems":"push movs lsls muls ldr adds adds bl pop"}
+,
+{"addr":"0x2a60","size":38,"n":19,"name":"FUN_00002a60","mnems":"push subs cmp bhi movs lsls ldr adds mov cmp beq ldmia stmia subs b movs adds strb pop"}
+,
+{"addr":"0x2aa8","size":118,"n":59,"name":"FUN_00002aa8","mnems":"push cmp bls movs pop mov lsrs movs ands movs cmp bmi cmp bne pop cmp ldr bmi movs lsls muls adds movs b movs lsls muls adds movs adds ldrb cmp bhi movs lsls muls adds cmp bge movs orrs mov lsls adds movs ldr ldr ands lsls lsrs beq lsrs ands cmp bcc movs pop movs pop"}
+,
+{"addr":"0x2b28","size":72,"n":35,"name":"FUN_00002b28","mnems":"push sub mov movs mov bl movs lsls muls ldr adds mov adds mov adds str str mov adds movs lsls lsls movs str str str mov str cmp beq ldrb lsrs lsls beq ldr"}
+,
+{"addr":"0x2b70","size":242,"n":121,"name":"FUN_00002b70","mnems":"lsrs cmp bcc ldr ldrb cmp bcc cmp beq cmp beq cmp bne mov adds ands cmp bls mov ldr ands adds b mov adds ands cmp bls mov ldr ands orrs mov b mov adds lsrs ands muls ands cmp bls mov ldr ands adds ands orrs ldr str b movs muls ldr cmp bhi mov b movs lsls mov bics lsls lsrs bne mov ldr lsls ldr adds movs str adds str ldr adds adds b ldr cmp bhi lsls ldr adds adds subs cmp beq movs stmia adds b movs ldr ands movs adds ldr strb movs strb ldr ldrb cmp bcc ldr b ldr movs ldr ldr movs lsls bics ldr ldrb lsrs lsls adds ands str"}
+,
+{"addr":"0x2c62","size":4,"n":2,"name":"FUN_00002c62","mnems":"add pop"}
+,
+{"addr":"0x2c80","size":22,"n":10,"name":"FUN_00002c80","mnems":"push bl ldr cmp beq movs b movs mvns pop"}
+,
+{"addr":"0x2c9c","size":46,"n":23,"name":"FUN_00002c9c","mnems":"movs lsls muls ldr adds movs ldrb cmp bne movs ldrb cmp bcc movs ldrh bx movs ldrh ldr cmp bcc mov bx"}
+,
+{"addr":"0x2cd4","size":14,"n":6,"name":"FUN_00002cd4","mnems":"push movs movs mov bl pop"}
+,
+{"addr":"0x2ce4","size":20,"n":9,"name":"FUN_00002ce4","mnems":"push movs lsls muls ldr adds adds bl pop"}
+,
+{"addr":"0x2cfc","size":20,"n":9,"name":"FUN_00002cfc","mnems":"push movs lsls muls ldr adds adds bl pop"}
+,
+{"addr":"0x2d14","size":28,"n":13,"name":"FUN_00002d14","mnems":"push sub str movs add movs mov bl cmp beq movs add pop"}
+,
+{"addr":"0x2d30","size":38,"n":17,"name":"FUN_00002d30","mnems":"push cmp beq pop movs movs ldr mov bl cmp beq ldr ldr movs mov bl pop"}
+,
+{"addr":"0x2db0","size":104,"n":48,"name":"FUN_00002db0","mnems":"push ldr ldr ldrb movs adds ldrb movs lsls ldrb cmp beq cmp bne cmp bcc movs lsls strb ldr ldrb cmp beq cmp beq movs mov mov bl movs movs mov bl pop cmp beq ldr ldrb cmp bne movs movs mov bl movs mov bl pop"}
+,
+{"addr":"0x2e30","size":174,"n":83,"name":"FUN_00002e30","mnems":"push mov movs mov bl mov bl lsls ldr ldr movs lsls str adds ldr ldr ands str ldr str movs mov mov bl movs lsls muls ldr adds movs strb movs strb movs strb movs strb movs muls ldr adds movs strh movs strh movs strb movs strb movs strb ldr str movs str lsls str movs lsls str movs lsls str str movs strb mov bl movs lsls strb movs lsls strh ldr strb movs strb movs strb ldr strb pop"}
+,
+{"addr":"0x2ef8","size":74,"n":37,"name":"FUN_00002ef8","mnems":"push movs muls ldr adds movs movs strb ldr ldrb movs movs cmp mov bne mov cmp mov beq mov movs lsls muls ldr adds movs strb movs strb movs strb cmp beq mov movs strb pop"}
+,
+{"addr":"0x2f50","size":18,"n":7,"name":"FUN_00002f50","mnems":"push mov bl movs mov bl pop"}
+,
+{"addr":"0x2f62","size":10,"n":4,"name":"FUN_00002f62","mnems":"push movs bl pop"}
+,
+{"addr":"0x2f6c","size":100,"n":49,"name":"FUN_00002f6c","mnems":"push sub mov mov movs lsls muls ldr adds movs adds movs strb movs ldrb cmp bne ldr cmp beq mov adds strb cmp beq cmp beq add str str movs mov mov bl mov mov ldr ldr b movs mov mov blx cmp beq adds str add pop"}
+,
+{"addr":"0x2fd4","size":96,"n":48,"name":"FUN_00002fd4","mnems":"push cmp beq ldrb cmp bne cmp beq cmp beq cmp bne ldrb movs cmp bne b ldrb lsls bmi b ldrb movs cmp beq ldrb lsls bmi cmp beq ldr movs ands lsrs lsls beq ldr ldr cmp beq ldrb cmp bne movs b movs mov pop"}
+,
+{"addr":"0x3038","size":10,"n":4,"name":"FUN_00003038","mnems":"push ldr bl pop"}
+,
+{"addr":"0x3048","size":56,"n":26,"name":"FUN_00003048","mnems":"push mov movs lsls muls ldr adds ldrb cmp beq pop movs adds ldrb cmp beq movs lsls movs ldr mov bl movs mov bl pop"}
+,
+{"addr":"0x3088","size":58,"n":26,"name":"FUN_00003088","mnems":"push mov movs lsls muls ldr adds movs movs strb movs mov bl movs ldrb cmp beq movs mov bl movs mov bl movs str pop"}
+,
+{"addr":"0x30c8","size":54,"n":23,"name":"FUN_000030c8","mnems":"push mov movs mov bl movs lsls muls ldr adds strb ldrb cmp bne mov bl movs mov bl pop mov bl pop"}
+,
+{"addr":"0x3104","size":78,"n":39,"name":"FUN_00003104","mnems":"movs lsls muls ldr adds movs ldrb cmp bne cmp bne movs movs strb b rsbs adcs ldr ldrb orrs lsls bne movs b movs ldrb b movs movs strb cmp bne movs ldrb cmp bls movs strb bx"}
+,
+{"addr":"0x315c","size":64,"n":30,"name":"FUN_0000315c","mnems":"push mov movs lsls muls ldr adds movs movs strb ldr ldr movs mov mov blx mov mov bl ldrb cmp beq movs b movs mov bl movs str pop"}
+,
+{"addr":"0x31a0","size":64,"n":29,"name":"FUN_000031a0","mnems":"push mov cmp bne movs muls ldr adds movs movs strb movs lsls muls ldr adds movs strb movs mov bl movs lsls mov bl movs mov bl pop"}
+,
+{"addr":"0x31ec","size":338,"n":157,"name":"FUN_000031ec","mnems":"push mov movs lsls muls ldr adds movs ldrb ldrb subs cmp bcs str ldr ldr movs movs str mov blx cmp beq movs ldrb cmp beq cmp beq ldr cmp bne ldr bl pop cmp bne str movs muls ldr adds movs ldrb ldr mov ldrb adds cmp bne adds strb uxtb cmp mov bcc movs strb movs ldrb ldr cmp bne cmp beq mov mov bl b movs ldr mov bl movs strb str ldr cmp bne movs b movs mov bl pop ldrb cmp beq movs strb b mov mov bl movs mov bl pop mov bl mov ldr cmp bne movs strb cmp bhi bl str movs str mov ldr mov blx movs mov blx movs str mov blx mov mov bl movs muls ldr adds movs strb movs str movs strb ldr bl movs ldr strb movs ldr mov ldr bl movs strb mov bl mov cmp beq movs strb mov b"}
+,
+{"addr":"0x3358","size":114,"n":53,"name":"FUN_00003358","mnems":"push mov cmp beq cmp beq cmp bne mov bl movs muls ldr adds movs movs strb movs movs b movs muls ldr adds movs ldrb cmp beq adds movs strb movs lsls muls ldr adds ldr ldr ldr mov blx movs ldr mov bl pop movs mov bl pop mov bl pop"}
+,
+{"addr":"0x36ac","size":20,"n":10,"name":"FUN_000036ac","mnems":"push sub mov subs cmp bls b lsls adr ldr"}
+,
+{"addr":"0x36c0","size":2,"n":1,"name":"switchD","mnems":"mov"}
+,
+{"addr":"0x3890","size":2,"n":1,"name":"FUN_00003890","mnems":"mov"}
+,
+{"addr":"0x3b60","size":14,"n":6,"name":"caseD_2","mnems":"movs strb movs mov bl movs"}
+,
+{"addr":"0x3b6e","size":8,"n":3,"name":"caseD_3","mnems":"mov bl pop"}
+,
+{"addr":"0x3b90","size":20,"n":10,"name":"FUN_00003b90","mnems":"push sub mov subs cmp bls b lsls adr ldr"}
+,
+{"addr":"0x3ba4","size":2,"n":1,"name":"switchD","mnems":"mov"}
+,
+{"addr":"0x3be0","size":42,"n":20,"name":"caseD_8","mnems":"adds ldrb cmp beq b ldr ldr ldr mov blx b movs ldrb adds str movs movs mov bl b"}
+,
+{"addr":"0x3ce8","size":50,"n":24,"name":"caseD_4","mnems":"cmp bne ldr cmp bpl b ldr adds ldr str movs lsls adds movs movs mov bl cmp beq ldrb cmp bne b mov"}
+,
+{"addr":"0x3d38","size":6,"n":2,"name":"FUN_00003d38","mnems":"bl b"}
+,
+{"addr":"0x3da8","size":8,"n":4,"name":"FUN_00003da8","mnems":"bhi adds strb b"}
+,
+{"addr":"0x3db8","size":8,"n":3,"name":"FUN_00003db8","mnems":"movs bl cmp"}
+,
+{"addr":"0x3dc0","size":14,"n":6,"name":"FUN_00003dc0","mnems":"bne b movs mov bl b"}
+,
+{"addr":"0x3e9a","size":34,"n":16,"name":"FUN_00003e9a","mnems":"movs strb adds str ldr adds ands movs lsls adds movs mov bl b add pop"}
+,
+{"addr":"0x3f70","size":2,"n":1,"name":"FUN_00003f70","mnems":"mov"}
+,
+{"addr":"0x4058","size":6,"n":3,"name":"caseD_2","mnems":"cmp bpl b"}
+,
+{"addr":"0x4076","size":36,"n":17,"name":"caseD_3","mnems":"cmp beq mov bl movs lsls ldr ldr str ldr ldr ldrb adds ldr mov blx pop"}
+,
+{"addr":"0x40ba","size":178,"n":85,"name":"caseD_4","mnems":"movs ldr movs push mov subs cmp bhi movs lsls muls ldr adds add ldrb lsls add movs mov bl movs movs strb str b movs mov bl mov bl pop movs muls ldr adds movs ldrb cmp bne adds movs strb movs lsls ldr lsls mov bpl lsrs ldr ands movs strh lsrs cmp bge movs orrs b movs ands lsls adds movs ldr movs lsls str lsls lsrs movs muls adds strh lsrs beq lsls lsrs muls mov strh movs mov bl pop"}
+,
+{"addr":"0x40e2","size":18,"n":7,"name":"caseD_5","mnems":"lsls movs mov bl mov bl pop"}
+,
+{"addr":"0x412c","size":10,"n":4,"name":"caseD_6","mnems":"movs mov bl pop"}
+,
+{"addr":"0x4198","size":8,"n":4,"name":"caseD_7","mnems":"lsls movs push mov"}
+,
+{"addr":"0x41a0","size":46,"n":19,"name":"caseD_8","mnems":"subs cmp bhi movs lsls muls ldr adds ldr mov add ldrb lsls add pop bpl andcs blls sbcscc"}
+,
+{"addr":"0x41be","size":14,"n":6,"name":"caseD_d","mnems":"lsls cmp lsls mov bl pop"}
+,
+{"addr":"0x437a","size":10,"n":4,"name":"caseD_9","mnems":"movs mov bl b"}
+,
+{"addr":"0x4418","size":4,"n":2,"name":"FUN_00004418","mnems":"blx b"}
+,
+{"addr":"0x4420","size":32,"n":16,"name":"FUN_00004420","mnems":"ldr mov mov blx ldr movs mov blx ldr mov ldr mov blx b add pop"}
+,
+{"addr":"0x444e","size":26,"n":13,"name":"FUN_0000444e","mnems":"movs lsls movs lsls movs push mov subs cmp bhi lsls adr ldr"}
+,
+{"addr":"0x4468","size":2,"n":1,"name":"switchD","mnems":"mov"}
+,
+{"addr":"0x4480","size":38,"n":16,"name":"FUN_00004480","mnems":"ldr movs ldr movs movs mov bl movs mov mov bl movs mov mov bl pop"}
+,
+{"addr":"0x4908","size":30,"n":15,"name":"caseD_2","mnems":"ldr adds movs ldrb cmp beq ldr b ldr cmp beq movs b movs ldr"}
+,
+{"addr":"0x4926","size":46,"n":20,"name":"caseD_3","mnems":"mov blx cmp beq movs mov bl cmp beq movs mov bl pop ldr mov blx movs mov bl pop"}
+,
+{"addr":"0x495e","size":4,"n":2,"name":"caseD_4","mnems":"movs lsls"}
+,
+{"addr":"0x4962","size":4,"n":2,"name":"caseD_5","mnems":"movs push"}
+,
+{"addr":"0x4966","size":26,"n":11,"name":"caseD_6","mnems":"mov subs cmp bhi mov add ldrb lsls add swics bls"}
+,
+{"addr":"0x497a","size":36,"n":15,"name":"caseD_8","mnems":"lsls lsrs movs mov bl cmp bne movs mov bl movs lsls mov bl movs"}
+,
+{"addr":"0x499e","size":10,"n":4,"name":"caseD_7","mnems":"movs mov bl pop"}
+,
+{"addr":"0x4a66","size":2,"n":1,"name":"FUN_00004a66","mnems":"mov"}
+,
+{"addr":"0x4f08","size":12,"n":5,"name":"FUN_00004f08","mnems":"add pop mov bl b"}
+,
+{"addr":"0x4f4a","size":4,"n":2,"name":"FUN_00004f4a","mnems":"lsls b"}
+,
+{"addr":"0x4f7c","size":14,"n":7,"name":"FUN_00004f7c","mnems":"movs b mov ldr ldrb str ldrb"}
+,
+{"addr":"0x4f98","size":36,"n":17,"name":"FUN_00004f98","mnems":"ldrh ldr ldrb ldr str str str add stmia ldr str movs mov mov ldr bl b"}
+,
+{"addr":"0x4fc0","size":722,"n":341,"name":"FUN_00004fc0","mnems":"push sub movs muls ldr adds movs ldrb str movs ldrb str movs ldrb add str strb movs ldrh str movs ldr str movs ldrb str movs lsls mov muls ldr adds cmp mov bne ldrb cmp beq ldr cmp beq ldr subs uxtb cmp bls ldr cmp beq cmp beq cmp beq b mov ldr ldr bl b subs cmp bls b lsls mov add ldrh lsls add b ldr cmp bne ldr ldr movs movs mov blx ldr subs uxtb cmp bhi cmp bne ldr cmp bne ldr ldr movs add mov blx movs mov bl movs ldrh cmp bne b movs mov bl b movs mov ldrb cmp bhi ldrb cmp beq b movs ldrb cmp beq ldr ldr mov blx cmp bne b ldr str mov ldr ldr ldr bl b ldr str mov ldr ldr ldr bl b movs ldrb cmp bne b movs ldrb cmp beq b movs b ldr cmp bne b movs mov bl movs mov bl b ldr movs ldr movs ldrb movs ldrh str str ldr mov bl cmp bne movs str ldr ldr mov bl cmp bne b ldrb cmp bne b movs mov movs mov bl movs ldr cmp beq mov b movs mov bl movs lsls mov bl movs ldrb cmp beq cmp beq cmp beq movs ldrb cmp bhi ldr ldrb cmp bne movs movs strb movs movs mov bl movs movs strb b movs mov bl movs lsls mov bl movs movs strb lsls movs ldr ldr cmp beq mov ldr ldr movs mov mov blx subs uxtb cmp bls b ldr cmp beq b ldr cmp beq b str str str str str str str movs mov mov mov bl b movs movs strb str b movs ldrb movs cmp bne b cmp bne b b movs mov bl movs ldrb cmp bne mov bl movs ldrb cmp bne b mov adds ldr cmp bne adds ldrb cmp bne adds ldrb str b movs mov bl b mov bl b str movs movs mov b"}
+,
+{"addr":"0x5172","size":88,"n":39,"name":"FUN_00005172","mnems":"bl ldr movs mov bl ldr ldrb lsls bmi b movs mov bl mov bl ldr ldr cmp bpl lsrs movs lsls adds ands lsls lsrs movs muls adds cmp bcs b movs b mov bl b add pop"}
+,
+{"addr":"0x5524","size":2,"n":1,"name":"FUN_00005524","mnems":"mov"}
+,
+{"addr":"0x57be","size":2,"n":1,"name":"FUN_000057be","mnems":"mov"}
+,
+{"addr":"0x58ac","size":2,"n":1,"name":"FUN_000058ac","mnems":"mov"}
+,
+{"addr":"0x5a20","size":14,"n":5,"name":"FUN_00005a20","mnems":"vld2.32 movs mov bl movs"}
+,
+{"addr":"0x5a2e","size":8,"n":3,"name":"FUN_00005a2e","mnems":"mov bl pop"}
+,
+{"addr":"0x5a38","size":52,"n":25,"name":"FUN_00005a38","mnems":"push mov movs muls ldr adds movs movs strb movs strb movs lsls muls ldr adds movs strb movs ldrb cmp beq movs mov bl"}
+,
+{"addr":"0x5a6c","size":10,"n":4,"name":"FUN_00005a6c","mnems":"movs mov bl pop"}
+,
+{"addr":"0x5a80","size":68,"n":34,"name":"FUN_00005a80","mnems":"push sub movs muls ldr ldr ldrh ldrh lsls adds str adds add movs ldr blx ldr ldr lsrs add strb lsrs strb adds adds movs blx ldr adds movs mov blx add pop"}
+,
+{"addr":"0x5acc","size":66,"n":32,"name":"FUN_00005acc","mnems":"push movs muls ldr adds movs ldrb cmp beq pop adds movs lsls muls ldr adds ldr ldr lsls lsrs movs strb movs strb movs ldrb cmp bls adds strb bl pop"}
+,
+{"addr":"0x5b24","size":26,"n":12,"name":"FUN_00005b24","mnems":"push mov movs muls ldr ldr ldr str movs movs bl pop"}
+,
+{"addr":"0x5b48","size":26,"n":12,"name":"FUN_00005b48","mnems":"push mov movs muls ldr ldr ldr str movs movs bl pop"}
+,
+{"addr":"0x5b6c","size":162,"n":78,"name":"FUN_00005b6c","mnems":"push mov movs muls ldr ldr ldrb cmp bne ldrb cmp bne adds movs movs strh movs ldr strh movs strb movs lsls mov bl movs lsls muls ldr adds ldr ldr ldr mov mov blx movs movs mov bl lsls mov bl movs movs strb pop ldrb lsls bmi movs lsls muls ldr adds ldr ldrb cmp beq ldr b movs lsls muls ldr adds ldr ldr ldr mov mov blx pop ldr mov mov blx pop"}
+,
+{"addr":"0x5c24","size":32,"n":14,"name":"FUN_00005c24","mnems":"push mov movs muls ldr adds adds movs bl movs lsls mov bl pop"}
+,
+{"addr":"0x5c5c","size":10,"n":4,"name":"FUN_00005c5c","mnems":"movs lsls bl pop"}
+,
+{"addr":"0x5c68","size":28,"n":13,"name":"FUN_00005c68","mnems":"push sub mov movs muls ldr ldr str ldrb mov bl adds movs"}
+,
+{"addr":"0x5c84","size":56,"n":27,"name":"FUN_00005c84","mnems":"lsls muls ldr adds cmp beq cmp beq cmp beq cmp bne ldr ldr ldr movs mov blx movs movs strb movs movs mov bl b ldrb"}
+,
+{"addr":"0x5cbc","size":58,"n":28,"name":"FUN_00005cbc","mnems":"cmp str bne b cmp ldr beq b ldr cmp bmi b lsls lsrs cmp bcs b adds lsls lsrs bne b mov adds subs mov bl b"}
+,
+{"addr":"0x5d04","size":6,"n":3,"name":"FUN_00005d04","mnems":"ands lsls cmp"}
+,
+{"addr":"0x5d0a","size":60,"n":30,"name":"FUN_00005d0a","mnems":"beq b ldrh subs cmp bls b add ldrb lsls add ldrb cmp bne b movs ldrb lsls bmi b movs lsls ldrb lsls bmi b movs strb movs b"}
+,
+{"addr":"0x5d4c","size":6,"n":3,"name":"FUN_00005d4c","mnems":"cmp str beq"}
+,
+{"addr":"0x5d52","size":2,"n":1,"name":"FUN_00005d52","mnems":"movs"}
+,
+{"addr":"0x5d54","size":8,"n":3,"name":"FUN_00005d54","mnems":"mov bl b"}
+,
+{"addr":"0x5d9a","size":124,"n":57,"name":"FUN_00005d9a","mnems":"ldr ldr cmp bpl lsls lsrs cmp bcc lsls lsrs cmp beq cmp bne mov ldr adds ldr movs bl ldr ldr movs str str add str lsrs ands movs lsls adds movs lsls ands adds movs lsls adds movs mov bl b mov adds adds subs mov bl ldr movs mov bl movs mov bl b"}
+,
+{"addr":"0x5df6","size":84,"n":40,"name":"FUN_00005df6","mnems":"ldr cmp bmi movs movs strb movs movs mov bl ldr ldr ldr ldr movs mov blx add pop ldr ands ldr cmp bcc movs lsls ands beq adds str movs lsls lsls lsrs adds movs movs mov bl b"}
+,
+{"addr":"0x5ed0","size":856,"n":405,"name":"FUN_00005ed0","mnems":"push sub mov movs mov bl movs mov bl movs str lsls mov str bl movs muls ldr str adds movs mov strb movs lsls muls ldr str adds movs movs strb mov adds str str mov adds str mov mov str bl cmp beq ldr ldr ldr ldrb cmp beq cmp beq ldr ldrb cmp bne ldrb movs ldr strb movs adds ldrb cmp str bne b mov mov mov bl movs ldrb adds b ldr str movs mov mov bl cmp beq ldr str ldrb subs cmp ldr bls b ldrb lsls add ldrh lsls add movs adds ldrb cmp bne b mov bl b ldr ldr ldr movs str mov blx movs b movs mov bl cmp beq mov bl b mov subs cmp str bhi movs ldr strb mov b ldr ldrb cmp bne mov bl b cmp mov mov bne ldr ldr strb movs mov str b str cmp bhi movs mov lsls ldr tst beq mov bl ldr mov cmp beq cmp bne ldr ldr ldr movs mov blx ldr movs movs ands cmp beq str b cmp bne cmp bne mov mov mov bl movs ldrb adds movs mov mov mov bl movs movs ands cmp beq str ldr cmp bne ldr cmp bne mov bl ldr ldrb cmp bne movs mov bl cmp bne movs mov bl add pop movs str ldr subs cmp bls b lsls adr ldr ldr movs cmp mov bne movs ldr bl b cmp bne ldr ldrb cmp bhi b movs ldrb cmp bne ldrb cmp bne cmp beq movs lsls b movs ldrb cmp bcc cmp bne movs b cmp bne movs ldrb cmp bcc ldr ldrb cmp bne ldr ldr movs b ldr ldrb cmp bne movs ldr strh movs ldr strh ldr strb ldr lsls mov mov bl ldr ldr ldr mov ldr blx movs movs mov bl mov ldr bl movs ldr strb b movs ldrb cmp bcs b ldr ldrb cmp beq b cmp bne movs b movs ldrb cmp bcs b ldr ldr movs mov ldr blx b cmp beq mov bl b ldr b movs adds ldrb cmp beq b b cmp bhi adds strb movs b movs lsls adds ldr lsrs cmp beq b ldr ldr lsrs cmp beq cmp beq b movs b ldr ldrb cmp bne mov bl cmp bhi movs adds ldr strb movs b movs b movs mov bl b"}
+,
+{"addr":"0x60ea","size":2,"n":1,"name":"FUN_000060ea","mnems":"mov"}
+,
+{"addr":"0x62a8","size":72,"n":35,"name":"FUN_000062a8","mnems":"push movs muls ldr adds movs ldr strh movs strb movs strb movs strb movs ldr str movs ldr strb movs ldr strh movs ldr str movs ldr strb movs ldr strh movs bl pop"}
+,
+{"addr":"0x62f4","size":34,"n":16,"name":"FUN_000062f4","mnems":"push sub mov ldr str movs str str str str str str mov bl add pop"}
+,
+{"addr":"0x631c","size":24,"n":11,"name":"FUN_0000631c","mnems":"push mov movs muls ldr ldr movs str mov bl pop"}
+,
+{"addr":"0x6338","size":38,"n":18,"name":"FUN_00006338","mnems":"push sub mov ldr str movs str str str str str str movs mov mov bl add pop"}
+,
+{"addr":"0x6364","size":32,"n":15,"name":"FUN_00006364","mnems":"push movs lsls muls ldr adds movs ldrb cmp bcc movs b movs bl pop"}
+,
+{"addr":"0x6388","size":36,"n":17,"name":"FUN_00006388","mnems":"push sub mov ldr str movs str str add stmia str movs mov mov bl add pop"}
+,
+{"addr":"0x63b0","size":38,"n":18,"name":"FUN_000063b0","mnems":"push sub mov ldr str str str movs str movs str str str mov mov bl add pop"}
+,
+{"addr":"0x63e8","size":58,"n":28,"name":"FUN_000063e8","mnems":"push mov bl movs muls ldr adds movs movs strb movs ldrb cmp beq movs b movs movs lsls muls ldr adds ldr ldr adds mov blx pop"}
+,
+{"addr":"0x642c","size":32,"n":14,"name":"FUN_0000642c","mnems":"push mov movs muls ldr adds adds movs bl movs lsls mov bl pop"}
+,
+{"addr":"0x6450","size":64,"n":29,"name":"FUN_00006450","mnems":"push mov bl movs muls ldr ldr movs mov bl adds movs movs strb movs lsls muls ldr adds ldr ldr adds movs mov blx movs mov bl pop"}
+,
+{"addr":"0x6498","size":40,"n":18,"name":"FUN_00006498","mnems":"push mov movs bl movs lsls muls ldr adds ldrb cmp beq movs b movs mov bl pop"}
+,
+{"addr":"0x6560","size":44,"n":20,"name":"FUN_00006560","mnems":"push mov movs lsls muls ldr adds ldrb cmp bne ldrb mov bl movs mov bl b movs movs strb"}
+,
+{"addr":"0x658c","size":2,"n":1,"name":"FUN_0000658c","mnems":"movs"}
+,
+{"addr":"0x658e","size":32,"n":15,"name":"FUN_0000658e","mnems":"movs mov mov bl str movs movs strb ldr ldr movs mov mov blx pop"}
+,
+{"addr":"0x6684","size":8,"n":4,"name":"FUN_00006684","mnems":"ldr ldr movs mov"}
+,
+{"addr":"0x668c","size":74,"n":34,"name":"FUN_0000668c","mnems":"blx ldrb ldr cmp bne movs mov bl movs mov mov bl pop mov adds ldr ldr mov mov blx ldrb lsls ldr ldrh ldr mov blx ldr mov blx movs mov bl pop"}
+,
+{"addr":"0x66e4","size":22,"n":9,"name":"FUN_000066e4","mnems":"push mov movs bl movs ldr mov bl pop"}
+,
+{"addr":"0x6700","size":44,"n":21,"name":"FUN_00006700","mnems":"push mov bl movs lsls muls ldr adds ldrb ldr ldr mov blx ldrb subs rsbs adcs movs strb strb pop"}
+,
+{"addr":"0x6730","size":140,"n":66,"name":"FUN_00006730","mnems":"push mov movs mov bl movs lsls muls ldr adds movs strb movs muls ldr adds movs strh movs strh movs lsls str movs lsls str movs strb cmp bhi movs muls ldr adds movs strb movs strb movs lsls strb movs strb str mov bl movs mov bl movs mov bl movs lsls strb movs lsls strb movs adds strb movs strb ldr strb pop"}
+,
+{"addr":"0x67cc","size":88,"n":41,"name":"FUN_000067cc","mnems":"push mov cmp beq cmp beq movs cmp beq cmp beq cmp bne movs lsls b movs lsls b movs lsls b movs lsls muls ldr adds movs adds ldrb cmp beq mov bl b mov bl mov mov bl pop"}
+,
+{"addr":"0x6828","size":12,"n":5,"name":"FUN_00006828","mnems":"push movs movs bl pop"}
+,
+{"addr":"0x6834","size":28,"n":13,"name":"FUN_00006834","mnems":"push mov movs muls ldr adds movs movs strb mov mov bl pop"}
+,
+{"addr":"0x6854","size":28,"n":13,"name":"FUN_00006854","mnems":"push mov movs muls ldr adds movs movs strb uxtb mov bl pop"}
+,
+{"addr":"0x6b34","size":48,"n":23,"name":"FUN_00006b34","mnems":"push movs lsls muls ldr adds ldr ldr tst beq movs bl movs pop movs muls ldr adds movs ldr subs sbcs pop"}
+,
+{"addr":"0x6b70","size":88,"n":42,"name":"FUN_00006b70","mnems":"push mov movs muls ldr adds movs ldrb movs ldrb cmp bne str str mov adds movs strb movs movs mov bl cmp bhi movs muls adds ldrb adds movs ands strb movs strb mov bl ldr ldr mov ldr blx pop"}
+,
+{"addr":"0x6bcc","size":262,"n":127,"name":"FUN_00006bcc","mnems":"push sub mov movs muls ldr adds movs movs str ldrb cmp bhi movs ldrb cmp beq str movs str muls adds ldrb str ldrb str ldr str str adds str movs lsls mov mov mov str bl cmp beq movs ldr strb mov mov adds ldr str movs movs mov str ldr bl cmp beq movs str b ldr ldr lsls lsrs movs strb ldr ldrb cmp beq ldr cmp beq ldr cmp bne ldr cmp beq ldr cmp bne cmp bne ldr adds strb ldr strb ldr str movs movs mov mov bl ldr cmp beq movs ldrb cmp beq movs strb ldr str movs mov mov ldr bl cmp bne movs b movs ldr str cmp bne ldr strb ldr ldr strb add pop"}
+,
+{"addr":"0x6cdc","size":30,"n":15,"name":"FUN_00006cdc","mnems":"cmp bhi movs muls ldr adds movs strb movs muls adds movs strb strb bx"}
+,
+{"addr":"0x6d00","size":200,"n":100,"name":"FUN_00006d00","mnems":"push cmp bhi movs lsls mov muls ldr adds movs ldrb lsls ldr ldr movs ldr mov adds ldr cmp str bcc ldr orrs str b ldr ands str ldr movs bics str ldr ands muls adds ldrb cmp beq movs lsls adds cmp bne movs ldrb cmp beq ldr cmp bcc movs ldrb cmp bne b ldrb cmp bne ldr cmp bcc movs ldrb cmp beq movs lsls orrs mov b ldrb cmp bne movs ldrb cmp beq movs b movs lsls orrs str ldr ldr ands ldrb lsls adds ldrb lsls orrs movs orrs str ldr str pop"}
+,
+{"addr":"0x6de4","size":16,"n":7,"name":"FUN_00006de4","mnems":"push movs str str str bl pop"}
+,
+{"addr":"0x6df4","size":860,"n":417,"name":"FUN_00006df4","mnems":"push sub str cmp bls b movs mov muls ldr adds movs ldrb cmp bne b str ldr mov ldr adds str str muls adds movs str ldrb cmp beq ldr cmp beq cmp beq movs lsls mov adds adds ands cmp bhi movs lsls ands lsls cmp mov bne lsls lsrs beq movs muls cmp mov bhi bl mov movs ldr strb movs ldr bl b ldr ldr mov adds movs ands movs str strb movs strb movs ldr strb movs ldr strb movs strh ldr str ands lsls ldr muls ldr adds movs ldrb str movs ldrb str ldrb movs str cmp bcc cmp ldr beq movs ldr cmp bne mov b ldr b movs ldr sxth movs mvns adds cmp mov bgt mov cmp ldr bhi mov ldr cmp beq ldrb cmp beq movs ldrb cmp beq ldr cmp bcs movs movs ldrb cmp bne mov adds movs strb ldr ldrb cmp str beq ldr sxth movs cmp str bpl movs str ldr cmp beq movs cmp str bcc ldr b ldr cmp beq movs lsls b lsls ldr orrs sxth movs cmp bmi str str str b ldrb lsls ldrb lsls orrs movs ldr muls adds ldrb mov adds ldr lsls cmp beq ldmia stmia subs b orrs orrs lsls orrs movs orrs ldr str adds str movs str str ldr mov ldr mov ldr ldr bl b lsls bmi str lsls lsrs movs mov muls adds cmp bls movs mvns muls adds b movs ldr strb movs ldr bl b movs lsls ands str movs b mov str uxth adds bl str ldr mov adds ldr cmp str beq movs lsls ldr lsls orrs str b ldrb lsls ldr lsls orrs ldrb lsls orrs str movs ldr muls adds ldrb str adds ldrb str movs movs mov mov bl ldr subs mov sbcs lsls ldr uxtb lsls orrs ldr orrs ldr orrs ldr lsls ldr ands cmp bne ldr strh movs ldr b lsls orrs uxtb mov cmp beq ldrb uxtb strb subs adds adds b movs ldr cmp ldr beq ldr cmp ldr beq mov b mov ldr b lsls orrs ldr uxth bl str movs ldr str str str str ldr uxtb mov ldr mov ldr bl mov bl mov movs ldr strb mov bl cmp bne movs ldr ldrb subs cmp bcc movs ldrb cmp bne subs uxtb cmp bhi ldr ldrb ldr cmp bcc cmp beq ldr bl mov bl add pop movs movs ldr ldr bl b"}
+,
+{"addr":"0x7160","size":18,"n":8,"name":"FUN_00007160","mnems":"push ldr str str movs str bl pop"}
+,
+{"addr":"0x7172","size":22,"n":10,"name":"FUN_00007172","mnems":"push ldr str movs str uxth str movs bl pop"}
+,
+{"addr":"0x718c","size":234,"n":109,"name":"FUN_0000718c","mnems":"push mov movs lsls muls ldr adds mov adds subs cmp bcc cmp beq cmp bne ldr movs mov bl movs muls ldr adds ldrb cmp bne movs strb ldr ldr movs mov blx movs strb ldrb cmp beq movs mov bl b movs mov mov bl movs muls ldr adds ldrb cmp bne adds strb movs ldrb cmp bne lsls ldr ldr movs lsls movs str adds ldr bics str movs mov bl ldr ldr movs mov mov blx movs strb pop movs mov bl mov bl pop movs movs strb movs movs b movs mov bl movs strb ldr ldr mov blx movs ldr mov bl pop"}
+,
+{"addr":"0x7754","size":106,"n":51,"name":"FUN_00007754","mnems":"push mov movs lsls muls ldr adds ldrb cmp bne ldrb subs sbcs lsls lsls ldr ldr movs lsls ldr movs bics adds str mov bl mov bl ldrb cmp beq movs b movs movs strb b movs movs strb str cmp bls pop movs muls ldr adds movs strb pop"}
+,
+{"addr":"0x77cc","size":48,"n":21,"name":"FUN_000077cc","mnems":"push mov movs lsls muls ldr adds movs strb movs strb movs mov bl movs mov bl movs mov bl pop"}
+,
+{"addr":"0x7800","size":10,"n":4,"name":"FUN_00007800","mnems":"push ldr bl pop"}
+,
+{"addr":"0x781c","size":52,"n":25,"name":"FUN_0000781c","mnems":"push mov movs lsls muls ldr adds ldrb cmp beq ldrb cmp beq movs b movs mov bl ldr ldr movs movs mov blx pop"}
+,
+{"addr":"0x7854","size":26,"n":13,"name":"FUN_00007854","mnems":"push movs lsls muls ldr adds ldr ldr movs mvns ldr blx pop"}
+,
+{"addr":"0x78bc","size":66,"n":30,"name":"FUN_000078bc","mnems":"push mov mov movs lsls muls ldr adds ldrb cmp bne movs strb ldrb cmp beq ldrb b movs mov mov bl movs mov mov bl movs lsls bl pop"}
+,
+{"addr":"0x799c","size":50,"n":23,"name":"FUN_0000799c","mnems":"push mov mov movs lsls muls ldr adds movs strb mov mov bl mov mov bl adds movs movs strb movs strb pop"}
+,
+{"addr":"0x79d4","size":64,"n":31,"name":"FUN_000079d4","mnems":"push mov mov cmp beq ldr b ldr lsls ldr ldr movs lsls ldr ands str mov mov bl movs lsls muls ldr adds adds movs movs strb movs strb pop"}
+,
+{"addr":"0x7a24","size":54,"n":26,"name":"FUN_00007a24","mnems":"push mov movs lsls muls ldr adds ldr strh ldrb cmp beq ldr strh strh movs movs mov bl movs muls ldr adds movs strb pop"}
+,
+{"addr":"0x7a6c","size":132,"n":62,"name":"FUN_00007a6c","mnems":"push str mov movs lsls muls ldr adds str ldr mov bl movs mov mov bl movs mov mov bl lsls ldr ldr movs lsls ldr lsls bics str ldr mov mov blx ldr mov mov blx ldr cmp bne ldr mov mov blx ldr mov mov blx movs movs mov bl movs ldr strb movs strb str strb strb strb pop"}
+,
+{"addr":"0x7af8","size":42,"n":21,"name":"FUN_00007af8","mnems":"push movs lsls muls ldr adds movs ldrb cmp bne mov adds ldr movs strb cmp beq adds blx str pop"}
+,
+{"addr":"0x7b28","size":178,"n":87,"name":"FUN_00007b28","mnems":"push sub mov lsls ldr ldr movs lsls movs str adds ldr orrs str movs lsls ldr movs orrs str mov ldr movs orrs str movs lsls muls ldr str adds strb ldrb cmp beq movs b movs str mov adds ldr mov adds ldrb cmp bne str str ldrb cmp bne ldr ldrb cmp beq mov bl cmp beq ldr strb movs str b ldr ldr movs mov blx ldr strb mov bl movs ldr strb movs str ldr ldr movs movs mov blx add pop"}
+,
+{"addr":"0x7be4","size":38,"n":18,"name":"FUN_00007be4","mnems":"push cmp bhi cmp beq ldr b ldr lsls ldr ldr movs lsls ldr ands str bl pop"}
+,
+{"addr":"0x7c18","size":46,"n":21,"name":"FUN_00007c18","mnems":"push mov lsls ldr ldr movs lsls movs str adds ldr bics str movs mov mov bl mov mov bl pop"}
+,
+{"addr":"0x7c4c","size":20,"n":9,"name":"FUN_00007c4c","mnems":"push movs lsls muls ldr adds ldrb bl pop"}
+,
+{"addr":"0x7c64","size":30,"n":15,"name":"FUN_00007c64","mnems":"push sub mov add str strh movs str muls ldr adds str subs uxtb adds"}
+,
+{"addr":"0x7d6c","size":100,"n":50,"name":"FUN_00007d6c","mnems":"push movs lsls muls ldr adds ldrb uxth lsrs cmp beq subs rsbs adcs uxtb subs rsbs adcs orrs rsbs adcs orrs pop movs ldrb uxtb cmp bne subs cmp bcc movs lsrs bne cmp beq movs pop movs cmp bhi movs lsls cmp bcs orrs subs sbcs mov pop"}
+,
+{"addr":"0x7dd4","size":74,"n":35,"name":"FUN_00007dd4","mnems":"push mov movs lsls muls ldr adds movs ldrb cmp bne ldrb movs movs cmp mov beq mov cmp beq mov ldrb cmp beq mov b movs mov bl cmp bne movs mov bl pop"}
+,
+{"addr":"0x7e4c","size":206,"n":99,"name":"FUN_00007e4c","mnems":"push sub movs str lsls ldr ldr movs lsls adds movs lsls lsls cmp str str str beq movs lsls str mov adds adds movs str str b movs lsls str mov adds adds movs str str lsls lsrs adds bl str ldr str ldr ldr orrs str ldr lsls beq ldr cmp bhi ldr adds str b movs bl ldr str ldr adds bl ldr ldr str ldr cmp bmi ands beq ldr lsls ldr ands ldr ldr ands ldr lsrs cmp bne cmp beq cmp bne cmp beq ldr orrs str ldr bl lsrs uxtb add pop"}
+,
+{"addr":"0x7f2c","size":820,"n":402,"name":"FUN_00007f2c","mnems":"push sub mov movs str bl lsls ldr ldr movs lsls adds movs lsls ldr movs lsls cmp bne b str movs str muls ldr adds str adds lsls ldr lsls str bpl movs ldr strb movs lsls ldr ands lsls cmp beq movs b movs ldr ldr blx mov adds str ldr ldr lsls bpl movs str movs strb ldr tst ldr ldr beq mov adds ldr lsls bpl ldr strb b strb mov adds ldr ldr lsrs ands adds lsrs movs strb ldrb cmp bcc mov adds movs strb movs ldr strb movs strb movs lsls str str ldr lsls bpl lsls mov bl ldr str lsls str ldr lsls bpl ldr movs ands cmp bne movs ldr ldrb cmp bne ldr mov adds ldr strb lsls ldr orrs str ldr ldr ands str ldr str ldr movs mov blx ldr movs ands cmp ldr bne movs ldr strb ldr ldr bics str str ldr ldr ldr str lsls lsrs subs strb movs lsls muls ldr adds movs ldrb cmp bhi mov adds ldr ands str lsls lsrs strb movs ands strb lsls lsrs strb movs ldrb cmp beq mov bl b mov adds ldr adds bl ldr movs mov blx ldr ldr str movs ldr strb movs lsls str ldr lsls bpl lsls ldr ldr movs mov blx ldr str ldr lsls bpl lsls ldr ldr movs mov blx ldr str ldr ldr tst ldr beq ldr bics str str ldr mov mov blx ldr ldr lsls bpl lsls movs mov bl cmp bne ldr bics str str ldr ldr lsls ldr lsls bpl lsls movs ldr strb movs ldrsb cmp bmi adds ldrb cmp beq str str movs bl ldr lsls bpl mov mov b ldr ldr ands str str ldr movs ldr blx ldr ldr b mov adds str ldr lsls str movs bl ldr ldr ldr orrs str ldr ldr ldrb subs strb ldr str ldr tst beq movs str mov bl lsls ldr ldr orrs str ldr bics str str ldr lsls lsrs ldr beq ldr movs mov blx movs lsls str ldr ldr orrs str ldr ldr tst beq movs ldr ldr strb ldr movs mov blx ldr ldr ands str ldr str ldr lsls bpl movs ldr ldr strb ldr ldr ands str ldr str ldr movs mov blx ldr cmp beq ldr lsls bpl movs str ldr tst beq str add pop"}
+,
+{"addr":"0x8284","size":94,"n":47,"name":"FUN_00008284","mnems":"push lsls ldr ldr str movs muls ldr adds mov adds mov adds mov adds str movs ldrb mov adds uxtb cmp bls ldrb ldrb cmp bcs lsls ldr adds ldr ldrb lsls adds str ldrb adds strb adds b ldr ldrb rsbs adcs lsls strb pop"}
+,
+{"addr":"0x82ec","size":110,"n":55,"name":"FUN_000082ec","mnems":"push movs muls ldr adds movs ldrb lsls ldr ldr movs ldr str cmp beq movs ands rsbs adcs cmp bne lsls b movs cmp bne movs b movs adds mov adds adds uxtb cmp bls ldr ldrb lsls ldr lsls adds str ldrb adds strb adds ldrb ldr cmp bcc movs pop movs pop"}
+,
+{"addr":"0x843c","size":92,"n":44,"name":"FUN_0000843c","mnems":"push mov mov lsls ldr ldr cmp beq movs lsls b movs lsls adds ldr str subs sbcs movs mov mov bl cmp ldr beq mov movs lsls bl movs muls adds lsls adds movs strh movs muls adds lsls adds movs ldrh pop"}
+,
+{"addr":"0x84a4","size":148,"n":73,"name":"FUN_000084a4","mnems":"push lsls ldr ldr movs lsls adds adds cmp beq movs lsls muls ldr adds movs ldrb b movs movs lsls ldr bics str ldr movs orrs str ldr mov adds ldr ands str lsls ldr ldrb lsls ldr orrs lsls orrs str ldr ands str movs lsls ldr orrs str movs lsls bl movs str ldr movs orrs str ldr lsls bmi ldr lsls bpl movs b movs ldr orrs str pop"}
+,
+{"addr":"0x8548","size":540,"n":262,"name":"FUN_00008548","mnems":"push sub mov movs lsls muls ldr adds movs ldrb cmp bne b lsls ldr ldr movs lsls adds adds ldrb cmp bne movs str ldr orrs str ldrb cmp bne ldrb cmp bne movs b ldrb cmp bne movs str lsls ldr bics str ldr movs orrs str ldr adds ldr ands str movs ldrb lsls ldr str ldrb lsls ldr orrs lsls orrs str movs lsls str bl movs lsls ldr ands adds ldr mov lsls str cmp bne ldr movs bics str ldrb lsls ldr adds ldrb lsls ldr orrs str ldr ldr ands str lsls ldr orrs str ldr bl movs str ldr movs orrs str ldr lsls bpl b b ldr movs lsls ldr bics str ldr orrs str movs str ldr orrs str ldrh mov bl uxth cmp bne mov bl mov bl movs muls ldr adds movs ldrh b movs mov bl b movs lsls ldr bics str movs lsls adds ldr orrs str movs str ldr orrs str ldr lsls bpl ldr b ldr lsls str cmp bne movs lsls bics str ldrb lsls ldr adds ldrb lsls ldr orrs str ldr ldr ands str movs lsls ldr orrs str ldr bl movs str ldr movs orrs str ldr ldr tst beq ldr ldr tst bne b ands str ldrb lsls ldr adds ldrb lsls ldr orrs lsls orrs str ldr ldr ands str movs lsls ldr orrs str ldr bl movs str ldr movs orrs str ldr ldr tst beq ldr ldr tst bne ldr movs b ldr movs orrs str add pop"}
+,
+{"addr":"0x8778","size":194,"n":91,"name":"FUN_00008778","mnems":"push mov movs lsls muls ldr adds ldrh add strh ldrb ldrb cmp beq lsls ldr ldr movs ldr lsls lsrs bne ldrb cmp bne movs subs uxtb movs str mov bl mov add strb mov mov ldr bl strb b mov adds ldrb cmp beq add ldrb cmp bcc movs mov mov bl add strb cmp bhi movs mov mov bl add strb ldrb add movs strb ldr pop movs movs cmp beq uxtb movs mov mov bl add strb cmp beq mov mov mov bl add strb adds b"}
+,
+{"addr":"0x8844","size":246,"n":122,"name":"FUN_00008844","mnems":"push str movs lsls movs cmp mov beq mov str lsls ldr ldr movs lsls adds ldr ands movs lsls muls ldr adds ldrb cmp beq lsls ldr bics str ldr orrs str movs str cmp bne movs ldrb lsls ldr adds adds b ldr cmp bne movs b movs ldr adds adds ldr adds ldrb lsls ldrb lsls orrs movs lsls ldr ands cmp bne ldr cmp mov bne b ldr bics str ldr orrs str adds movs lsls bl ldrb movs cmp mov beq ldr movs ldr cmp mov bne mov adds cmp bne mov movs lsls ldr ands lsls cmp beq mov cmp beq mov b movs cmp beq mov ldr cmp bne mov eors adds bne mov pop"}
+,
+{"addr":"0x8948","size":94,"n":47,"name":"FUN_00008948","mnems":"push str lsls ldr ldr mov adds ldr str ldr ldr cmp bne movs str lsls ldr orrs ldr str movs muls ldr adds movs strb movs strb lsls ldr ldr str movs lsls ands lsls adds ldr adds str str movs ldr strb ldr str pop"}
+,
+{"addr":"0x89b8","size":230,"n":114,"name":"FUN_000089b8","mnems":"push sub lsls ldr ldr movs lsls ldr movs lsls str bics str movs lsls ldr str movs str muls ldr adds movs str ldrsb mov adds cmp bmi adds str ldr adds ldr str lsls adds ldr tst beq ldrb subs strb ldr ldr ldr orrs str ldr movs ldr blx b lsls ldr orrs str b str str movs movs str ldr strb movs ldr str bl cmp mov ldr beq ldr ldr orrs str ldr ldr orrs str movs ldrb subs rsbs adcs lsls ldr movs bics adds str ldr ldr ldrb movs ldr strb ldrb subs strb subs sbcs lsls movs lsls bics adds ldr lsls adds str add pop"}
+,
+{"addr":"0x8ab0","size":92,"n":46,"name":"FUN_00008ab0","mnems":"push lsls ldr ldr movs lsls ldr movs lsls bics str movs lsls movs lsls str adds cmp beq cmp bne ldr ldr ands str ldr ldr ands str b ldr ldr ands movs lsls adds str ldr ldr ands lsls adds str ldr str pop"}
+,
+{"addr":"0x8b1c","size":36,"n":17,"name":"FUN_00008b1c","mnems":"push lsls ldr ldr movs lsls ldr movs adds orrs str movs bl ldr bics str pop"}
+,
+{"addr":"0x8b44","size":42,"n":21,"name":"FUN_00008b44","mnems":"push movs muls ldr adds movs movs strb lsls ldr ldr movs lsls adds ldr ldr ands str ldr str pop"}
+,
+{"addr":"0x8b80","size":88,"n":42,"name":"FUN_00008b80","mnems":"push lsls ldr ldr movs lsls ldr str movs lsls ldr orrs str movs ldr str bl adds movs ldr lsls beq ldr tst beq movs lsls bl subs b ldr tst beq movs pop movs lsls ldr orrs str movs pop"}
+,
+{"addr":"0x8be8","size":34,"n":17,"name":"FUN_00008be8","mnems":"lsls ldr ldr movs ldr ldr tst beq movs bx adds movs lsls ldr ands lsrs bx"}
+,
+{"addr":"0x8c14","size":56,"n":28,"name":"FUN_00008c14","mnems":"push movs lsls muls ldr adds ldrb cmp beq pop lsls ldr ldr movs lsls ldr movs bics str ldrb cmp bne adds ldr movs orrs str pop"}
+,
+{"addr":"0x8c54","size":140,"n":70,"name":"FUN_00008c54","mnems":"push lsls ldr ldr movs movs lsls adds ldr ldrb cmp bne ldrb cmp bne cmp beq adds b ldr cmp beq adds b adds lsls ldr movs bics str movs mvns ldr ands str ldr ands str ldrb ldr orrs str ldrb ldr orrs str cmp bne ldr movs orrs str movs adds cmp beq movs lsls b movs lsls lsls orrs movs lsls ldr bics orrs str pop"}
+,
+{"addr":"0x8cec","size":38,"n":19,"name":"FUN_00008cec","mnems":"push movs cmp beq lsls b lsls lsls ldr ldr movs lsls ldr movs lsls bics orrs str pop"}
+,
+{"addr":"0x8d18","size":48,"n":24,"name":"FUN_00008d18","mnems":"push cmp beq ldr b ldr lsls ldr ldr movs lsls ldr ands str movs cmp beq lsls b lsls ldr orrs str pop"}
+,
+{"addr":"0x8d54","size":14,"n":7,"name":"FUN_00008d54","mnems":"cmp beq ldmia stmia subs b bx"}
+,
+{"addr":"0x8d62","size":38,"n":19,"name":"FUN_00008d62","mnems":"sub movs str str adds str ldr cmp bcc ldr subs str ldr adds str b ldr add bx"}
+,
+{"addr":"0x8d88","size":26,"n":11,"name":"FUN_00008d88","mnems":"push mov mov bl cmp beq ldr orrs str bl pop"}
+,
+{"addr":"0x8da2","size":26,"n":11,"name":"FUN_00008da2","mnems":"push mov mov bl cmp beq ldr bics str bl pop"}
+,
+{"addr":"0x8dbc","size":56,"n":26,"name":"FUN_00008dbc","mnems":"push mov bl movs cmp beq ldr cmp beq ldr movs cmp beq movs lsls tst bne adds mov b ldr bics str bl uxtb pop"}
+,
+{"addr":"0x8df8","size":38,"n":19,"name":"FUN_00008df8","mnems":"movs ands movs lsls lsrs lsls cmp beq ldr ldr ldr orrs b ldr ldr ldr bics str bx"}
+,
+{"addr":"0x8e24","size":34,"n":17,"name":"FUN_00008e24","mnems":"push movs ands movs muls movs lsls lsrs lsls ldr ldr ldr bics lsls orrs str pop"}
+,
+{"addr":"0x8e4c","size":30,"n":15,"name":"FUN_00008e4c","mnems":"push lsls lsrs movs lsls lsrs lsls ldr ldr ldr bics lsls orrs str pop"}
+,
+{"addr":"0x8e70","size":32,"n":13,"name":"FUN_00008e70","mnems":"push mov mov mov mov bl mov mov bl mov mov bl pop"}
+,
+{"addr":"0x8e90","size":52,"n":22,"name":"FUN_00008e90","mnems":"push movs movs mov bl ldr adds movs mov mov mov bl mov mov bl str movs add movs bl mov pop"}
+,
+{"addr":"0x8efc","size":12,"n":5,"name":"FUN_00008efc","mnems":"push ldr movs bl pop"}
+,
+{"addr":"0x8f0c","size":62,"n":28,"name":"FUN_00008f0c","mnems":"push mov movs ldr ldrb adds uxtb movs cmp bhi ldr ldr cmp bne adds adds movs movs mov mov bl movs mov mov bl bl mov pop"}
+,
+{"addr":"0x8f54","size":82,"n":36,"name":"FUN_00008f54","mnems":"push mov bl mov mov movs bl movs mov bl mov bl mov orrs beq movs movs subs mov sbcs bge movs cmp bne mov b mov orrs uxtb bl lsrs lsls adds asrs b pop"}
+,
+{"addr":"0x8fa8","size":34,"n":16,"name":"FUN_00008fa8","mnems":"push ldr ldrb ldr adds movs strb adds strb uxtb cmp bne bl movs strb pop"}
+,
+{"addr":"0x8fd4","size":32,"n":14,"name":"FUN_00008fd4","mnems":"push cmp beq mov cmp bne movs b movs movs bl mov bl pop"}
+,
+{"addr":"0x8ff4","size":84,"n":39,"name":"FUN_00008ff4","mnems":"push ldr ldrb cmp beq ldrb cmp bne ldr adds lsrs beq ldr movs strb adds str add movs strb ldr mov bl mov bl b movs lsls adds ldr adds bl ldrb ldr adds str movs strb pop"}
+,
+{"addr":"0x9058","size":20,"n":7,"name":"FUN_00009058","mnems":"push movs bl movs bl bl pop"}
+,
+{"addr":"0x906c","size":24,"n":11,"name":"FUN_0000906c","mnems":"push mov mov cmp beq ldrb bl subs adds b pop"}
+,
+{"addr":"0x91a8","size":192,"n":87,"name":"FUN_000091a8","mnems":"push sub movs movs mov bl movs ldr ldrb lsls lsls ldr ldr cmp bne str ldr str movs str ldr str movs str str movs str str str strb str str str bl ldr ldr movs orrs str bl lsls bl str bl ldr movs str lsls str str movs ldrb ldr cmp bne ldr str ldr str str ldr str movs str str movs str ldr str ldr str strb bl ldr ldr orrs str bl lsls bl str bl str ldr str add pop"}
+,
+{"addr":"0x927c","size":20,"n":7,"name":"FUN_0000927c","mnems":"push bl bl movs movs bl pop"}
+,
+{"addr":"0x9290","size":36,"n":18,"name":"FUN_00009290","mnems":"movs muls lsrs cmp bcc movs b adds lsls ldrh lsls ldrh subs muls lsrs adds uxth bx"}
+,
+{"addr":"0x92b4","size":114,"n":53,"name":"FUN_000092b4","mnems":"push mov mov ldr ldrb cmp beq cmp beq cmp beq strb mov bl cmp beq cmp bne ldr mov bl ldr ldrh muls lsrs uxth ldr str ldrh b cmp beq movs strb bl pop ldr mov bl ldr ldrh muls lsrs uxth ldr str ldrh muls lsrs uxth ldr str pop"}
+,
+{"addr":"0x9340","size":72,"n":33,"name":"FUN_00009340","mnems":"push cmp beq cmp beq cmp bne bl ldr ldr movs b bl ldr ldr movs orrs str ldr ldr bics b bl ldr ldr movs orrs str ldr ldr orrs str pop"}
+,
+{"addr":"0x955c","size":16,"n":7,"name":"FUN_0000955c","mnems":"push movs ldr movs strb bl pop"}
+,
+{"addr":"0x9570","size":32,"n":15,"name":"FUN_00009570","mnems":"push ldr ldr cmp beq movs b movs ldr movs strb adds bl mov pop"}
+,
+{"addr":"0x9598","size":16,"n":7,"name":"FUN_00009598","mnems":"push movs ldr movs strb bl pop"}
+,
+{"addr":"0x95ac","size":16,"n":7,"name":"FUN_000095ac","mnems":"push movs ldr movs strb bl pop"}
+,
+{"addr":"0x95e8","size":20,"n":9,"name":"FUN_000095e8","mnems":"push movs ldr movs strb ldr adds bl pop"}
+,
+{"addr":"0x9604","size":36,"n":17,"name":"FUN_00009604","mnems":"push movs ldr ldrb cmp beq ldr cmp beq ldrb movs orrs strb ldr adds bl pop"}
+,
+{"addr":"0x9634","size":18,"n":8,"name":"FUN_00009634","mnems":"push cmp bhi lsls adr ldr bl pop"}
+,
+{"addr":"0x9640","size":2,"n":1,"name":"FUN_00009640","mnems":"mov"}
+,
+{"addr":"0x967c","size":648,"n":243,"name":"FUN_0000967c","mnems":"sub mov bl mov bl add strb cmp bhi lsls add ldrh lsls add ldr ldrb cmp bne mrs cpsid movs bl bl msr movs b ldr ldrb cmp beq b mrs cpsid movs bl add movs bl bl msr b ldr ldrb cmp bne mrs cpsid movs bl bl msr movs b ldr ldrb cmp beq b mrs cpsid movs bl bl msr b ldr ldrb cmp beq b mrs cpsid movs bl bl msr b ldr ldrb cmp beq b mrs cpsid movs bl bl msr b ldr ldrb cmp beq b mrs cpsid movs bl bl msr b ldr ldrb cmp beq b mrs cpsid movs bl bl msr b ldr ldrb cmp bne mrs cpsid movs bl bl msr movs b ldr ldrb cmp beq b mrs cpsid movs bl bl msr b ldr ldrb cmp beq b mrs cpsid movs bl bl msr b ldr ldrb cmp bne mrs cpsid movs bl bl msr movs b ldr ldrb cmp bne mrs cpsid movs bl bl msr b ldr ldrb cmp bne mrs cpsid movs bl bl msr b ldr ldrb cmp bne mrs cpsid movs bl bl msr b ldr ldrb cmp bne mrs cpsid movs bl bl msr b ldr ldrb cmp bne mrs cpsid movs bl bl msr b ldr ldrb cmp bne mrs cpsid movs bl bl msr b ldr ldrb cmp bne mrs cpsid movs bl bl msr movs bl bl mov adds movs"}
+,
+{"addr":"0x9928","size":24,"n":9,"name":"FUN_00009928","mnems":"push mrs cpsid bl movs ldr ldrb msr pop"}
+,
+{"addr":"0x9944","size":28,"n":12,"name":"FUN_00009944","mnems":"push ldr mov adds movs bl ldr cmp bne pop movs bl"}
+,
+{"addr":"0x9964","size":88,"n":37,"name":"FUN_00009964","mnems":"push ldr ldr cmp bne mrs cpsid bl movs ldrb msr subs uxtb cmp bhi ldr ldr lsls bmi movs str b sxtb bl cmp bne adds mov bl ldr ldr str pop movs bl movs bl"}
+,
+{"addr":"0x99c8","size":30,"n":11,"name":"FUN_000099c8","mnems":"push mov mrs cpsid bl movs ldr strb bl msr pop"}
+,
+{"addr":"0x99ec","size":276,"n":117,"name":"FUN_000099ec","mnems":"push sub ldr movs str str strb ldr str ldr cmp beq b ldr bl mov bl cmp beq ldr ldr cmp beq b bl bl cmp beq cmp beq cmp bne movs ldr mov bl movs mov bl ldr str lsls ldr ldr orrs str ldr bics str str movs lsls bl lsls ldr ldr bics str b bl cmp bne b bl mov bl cmp bls b mov adds cmp bls b movs bl bl ldr ldr movs ands lsls adds b movs bl bl cmp bne bl ldr ldr movs ands movs lsls adds str movs mov bl bl bl bl mov mov ldr bl cmp bcs movs ldr str svc b movs bl"}
+,
+{"addr":"0x9ae6","size":8,"n":3,"name":"FUN_00009ae6","mnems":"bl cmp bne"}
+,
+{"addr":"0x9aee","size":6,"n":3,"name":"FUN_00009aee","mnems":"str movs mov"}
+,
+{"addr":"0x9af4","size":390,"n":161,"name":"FUN_00009af4","mnems":"bl uxtb movs cmp mov beq movs lsls ands lsls cmp mov beq movs bl cmp mov bne mrs cpsid bl movs ldr ldrb msr cmp bcc b adds mrs cpsid bl movs ldr strb bl msr bl subs sbcs ldr ldr blt mrs cpsid bl ldr ldr ldr msr subs mov sbcs movs ldr subs sbcs blt bl subs sbcs blt bl mov bl mov mov adds bl cmp bls cmp beq movs lsls ldr ldrb cmp beq movs ldrb cmp beq bl subs cmp bhi subs asrs adds eors movs muls movs bl cmp bhi movs ldrb cmp bne mrs cpsid movs ldrb msr cmp beq movs ldrh movs ldrh movs mov muls movs bl adds ldr cmp bcc muls movs mov bl subs cmp bhi bl movs bl movs ldr str svc ldr ldrb cmp beq b movs add pop movs bl movs bl movs bl movs bl movs bl movs bl movs bl movs bl movs bl"}
+,
+{"addr":"0x9cbc","size":24,"n":9,"name":"FUN_00009cbc","mnems":"push mrs cpsid bl movs ldr ldrb msr pop"}
+,
+{"addr":"0x9cd8","size":54,"n":24,"name":"FUN_00009cd8","mnems":"push ldr ldrb cmp bne bl cmp bgt ldrb cmp bcc movs b adds strb pop movs strb ldrb cmp bhi bl movs bl"}
+,
+{"addr":"0x9d14","size":30,"n":11,"name":"FUN_00009d14","mnems":"push mov mrs cpsid bl movs ldr strb bl msr pop"}
+,
+{"addr":"0x9d38","size":98,"n":44,"name":"FUN_00009d38","mnems":"push ldr ldr cmp bne ldr ldr str movs lsls ldr str movs bl ldr str mov bl bl movs ldr ldrb cmp bne bl strb lsls ldr ldr orrs str ldrh ldr str ldr ldr movs orrs movs bics str pop movs bl"}
+,
+{"addr":"0x9dc0","size":24,"n":9,"name":"FUN_00009dc0","mnems":"push mrs cpsid bl ldr ldr ldr msr pop"}
+,
+{"addr":"0x9ddc","size":24,"n":11,"name":"FUN_00009ddc","mnems":"push ldr ldr adds str mov adds movs bl str pop"}
+,
+{"addr":"0x9df8","size":18,"n":7,"name":"FUN_00009df8","mnems":"push movs bl ldr adds bl pop"}
+,
+{"addr":"0x9e10","size":30,"n":11,"name":"FUN_00009e10","mnems":"push mov mrs cpsid bl movs ldr strb bl msr pop"}
+,
+{"addr":"0x9e34","size":18,"n":7,"name":"FUN_00009e34","mnems":"push movs bl ldr adds bl pop"}
+,
+{"addr":"0x9e74","size":54,"n":23,"name":"FUN_00009e74","mnems":"push movs lsls ldr ldr movs ldrb cmp beq movs bl ldr adds bl pop adds ldrb cmp bne bl pop bl pop"}
+,
+{"addr":"0x9eb4","size":26,"n":13,"name":"FUN_00009eb4","mnems":"ldr ldr ldr ldr lsls bne ldr lsls bne ldr lsls bmi bx"}
+,
+{"addr":"0x9edc","size":102,"n":45,"name":"FUN_00009edc","mnems":"push mov mov movs mvns lsrs bne mov movs lsls cmp bhi bl bl mrs cpsid ldr movs str lsrs str lsrs uxtb str uxtb str adds cmp bcs ldrb str mov subs ldr movs ands cmp bhi adds b msr bl bl mov pop"}
+,
+{"addr":"0x9f48","size":64,"n":28,"name":"FUN_00009f48","mnems":"push ldr ldr movs lsls ldr orrs str ldr bics str mrs cpsid movs str movs str msr bl ldr ldr lsls beq movs lsls bl b pop"}
+,
+{"addr":"0x9f90","size":14,"n":6,"name":"FUN_00009f90","mnems":"push ldr movs str bl pop"}
+,
+{"addr":"0x9fa4","size":58,"n":28,"name":"FUN_00009fa4","mnems":"push mov mov mov cmp beq uxtb movs lsls subs cmp bhi mov mov mov mov bl cmp bmi adds subs adds b movs pop movs mvns pop"}
+,
+{"addr":"0x9fe0","size":50,"n":20,"name":"FUN_00009fe0","mnems":"push mov mov bl mrs cpsid ldr str lsrs uxtb str lsrs uxtb str uxtb str msr bl bl pop"}
+,
+{"addr":"0xa018","size":106,"n":52,"name":"FUN_0000a018","mnems":"push mov lsls beq movs pop mov cmp blt lsls bne ldr cmp ble ldr adds movs ldr b ldr cmp bgt movs b movs mov ldr ands rsbs adcs ands ldr bne ldr cmp bne ldr b ldr adds cmp bne movs b movs mov bl adds adds b movs pop"}
+,
+{"addr":"0xa09c","size":148,"n":68,"name":"FUN_0000a09c","mnems":"push sub str str str movs ldr ldr cmp beq str movs strb add str movs strh str ldr strb add mov mov bl movs svc movs str mov mov bl ldr bl ldr lsls bne strb str ldr strh ldr str add mov mov bl movs svc movs mov mov bl lsls beq ldr bl ldr adds b ldr cmp bcc movs mvns str ldr add pop"}
+,
+{"addr":"0xa460","size":24,"n":12,"name":"FUN_0000a460","mnems":"lsls movs adds movs adds movs subs movs adds movs lsrs movs"}
+,
+{"addr":"0xa478","size":42,"n":20,"name":"FUN_0000a478","mnems":"push cmp beq mov movs lsls mov adds mov bl mov mov mov muls adds cmp bcc pop movs pop"}
+,
+{"addr":"0xa4a4","size":104,"n":49,"name":"FUN_0000a4a4","mnems":"push str movs lsls mrs cpsid ldr ldrb adds ldrb cmp beq movs lsls ldr ldrb cmp beq lsls mov adds adds movs movs str ldr str ldr bl msr mov adds movs ldr cmp bcs mov ldmia subs ldr mov adds movs ldr blx adds mov b pop"}
+,
+{"addr":"0xa514","size":58,"n":29,"name":"FUN_0000a514","mnems":"push ldr lsrs cmp beq cmp bne lsls lsrs str str b lsls lsrs str ldr lsls lsrs str ldr ldr ands str pop movs str str str pop"}
+,
+{"addr":"0xa554","size":412,"n":195,"name":"FUN_0000a554","mnems":"push sub movs lsls ldr ldr movs lsls ldr cmp beq str ldr mov adds ldr ands cmp bne lsls lsrs b ldr ldrb cmp bne mov movs b ldrb str adds add ldr str cmp beq add add add mov bl movs ldr muls cmp bhi ldr muls cmp bls movs str str mov b ldr ldr ands bl ldr subs bcs movs str ldr ands adds stmia subs adds ldr b movs lsls ldr bics str ldr cmp bcs add mov bl ldr ldr lsrs movs ands movs mvns lsls mvns orrs movs lsls ldr strb b movs add bl ldr ldr lsrs movs orrs movs lsls ldr strb subs uxtb subs uxtb cmp bhi movs lsls adds add adds mov cmp beq ldmia stmia subs b ldrb cmp bne mov movs b ldr strb movs mvns lsls mvns ldr strb ldr b ldrb mov cmp beq movs b movs lsls movs bl movs lsls cmp bcc subs ldr ands adds str movs add mov bl movs lsls strb cmp beq movs movs ldr mov bl cmp beq mrs cpsid ldr mov bl movs lsls ldr movs mov bl strb msr add pop"}
+,
+{"addr":"0xa758","size":122,"n":60,"name":"FUN_0000a758","mnems":"push ldr ldrb movs cmp beq mov b ldrb movs cmp bne movs ldr ldrb movs ldrb cmp beq cmp bne movs mov adds ldrb cmp beq sxtb pop str adds movs mvns movs cmp beq ldrb cmp beq ldr cmp bne lsls adds ldr cmp bne uxtb movs movs bl cmp bne movs lsls adds adds b ldr b"}
+,
+{"addr":"0xa7dc","size":68,"n":28,"name":"FUN_0000a7dc","mnems":"push ldr ldrb cmp beq movs b bl movs cmp bne bl cmp beq mrs cpsid movs bl cmp bne strb b mov bl movs msr sxtb pop"}
+,
+{"addr":"0xa824","size":64,"n":26,"name":"FUN_0000a824","mnems":"push cmp ldr beq mrs cpsid ldr mov bl movs strb ldr ldr movs mov bl strb msr ldrb cmp bne bl bl movs strb pop"}
+,
+{"addr":"0xaa10","size":552,"n":258,"name":"FUN_0000aa10","mnems":"push sub mov mov mov subs cmp ldr ldr bhi lsls adr ldr cmp bne b cmp bne b cmp bne b cmp bne b cmp beq b cmp beq b ldr ldr movs mov bl ldr b bl b ldrb cmp beq b mov adds movs movs str bl movs movs str strb subs subs sbcs movs lsls mov muls adds movs ldrb cmp bne b str ldrb ldrb lsls bmi b cmp bls b movs lsls movs tst bne b ldr muls adds ldrb cmp bne b ldrb str mov adds ldr mov adds mov str ldr lsls bl ldrb movs strb ldrb ldr strb ldr str ldrb strb movs ands strb movs mov ldr b bl bl movs movs mov mov bl mov mov bl ldr ldrb cmp beq strb bl ldr ldr mov mov bl b cmp bne ldr ldrb cmp bne movs bl movs strb bl movs ldr movs strb ldr adds b cmp bne movs movs bl b bl add pop bl b mov subs cmp bls b add ldrb lsls add mov ldr mov muls adds ldrb cmp bne b movs b bl mov bl b cmp bne mov ldr muls adds ldrb cmp beq movs b bl ldr b mov ldr muls mov ldr muls adds ldrb cmp beq movs b mov ldr muls adds ldrb cmp beq movs b mov ldr muls adds ldrb cmp bne b mov ldr muls adds ldrb cmp beq movs muls adds ldrb adds movs b movs ldr movs mov b ldr str movs"}
+,
+{"addr":"0xaa2a","size":2,"n":1,"name":"FUN_0000aa2a","mnems":"mov"}
+,
+{"addr":"0xaee4","size":12,"n":6,"name":"FUN_0000aee4","mnems":"adds ldrb cmp beq movs b"}
+,
+{"addr":"0xaf24","size":12,"n":5,"name":"FUN_0000af24","mnems":"movs b mov bl b"}
+,
+{"addr":"0xaf5c","size":8,"n":4,"name":"FUN_0000af5c","mnems":"add movs mov b"}
+,
+{"addr":"0xafa4","size":2,"n":1,"name":"FUN_0000afa4","mnems":"bx"}
+,
+{"addr":"0xafc6","size":18,"n":9,"name":"FUN_0000afc6","mnems":"cmp beq str pop movs blx movs str pop"}
+,
+{"addr":"0xb0b6","size":46,"n":20,"name":"FUN_0000b0b6","mnems":"push mov mov cmp bne bl b bl mov muls movs mov bl adds cmp bge movs pop movs pop"}
+,
+{"addr":"0xb0f0","size":184,"n":89,"name":"FUN_0000b0f0","mnems":"push sub str mov str bl ldr ldr movs ldrb movs cmp beq mov bl movs movs strb movs ldr ldrb cmp ldr beq strb movs ldrb cmp str beq movs strb movs lsls mov ldr muls mov adds movs lsls strb ldr b ldr movs ldrb cmp beq movs b str str adds add add add mov bl ldr ldr ands cmp bcc ldr b lsls ldr adds ldr ldr cmp beq add movs strb str ldr ldr blx b ldr mov adds ldr ands cmp bne mov"}
+,
+{"addr":"0xb1a8","size":26,"n":11,"name":"FUN_0000b1a8","mnems":"movs bl bl ldr b movs strb ldr str add pop"}
+,
+{"addr":"0xb1f8","size":372,"n":176,"name":"FUN_0000b1f8","mnems":"push sub str str ldr str movs cmp ldr bne strb ldr bl str str bl mov movs ldr adds adcs mrs cpsid bl ldr str str bl msr ldr cmp bge movs b mvns ldr cmp ldr bne mov lsls lsrs adds mov bl movs lsls ldr str ldr ldr lsls adds ldr movs ldrb cmp beq ldr strb ldr adds movs lsls ldr lsrs movs orrs ldr cmp mov mov bne ands lsrs ands bl mov lsls ldr adds ldr ands lsrs cmp ldr bcs lsls ldr ands adds ands adds adds cmp bls ldr ands adds movs ldrb cmp bne add movs strb str movs mov ldr blx strb b cmp ldr beq ldr movs ldrb cmp bhi lsls adds movs ldr lsrs cmp bcc movs movs strb add movs strb ldr ldr movs add blx movs strb b str ldr ldr str bl cmp beq strb add movs strb movs blx b movs strb add pop movs ldr bl cmp ldr ldr beq movs movs strb movs b movs add strb b"}
+,
+{"addr":"0xb390","size":14,"n":7,"name":"FUN_0000b390","mnems":"push mov mov movs strb blx pop"}
+,
+{"addr":"0xb3a0","size":592,"n":289,"name":"FUN_0000b3a0","mnems":"push sub str mov mov ldr movs mov bl lsrs movs lsls cmp beq ldr cmp beq b lsls bpl lsls lsrs beq b ldr mov ldr bl b ldrb cmp beq b ldr movs mov ands ldr beq cmp bne mov mov bl movs b lsls movs strb adds ands ldr orrs str b ldrb cmp beq cmp beq cmp bne cmp beq subs cmp bls b subs cmp bhi lsls lsrs beq b ldr lsrs cmp beq b cmp beq cmp beq b adds lsls lsrs mov mov mov bl mov cmp bne b ldrh adds strh movs lsls bics lsls adds adds str uxth ldr ldrh movs cmp bhi b subs cmp bhi add mov mov bl mov b movs b movs strb b cmp beq cmp bne str movs lsls ldr ands movs lsls cmp bne lsls ands movs lsls cmp bne ldr str ldr movs ldr strh str lsrs cmp bne movs lsls ands ldr ldrb beq cmp bne movs ldr strb movs orrs movs bics str b movs strb ldr adds b movs ldr ldrb adds uxtb cmp bhi movs ldrb add adds cmp beq cmp bne ldr ldr lsrs bne str ldr adds str lsls lsrs adds cmp bls subs mov mov bl b cmp bne cmp bne movs ldr ldrb adds uxtb cmp bls movs lsls bics adds str add strb movs ldr add strb mov blx add pop ldr ldr lsrs beq movs lsls bics adds str movs movs strb b ldr subs sbcs ldr mov movs ldr strb str movs orrs movs bics str b str ldr adds str lsls lsrs adds cmp bls subs movs lsls ldr mov mov blx add ldr mov mov bl mov ldr b"}
+,
+{"addr":"0xb610","size":24,"n":12,"name":"FUN_0000b610","mnems":"push mov ldr movs ands cmp bne movs ldr ldr blx pop"}
+,
+{"addr":"0xb6a0","size":178,"n":88,"name":"FUN_0000b6a0","mnems":"push sub movs mov ands subs cmp bhi str mov lsls lsrs str lsls ldr ldr ldr ldr mov lsls add bl cmp beq cmp beq cmp mov mov ldr bne movs lsls ldr bics movs ldr ldrb lsls adds str b ldr ldrb cmp mov mov ldr ldr beq cmp bne ldr movs strb strb b ldr ldrb ldr cmp mov mov mov ldr bne ldr movs strb movs strb cmp beq lsls ldr bics lsls adds adds str add movs strb strb mov blx add pop"}
+,
+{"addr":"0xb790","size":124,"n":53,"name":"FUN_0000b790","mnems":"push mov mov ldr strb strb ldr cmp ldr str bne movs ldrb cmp beq mrs cpsid str ldr bl ldr ldr movs mov bl ldr strb movs strb ldr msr adds ldr mov mov mov bl cmp beq mrs cpsid ldr adds bl movs lsls ldr movs mov bl strb msr pop"}
+,
+{"addr":"0xb8b8","size":36,"n":16,"name":"FUN_0000b8b8","mnems":"push subs subs sbcs movs movs ldr bl cmp beq movs bl ldr movs strb pop"}
+,
+{"addr":"0xb924","size":12,"n":5,"name":"FUN_0000b924","mnems":"push movs movs bl pop"}
+,
+{"addr":"0xb930","size":94,"n":39,"name":"FUN_0000b930","mnems":"push mov mrs cpsid str uxtb movs str bl movs lsls bl movs movs mov lsls beq movs movs mov mov bl adds movs mov mov bl adds b movs ldr bl ldr msr ldr muls mov bl pop"}
+,
+{"addr":"0xb994","size":12,"n":5,"name":"FUN_0000b994","mnems":"push movs movs bl pop"}
+,
+{"addr":"0xb9a0","size":212,"n":99,"name":"FUN_0000b9a0","mnems":"push sub ldr str ldr ldr str mov adds str mov adds str mov adds adds str ldr str ldr str str ldr ldrb cmp bne ldr adds movs ldr cmp beq uxtb bl ldrb movs strb cmp beq movs mov bl adds adds adds b mrs cpsid add ldr ldr mov ldr bl ldr ldrb lsls adds movs ldr str ldr ldrb ldr ldr strb msr movs ldr ldr cmp bcs mov ldmia subs ldr mov ldr blx ldr adds mov b ldr ldrb cmp bne bl cmp bne svc b movs lsls bl b movs add pop"}
+,
+{"addr":"0xba84","size":10,"n":4,"name":"FUN_0000ba84","mnems":"push ldr bl pop"}
+,
+{"addr":"0xba94","size":12,"n":5,"name":"FUN_0000ba94","mnems":"push ldr bl movs pop"}
+,
+{"addr":"0xbaa4","size":116,"n":58,"name":"FUN_0000baa4","mnems":"push sub mov mov add movs strb ldr cmp beq ldr cmp bne str add movs strb str cmp bne b ldr str add mov str mov mov str ldr blx ldr ldr ldrb cmp beq str ldr cmp beq ldr mov mov mov blx mov ldr ldr cmp beq ldr mov mov blx add ldrb add pop"}
+,
+{"addr":"0xbb18","size":42,"n":20,"name":"FUN_0000bb18","mnems":"push str mov lsls ldr adds movs movs mov bl strb movs str ldr str ldr strh str strb pop"}
+,
+{"addr":"0xbb4c","size":150,"n":69,"name":"FUN_0000bb4c","mnems":"push sub ldr movs strb ldr ldrb subs cmp bhi ldr mov add ldrb lsls add adds b ldr b movs ldr ldrb lsls lsrs ldr adds adds add movs strb movs strb movs strb str str movs ldr bl cmp beq mrs cpsid mov bl movs lsls ldr movs mov bl strb msr b ldr bl movs ldr ldrb movs muls ldr adds movs movs strb add pop"}
+,
+{"addr":"0xbd28","size":30,"n":15,"name":"FUN_0000bd28","mnems":"push ldr adds movs cmp beq ldrh cmp beq adds adds b movs sxtb pop"}
+,
+{"addr":"0xc254","size":38,"n":16,"name":"FUN_0000c254","mnems":"push mov mov movs bl cmp beq movs mov bl uxth movs ldr mov bl pop"}
+,
+{"addr":"0xc34c","size":106,"n":51,"name":"FUN_0000c34c","mnems":"push sub movs mov cmp beq add adds ldr str subs adds b movs adds ldr movs str strb add movs strb strb strb str movs ldr str mov bl cmp beq ldr strb strb movs ldr muls ldr adds movs str movs mov bl b ldr ldr strb add pop"}
+,
+{"addr":"0xc454","size":68,"n":30,"name":"FUN_0000c454","mnems":"push sub mov mov mov add movs strb mov blx movs mov mov bl mov mov bl ldr strb adds movs mov bl ldrb adds mov mov bl add pop"}
+,
+{"addr":"0xc49c","size":272,"n":131,"name":"FUN_0000c49c","mnems":"push sub mov mov mov subs subs mov sbcs ldr ldrb cmp bne mov mov b str cmp beq ldr movs ands beq cmp beq cmp bne movs b ldr movs ands beq cmp bne movs mov mov ldr bl b subs sbcs movs muls ldr adds ldrb cmp bne movs b cmp beq ldrb movs muls ldr adds mov adds str lsls movs cmp beq adds ldr str adds b subs sbcs movs muls ldr adds ldrb cmp bne movs mov ldr bl b movs strb b cmp bne mov ldr bl add pop cmp beq cmp bne ldrb ldr cmp ldr bne adds b movs b movs mov mov ldr bl b movs movs strb movs ldr strb movs movs mov bl add movs strh str mov blx b"}
+,
+{"addr":"0xc5b8","size":130,"n":65,"name":"FUN_0000c5b8","mnems":"push sub lsls adds ldr movs muls ldr adds ldr ldrb cmp bne lsls lsrs beq cmp bne ldrb cmp bne movs ldrb cmp beq ldrb cmp bne movs movs b ldrb cmp beq cmp bne lsls lsrs bne ldr adds movs b movs ldr b lsls lsrs bne ldr adds movs movs strb mov movs strh str blx b movs movs strb add pop"}
+,
+{"addr":"0xc644","size":40,"n":20,"name":"FUN_0000c644","mnems":"push sub mov mov movs strh movs muls ldr adds movs strh ldr cmp bne adds str blx add pop"}
+,
+{"addr":"0xc674","size":174,"n":85,"name":"FUN_0000c674","mnems":"push sub mov str cmp str bne movs b movs adds ldr lsls ldr add movs movs mov str bl movs lsls ands subs sbcs str lsls lsrs cmp bls movs ldr ldr cmp mov bne mov adds cmp beq cmp bne ldr b ldr orrs uxth adds cmp bhi movs b movs orrs beq adds ands ldr orrs b lsls adds adds add adds mov bl add movs strb ldr lsls lsrs lsrs cmp beq adds ldr adds strb str ldr blx add pop"}
+,
+{"addr":"0xc730","size":72,"n":34,"name":"FUN_0000c730","mnems":"push mov movs muls ldr adds movs strb movs mov bl cmp beq movs mov bl movs muls ldr ldr str movs movs strb ldr strb adds str str ldr str str strh pop"}
+,
+{"addr":"0xc78c","size":146,"n":67,"name":"FUN_0000c78c","mnems":"push sub mrs cpsid cmp beq cmp beq str str lsls adds ldr ldr movs ldr ldr cmp beq ldrh cmp beq adds adds adds b str str bl ldr ldr strh movs str movs ldr cmp beq ldrh cmp beq adds adds adds b ldr str strh movs lsls muls movs ldr mov bl ldr strb adds ldr beq msr add pop ldr bl ldr bl"}
+,
+{"addr":"0xc83c","size":52,"n":24,"name":"FUN_0000c83c","mnems":"push ldr mrs cpsid ldr movs strb lsls ldr ldrh ldr strh lsls ldr ldr movs str cmp beq lsrs uxtb blx msr pop"}
+,
+{"addr":"0xc880","size":10,"n":4,"name":"FUN_0000c880","mnems":"push movs bl pop"}
+,
+{"addr":"0xc88c","size":56,"n":25,"name":"FUN_0000c88c","mnems":"push lsls adds ldr ldr movs mrs cpsid ldr cmp beq ldrh cmp beq adds adds adds b ldr strh movs str bl msr pop"}
+,
+{"addr":"0xc8d4","size":38,"n":17,"name":"FUN_0000c8d4","mnems":"push lsls adds movs mrs cpsid ldr mov cmp beq ldrh adds cmp bne movs msr pop"}
+,
+{"addr":"0xc900","size":54,"n":25,"name":"FUN_0000c900","mnems":"push mov movs mrs cpsid str ldr mov cmp beq ldrh lsrs cmp bne uxtb cmp bcc cmp bls adds b movs ldr msr pop"}
+,
+{"addr":"0xc93c","size":88,"n":41,"name":"FUN_0000c93c","mnems":"push str cmp bcs mov movs ldr ldr mrs cpsid str str cmp beq ldr ldrh lsrs cmp bne uxtb cmp bcc ldr cmp bhi ldr strh movs str mov mov bl mov ldr adds adds adds b ldr msr pop"}
+,
+{"addr":"0xc9a4","size":376,"n":180,"name":"FUN_0000c9a4","mnems":"push sub ldr ldrb cmp bne movs str strb ldrb lsls add strb ldrb ldr cmp str str beq cmp beq movs uxtb cmp bhi ldrb add strb adds str adds b movs b movs movs str mvns ldr str adds uxtb add add bl ldr movs str str ldr ldr ldr str ldr lsls bne ldr lsls bpl ldr lsls bpl ldr ldr movs cmp bcc ldr ands bne movs bl subs b movs ldr ldr ldr ldr lsls bmi ldr lsls bmi cmp bcc movs bl subs b movs ldr ldrh cmp beq cmp beq mov b movs ldr str ldr ldr lsls bpl ldr cmp bcc movs bl subs str b mov uxth uxth cmp bcs uxth cmp mov bcc movs uxtb ldr adds add mov bl ldrh subs lsls beq ldr ldr movs ldr cmp bcc ldr ands bne adds movs bl ldr subs str ldr ldrh b movs ldr str ldr ldr lsls bpl ldr cmp blt movs bl subs str b cmp mov bne movs b movs bl ldr ldr strb mov add pop"}
+,
+{"addr":"0xcb34","size":44,"n":22,"name":"FUN_0000cb34","mnems":"push ldr ldr movs ands movs subs uxtb cmp bhi mov uxtb cmp beq ldrb str subs adds b uxtb strh pop"}
+,
+{"addr":"0xcb64","size":24,"n":12,"name":"FUN_0000cb64","mnems":"ldr movs str ldr ldr ands str adds ldr orrs str bx"}
+,
+{"addr":"0xcb84","size":390,"n":188,"name":"FUN_0000cb84","mnems":"push sub ldr ldrb cmp bne str ldr ldr ldr ands str adds ldr orrs str str ldr movs str mvns str ldr cmp beq ldr ldrb cmp beq ldr ldrb lsls add strb movs ldr uxtb cmp bhi ldrb add strb adds ldr str adds b movs b ldr str adds uxtb add add bl movs ldr str ldr ldr ldr lsls bne ldr lsls bpl ldr lsls bpl ldr cmp bcc movs ands bne movs bl subs b movs ldr strb movs lsls bl ldr ldrb lsls adds add strb ldr str movs ldr str add str mov mov bl ldrh ldrh subs ldr ldr str ldr uxth uxth cmp bcs str uxth cmp mov bcc movs uxtb ldr movs ands cmp bhi mov ldr ldr adds mov cmp beq ldr strb subs adds b subs uxth subs sbcs ldr orrs lsls bne movs ldr str ldr mov str ldr cmp bcc adds movs bl ldr subs ldr ldrh mov b add strh ldr ldr lsls bpl cmp blt mov movs bl mov subs b add strh bl movs movs ldr strb add pop movs b"}
+,
+{"addr":"0xcd0c","size":4,"n":2,"name":"FUN_0000cd0c","mnems":"movs ands"}
+,
+{"addr":"0xcd2c","size":68,"n":31,"name":"FUN_0000cd2c","mnems":"push add movs strb add movs strb ldr mov bl ldr movs strb str strh str movs svc movs lsls bne ldr mov bl add ldrb sxtb add pop movs bl"}
+,
+{"addr":"0xcd78","size":54,"n":25,"name":"FUN_0000cd78","mnems":"push sub add strb add strb ldr add mov mov bl ldr movs strb str strh str movs svc movs mov mov bl add pop"}
+,
+{"addr":"0xcdb8","size":124,"n":58,"name":"FUN_0000cdb8","mnems":"push sub ldr movs movs cmp beq movs lsls ldr add movs mov mov blx mov bl cmp beq add ldrb cmp beq ldr adds adds subs b movs lsls str add movs mov mov bl movs strb adds str str lsls str ldr str ldr str movs mov bl str lsls mov ldr bl mov add pop"}
+,
+{"addr":"0xce38","size":18,"n":8,"name":"FUN_0000ce38","mnems":"push ldr movs bl subs rsbs adcs pop"}
+,
+{"addr":"0xce4a","size":26,"n":12,"name":"FUN_0000ce4a","mnems":"push mov movs lsls movs bl cmp beq movs blx movs pop"}
+,
+{"addr":"0xce64","size":40,"n":20,"name":"FUN_0000ce64","mnems":"push mov movs lsls movs ldr blx lsls movs mov blx lsls mov blx cmp beq movs blx movs pop"}
+,
+{"addr":"0xcf38","size":246,"n":116,"name":"FUN_0000cf38","mnems":"push sub str ldr movs movs mov str mov bl movs lsls str ldr movs lsls mov mov mov blx cmp bmi ldr ldr cmp bne ldr str ldr ldr mov adds add movs blx ldr lsrs ldr strb ldr ldr cmp bmi movs ldrb cmp beq ldr ldr ands ldr cmp bcc str movs ands ldr mov bl movs mov mov bl ldr ldrb cmp beq cmp bne movs b movs mov add pop cmp beq ldr adds movs mov bl mov ldr mov bl ldr bl ldr ldr adds movs mov mov mov blx mov adds bl cmp beq movs cmp beq ldr rev str adds subs b movs b ldr b movs b"}
+,
+{"addr":"0xd048","size":514,"n":232,"name":"FUN_0000d048","mnems":"push sub mov movs ldr ldrb cmp bne movs b ldr cmp beq adds mov bl cmp beq b ldr cmp str str str beq adds add ldr mov mov mov blx add mov mov mov str blx ldr mov mov mov blx mov mov mov blx mov mov mov blx ldr mov mov bl ldr cmp bne ldr adds b ldr adds mov mov ldr blx mov mov bl cmp beq b add movs movs bl ldr mov bl cmp bne ldr bl cmp bne movs adds add add movs mov mov bl mov mov bl subs movs ands lsrs lsls ldr lsrs lsls beq add add movs mov mov bl mov mov ldr bl subs cmp bhi add bl cmp beq ldr bl cmp bne ldr ldr mov bl cmp bmi mov adds ldr mov bl cmp bmi mov adds add ldr mov bl cmp beq add ldr mov mov bl cmp beq add movs movs bl add ldr ldr mov bl movs adds add add movs mov mov bl mov mov bl subs movs ands lsrs lsls add ldr lsrs add ldr lsrs mov orrs lsls beq add add movs bl ands lsls bne movs ands bne add add mov b add add add b add add ldr bl subs cmp bhi add ldr bl cmp blt add ldr bl add ldr bl cmp bne b movs add pop"}
+,
+{"addr":"0xd26c","size":130,"n":62,"name":"FUN_0000d26c","mnems":"push sub ldr adds add adds movs lsls movs ldr ldr str str str cmp beq str ldr movs mov mov blx mov bl cmp beq ldr adds ldr str mov str bl movs mvns mov ldr adds beq adds adds ldr add movs blx mov bl cmp mov beq ldr ldr adds ldr adds ldr b movs add pop ldr b"}
+,
+{"addr":"0xd2fc","size":32,"n":16,"name":"FUN_0000d2fc","mnems":"push movs ldr adds cmp beq ldr adds ldr cmp mov beq movs pop movs pop"}
+,
+{"addr":"0xd320","size":80,"n":39,"name":"FUN_0000d320","mnems":"push str movs lsls cmp bhi cmp bhi mov adds cmp bhi movs ldr str str ldr cmp bcs subs cmp bcc movs movs lsls ldr mov mov mov blx ldr mov mov bl adds adds ldr b pop"}
+,
+{"addr":"0xd374","size":36,"n":15,"name":"FUN_0000d374","mnems":"push mov mov mov bl mov mov mov bl mov bl ldr movs strb pop"}
+,
+{"addr":"0xd39c","size":16,"n":7,"name":"FUN_0000d39c","mnems":"push ldr ldr ldr bl movs pop"}
+,
+{"addr":"0xd3ac","size":58,"n":26,"name":"FUN_0000d3ac","mnems":"push ldr movs lsls cmp bhi ldr cmp bhi adds cmp bhi ldr mov bl mov mov mov bl mov bl ldr movs strb movs pop"}
+,
+{"addr":"0xd8dc","size":40,"n":18,"name":"FUN_0000d8dc","mnems":"push mov mov mov bl ldr ldr cmp beq movs b str str movs mov bl mov pop"}
+,
+{"addr":"0xd908","size":112,"n":45,"name":"FUN_0000d908","mnems":"push mrs cpsid cmp beq cmp bne bl cmp bmi ldr ldr lsrs movs ldr strb cmp bpl bl bl ldrb cmp beq bl ldrb cmp bne bl cmp bne bl bl movs strb b bl ldr ldr movs bics str wfi bl msr pop"}
+,
+{"addr":"0xd984","size":2014,"n":965,"name":"FUN_0000d984","mnems":"push sub lsls str uxtb ldr adds ldrb lsrs ldr cmp ldr ldr ldr str str bcc lsls adds ldrh adds str cmp bne b str ldr ldr adds ldrb str muls adds uxth ldrh cmp bhi b str adds strb uxtb cmp bcc movs strh strb mov uxtb ldr muls ldr adds uxth cmp bls b str str str mov adds strh str add movs str strb ldr mov adds mov ldr muls adds uxth movs str lsls adds bl movs mvns str cmp beq b str str str add movs strb ldr adds movs mov bl cmp beq b str str ldr mov adds ldr ldr ldr cmp bne b ldrh cmp bne b adds adds adds ldr b lsls adds ldrh adds str cmp beq lsls ldr ldr adds str ldrb mov adds strb ldr ldrh cmp beq uxtb cmp mov bhi movs movs ands subs movs lsls beq subs uxtb lsrs b str ldr adds ldrb str muls adds uxth ldrh mov cmp bhi b str adds strb uxtb cmp bcc movs strh strb mov uxtb ldr muls ldr adds uxth cmp bhi b movs b subs lsrs movs lsls str cmp bne b cmp mov bcc movs subs adds uxtb lsrs cmp bne b str subs asrs bics movs cmp bne b add movs strb adds uxtb ldr adds ldr ldrh adds adds movs bl adds cmp beq b mov mov adds strh add str movs strb movs lsls adds bl ldr cmp ldr beq b str movs str mvns cmp bne b str lsls adds ldr ldr ldrh add movs strb adds movs str bl cmp ldr beq b str add movs movs str mov bl lsrs strb lsrs strb lsrs strb strb ldr strb ldr adds mov ldr ldr bl cmp ldr beq b add movs strb movs ldr bl cmp bne add movs strb adds movs bl cmp ldr ldr ldr ldr beq b ldr strh ldr strb b str str mov adds strh add movs str strb ldr mov adds str mov ldr muls adds uxth movs lsls str str adds bl movs mvns str cmp bne str str str add movs strb ldr ldr adds movs mov bl cmp beq ldr b ldr ldrh ldr add strb ldr adds adds adds movs bl b str ldr mov adds ldr str ldr ldr ldr cmp bne b ldrh cmp beq adds ldr adds str adds ldr b uxtb cmp beq str adds add adds str movs str lsls str movs ldr str str str ldr cmp bne b str cmp beq ldr ldrh cmp beq ldrb ldr muls mov mov ldr ands mov cmp ldr bhi ldr adds mov adds uxth cmp bcs ldr muls ldr adds uxth ldrh cmp bhi mov adds strh add ldr strb ldr adds movs bl cmp bne str cmp beq ldr ldr ldr ldrh str add ldr strb ldr ldr adds movs str bl cmp beq b add movs movs str mov bl lsrs ldr strb lsrs strb lsrs strb strb strb ldr adds mov ldr bl cmp beq b add movs strb movs ldr bl cmp beq b add ldr strb ldr ldr adds movs bl cmp beq b ldr adds movs strb ldr ldr strh ldr ldr ldr adds str ldr adds adds ldr b uxtb cmp bne b str adds add adds str movs str lsls str movs ldr str str str str ldr cmp bne b mov cmp beq ldrh ldr cmp beq ldr ldrb mov muls mov mov ldr ands mov cmp ldr bhi ldr adds mov adds uxth cmp bcs ldr muls ldr adds uxth ldr ldrh cmp bls b mov adds strh add ldr strb ldr adds movs bl cmp beq b ldr str cmp bne b ldr ldr ldrh str add ldr strb ldr ldr adds movs str bl cmp beq b add movs movs str mov bl lsrs ldr strb lsrs strb lsrs strb strb strb ldr adds mov ldr bl cmp beq b add movs strb movs ldr bl cmp beq b add ldr strb ldr ldr adds movs bl cmp beq b ldr adds movs strb ldr strh ldr ldr ldr adds str mov adds adds ldr b mov ldrh add strb ldr adds movs bl cmp beq b ldr ldr ldrh add ldr strb movs ldr mov bl cmp beq b str add movs movs str mov bl lsrs strb lsrs strb lsrs strb strb ldr strb adds mov ldr bl cmp beq b ldr add movs strb movs mov bl cmp beq b add ldr strb ldr ldr adds movs mov bl cmp beq b ldr ldr adds movs strb ldr strh ldr cmp ldr bls b ldr ldr adds ldr bl cmp beq mov b ldrh add ldr strb mov ldr adds movs bl cmp beq b ldr ldr ldrh add ldr strb movs ldr mov bl cmp beq b add movs movs mov str mov bl lsrs strb lsrs strb lsrs strb strb ldr strb adds mov mov bl cmp beq b add movs strb movs mov bl cmp beq b add ldr strb ldr ldr adds movs mov bl cmp beq b ldr ldr adds movs strb ldr ldr strh ldr cmp ldr ldr ldr bhi ldr ldr adds ldr bl ldr cmp mov bne b ldrb ldr muls ldr adds uxth ldrh mov cmp mov ldr ldr ldr bhi ldr strh mov adds strh movs mvns cmp beq str str lsls ldr ldr add movs strb mov movs lsls adds mov bl cmp bne str add movs movs mov mov bl lsrs strb lsrs strb lsrs strb strb ldr strb adds mov mov bl cmp beq ldr b add movs strb movs mov bl cmp ldr ldr ldr ldr bne b add pop"}
+,
+{"addr":"0xe1bc","size":52,"n":25,"name":"FUN_0000e1bc","mnems":"push mov movs lsls bics lsls lsrs adds adds str cmp beq adds mov mov bl lsls lsrs cmp beq adds adds pop movs pop"}
+,
+{"addr":"0xe1f0","size":72,"n":36,"name":"FUN_0000e1f0","mnems":"push sub mov ldr movs mov ands lsls lsrs str ldr lsls lsrs cmp bne cmp bne add strb strh ldr cmp bcc movs strb adds str str ldr str add movs svc movs mov mov"}
+,
+{"addr":"0xe238","size":8,"n":3,"name":"FUN_0000e238","mnems":"bl mov b"}
+,
+{"addr":"0xe27a","size":2,"n":1,"name":"switchD","mnems":"mov"}
+,
+{"addr":"0xe7d6","size":26,"n":13,"name":"caseD_f","mnems":"lsls str movs lsls ldr bics ldr lsls adds adds ldr str b"}
+,
+{"addr":"0xe7fc","size":30,"n":14,"name":"caseD_16","mnems":"adds adds movs ldrb lsls adds str add movs ldr mov mov bl ldr"}
+,
+{"addr":"0xe81a","size":6,"n":3,"name":"caseD_26","mnems":"mov mov b"}
+,
+{"addr":"0xe82e","size":74,"n":35,"name":"caseD_28","mnems":"bne b cmp beq b add movs ldr bl ldr ldr strh add movs mov ldr bl ldrb cmp beq cmp ldr ldr bne movs b movs ldr ldr movs lsls bics adds str b"}
+,
+{"addr":"0xe848","size":2,"n":1,"name":"caseD_15","mnems":"b"}
+,
+{"addr":"0xe862","size":28,"n":14,"name":"caseD_2","mnems":"movs lsls ldr bics cmp bne b ldr lsls orrs movs b orrs b"}
+,
+{"addr":"0xe8ac","size":22,"n":10,"name":"caseD_b","mnems":"stc2l beq movs lsls ldr bics ldr b movs lsls"}
+,
+{"addr":"0xe8d6","size":18,"n":9,"name":"caseD_27","mnems":"ldr bics adds ldr str movs mov add pop"}
+,
+{"addr":"0xe900","size":28,"n":14,"name":"caseD_14","mnems":"ldr adds str str ldr ldr cmp beq movs str cmp beq uxtb uxtb"}
+,
+{"addr":"0xe91c","size":36,"n":15,"name":"caseD_0","mnems":"movs mov mov bl mov movs mov mov bl mov lsls bl ldr muls asrs"}
+,
+{"addr":"0xe940","size":32,"n":15,"name":"caseD_1","mnems":"ldr ldr adds adds ldr adds str adds b adds b ldr msr ldr asrs"}
+,
+{"addr":"0xe960","size":26,"n":12,"name":"caseD_d","mnems":"str movs ldr ldr mov ldr bl mov mov mov mov b"}
+,
+{"addr":"0xe99c","size":2,"n":1,"name":"caseD_1c","mnems":"b"}
+,
+{"addr":"0xe9c2","size":34,"n":17,"name":"caseD_8","mnems":"ands str ldr movs ldr strb movs lsls ldr bics ldr lsls adds adds ldr str b"}
+,
+{"addr":"0xe9e6","size":6,"n":3,"name":"FUN_0000e9e6","mnems":"ldr movs lsls"}
+,
+{"addr":"0xe9ec","size":50,"n":24,"name":"caseD_20","mnems":"adds ldr ldr mov blx cmp beq movs lsls ldr bics adds str b ldr mov ldr mov bl movs orrs ldr str b"}
+,
+{"addr":"0xea3c","size":16,"n":7,"name":"caseD_a","mnems":"cmp bhi ldr ldrb movs strb bl"}
+,
+{"addr":"0xea4c","size":4,"n":2,"name":"FUN_0000ea4c","mnems":"movs lsls"}
+,
+{"addr":"0xea50","size":12,"n":6,"name":"caseD_e","mnems":"ldr bics movs lsls adds b"}
+,
+{"addr":"0xea96","size":24,"n":12,"name":"caseD_25","mnems":"movs ldr strb movs lsls bics ldr lsls adds adds str b"}
+,
+{"addr":"0xed52","size":24,"n":11,"name":"caseD_3","mnems":"ldr cmp beq b lsls lsrs adds movs strh bl b"}
+,
+{"addr":"0xeef2","size":60,"n":30,"name":"caseD_c","mnems":"muls lsrs cmp mov bne mov ldr str cmp beq mov ldr str ldr str ldr movs strb b ldr movs lsls ldr bics ldr lsls adds adds str b"}
+,
+{"addr":"0xf074","size":250,"n":124,"name":"FUN_0000f074","mnems":"push sub str mov mov str add movs movs mov mov bl strh str strh ldr str ldr str str str ldr ldr mov blx mov ldr mov blx mov ldr ldr mov blx ldr subs adds adds movs ldr ldrb ldr mov blx adds ldr ldr ldr subs bcs ldr ldr mov blx adds ldr ldr subs bcs ldr ldr mov blx adds ldr ldr subs bcs ldr ldr mov blx adds ldr ldr subs bcs ldr ldr mov blx adds ldr ldr subs bcs ldr ldr mov blx adds ldr ldr subs bcs ldr ldr mov blx adds ldr ldr subs bcs ldr ldr mov blx adds ldr ldr subs bcs ldr ldr mov blx adds ldr cmp bgt mov add pop"}
+,
+{"addr":"0xf1b4","size":86,"n":39,"name":"FUN_0000f1b4","mnems":"push mov bl cmp bne mov ldrb bl cmp bne bl cmp bne bl cmp beq ldr movs strb movs movs ldr strb str movs pop ldr movs strb movs lsls ldr add ldr movs blx ldr movs b"}
+,
+{"addr":"0xf478","size":2,"n":1,"name":"thunk_FUN_0000fa66","mnems":"b"}
+,
+{"addr":"0xfa66","size":6,"n":3,"name":"FUN_0000fa66","mnems":"movs add pop"}
+,
+{"addr":"0xfccc","size":212,"n":101,"name":"FUN_0000fccc","mnems":"ldr ldrb mov ldr adds strb ldr ldr adds str movs str ldrh ldr cmp bne bl uxtb cmp mov bcc movs subs adds movs mov bics subs movs lsls bne b subs uxtb lsrs b subs ldr lsls str uxtb lsrs cmp bne b cmp mov bcc movs subs adds uxtb lsrs cmp bne b str str subs asrs bics movs ldr cmp bne b add movs strb ldr ldrh ldr adds uxtb ldr adds adds adds movs bl ldr adds cmp beq bl mov asrs movs vaddl.u32 ldr ldrh ldr add strb ldr adds adds adds movs bl b"}
+,
+{"addr":"0x10856","size":34,"n":13,"name":"FUN_00010856","mnems":"movs strb mrs cpsid movs bl bl msr ldr strb movs add pop"}
+,
+{"addr":"0x10af4","size":44,"n":21,"name":"FUN_00010af4","mnems":"push mov ldr ldr ldr adds movs lsrs bne adds lsrs cmp bhi mov mov bl ldr adds str movs pop"}
+,
+{"addr":"0x10b28","size":20,"n":9,"name":"FUN_00010b28","mnems":"push ldr ldrb cmp bne adds movs bl pop"}
+,
+{"addr":"0x12a70","size":32,"n":14,"name":"FUN_00012a70","mnems":"push bl ldr ldrh ldr str ldr ldr movs orrs str wfi bl pop"}
+,
+{"addr":"0x12a9c","size":32,"n":16,"name":"FUN_00012a9c","mnems":"push ldr ldr movs lsls ldr ldr bics str movs ands ldr strh movs str pop"}
+,
+{"addr":"0x12ac8","size":70,"n":35,"name":"FUN_00012ac8","mnems":"ldr mov subs ldr str ldr str ldr ldr str movs str ldr str movs str ldr movs str str ldr str str ldr str str ldr ldr strh movs lsls ldr bics str bx"}
+,
+{"addr":"0x12b38","size":22,"n":9,"name":"FUN_00012b38","mnems":"push bl ldr ldr movs bics str bl pop"}
+,
+{"addr":"0x12b54","size":22,"n":9,"name":"FUN_00012b54","mnems":"push bl ldr ldr movs bics str bl pop"}
+,
+{"addr":"0x12b70","size":48,"n":24,"name":"FUN_00012b70","mnems":"movs lsls ldr ldr orrs str ldr ldr movs orrs movs bics str ldr movs orrs movs bics str ldr ldrh ldr str bx"}
+,
+{"addr":"0x12bb0","size":88,"n":44,"name":"FUN_00012bb0","mnems":"push ldr ldr ldr ldr movs ands lsls lsrs adds str ldr ldr movs bics str ldr ldr movs ands lsrs movs ands adds eors str ldr movs bics str ldr ldr movs lsls ldr bics str movs ands ldr strh movs str pop"}
+,
+{"addr":"0x12c1c","size":32,"n":16,"name":"FUN_00012c1c","mnems":"push ldr ldr ldr lsls bpl movs b movs ldr movs ands cmp beq str pop"}
+,
+{"addr":"0x12c44","size":20,"n":9,"name":"FUN_00012c44","mnems":"push mov ldrb cmp beq bl adds b pop"}
+,
+{"addr":"0x12c58","size":28,"n":12,"name":"FUN_00012c58","mnems":"push mov bl ldr ldr movs bics lsls orrs str bl pop"}
+,
+{"addr":"0x13dc4","size":50,"n":25,"name":"FUN_00013dc4","mnems":"push lsls bne mov orrs lsls beq cmp beq mov ldrb strb adds adds subs bne pop lsrs beq mov ldmia stmia subs bne b"}
+,
+{"addr":"0x13df6","size":16,"n":8,"name":"FUN_00013df6","mnems":"cmp beq mov strb adds subs bne bx"}
+,
+{"addr":"0x13e06","size":30,"n":15,"name":"FUN_00013e06","mnems":"push mov movs cmp beq ldrb ldrb cmp bne subs adds adds b movs pop"}
+,
+{"addr":"0x13e24","size":20,"n":10,"name":"FUN_00013e24","mnems":"adds lsrs beq nop subs bne nop nop nop bx"}
+,
+{"addr":"0x13e38","size":8,"n":3,"name":"FUN_00013e38","mnems":"mrs cpsid bx"}
+,
+{"addr":"0x13e40","size":6,"n":2,"name":"FUN_00013e40","mnems":"msr bx"}
+,
+{"addr":"0x13e48","size":874,"n":423,"name":"FUN_00013e48","mnems":"push sub movs lsls ldr str ldr ldr str ldr movs str movs movs str bl movs mov bl ldr movs str ldr ldr orrs str movs str movs str lsls str lsls adds ldr str str ldr str movs str str ldr str str ldr str str ldr str str ldr str orrs str ldr ldr str ldr ldr str mvns str ldr bl movs lsls ldr lsls str lsls add mov mov blx ldr movs mov blx ldr cmp beq b str str ldr lsls ldr cmp str beq ldr adds adds str add adds str add adds str ldr lsls str ldr cmp bne b str ldr ldr add movs mov mov blx ldr ldr movs mov blx cmp beq b ldr adds ldr mov str mov bl movs ldr cmp bne b movs mov muls ldr adds ldr ldr add blx movs adds cmp beq ldr adds ldr cmp mov beq adds b ldr lsrs beq b ldr adds str subs ldr ldr cmp bcc b ldr ldr ldr mov mov mov blx mov mov mov bl cmp bne b movs str str ldr cmp bcs ldr ldr mov bl ldr str movs str add ldr str subs ldr adds str str nop ldr ldr ldr cmp bhi adds ands ldr cmp beq ldr ldr uxtb str ldr cmp beq b bl ldr str ldr str add ldr str ldr adds ldr str nop ldr ldr ldr cmp bhi adds ands ldr cmp bne movs b ldr str b ldr ldr uxtb str ldr cmp bne ldr ldr str ldr adds ldr str nop ldr ldr ldr cmp bhi adds ands ldr cmp bne movs b ldr ldr uxtb str ldr cmp bne lsrs ldr str lsls ldr orrs str add ldr str ldr adds ldr str nop ldr ldr ldr cmp bhi adds ands ldr cmp bne movs b ldr ldr uxtb str ldr cmp bne ldr str str add ldr str ldr adds ldr str nop ldr ldr ldr cmp bhi adds ands ldr cmp bne movs b ldr ldr uxtb str ldr cmp beq ldr str bl ldr adds adds b ldr ldr adds adds ldr adds b ldr ldr str bl movs str ldr str movs str str bl ldr ldr adds ldr orrs str ldr lsls ldr bics str ldr str ldr str bl ldr ldr lsls beq mov adds bl b ldr ldr str movs lsls bl movs lsls ldr ldr orrs str ldr bl ldr ldr ands ldr orrs str add pop"}
+,
+{"addr":"0x14238","size":26,"n":13,"name":"FUN_00014238","mnems":"ldr ldr ldr ldr lsls bne ldr lsls bne ldr lsls bmi bx"}
+,
+{"addr":"0x14260","size":68,"n":34,"name":"FUN_00014260","mnems":"push movs mov ands movs lsls lsrs lsls ldr ldr ldr orrs str movs muls movs lsls ldr bics lsls orrs str lsls lsrs lsls ldr ldr ldr bics movs lsls orrs str pop"}
+,
+{"addr":"0x142ac","size":306,"n":153,"name":"FUN_000142ac","mnems":"push sub movs cmp beq ldr rev add str adds b movs cmp beq add ldr adds ldr adds ldr movs mov rors lsrs eors movs rors eors adds ldr movs mov rors lsrs eors movs rors eors adds str adds b movs mvns movs cmp beq add adds ldr lsls str adds b movs ldr str str str cmp beq movs ldr mov rors movs mov rors eors movs mov rors eors str lsls ldr ldr ldr adds adds str ldr ldr str str eors movs ldr mov rors str ldr bics add ldr str lsls str movs ldr mov adds beq add adds ldr str subs b ands orrs ldr adds ldr adds ldr adds str ldr ldr ands ands eors lsrs ldr orrs movs rors ldr eors eors adds adds str ldr adds ldr ldr b movs cmp beq ldr add adds lsls ldr adds str adds b add pop"}
+,
+{"addr":"0x143e4","size":58,"n":28,"name":"FUN_000143e4","mnems":"push mov mov mov adds cmp beq ldrb ldr adds str adds strb ldr adds str ldr cmp bne mov mov bl movs str adds subs b pop"}
+,
+{"addr":"0x14420","size":198,"n":93,"name":"FUN_00014420","mnems":"push sub mov mov mov movs movs mov bl mov adds ldr movs bl movs lsls cmp bhi cmp bhi mov adds cmp bhi ldr str str cmp bcs subs cmp mov bcc movs movs lsls ldr ldr mov str mov blx mov mov mov bl ldr adds adds ldr mov b add movs strb add movs strb ldr movs mov bl movs lsls ldr cmp beq mov adds ands cmp beq add movs mov bl b str rev str adds mov bl movs cmp beq ldr rev str adds b add pop"}
+]
