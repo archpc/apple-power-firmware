@@ -683,7 +683,7 @@
   {
    "id": "C33",
    "kind": "observed",
-   "statement": "Of the 155 non-stub calibrated 1:1 pairs 3.1.12->3.2.0, 124 are identical modulo relink and 31 are substantive, including a signed->unsigned comparison change (0xa018->0xa020).",
+   "statement": "Of the 155 non-stub calibrated 1:1 pairs 3.1.12->3.2.0, 124 are identical modulo relink and 31 are substantive, including a signed-to-unsigned comparison change (0xa018->0xa020).",
    "where": "report",
    "refs": [
     {
@@ -743,6 +743,19 @@
      "type": "record",
      "path": "DIFF.md",
      "quote": "a real SVDM dispatcher exists at 3.1.8\n  `0xb34c`"
+    }
+   ]
+  },
+  {
+   "id": "C27",
+   "kind": "observed",
+   "statement": "Literal-multiset agreement cannot validate the 30 lower-confidence cross-version function pairs: function literal pools are dominated by image and SRAM pointers that relocate wholesale, so the measured disagreement does not distinguish logic change from relink. Those pairs remain unvalidated.",
+   "where": "report",
+   "refs": [
+    {
+     "type": "record",
+     "path": "evidence/magsafe-cortexm/delegated/matcher.md",
+     "quote": "literal-multiset agreement is not a usable validator at this band"
     }
    ]
   }
