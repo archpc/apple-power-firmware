@@ -130,3 +130,25 @@ manifest that the documents are checked against.
 Claim reconciliation, mandatory regressions and PDF publication all pass on this
 tree. Verdict: **ready for review**, subject to the PR review outcome recorded in
 the final commit message.
+
+## 8. Final committed state
+
+| field | value |
+|---|---|
+| branch | `feature/release-verification` |
+| verified commit | `c1fe423739e43abf82247a38c65285040c0c87d9` |
+| CI (GitHub Actions, `verify`) | pass — `verify_docs` 6 passed / 5 skipped, `verify_claims` 23 claims, `regress_release` document-level cases pass |
+| local suite on the same commit | `verify_docs` 11/11, `verify_claims` 23 claims / 71 refs, `regress_release` 9/9 |
+| PDF | `552a3e6f895d97f0`, SHA-256 `552a3e6f895d97f0ca47812593c47a90a768323c7e4a3654f36bc857f327fcb8` |
+
+CI and the local suite differ only in the six checks that need the firmware images,
+which are not committed; CI names each skipped check in its log rather than
+reporting a false pass. This file's own commit follows the verified one and changes
+documentation only.
+
+### Approval status
+
+The repository has one collaborator (`archpc`), so no independent reviewer is
+available and self-approval is not acceptable. The PR is therefore left open and
+ready for review with all required checks green. This is the precise blocker to
+merge: absent an authorised second reviewer, approval cannot be obtained.
