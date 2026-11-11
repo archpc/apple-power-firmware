@@ -1,0 +1,265 @@
+{
+ "source": "adapter-70w/evidence/registers/hpm-regs-live.json",
+ "rids": {
+  "0x0": {
+   "rx_source_caps": {
+    "declared_count": 1,
+    "pdos": [
+     {
+      "raw": 654413914,
+      "kind": "fixed",
+      "voltage_mv": 5000,
+      "max_current_ma": 900,
+      "dual_role_power": 1,
+      "usb_suspend_supported": 0,
+      "unchunked_ext": 0,
+      "dual_role_data": 1
+     }
+    ]
+   },
+   "rx_sop_partner": {
+    "byte0": "0x19",
+    "vendor_id": "0x05AC",
+    "product_id": "0x751F",
+    "trailing": "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 07 01 04 00",
+    "record_shape": "OPEN (26 bytes, not the 61-byte 0x49 shape)"
+   },
+   "rx_sop_prime_identity": {
+    "vdo_count": 0,
+    "note": "all zero"
+   },
+   "tx_identity_inferred": {
+    "entry_count_inferred": 6,
+    "vendor_id": "0x05AC",
+    "product_id": "0xD540",
+    "le_words": [
+     "0xD54005AC",
+     "0x00000000",
+     "0x731D3115",
+     "0x6D00003C",
+     "0x00000000",
+     "0x47000000"
+    ],
+    "version_word": "0x731D3115"
+   },
+   "reg_0x48": {
+    "first_byte": "0x56",
+    "all_zero": false
+   },
+   "reg_0x4f": {
+    "all_zero": false,
+    "ascii_runs": [
+     "e Inc."
+    ]
+   }
+  },
+  "0x1": {
+   "rx_source_caps": {
+    "declared_count": 0,
+    "pdos": []
+   },
+   "rx_sop_partner": {
+    "vdo_count": 0,
+    "note": "all zero"
+   },
+   "rx_sop_prime_identity": {
+    "vdo_count": 0,
+    "note": "all zero"
+   },
+   "tx_identity_inferred": {
+    "entry_count_inferred": 6,
+    "vendor_id": "0x05AC",
+    "product_id": "0xD540",
+    "le_words": [
+     "0xD54005AC",
+     "0x00000000",
+     "0x731D3115",
+     "0x6D00003C",
+     "0x00000000",
+     "0x47000000"
+    ],
+    "version_word": "0x731D3115"
+   },
+   "reg_0x48": {
+    "first_byte": "0x00",
+    "all_zero": true
+   },
+   "reg_0x4f": {
+    "all_zero": true,
+    "ascii_runs": []
+   }
+  },
+  "0x2": {
+   "rx_source_caps": {
+    "declared_count": 0,
+    "pdos": []
+   },
+   "rx_sop_partner": {
+    "vdo_count": 0,
+    "note": "all zero"
+   },
+   "rx_sop_prime_identity": {
+    "vdo_count": 4,
+    "id_header_vdo": "0x1C600000",
+    "vendor_id": "0x0000",
+    "product_id": "0x1C60",
+    "product_vdo": "0x00000000",
+    "product_vdo_pid": "0x0000",
+    "product_vdo_bcd_device": "0x0000"
+   },
+   "tx_identity_inferred": {
+    "entry_count_inferred": 6,
+    "vendor_id": "0x05AC",
+    "product_id": "0xD540",
+    "le_words": [
+     "0xD54005AC",
+     "0x00000000",
+     "0x731D3115",
+     "0x6D00003C",
+     "0x00000000",
+     "0x47000000"
+    ],
+    "version_word": "0x731D3115"
+   },
+   "reg_0x48": {
+    "first_byte": "0x45",
+    "all_zero": false
+   },
+   "reg_0x4f": {
+    "all_zero": false,
+    "ascii_runs": []
+   }
+  },
+  "0x5": {
+   "rx_source_caps": {
+    "declared_count": 4,
+    "pdos": [
+     {
+      "raw": 134320424,
+      "kind": "fixed",
+      "voltage_mv": 5000,
+      "max_current_ma": 2960,
+      "dual_role_power": 0,
+      "usb_suspend_supported": 0,
+      "unchunked_ext": 1,
+      "dual_role_data": 0
+     },
+     {
+      "raw": 184617,
+      "kind": "fixed",
+      "voltage_mv": 9000,
+      "max_current_ma": 2970,
+      "dual_role_power": 0,
+      "usb_suspend_supported": 0,
+      "unchunked_ext": 0,
+      "dual_role_data": 0
+     },
+     {
+      "raw": 307498,
+      "kind": "fixed",
+      "voltage_mv": 15000,
+      "max_current_ma": 2980,
+      "dual_role_power": 0,
+      "usb_suspend_supported": 0,
+      "unchunked_ext": 0,
+      "dual_role_data": 0
+     },
+     {
+      "raw": 409939,
+      "kind": "fixed",
+      "voltage_mv": 20000,
+      "max_current_ma": 3390,
+      "dual_role_power": 0,
+      "usb_suspend_supported": 0,
+      "unchunked_ext": 0,
+      "dual_role_data": 0
+     }
+    ]
+   },
+   "rx_sop_partner": {
+    "byte0": "0x19",
+    "vendor_id": "0x05AC",
+    "product_id": "0x701C",
+    "trailing": "00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 00 00 03 00 44 00",
+    "record_shape": "OPEN (26 bytes, not the 61-byte 0x49 shape)"
+   },
+   "rx_sop_prime_identity": {
+    "vdo_count": 4,
+    "id_header_vdo": "0x1C0005AC",
+    "vendor_id": "0x05AC",
+    "product_id": "0x1C00",
+    "product_vdo": "0x78003200",
+    "product_vdo_pid": "0x7800",
+    "product_vdo_bcd_device": "0x3200"
+   },
+   "tx_identity_inferred": {
+    "entry_count_inferred": 3,
+    "vendor_id": "0x05AC",
+    "product_id": "0x1C60",
+    "le_words": [
+     "0x1C6005AC",
+     "0x00000000",
+     "0x731D3115"
+    ],
+    "version_word": "0x731D3115"
+   },
+   "reg_0x48": {
+    "first_byte": "0x80",
+    "all_zero": false
+   },
+   "reg_0x4f": {
+    "all_zero": false,
+    "ascii_runs": []
+   }
+  }
+ },
+ "rdo_rid5": {
+  "raw": 1166363987,
+  "object_position": 4,
+  "giveback": 0,
+  "capability_mismatch": 1,
+  "usb_comm_capable": 0,
+  "no_usb_suspend": 1,
+  "unchunked_ext": 1,
+  "operating_current_ma": 3390,
+  "max_current_ma": 3390
+ },
+ "checks": [
+  {
+   "name": "0x30 RID5 PDOs equal IOKit contract",
+   "pass": true
+  },
+  {
+   "name": "0x30 RID5 max power 67800 mW",
+   "pass": true
+  },
+  {
+   "name": "RDO position 4 selects the 20 V PDO",
+   "pass": true
+  },
+  {
+   "name": "RDO operating == max == 3390 mA",
+   "pass": true
+  },
+  {
+   "name": "RDO capability mismatch set (B26)",
+   "pass": true
+  },
+  {
+   "name": "0x43 RID5 VID/PID 0x05AC/0x701C",
+   "pass": true
+  },
+  {
+   "name": "0x43 RID0 live vendor 0x05AC (partner present)",
+   "pass": true
+  },
+  {
+   "name": "0x47 RID5 VID/PID 0x05AC/0x1C60",
+   "pass": true
+  },
+  {
+   "name": "0x47 RID5 version word carries 0x3115 (FW 003.115, INFERRED)",
+   "pass": true
+  }
+ ]
+}
