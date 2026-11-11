@@ -82,6 +82,7 @@ REGISTERS.md     HPM 0x30/0x43/0x47/0x48/0x49/0x4a/0x4f and the active RDO
 HOST.md          metadata provenance and the updater architecture
 DISTRIBUTION.md  what was searched for firmware and the exact negative scope
 DUMP-FEASIBILITY.md  whether the onboard image can be read, and the blockers
+STATUS.md        current state, blockers, holdings, where to resume
 OPEN.md          unresolved questions, blockers, what would settle each
 BRIEF.md         shared brief used by the delegated work
 scripts/registers.py       reproducible register/PDO/RDO decoder
