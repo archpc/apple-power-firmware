@@ -183,8 +183,9 @@ def main(argv):
     checks.append(("0x43 RID5 VID/PID 0x05AC/0x701C",
                    sop.get("vendor_id") == "0x05AC" and sop.get("product_id") == "0x701C"))
     sop0 = result["rids"].get("0x0", {}).get("rx_sop_partner", {})
-    checks.append(("0x43 RID0 live vendor 0x05AC (partner present)",
-                   sop0.get("vendor_id") in (None, "0x05AC")))
+    if sop0.get("vendor_id"):
+        checks.append(("0x43 RID0 partner vendor 0x05AC",
+                       sop0["vendor_id"] == "0x05AC"))
 
     tx = result["rids"].get("0x5", {}).get("tx_identity_inferred", {})
     checks.append(("0x47 RID5 VID/PID 0x05AC/0x1C60",
