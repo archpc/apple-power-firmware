@@ -38,8 +38,11 @@ def para(doc, needle):
 def main():
     root = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else ".")
     os.chdir(root)
-    imgs = {t: open(f"firmware/images/A2363_{t}_base0.bin", "rb").read()
-            for t in ("3.1.8_10M569", "3.1.12_10M1543", "3.2.0_10M13722")}
+    def load(t):
+        path = f"firmware/images/A2363_{t}_base0.bin"
+        return open(path, "rb").read() if os.path.exists(path) else b""
+
+    imgs = {t: load(t) for t in ("3.1.8_10M569", "3.1.12_10M1543", "3.2.0_10M13722")}
     have = all(len(v) > 0 for v in imgs.values())
 
     # R1 — literal sets: 28 is 3.2.0-only; 11/7/1 and disjointness hold
