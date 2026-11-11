@@ -1,0 +1,9 @@
+seed 0xa84c | unit=data: len=1 | inFunc=- | refsTo=NONE | disasm=OK:push {r4,r5,r6,lr}
+seed 0xa8c0 | unit=data: len=1 | inFunc=- | refsTo=NONE | disasm=OK:push {r7,lr}
+seed 0xa96c | unit=data: len=1 | inFunc=- | refsTo=NONE | disasm=OK:push {r7,lr}
+seed 0xa9ac | unit=data: len=1 | inFunc=- | refsTo=NONE | disasm=OK:push {r7,lr}
+seed 0xa9bc | unit=data: len=1 | inFunc=- | refsTo=NONE | disasm=OK:push {r4,r5,r6,r7,lr}
+seed 0xa9d6 | unit=instruction:mov pc,r0 | inFunc=- | refsTo=NONE | disasm=OK:mov pc,r0
+seed 0xaa2a | unit=instruction:bne 0x0000aa2e | inFunc=- | refsTo=NONE | disasm=OK:bne 0x0000aa2e
+seed 0xa9d8 | unit=data: len=4 | inFunc=- | refsTo=NONE | disasm=FAILED
+seed 0xb154 | unit=instruction:movs r0,#0x0 | inFunc=FUN_0000b09c@0xb09c | refsTo=NONE | disasm=OK:movs r0,#0x0

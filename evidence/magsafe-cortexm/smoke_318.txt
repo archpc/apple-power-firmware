@@ -1,0 +1,4 @@
+language=ARM:LE:32:Cortex
+bytes@0x10=f0b585b072b64148
+instr=push {r4,r5,r6,r7,lr}
+nextAddr=0x12
