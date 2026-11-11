@@ -5,9 +5,13 @@ every structural check it enforces.
 
 | file | what it is |
 |---|---|
-| `claim-register-6pp.pdf` | the first publication: executive summary, method, 23-claim register, corrections table, limitations |
-| `research-narrative-9pp.pdf` | the rebuild: three firmware objects, power path, acquisition, container format, image anatomy, cross-version table, claims examined individually, host stack, security, limits, method, register as appendix |
+| `../publication/prior/claim-register-6pp.pdf` | the first publication: executive summary, method, 23-claim register, corrections table, limitations |
+| `../publication/current/apple-power-firmware.pdf` | the rebuild: three firmware objects, power path, acquisition, container format, image anatomy, cross-version table, claims examined individually, host stack, security, limits, method, register as appendix |
 | `*.typ`, `*.json` | the sources and metadata each PDF came from, as snapshots |
+
+The PDFs are not duplicated here. `publication/` holds one copy of each build; this
+directory holds the sources, the comparison script and the judgement. `compare.py`
+resolves both PDFs relative to `../../publication/`.
 
 `compare.py` measures both and stops. It reports pages, selectable characters,
 heading count, table count and claim markers — and prints no verdict.

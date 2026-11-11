@@ -22,12 +22,12 @@ $ shasum -a 256 -c SHA256SUMS
 
 $ python3 ~/.hermes/skills/research/research-pdf/scripts/build.py \
     --content report.typ --meta report.json \
-    --out publication/apple-power-firmware.pdf --inspect
+    --out publication/current/apple-power-firmware.pdf --inspect
 evidence ok: 23 claims, 71 refs
 layout: 7 renderer elements, 0 hard, 0 warn, 0 other
 verified: 6 pages, text layer present, no blank pages
 
-$ build.py --verify publication/apple-power-firmware.pdf
+$ build.py --verify publication/current/apple-power-firmware.pdf
 verified generation: apple-power-firmware.pdf
 ```
 
@@ -94,7 +94,7 @@ shared/union constant mislabelling) was found by the user and re-derived.
 
 | field | value |
 |---|---|
-| file | `publication/apple-power-firmware.pdf` |
+| file | `publication/current/apple-power-firmware.pdf` |
 | generation id | `1848b3a363df46de` |
 | SHA-256 | `1848b3a363df46dedc69f9147eb3cfb3c9c6368ef7dcb4215f03da0b05d5a168` |
 | pages | 9, no blank pages |
