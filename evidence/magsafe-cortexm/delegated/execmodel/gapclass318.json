@@ -1,0 +1,362 @@
+[
+ {
+  "start": 68284,
+  "end": 76272,
+  "length": 7988,
+  "prologues": [
+   "0x10ac0",
+   "0x10b30",
+   "0x12938",
+   "0x129c8"
+  ],
+  "coherent": [
+   [
+    "0x10ac0",
+    "b@0x10af6"
+   ],
+   [
+    "0x10b30",
+    "b@0x10b62"
+   ],
+   [
+    "0x12938",
+    "b@0x1295e"
+   ],
+   [
+    "0x129c8",
+    "pop-pc@0x129d2"
+   ]
+  ],
+  "bl_targets": [
+   "0x12012",
+   "0x1291c",
+   "0x1297c",
+   "0x12988",
+   "0x10b30"
+  ],
+  "ascii_runs": 1,
+  "ascii_sample": [
+   ">c[ =TG "
+  ],
+  "ptr_words": 363,
+  "verdict": "CODE-plausible"
+ },
+ {
+  "start": 76788,
+  "end": 81220,
+  "length": 4432,
+  "prologues": [
+   "0x1304e",
+   "0x130f6",
+   "0x135d0",
+   "0x135d4",
+   "0x135d8",
+   "0x135dc",
+   "0x135e0",
+   "0x135e4",
+   "0x135e8"
+  ],
+  "coherent": [],
+  "bl_targets": [],
+  "ascii_runs": 50,
+  "ascii_sample": [
+   "Unsupported: '%c'",
+   "0123456789ABCDEF",
+   "0123456789abcdef"
+  ],
+  "ptr_words": 82,
+  "verdict": "DATA-strings"
+ },
+ {
+  "start": 64800,
+  "end": 67542,
+  "length": 2742,
+  "prologues": [],
+  "coherent": [],
+  "bl_targets": [
+   "0x10016",
+   "0xfd5a",
+   "0x1056c",
+   "0x10768"
+  ],
+  "ascii_runs": 0,
+  "ascii_sample": [],
+  "ptr_words": 88,
+  "verdict": "DATA-other"
+ },
+ {
+  "start": 62458,
+  "end": 63974,
+  "length": 1516,
+  "prologues": [],
+  "coherent": [],
+  "bl_targets": [],
+  "ascii_runs": 0,
+  "ascii_sample": [],
+  "ptr_words": 39,
+  "verdict": "DATA-other"
+ },
+ {
+  "start": 57852,
+  "end": 59222,
+  "length": 1370,
+  "prologues": [],
+  "coherent": [],
+  "bl_targets": [],
+  "ascii_runs": 0,
+  "ascii_sample": [],
+  "ptr_words": 45,
+  "verdict": "DATA-other"
+ },
+ {
+  "start": 29302,
+  "end": 30548,
+  "length": 1246,
+  "prologues": [
+   "0x728c",
+   "0x7360",
+   "0x736a",
+   "0x7374",
+   "0x73e4",
+   "0x74a4"
+  ],
+  "coherent": [
+   [
+    "0x728c",
+    "b@0x72d0"
+   ],
+   [
+    "0x7360",
+    "pop-pc@0x7368"
+   ],
+   [
+    "0x736a",
+    "pop-pc@0x7372"
+   ],
+   [
+    "0x7374",
+    "pop-pc@0x73cc"
+   ],
+   [
+    "0x73e4",
+    "pop-pc@0x745c"
+   ],
+   [
+    "0x74a4",
+    "b@0x74f8"
+   ]
+  ],
+  "bl_targets": [],
+  "ascii_runs": 2,
+  "ascii_sample": [
+   "Guw\" 5T8h",
+   "}}<n8F`0"
+  ],
+  "ptr_words": 91,
+  "verdict": "CODE-plausible"
+ },
+ {
+  "start": 19048,
+  "end": 20232,
+  "length": 1184,
+  "prologues": [],
+  "coherent": [],
+  "bl_targets": [],
+  "ascii_runs": 1,
+  "ascii_sample": [
+   "C 7\\. 0\\"
+  ],
+  "ptr_words": 60,
+  "verdict": "DATA-other"
+ },
+ {
+  "start": 17574,
+  "end": 18696,
+  "length": 1122,
+  "prologues": [
+   "0x4528",
+   "0x4560",
+   "0x45dc",
+   "0x4644",
+   "0x470a",
+   "0x4730",
+   "0x4828",
+   "0x4890"
+  ],
+  "coherent": [
+   [
+    "0x4528",
+    "pop-pc@0x4538"
+   ],
+   [
+    "0x4560",
+    "pop-pc@0x458e"
+   ],
+   [
+    "0x45dc",
+    "pop-pc@0x45f6"
+   ],
+   [
+    "0x4644",
+    "pop-pc@0x4670"
+   ],
+   [
+    "0x470a",
+    "pop-pc@0x4720"
+   ],
+   [
+    "0x4730",
+    "pop-pc@0x47b2"
+   ],
+   [
+    "0x4828",
+    "pop-pc@0x4844"
+   ],
+   [
+    "0x4890",
+    "pop-pc@0x48d0"
+   ]
+  ],
+  "bl_targets": [],
+  "ascii_runs": 1,
+  "ascii_sample": [
+   "8!ET:!ET- >T"
+  ],
+  "ptr_words": 72,
+  "verdict": "CODE-plausible"
+ },
+ {
+  "start": 41264,
+  "end": 42020,
+  "length": 756,
+  "prologues": [
+   "0xa140",
+   "0xa15c",
+   "0xa1e0",
+   "0xa250"
+  ],
+  "coherent": [
+   [
+    "0xa140",
+    "pop-pc@0xa154"
+   ],
+   [
+    "0xa15c",
+    "b@0xa1b2"
+   ],
+   [
+    "0xa1e0",
+    "b@0xa232"
+   ],
+   [
+    "0xa250",
+    "b@0xa262"
+   ]
+  ],
+  "bl_targets": [
+   "0xa140",
+   "0xa1e0"
+  ],
+  "ascii_runs": 0,
+  "ascii_sample": [],
+  "ptr_words": 46,
+  "verdict": "CODE-plausible"
+ },
+ {
+  "start": 13258,
+  "end": 13996,
+  "length": 738,
+  "prologues": [
+   "0x33dc",
+   "0x341c",
+   "0x34c8",
+   "0x3520",
+   "0x359c",
+   "0x3608",
+   "0x3694"
+  ],
+  "coherent": [
+   [
+    "0x33dc",
+    "b@0x33fc"
+   ],
+   [
+    "0x341c",
+    "b@0x347c"
+   ],
+   [
+    "0x34c8",
+    "pop-pc@0x3516"
+   ],
+   [
+    "0x3520",
+    "pop-pc@0x355c"
+   ],
+   [
+    "0x359c",
+    "pop-pc@0x35ca"
+   ],
+   [
+    "0x3608",
+    "pop-pc@0x3656"
+   ],
+   [
+    "0x3694",
+    "pop-pc@0x36a8"
+   ]
+  ],
+  "bl_targets": [],
+  "ascii_runs": 0,
+  "ascii_sample": [],
+  "ptr_words": 45,
+  "verdict": "CODE-plausible"
+ },
+ {
+  "start": 14482,
+  "end": 15200,
+  "length": 718,
+  "prologues": [
+   "0x3a2c",
+   "0x3b00"
+  ],
+  "coherent": [
+   [
+    "0x3a2c",
+    "pop-pc@0x3a46"
+   ],
+   [
+    "0x3b00",
+    "b@0x3b26"
+   ]
+  ],
+  "bl_targets": [],
+  "ascii_runs": 0,
+  "ascii_sample": [],
+  "ptr_words": 36,
+  "verdict": "CODE-plausible"
+ },
+ {
+  "start": 26736,
+  "end": 27444,
+  "length": 708,
+  "prologues": [
+   "0x6874",
+   "0x6abc"
+  ],
+  "coherent": [
+   [
+    "0x6874",
+    "b@0x6886"
+   ],
+   [
+    "0x6abc",
+    "pop-pc@0x6afa"
+   ]
+  ],
+  "bl_targets": [],
+  "ascii_runs": 0,
+  "ascii_sample": [],
+  "ptr_words": 52,
+  "verdict": "CODE-plausible"
+ }
+]

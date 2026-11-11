@@ -223,3 +223,23 @@ withdrawn phrase in a conclusion, or a broken evidence reference.
 - *C25* [OBSERVED] The three firmware objects are not equally established: the adapter value is host-reported only, and the cable version is a single in-file source consistent with register 0x49.
 // claim: C26
 - *C26* [REPRODUCED] 3.2.0 contains 10 detected mov-pc dispatch sites, not 15.
+// claim: C28
+- *C28* [REPRODUCED] The C99 inner header is a two-record SHA-256/CRC-32 hash chain over the payload body, record 3, record 4, plus a header self-hash; all five relations reproduce byte-exactly on all three payloads.
+// claim: C29
+- *C29* [REPRODUCED] The flat base0 images equal payload[0x180:] — the 384-byte C99 header is stripped in extraction, not absent from the asset.
+// claim: C30
+- *C30* [REPRODUCED] SHA-256 (FIPS 180-4 K table + IV, twice per image) and a complete secp256r1 parameter block (p, b, Gx, Gy, n) are present in all three images.
+// claim: C31
+- *C31* [INFERRED] The 3.1.x dispatcher's second-stage 17-case switch has a verified 3.2.0 successor (0xad2a/0xad7e/0xab64) whose only structural change is the index width (ldrb -\> ldrh).
+// claim: C32
+- *C32* [OPEN] The 3.1.x dispatcher island has zero static inbound edges and even mov pc table targets (ARM-state request on v7-M); it is very likely a stale or dead copy, and the live dispatcher's location is open.
+// claim: C33
+- *C33* [OBSERVED] Of the 155 non-stub calibrated 1:1 pairs 3.1.12-\>3.2.0, 124 are identical modulo relink and 31 are substantive, including a signed-\>unsigned comparison change (0xa018-\>0xa020).
+// claim: C34
+- *C34* [OBSERVED] The 3.1.x dispatcher default arm (including Soft\_Reset, case 13) rebuilds the source-cap buffer and sets a port state byte; no Accept transmit or CC/PHY write is decoded in that body.
+// claim: C35
+- *C35* [OBSERVED] The FSM state-name string spm\_host\_src\_hardreset exists in 3.1.8 and 3.1.12 and is absent from 3.2.0, whose pool retains four reordered states.
+// claim: C36
+- *C36* [OPEN] No version-threshold constant or cmp.w instruction exists in any image; at 46-56% function coverage this negative is bounded, not conclusive — anti-rollback is unresolved.
+// claim: C37
+- *C37* [OBSERVED] VDMs is one 4CC command tag among many; UARP uses CFUa/CFUp/CFUs as runtime 4CC arguments. The cable images contain an SVDM dispatcher (0xb34c) with no 4CC compare; CFU consumption below the app image is open.

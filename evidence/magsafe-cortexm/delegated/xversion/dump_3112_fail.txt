@@ -1,0 +1,221 @@
+== range 0x2c62 - 0x2c80
+002c62  add sp,#0x1c                
+002c64  pop {r4,r5,r6,r7,pc}        
+002c66  DATA len=1 -0x40
+002c67  DATA len=1 0x46
+002c68  DATA len=4 -0x400
+002c6c  DATA len=4 0xc3b3
+002c70  DATA len=4 -0x300400
+002c74  DATA len=4 -0x1c00001
+002c78  DATA len=4 -0x1400001
+002c7c  DATA len=4 0x200002b0
+== range 0x3b64 - 0x3b78
+003b64  movs r1,#0x10               
+003b66  mov r0,r4                   
+003b68  bl 0x000031a0                UNCONDITIONAL_CALL->0x31a0
+003b6c  movs r1,#0x10               
+003b6e  mov r0,r4                   
+003b70  bl 0x000031a0                UNCONDITIONAL_CALL->0x31a0
+003b74  pop {r4,r5,r6,pc}           
+003b76  DATA len=1 -0x40
+003b77  DATA len=1 0x46
+== range 0x3dc0 - 0x3dd0
+003dc0  bne 0x00003dc4               CONDITIONAL_JUMP->0x3dc4
+003dc2  b 0x00003eee                 UNCONDITIONAL_JUMP->0x3eee
+003dc4  movs r1,#0x12               
+003dc6  mov r0,r4                   
+003dc8  bl 0x000031a0                UNCONDITIONAL_CALL->0x31a0
+003dcc  b 0x00003efa                 UNCONDITIONAL_JUMP->0x3efa
+003dce  str r7,[sp,#0x0]            
+== range 0x59bc - 0x59cc
+0059bc  DATA len=1 0x0
+0059bd  DATA len=1 0x21
+0059be  DATA len=1 0x7
+0059bf  DATA len=1 0x22
+0059c0  DATA len=1 0x20
+0059c1  DATA len=1 0x46
+0059c2  DATA len=1 0x1
+0059c3  DATA len=1 -0x10
+0059c4  DATA len=1 0xf
+0059c5  DATA len=1 -0x6
+0059c6  DATA len=1 0x10
+0059c7  DATA len=1 -0x43
+0059c8  DATA len=1 0x20
+0059c9  DATA len=1 0x46
+0059ca  DATA len=1 0x0
+0059cb  DATA len=1 -0x10
+== range 0x5a64 - 0x5a7c
+005a64  movs r1,#0x0                
+005a66  mov r0,r4                   
+005a68  bl 0x00002f62                UNCONDITIONAL_CALL->0x2f62
+005a6c  movs r1,#0x16               
+005a6e  mov r0,r4                   
+005a70  bl 0x000031a0                UNCONDITIONAL_CALL->0x31a0
+005a74  pop {r4,pc}                 
+005a76  DATA len=1 -0x40
+005a77  DATA len=1 0x46
+005a78  DATA len=4 0x20000680
+== range 0x9ad4 - 0x9af0
+009ad4  DATA len=1 -0x6b
+009ad5  DATA len=1 -0x4
+009ad6  DATA len=1 0x0
+009ad7  DATA len=1 -0x10
+009ad8  DATA len=1 -0xf
+009ad9  DATA len=1 -0x8
+009ada  DATA len=1 0x0
+009adb  DATA len=1 -0x10
+009adc  DATA len=1 0x1b
+009add  DATA len=1 -0x7
+009ade  DATA len=1 -0x9
+009adf  DATA len=1 -0x9
+009ae0  DATA len=1 -0x49
+009ae1  DATA len=1 -0x7
+009ae2  DATA len=1 0x6
+009ae3  DATA len=1 0x46
+009ae4  DATA len=1 0xc
+009ae5  DATA len=1 0x46
+009ae6  DATA len=1 -0x1
+009ae7  DATA len=1 -0x9
+009ae8  DATA len=1 0x1f
+009ae9  DATA len=1 -0x1
+009aea  DATA len=1 0x2
+009aeb  DATA len=1 0x28
+009aec  DATA len=1 0x4e
+009aed  DATA len=1 -0x2f
+009aee  DATA len=1 0x2
+009aef  DATA len=1 -0x6c
+== range 0xe79c - 0xe7ac
+00e79c  DATA len=1 0x40
+00e79d  DATA len=1 0x19
+00e79e  DATA len=1 0x0
+00e79f  DATA len=1 0x20
+00e7a0  DATA len=1 -0x44
+00e7a1  DATA len=1 0x40
+00e7a2  DATA len=1 0x1
+00e7a3  DATA len=1 0x0
+00e7a4  DATA len=1 0x78
+00e7a5  DATA len=1 -0xe
+00e7a6  DATA len=1 -0x1
+00e7a7  DATA len=1 0xf
+00e7a8  DATA len=1 0x0
+00e7a9  DATA len=1 0xc
+00e7aa  DATA len=1 0x1
+00e7ab  DATA len=1 0x3
+== range 0xa710 - 0xa728
+00a710  DATA len=4 0xab9d
+00a714  DATA len=4 0x200000a8
+00a718  DATA len=4 0xabad
+00a71c  DATA len=1 -0x80
+00a71d  DATA len=1 -0x4b
+00a71e  DATA len=1 0x1
+00a71f  DATA len=1 0x29
+00a720  DATA len=1 0x2
+00a721  DATA len=1 -0x28
+00a722  DATA len=1 0x1
+00a723  DATA len=1 0x20
+00a724  bl 0x0000a554                UNCONDITIONAL_CALL->0xa554
+== range 0xa7d4 - 0xa830
+00a7d4  DATA len=4 0x20001854
+00a7d8  DATA len=4 0x200002b0
+00a7dc  push {r4,r5,r6,lr}          
+00a7de  ldr r5,[0x0000a820]          READ->0xa820
+00a7e0  ldrb r0,[r5,#0xc]            READ->0x20001860
+00a7e2  cmp r0,#0x0                 
+00a7e4  beq 0x0000a7ea               CONDITIONAL_JUMP->0xa7ea
+00a7e6  movs r4,#0x1                
+00a7e8  b 0x0000a81c                 UNCONDITIONAL_JUMP->0xa81c
+00a7ea  bl 0x0000a758                UNCONDITIONAL_CALL->0xa758
+00a7ee  movs r4,#0xff               
+00a7f0  cmp r0,#0x1                 
+00a7f2  bne 0x0000a81c               CONDITIONAL_JUMP->0xa81c
+00a7f4  bl 0x00001ff0                UNCONDITIONAL_CALL->0x1ff0
+00a7f8  cmp r0,#0x0                 
+00a7fa  beq 0x0000a81c               CONDITIONAL_JUMP->0xa81c
+00a7fc  mrs r6,primask              
+00a800  cpsid i                     
+00a802  movs r4,#0x1                
+00a804  bl 0x0000a758                UNCONDITIONAL_CALL->0xa758
+00a808  cmp r0,#0x1                 
+00a80a  bne 0x0000a810               CONDITIONAL_JUMP->0xa810
+00a80c  strb r4,[r5,#0xc]            WRITE->0x20001860
+00a80e  b 0x0000a818                 UNCONDITIONAL_JUMP->0xa818
+00a810  mov r0,r4                   
+00a812  bl 0x0000a824                UNCONDITIONAL_CALL->0xa824
+00a816  movs r4,#0xff               
+00a818  msr primask,r6              
+00a81c  sxtb r0,r4                  
+00a81e  pop {r4,r5,r6,pc}           
+00a820  DATA len=4 0x20001854
+00a824  push {r4,r5,r6,lr}          
+00a826  cmp r0,#0x0                 
+00a828  ldr r5,[0x0000a868]          READ->0xa868
+00a82a  beq 0x0000a850               CONDITIONAL_JUMP->0xa850
+00a82c  mrs r6,primask              
+== range 0xa898 - 0xa8a8
+00a898  DATA len=1 0x8
+00a899  DATA len=1 0x0
+00a89a  DATA len=1 0x32
+00a89b  DATA len=1 0x0
+00a89c  DATA len=1 0x60
+00a89d  DATA len=1 0x3a
+00a89e  DATA len=1 0x1
+00a89f  DATA len=1 0x0
+00a8a0  DATA len=1 0x70
+00a8a1  DATA len=1 -0x4b
+00a8a2  DATA len=1 0x1d
+00a8a3  DATA len=1 0x46
+00a8a4  DATA len=1 0x2
+00a8a5  DATA len=1 0x20
+00a8a6  DATA len=1 0x18
+00a8a7  DATA len=1 0x75
+== range 0xa90c - 0xa91c
+00a90c  DATA len=1 0x18
+00a90d  DATA len=1 0x0
+00a90e  DATA len=1 0x32
+00a90f  DATA len=1 0x0
+00a910  DATA len=1 0x70
+00a911  DATA len=1 0x3a
+00a912  DATA len=1 0x1
+00a913  DATA len=1 0x0
+00a914  DATA len=1 -0x80
+00a915  DATA len=1 -0x4b
+00a916  DATA len=1 0x7
+00a917  DATA len=1 0x20
+00a918  DATA len=1 0x18
+00a919  DATA len=1 0x75
+00a91a  DATA len=1 0x13
+00a91b  DATA len=1 0x4a
+== range 0xa9c0 - 0xa9cc
+00a9c0  DATA len=1 -0x80
+00a9c1  DATA len=1 -0x4b
+00a9c2  DATA len=1 0x1
+00a9c3  DATA len=1 0x20
+00a9c4  DATA len=1 0x1
+00a9c5  DATA len=1 -0x10
+00a9c6  DATA len=1 -0x4c
+00a9c7  DATA len=1 -0x2
+00a9c8  DATA len=1 -0x80
+00a9c9  DATA len=1 -0x43
+00a9ca  DATA len=1 -0x40
+00a9cb  DATA len=1 0x46
+== range 0xaa00 - 0xaa14
+00aa00  DATA len=1 -0x80
+00aa01  DATA len=1 -0x4b
+00aa02  DATA len=1 0x2
+00aa03  DATA len=1 0x48
+00aa04  DATA len=1 -0x1
+00aa05  DATA len=1 -0x9
+00aa06  DATA len=1 0x4e
+00aa07  DATA len=1 -0x3
+00aa08  DATA len=1 -0x80
+00aa09  DATA len=1 -0x43
+00aa0a  DATA len=1 -0x40
+00aa0b  DATA len=1 0x46
+00aa0c  DATA len=1 0x1a
+00aa0d  DATA len=1 0x0
+00aa0e  DATA len=1 0x32
+00aa0f  DATA len=1 0x0
+00aa10  DATA len=1 -0x10
+00aa11  DATA len=1 -0x4b
+00aa12  DATA len=1 -0x79
+00aa13  DATA len=1 -0x50

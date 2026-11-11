@@ -289,3 +289,309 @@ mean. Neither step was performed here.
 - Subagent claims corrected here: "uncovered 61 % is data" (**REFUTED**), "PDO
   table at a fixed address" (**REFUTED**), "`0xB154` shared handler"
   (**OBSERVED** true for 3.1.8).
+
+## 11. Seeded Cortex-M re-analysis (supersedes §3/§4 detection limits)
+
+Pipeline: Ghidra 12.1.4 headless, `-processor ARM:LE:32:Cortex -cspec default`
+(same `ARM7_le.sla` as v7 but `ARMCortex.pspec` with `TMode=1` default, external
+name `armv7e-m`). Census-derived seeds were first DIAGNOSED per address
+(unit type, containing function, inbound refs, decode attempt —
+`scripts/ghidra/DiagSeeds.java`); only seeds proven to be decodable code were
+created, and only units proven wrong (with before/after evidence in the seed
+log) were cleared. BL/B.W xref maps came from `scripts/ghidra/bl_xref.py`.
+Delegated verification: `evidence/magsafe-cortexm/delegated/execmodel.md`,
+`protocol.md`, `xversion.md`.
+
+### 11a. Coverage (REPRODUCED)
+
+| build | functions | coverage | prior generic-v7 |
+|---|---|---|---|
+| 3.1.8 | 444 | 46.4 % | 300 / 38.8 % |
+| 3.1.12 | 436 | 45.2 % | 303 / 39.4 % |
+| 3.2.0 | 423 | 56.2 % | 296 / 43.3 % |
+
+Two independent 3.1.8 runs produce identical inventories except the `0x10`
+function body length (4 vs 8 B). `0x10` stays **CANDIDATE** startup entry; the
+reset-vector words still land in the pointer table at `0x10f4c..` and decode as
+nothing (`REFUTED` as code, again). Addresses remain file offsets; no runtime
+base is asserted.
+
+### 11b. The control-message dispatcher, corrected (OBSERVED unless noted)
+
+- 3.1.8 entry `0xa9bc`, guard `subs r0,#9; cmp r0,#0xd`, table `0xa9d8` with
+  exactly 14 entries (`0xaa10` = `0xd0002c01`, not a pointer), six unique
+  targets `0xaed0 0xae90 0xb154 0xaf08 0xaf50 0xaf72`, dispatch `mov pc,r0` at
+  `0xa9d6`. 3.1.12 counterpart `0xaa10`, table `0xaa2c`, same case grouping.
+- **§3's "switch site 0xAA2A" was mislabelled for 3.1.8**: at `0xaa2a` the
+  bytes are `cmp r1,#0x28; bne 0xaa2e` (bytes `28 29 00 d1`) — a compare
+  chain in the
+  out-of-table cases, reached by fallthrough. `0xaa2a` is the 3.1.12
+  dispatcher site. The earlier "not inside any Ghidra function" statements
+  were true of the old analysis and are superseded by the seeded one.
+- Body extent: Ghidra's function body says 552 B, but flow continues through
+  shared epilogue at `0xacd4/0xacd6`; `0xa9bc..0xacd7 = 796 B`. The 552 figure
+  is an analysis-boundary artifact, not a semantic size.
+- Decompiler dataflow at `0xaf76`, settled after two conflicting delegated
+  reports and an independent audit: `adr r1,#4` at `0xa9d2` sets `r1` to the
+  table base `0xa9d8` before dispatch, and `r1` survives to
+  `str r1,[r4,#0x60]` (`r4` = `0x20001854`). The decompiler's original claim
+  `param_1[0x18] = &table` therefore STANDS; the intervening "writes the
+  message type" reading was **REFUTED**. The `blx r1` branch at `0xaf80`
+  exists (r0 = 0 or 1) but is reached only when `0x20001854[0x11] == 0`;
+  whether either path executes is **OPEN** (liveness, §11b above).
+  Control-flow structure of the decompilation is otherwise supported by
+  decode. (Audit: delegated/review/.)
+- **Liveness OPEN**: no BL, B.W, pointer word or halfword reference to
+  `0xa9bc` (or `0xaa10`) exists in either image. The island `0xa9bc..0xb1a3`
+  has zero static inbound edges, and three of its six case targets enter
+  foreign stack frames. Inferred (not established): scheduling via a
+  function-pointer/callback mechanism invisible to static xref, or a
+  stale/duplicated copy. Do not call it "the live control-message handler".
+- Callee deltas 3.1.8→3.1.12 are NOT uniform (the subagent claim of a
+  uniform +0x54 shift is **REFUTED**): 14 callees are address-identical;
+  table-adjacent code moved +0x54; the large handler `0xd904→0xd984` moved
+  +0x80.
+- Case-value → USB-PD message-type mapping (9=DR_Swap … 22=Get_Sink_Cap_Ext
+  under standard PD numbering; earlier draft numbering in this document was
+  off by one) remains **INFERRED**; no in-image constant names a type.
+  Out-of-table cases 2, 3, 0x28, 0x3d, 0x41: **OPEN**.
+
+### 11c. 3.2.0 (OBSERVED)
+
+The 14-case 9–22 table is absent (`REFUTED` both "unchanged" and "the
+dispatcher disappeared"). Three switches with different guards and message
+index sources exist: entries `0x4b78` (8 cases, span 2–9), `0x50fc` (13 cases,
+span 2–14), and `0x4eca` (15 cases, span 3–17, reached only indirectly).
+Whether any is the successor of the 3.1.x control-message dispatcher:
+**OPEN**.
+
+### 11d. Cross-version match (first pass, many-to-many caveat)
+
+Audit-corrected figures (the first-pass numbers were computed against a
+superseded 430-function 3.2.0 inventory): 181 exact signatures shared by all
+three builds, covering 224/222/209 functions. 3.1.8→3.1.12: 98.2 % exact.
+3.1.12→3.2.0: 49.9 % strict, 234 pairs at similarity ≥ 0.85, 189 3.2.0
+functions without a counterpart (largest `0xfbc8`, 2,932 B). Max
+mnemonic-sequence multiplicity 7 (3.2.0), so these counts are many-to-many
+upper bounds, consistent with §2's rule that no per-function semantic claim
+rests on them yet. (Reproduced by the auditor with `match.py` on current
+inventories: `delegated/review/match_result_audit.json`.)
+
+### 11e. New evidence bounds
+
+The largest uncovered 3.1.8 region `0x10abc..0x129f0` (7,988 B) is a
+coherent code island with prologues at `0x10ac0/0x10b30/0x12938/0x129c8`,
+an `"NVM0"`-tagged descriptor table at `0x10f4c`, and no external caller —
+like the dispatcher island, statically unreachable. Roughly 22.7 kB of the
+image (27 %) contains coherent `push {…,lr}` bodies outside the analysed
+function set; 4.4 kB are strings. Reachability of these islands is **OPEN**
+and bounds every claim in §11.
+
+## 12. Second investigation wave (liveness, successor, calibrated matcher)
+
+Delegated evidence: `delegated/liveness.md`, `delegated/successor.md`,
+`delegated/matcher.md` (+ scripts/results alongside). Independent spot-checks
+by the lead are marked below.
+
+### 12a. Liveness of the islands (3.1.8)
+
+- Base+delta relocation pattern: **REFUTED** by exhaustive word-pair scan
+  (`delta_scan.py`): zero co-located pairs whose difference equals any island
+  entry; zero anchored hits.
+- The callback mechanism exists and is used by reachable code: `0x1d00`
+  installs a 13-entry vtable (`0x13a2c`) at `port_obj+0x60`; 47 reachable
+  `ldr [rY,#0x60] → blx` sites all dispatch on `0x200002b0 + port*0x1cc`;
+  the vtable image words are all zero, i.e. runtime-filled. The islands are
+  never installed or called through this mechanism in-image.
+- The `"NVM0"` block at `0x10f4c` is a flat descriptor (masks + MMIO run +
+  3 odd code points), referenced only by the vector words at 0x4/0x8/0xc and
+  one literal inside the island itself (`0x12978`); `0xe000ed08` (VTOR) is
+  absent from the image, and the startup at `0x10` (90 instructions decoded)
+  never reads it.
+- Verdict per island: **no evidence of static reachability**; dead/stale-copy
+  not refuted (3.1.12 retains a counterpart). One positive internal link: the
+  large island calls `0x10` (`0x12960 bl 0x10`).
+- **Correction of a delegated "correction"**: the claim that `0xaf76`'s
+  stored `r1` is the containing function's argument is true only for a direct
+  call entering at `0xaf54`. On the table path the dispatcher jumps
+  `mov pc,r0` from `0xa9d6` straight into `0xaf72`, no prologue runs, and
+  `r1` is still the table base `0xa9d8` set at `0xa9d2` — the §11b reading
+  stands for that path. Both entries of `0xaf54` are now on record; which
+  runs is **OPEN** (liveness).
+- Environment note: Ghidra 12.1.4 remains installed at the canonical path;
+  the subagent's "no longer installed" report was an environment artifact.
+
+### 12b. 3.2.0 switch landscape and the successor question
+
+- The three inventoried switches (`0x4b78`, `0x50fc`, `0x4eca`) are decoded
+  and boundary-checked; none matches the 3.1.x dispatcher on index register,
+  grouping shape or callee set (callee overlap 1/19, 1/20, 1/12; LCS ≈ 2%).
+- Two further dispatch sites exist in uncovered 3.2.0 code (`0xa958`,
+  `0xab64`); the landscape was incomplete.
+- **The 3.1.x dispatcher's second-stage switch has a verified successor**:
+  `0xad2a` (3.1.8) / `0xad7e` (3.1.12) / `0xab64` (3.2.0) share the identical
+  guard `mov r3,r2; subs r3,#8; cmp r3,#0x10; bls` (lead-verified in all
+  three images), identical index chain and `add pc` table fetch, 17 cases
+  (span 8–24) in 3.2.0 vs a 17-byte byte-table in 3.1.x — same grouping
+  (1,8,1,1,2,1,1,1,1; 10/17 dominant), non-dominant offsets growing
+  monotonically. The only structural change is the index width
+  (`ldrb` → `ldrh` halfword table). **INFERRED, high confidence.**
+- The 14-case outer table has no 3.2.0 counterpart on current evidence:
+  **OPEN** whether its function was removed, renamed beyond recognition, or
+  lives in an uncovered island.
+- SVID-literal anchoring is a **negative** cross-check: the pair builder
+  tracks `0xc2b8 → 0xc30c → 0xc4ac`, but the 3.1.x dispatcher never calls
+  into the SVID region, so the literals cannot arbitrate the successor
+  question.
+
+### 12c. Calibrated matcher (§2 gate satisfied)
+
+`match_calibrated.py` fixes both recorded failure modes: mnemonics come from
+Ghidra body ranges (hard-fail on empty sequences) and calibration draws
+hard negatives from WITHIN each build. Calibration: 352 known-true
+3.1.8→3.1.12 pairs all score 1.0 (TPR 1.0); 41,103 within-build gated
+negative pairs, hardest non-identical negative 0.9829 → threshold 0.9830
+(cap rule < 1.0), FPR 0.0 on non-identical negatives; the only false
+positives are 197 exact-duplicate body pairs, handled by the ambiguity rule.
+
+3.1.12→3.2.0 at 0.983: **167 unique 1:1 pairs (155 non-stub), 208 ambiguous
+pairs over 48 duplicated-signature functions, 208 unmatched 3.2.0 functions
+(173 non-stub, largest `0xfbc8` 2,932 B)**. At 0.85: 195 unique (30
+"probable"), 337 ambiguous, 150 unmatched. 9.2 % of the first-pass pair set
+sat on duplicated signatures — the §11d greedy counts overstated resolvable
+matches by ~40 %. The §11d delta vs the audit rerun is explained exactly by
+`difflib autojunk` (verified both ways).
+
+Claim status: pair memberships are now confidence-graded; no semantic claim
+rests on any pair yet. Open: 16-byte size gate may suppress true
+correspondences for large unmatched functions; the 30 "probable" pairs need
+literal/callee-multiset confirmation before use.
+
+## 13. Third wave: update transport and security bounding
+
+Delegated evidence: `delegated/vdm/` (SPEC.md), `delegated/security/`
+(hash_test.py/.log, field_matrix, crypto_scan). Lead independently
+reproduced the load-bearing claims (marked below); the flagged image/payload
+offset convention: **the flat base0 images equal `payload[0x180:]`** — the
+384-byte C99 header is the payload's first 0x180 bytes (verified byte-exact
+on 3.1.8). Delegated offset tables are image-space; add 0x180 for payload
+space.
+
+### 13a. Update transport (host side OBSERVED, cable side OBSERVED)
+
+- `VDMs` is a 4CC command tag, one of many: `hpmIECSCommand` revs an
+  arbitrary 4CC and polls for `!CMD`; `hpmIECSSendVDM` appends the tag via a
+  second call. UARP uses `CFUa`/`CFUp`/`CFUs` as runtime 4CC arguments (0
+  static hits in the kext — earlier "CFUp 11x" was the false positive
+  `CPUF`). CFUa descriptors carry `_sopType` bits 31:30; the stored value is
+  **OPEN**.
+- Cable side, all three builds: a real SVDM dispatcher exists at 3.1.8
+  `0xb34c` (prologue verified by lead): SVID compare via `lsrs r0,r4,#0x10`
+  against `0x05AC` (pool `0xb59c`), structured/unstructured split on bit 15,
+  unstructured handler `0xb64c` accepting 1–5 VDOs with **no 4CC compare**.
+  Composes `0x05AC8106` (Discover Identity) at `0xc2ce` (3.1.12 `0xc344`,
+  3.2.0 `0xc4e4`). `VDMs`/`CFU`/`UARP` strings: 0 hits in all three images.
+- Reading: the update TLV transport is not visible above the 4CC-tag layer
+  in the cable images; whether CFU is consumed below the app image (PD
+  PHY/ROM) is **OPEN**. A single passive CC capture during an update would
+  settle endpoint, envelope and chunk size at once (no experiment run).
+
+### 13b. Integrity: the C99 header is a two-record hash chain (REPRODUCED)
+
+Lead re-derived all five relations byte-exactly on all three payloads:
+
+- `sha256(payload[0x180 : 0x180+lenf]) == field@0x110` and
+  `crc32(body) == field@0x108` (body = the shipped firmware image)
+- `sha256(payload[0x100 : 0x180+lenf]) == field@0x0c` (record 3 = header
+  prefix + body)
+- `sha256(payload[tail .. EOF]) == field@0x30` (record 4, the second
+  crypto-bearing module; tail = `0x13e34/0x13eb4/0x14084`)
+- `sha256(payload[0:0xa0]) == field@0xe0` (header self-hash)
+
+FIRMWARE.md §6's "header contents not recovered" is **superseded**: the
+header carries a complete SHA-256/CRC-32 hash tree over the image, record 3
+and record 4, plus its own self-hash. Unexplained remain `0xa0..0xdf`
+(64 B) and the `0x17c` trailer word.
+
+### 13c. Crypto inventory (REPRODUCED)
+
+SHA-256 (FIPS 180-4 K table + IV, twice per image) and a complete secp256r1
+parameter block (p, b, Gx, Gy, n — lead-verified byte-exact at payload
+`0x1336c` et seq. for 3.1.8) are present. No RSA, AES, secp256k1. The
+64-byte `0xa0..0xdf` field is range-valid as an ECDSA (r,s) but not
+on-curve: the embedded-public-key reading is **REFUTED**; its role is
+**OPEN**. The crypto block sits outside the analysed function set
+(uncovered island) — enclosing function unidentified.
+
+### 13d. Anti-rollback and update path
+
+- No version-threshold constant or `cmp.w` exists in any image; at 46–56 %
+  coverage "no anti-rollback" is **NOT claimed** — **OPEN**, byte-granular
+  or register-register compares are indistinguishable statically.
+- `0xd904` (3.1.8; `0xd984`/`0xdb40` successors) is a table-driven flash
+  programmer: 18 address/value records, 256-B transfer splits, command +
+  3-byte-address writes to `0x40070240` with per-byte status polling
+  (`&0x1f <= 0xe`), erase commands `0x20/0x52/0xD8` at 4 kB alignment,
+  guarded to address `< 0x40000`. No hashing or compare inside it; integrity
+  enforcement therefore lives elsewhere (the hash chain of §13b is the
+  candidate, but nothing OBSERVED wires them together yet).
+
+## 14. Fourth wave: per-pair semantic diff and reset handling
+
+Delegated evidence: `delegated/semantics/`, `delegated/resetmap/`. Lead
+spot-verifications marked.
+
+### 14a. 3.1.12 → 3.2.0 pair classes (155 non-stub calibrated 1:1 pairs)
+
+- 147/155 (94.8 %) show a decoded instruction-level difference; 124 (80 %)
+  are identical once branch/call displacements are masked (relink signature);
+  31 (20 %) substantive: field-offset changes 14+6 combined, immediate
+  changes 2+2, register 2, sequence edits 2, signedness 1, indexed-vs-fixed
+  load 1, reordering 1, size change 1 (decoder desync excluded).
+- Displacement deltas are uniform within a pair (18/20), clustered at
+  −2/−4/+0x20/+7 — layout change, not isolated edits.
+- Headline (lead-verified at instruction level): `0xa018 → 0xa020`,
+  s = 1.0 in the matcher, yet `ble` → `bls` and `bgt` → `bhi` after
+  `cmp r4,r0`: a signed→unsigned comparison change. **Matcher caveat
+  (OBSERVED):** `canon()` collapses every conditional branch to `cbr`, so
+  condition-signature changes are invisible to the calibrated matcher by
+  construction; they must come from the decode pass. Raw-word literal
+  multiset checks are **REFUTED as a validator** (5 flagged pairs are packed
+  Thumb instructions, not literals).
+- The `0x1df0` tail diff is a decoder desync (re-verified from 0x1e74) and
+  is excluded.
+
+### 14b. Soft_Reset and escalation
+
+- Premise corrected: `0xb154` (3.1.8; `0xb1a8` in 3.1.12) is the **default
+  arm** taken by 8 of the 14 types (11, 13, 14, 15, 16, 17, 20, 21),
+  including Soft_Reset (13). Body: rebuild + install a 28-byte source-cap
+  buffer at `0x200002b0+0x268`, `port+0x45 := 0x10`, keyed
+  `(port<<8)|9` timer lookup, event word update. **No Accept transmit, no
+  timer arm, no CC/PHY write in the decoded body** — the spec-mandated
+  Accept reply for Soft_Reset is absent from the decoded arm.
+- Three anomalies mark the island as a foreign fragment: +8 over-pop
+  epilogue vs frame, two never-initialised stack slots stored to globals,
+  and **even table entries consumed by `mov pc,r0`** — on v7-M an even value
+  in `mov pc` requests ARM state, which would fault. The 3.1.x dispatcher
+  island is very likely a stale/dead copy (previously OPEN, now INFERRED
+  with this evidence); the live dispatcher, if any, is elsewhere.
+- Soft→hard escalation: **OPEN** (bounded negative: timer machinery
+  `0x1178`/`0xa450` located; no decoded callback reaches a register write).
+- Hard-reset evidence: FSM state-name pool headed `"SPM FSM"` contains
+  `spm_host_src_hardreset` in 3.1.8 (`0x12d94`) and 3.1.12 (`0x12e14`);
+  **3.2.0 dropped it** (lead-verified: 1/1/0 hits), pool retained with 4
+  reordered states. Name liveness **OPEN** (no pointer xref to the pool).
+
+### 14c. 3.2.0 switch semantics
+
+- The three unmatched 3.2.0 switches are arg- or struct-indexed with distinct
+  shapes; "the 3.1.x dispatcher split into control+data switches" is **not
+  supported** by the spans (two start at 2, one crosses the 15/16 boundary).
+  Three layer-distinct handlers fits the evidence better. All four entries
+  are pointer-reached (no BL caller).
+- Out-of-table cases in 3.1.x (INFERRED): 2 = timer arm+release; 3 = mask
+  clears + timer arm; 0x28 = one-shot latch + state 2 + timer; 0x3d =
+  `0x31a0(1,0x29)` state 41; 0x41 = memset of `0x20001a10+0x28` (0x2c B) +
+  state 0x1e then the second-stage switch. 0x28/0x3d/0x41 exceed the PD type
+  range → device-specific control codes.

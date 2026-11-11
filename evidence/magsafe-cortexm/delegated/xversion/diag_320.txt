@@ -1,0 +1,87 @@
+seed 0x10 | unit=data: len=4 | inFunc=- | refsTo=0x0(EXTERNAL)  | disasm=FAILED
+seed 0x267a | unit=instruction:mov pc,r0 | inFunc=FUN_000021a0@0x21a0 | refsTo=NONE | disasm=OK:mov pc,r0
+seed 0x2b24 | unit=instruction:bhi 0x00002b62 | inFunc=FUN_00002a5c@0x2a5c | refsTo=0x2680(DATA) 0x2694(DATA) 0x267a(COMPUTED_JUMP)  | disasm=OK:bhi 0x00002b62
+seed 0x2c0c | unit=instruction:adds r2,#0x3e | inFunc=FUN_00002bec@0x2bec | refsTo=0x267c(DATA) 0x267a(COMPUTED_JUMP)  | disasm=OK:adds r2,#0x3e
+seed 0x2c14 | unit=instruction:lsls r0,r3,#0x3 | inFunc=FUN_00002bec@0x2bec | refsTo=0x26a0(DATA) 0x267a(COMPUTED_JUMP)  | disasm=OK:lsls r0,r3,#0x3
+seed 0x2c24 | unit=instruction:beq 0x00002ce8 | inFunc=FUN_00002bec@0x2bec | refsTo=0x2684(DATA) 0x2688(DATA) 0x268c(DATA) 0x2690(DATA) ... | disasm=OK:beq 0x00002ce8
+seed 0x3700 | unit=instruction:mov pc,r0 | inFunc=FUN_000036ec@0x36ec | refsTo=NONE | disasm=OK:mov pc,r0
+seed 0x38cc | unit=data: len=1 | inFunc=- | refsTo=NONE | disasm=OK:mov pc,r0
+seed 0x3ba0 | unit=instruction:movs r1,#0x1 | inFunc=FUN_000036ec@0x36ec | refsTo=0x3704(DATA) 0x3700(COMPUTED_JUMP)  | disasm=OK:movs r1,#0x1
+seed 0x3bae | unit=instruction:movs r0,#0xe2 | inFunc=FUN_000036ec@0x36ec | refsTo=0x3708(DATA) 0x3700(COMPUTED_JUMP)  | disasm=OK:movs r0,#0xe2
+seed 0x3bb2 | unit=instruction:cmp r0,#0x0 | inFunc=FUN_000036ec@0x36ec | refsTo=0x3714(DATA) 0x3700(COMPUTED_JUMP)  | disasm=OK:cmp r0,#0x0
+seed 0x3c20 | unit=data: len=2 | inFunc=- | refsTo=0x371c(DATA) 0x3700(COMPUTED_JUMP)  | disasm=FAILED
+seed 0x3d24 | unit=instruction:ldc2 p0,cr14,[r1],{0xe1} | inFunc=- | refsTo=0x370c(DATA) 0x3710(DATA) 0x3718(DATA) 0x3700(COMPUTED_JUMP)  | disasm=OK:ldc2 p0,cr14,[r1],{0xe1}
+seed 0x3d74 | unit=instruction:movs r5,#0x0 | inFunc=FUN_00003be8@0x3be8 | refsTo=NONE | disasm=OK:movs r5,#0x0
+seed 0x3dec | unit=instruction:str r1,[sp,#0x14] | inFunc=FUN_00003be8@0x3be8 | refsTo=NONE | disasm=OK:str r1,[sp,#0x14]
+seed 0x3dfc | unit=instruction:lsrs r0,r2 | inFunc=FUN_00003be8@0x3be8 | refsTo=NONE | disasm=OK:lsrs r0,r2
+seed 0x3e04 | unit=instruction:lsrs r7,r0,#0x1e | inFunc=FUN_00003be8@0x3be8 | refsTo=NONE | disasm=OK:lsrs r7,r0,#0x1e
+seed 0x3e0e | unit=instruction:cmp r7,#0x0 | inFunc=FUN_00003be8@0x3be8 | refsTo=NONE | disasm=OK:cmp r7,#0x0
+seed 0x3ef8 | unit=instruction:movs r1,#0x0 | inFunc=FUN_00003be8@0x3be8 | refsTo=NONE | disasm=OK:movs r1,#0x0
+seed 0x4218 | unit=instruction:mov pc,r0 | inFunc=- | refsTo=NONE | disasm=OK:mov pc,r0
+seed 0x4594 | unit=data: len=1 | inFunc=- | refsTo=NONE | disasm=OK:mov pc,r0
+seed 0x46b8 | unit=instruction:stc2l p13,cr11,[r3,#-0x40] | inFunc=- | refsTo=0x4224(DATA) 0x4228(DATA) 0x422c(DATA) 0x4218(COMPUTED_JUMP)  | disasm=OK:stc2l p13,cr11,[r3,#-0x40]
+seed 0x46c0 | unit=instruction:blx r1 | inFunc=- | refsTo=0x421c(DATA) 0x4218(COMPUTED_JUMP)  | disasm=OK:blx r1
+seed 0x46fa | unit=instruction:movs r1,#0x23 | inFunc=- | refsTo=0x4220(DATA) 0x4218(COMPUTED_JUMP)  | disasm=OK:movs r1,#0x23
+seed 0x4726 | unit=instruction:mov r0,r4 | inFunc=- | refsTo=0x4230(DATA) 0x4218(COMPUTED_JUMP)  | disasm=OK:mov r0,r4
+seed 0x474a | unit=instruction:blx r2 | inFunc=- | refsTo=0x4234(DATA) 0x4218(COMPUTED_JUMP)  | disasm=OK:blx r2
+seed 0x4a34 | unit=instruction:ldr r1,[0x00004a8c] | inFunc=- | refsTo=0x4598(DATA)  | disasm=OK:ldr r1,[0x00004a8c]
+seed 0x4a52 | unit=instruction:mov r0,r4 | inFunc=- | refsTo=0x459c(DATA)  | disasm=OK:mov r0,r4
+seed 0x4a8a | unit=instruction:movs r0,#0x0 | inFunc=- | refsTo=0x45a0(DATA)  | disasm=OK:movs r0,#0x0
+seed 0x4a8e | unit=instruction:movs r0,#0x0 | inFunc=- | refsTo=0x45a4(DATA)  | disasm=OK:movs r0,#0x0
+seed 0x4a92 | unit=instruction:mov r4,r0 | inFunc=- | refsTo=0x45a8(DATA)  | disasm=OK:mov r4,r0
+seed 0x4aa6 | unit=instruction:lsls r3,r0,#0xc | inFunc=- | refsTo=0x45b0(DATA)  | disasm=OK:lsls r3,r0,#0xc
+seed 0x4aca | unit=instruction:movs r2,#0x6 | inFunc=- | refsTo=0x45ac(DATA)  | disasm=OK:movs r2,#0x6
+seed 0x4b92 | unit=data: len=1 | inFunc=- | refsTo=NONE | disasm=OK:mov pc,r1
+seed 0x4ee2 | unit=data: len=1 | inFunc=- | refsTo=NONE | disasm=OK:mov pc,r2
+seed 0x5034 | unit=instruction:bl 0x00003258 | inFunc=- | refsTo=0x4b94(DATA)  | disasm=OK:bl 0x00003258
+seed 0x5076 | unit=instruction:str r6,[r5,#0x64] | inFunc=- | refsTo=0x4ba4(DATA)  | disasm=OK:str r6,[r5,#0x64]
+seed 0x50ae | unit=instruction:muls r0,r7 | inFunc=- | refsTo=0x4bac(DATA)  | disasm=OK:muls r0,r7
+seed 0x50d0 | unit=instruction:ldrb r3,[r0,#0x1] | inFunc=- | refsTo=0x4bb0(DATA)  | disasm=OK:ldrb r3,[r0,#0x1]
+seed 0x5166 | unit=data: len=1 | inFunc=- | refsTo=NONE | disasm=OK:mov pc,r0
+seed 0x53ac | unit=instruction:movs r0,#0x2f | inFunc=- | refsTo=0x4ef8(DATA) 0x4efc(DATA)  | disasm=OK:movs r0,#0x2f
+seed 0x5504 | unit=instruction:movs r0,#0x73 | inFunc=- | refsTo=0x4f00(DATA) 0x4f04(DATA)  | disasm=OK:movs r0,#0x73
+seed 0x550a | unit=instruction:ldr r1,[0x000055ec] | inFunc=- | refsTo=0x4ee4(DATA)  | disasm=OK:ldr r1,[0x000055ec]
+seed 0x551a | unit=instruction:blx r3 | inFunc=- | refsTo=0x4ee8(DATA)  | disasm=OK:blx r3
+seed 0x552c | unit=instruction:cdp2 p0,0x9,cr14,cr5,cr9,0x1 | inFunc=- | refsTo=0x4ef0(DATA)  | disasm=OK:cdp2 p0,0x9,cr14,cr5,cr9,0x1
+seed 0x553c | unit=instruction:mov r7,r2 | inFunc=- | refsTo=0x4f18(DATA)  | disasm=OK:mov r7,r2
+seed 0x5542 | unit=instruction:cmp r0,#0x0 | inFunc=- | refsTo=0x4f1c(DATA)  | disasm=OK:cmp r0,#0x0
+seed 0x554a | unit=instruction:str r1,[sp,#0x8] | inFunc=- | refsTo=0x4eec(DATA) 0x4ef4(DATA) 0x4f08(DATA) 0x4f0c(DATA) ... | disasm=OK:str r1,[sp,#0x8]
+seed 0x5574 | unit=instruction:mov r0,r4 | inFunc=- | refsTo=0x4b98(DATA) 0x4b9c(DATA) 0x4ba0(DATA) 0x4ba8(DATA) ... | disasm=OK:mov r0,r4
+seed 0x561c | unit=instruction:pop {r2,r3,r7,pc} | inFunc=- | refsTo=0x516c(DATA)  | disasm=OK:pop {r2,r3,r7,pc}
+seed 0x56a2 | unit=instruction:ldrb r0,[r0,#0x4] | inFunc=- | refsTo=0x5168(DATA)  | disasm=OK:ldrb r0,[r0,#0x4]
+seed 0x56da | unit=instruction:bpl 0x0000579a | inFunc=- | refsTo=0x5170(DATA)  | disasm=OK:bpl 0x0000579a
+seed 0x56ee | unit=instruction:ldrb r0,[r0,r3] | inFunc=- | refsTo=0x5174(DATA)  | disasm=OK:ldrb r0,[r0,r3]
+seed 0x5704 | unit=instruction:mov r0,r4 | inFunc=- | refsTo=0x517c(DATA) 0x5184(DATA) 0x5188(DATA) 0x5190(DATA) ... | disasm=OK:mov r0,r4
+seed 0x5710 | unit=instruction:movs r1,#0xc | inFunc=- | refsTo=0x5178(DATA)  | disasm=OK:movs r1,#0xc
+seed 0x5752 | unit=instruction:bl 0x00005b5c | inFunc=- | refsTo=0x5180(DATA)  | disasm=OK:bl 0x00005b5c
+seed 0x576a | unit=instruction:movs r2,#0x0 | inFunc=- | refsTo=0x518c(DATA)  | disasm=OK:movs r2,#0x0
+seed 0x57c8 | unit=instruction:beq 0x00005822 | inFunc=- | refsTo=0x5198(DATA)  | disasm=OK:beq 0x00005822
+seed 0x590e | unit=instruction:mov pc,r0 | inFunc=- | refsTo=NONE | disasm=OK:mov pc,r0
+seed 0x5dac | unit=instruction:cmp r6,#0x6 | inFunc=FUN_00005d88@0x5d88 | refsTo=NONE | disasm=OK:cmp r6,#0x6
+seed 0x5dd4 | unit=instruction:ldrh r1,[r5,#0x8] | inFunc=FUN_00005d88@0x5d88 | refsTo=0x5dd0(CONDITIONAL_JUMP) 0x5910(DATA)  | disasm=OK:ldrh r1,[r5,#0x8]
+seed 0x5e0c | unit=instruction:strb r0,[r3,r1] | inFunc=FUN_00005d88@0x5d88 | refsTo=NONE | disasm=OK:strb r0,[r3,r1]
+seed 0x5e56 | unit=instruction:lsrs r1,r1,#0x1c | inFunc=FUN_00005d88@0x5d88 | refsTo=NONE | disasm=OK:lsrs r1,r1,#0x1c
+seed 0x5e5c | unit=instruction:adds r0,#0x22 | inFunc=FUN_00005d88@0x5d88 | refsTo=0x5e58(CONDITIONAL_JUMP) 0x5914(DATA)  | disasm=OK:adds r0,#0x22
+seed 0xe416 | unit=instruction:mov pc,r5 | inFunc=FUN_0000e388@0xe388 | refsTo=NONE | disasm=OK:mov pc,r5
+seed 0xe940 | unit=instruction:lsls r7,r6,#0x7 | inFunc=- | refsTo=0xe49c(DATA) 0xe4a0(DATA) 0xe4a4(DATA) 0xe4a8(DATA)  | disasm=OK:lsls r7,r6,#0x7
+seed 0xe97a | unit=data: len=1 | inFunc=- | refsTo=0xe454(DATA) 0xe484(DATA)  | disasm=OK:movs r0,#0x0
+seed 0xe9a0 | unit=data: len=1 | inFunc=- | refsTo=0xe470(DATA)  | disasm=FAILED
+seed 0xe9be | unit=instruction:cmp r6,#0x4 | inFunc=- | refsTo=0xe4b0(DATA)  | disasm=OK:cmp r6,#0x4
+seed 0xe9d0 | unit=instruction:bl 0x00000170 | inFunc=- | refsTo=0xe420(DATA)  | disasm=OK:bl 0x00000170
+seed 0xea1e | unit=instruction:b 0x0000eca0 | inFunc=- | refsTo=0xe444(DATA)  | disasm=OK:b 0x0000eca0
+seed 0xea48 | unit=instruction:movs r0,#0x7f | inFunc=- | refsTo=0xe46c(DATA)  | disasm=OK:movs r0,#0x7f
+seed 0xea64 | unit=instruction:beq 0x0000eb2e | inFunc=- | refsTo=0xe4b8(DATA)  | disasm=OK:beq 0x0000eb2e
+seed 0xea80 | unit=data: len=1 | inFunc=- | refsTo=0xe418(DATA)  | disasm=OK:str r0,[sp,#0x4]
+seed 0xeaa4 | unit=instruction:mov r4,r0 | inFunc=- | refsTo=0xe41c(DATA)  | disasm=OK:mov r4,r0
+seed 0xeac4 | unit=instruction:adds r0,r1,r0 | inFunc=- | refsTo=0xe44c(DATA)  | disasm=OK:adds r0,r1,r0
+seed 0xeae4 | unit=instruction:ldr r2,[0x0000ed80] | inFunc=- | refsTo=0xe468(DATA)  | disasm=OK:ldr r2,[0x0000ed80]
+seed 0xeb00 | unit=instruction:subs r2,r4,r3 | inFunc=- | refsTo=0xe4b4(DATA)  | disasm=OK:subs r2,r4,r3
+seed 0xeb4a | unit=instruction:vmlal.u32 q1,d2,d0 | inFunc=- | refsTo=0xe438(DATA)  | disasm=OK:vmlal.u32 q1,d2,d0
+seed 0xeb74 | unit=instruction:blx r3 | inFunc=- | refsTo=0xe440(DATA)  | disasm=OK:blx r3
+seed 0xeb88 | unit=instruction:ldr r0,[sp,#0x14] | inFunc=- | refsTo=0xe450(DATA) 0xeb10(CONDITIONAL_JUMP) 0xeb78(CONDITIONAL_JUMP)  | disasm=OK:ldr r0,[sp,#0x14]
+seed 0xeba4 | unit=instruction:movs r0,#0x30 | inFunc=- | refsTo=0xe488(DATA)  | disasm=OK:movs r0,#0x30
+seed 0xebca | unit=instruction:ldr r2,[sp,#0x14] | inFunc=- | refsTo=0xe498(DATA)  | disasm=OK:ldr r2,[sp,#0x14]
+seed 0xec36 | unit=instruction:cmp r1,r0 | inFunc=- | refsTo=0xe4ac(DATA)  | disasm=OK:cmp r1,r0
+seed 0xf0be | unit=instruction:mov r3,r1 | inFunc=- | refsTo=0xe448(DATA)  | disasm=OK:mov r3,r1
+seed 0xf120 | unit=instruction:bmi 0x0000f066 | inFunc=- | refsTo=0xe424(DATA) 0xe428(DATA) 0xe42c(DATA) 0xe430(DATA) ... | disasm=OK:bmi 0x0000f066
+seed 0xf5b8 | unit=instruction:muls r2,r1 | inFunc=- | refsTo=NONE | disasm=OK:muls r2,r1

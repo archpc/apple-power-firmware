@@ -212,3 +212,12 @@ something we have not yet identified.
   constant data and not a handler. Which code executes first is **OPEN**.
 - The region addressed by the Apple SVID literal sites is **UNVERIFIED** as a UVDM
   builder; the identification is a subagent claim that was not re-derived.
+
+---
+
+**UPDATE (2026-11-11, superseded):** the §6 statement that the C99 header
+contents were "not recovered" is no longer true. The header is a two-record
+SHA-256/CRC-32 hash chain over the payload (body, record 3, record 4, and a
+header self-hash); see `DIFF.md` §13b and `evidence/magsafe-cortexm/delegated/security/`.
+Also: the flat base0 images equal `payload[0x180:]` — the header is stripped
+in the extracted images, not absent from the asset.
