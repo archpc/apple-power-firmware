@@ -1,0 +1,265 @@
+{
+ "318_outer": {
+  "entry": "0xa9bc",
+  "guard": "subs r0,#9; cmp r0,#0xd",
+  "index": "r1 (arg2)",
+  "span": [
+   9,
+   22
+  ],
+  "table": "0xa9d8",
+  "words": [
+   "0xaed0",
+   "0xae90",
+   "0xb154",
+   "0xaf08",
+   "0xb154",
+   "0xb154",
+   "0xb154",
+   "0xb154",
+   "0xb154",
+   "0xae90",
+   "0xaf50",
+   "0xb154",
+   "0xb154",
+   "0xaf72"
+  ],
+  "uniq": 6,
+  "after": "0xd0002c01"
+ },
+ "3112_outer": {
+  "entry": "0xaa10",
+  "guard": "subs r0,#9; cmp r0,#0xd",
+  "index": "r1 (arg2)",
+  "span": [
+   9,
+   22
+  ],
+  "table": "0xaa2c",
+  "words": [
+   "0xaf24",
+   "0xaee4",
+   "0xb1a8",
+   "0xaf5c",
+   "0xb1a8",
+   "0xb1a8",
+   "0xb1a8",
+   "0xb1a8",
+   "0xb1a8",
+   "0xaee4",
+   "0xafa4",
+   "0xb1a8",
+   "0xb1a8",
+   "0xafc6"
+  ],
+  "uniq": 6,
+  "after": "0xd0002c01"
+ },
+ "318_inner": {
+  "site": "0xad2a",
+  "guard": "subs r3,#8; cmp r3,#0x10",
+  "index": "r3<-r2",
+  "span": [
+   8,
+   24
+  ],
+  "table": "0xad3c (byte)",
+  "words": [
+   "0x08",
+   "0x6c",
+   "0x6c",
+   "0x6c",
+   "0x6c",
+   "0x6c",
+   "0x6c",
+   "0x6c",
+   "0x6c",
+   "0xa6",
+   "0xaf",
+   "0x6c",
+   "0x6c",
+   "0x45",
+   "0xb8",
+   "0xc1",
+   "0xcb"
+  ],
+  "targets": [
+   "0xad4e",
+   "0xae16",
+   "0xae16",
+   "0xae16",
+   "0xae16",
+   "0xae16",
+   "0xae16",
+   "0xae16",
+   "0xae16",
+   "0xae8a",
+   "0xae9c",
+   "0xae16",
+   "0xae16",
+   "0xadc8",
+   "0xaeae",
+   "0xaec0",
+   "0xaed4"
+  ],
+  "uniq": 8
+ },
+ "3112_inner": {
+  "site": "0xad7e",
+  "guard": "subs r3,#8; cmp r3,#0x10",
+  "index": "r3<-r2",
+  "span": [
+   8,
+   24
+  ],
+  "table": "0xad90 (byte)",
+  "words": [
+   "0x08",
+   "0x6c",
+   "0x6c",
+   "0x6c",
+   "0x6c",
+   "0x6c",
+   "0x6c",
+   "0x6c",
+   "0x6c",
+   "0xa6",
+   "0xaf",
+   "0x6c",
+   "0x6c",
+   "0x45",
+   "0xb8",
+   "0xc1",
+   "0xcb"
+  ],
+  "uniq": 8
+ },
+ "320_x1": {
+  "site": "0xab64",
+  "guard": "subs r3,#8; cmp r3,#0x10",
+  "index": "r3<-r2",
+  "span": [
+   8,
+   24
+  ],
+  "table": "0xab78 (halfword)",
+  "words": [
+   "0x10",
+   "0x1e5",
+   "0x1e5",
+   "0x1e5",
+   "0x1e5",
+   "0x1e5",
+   "0x1e5",
+   "0x1e5",
+   "0x1e5",
+   "0x220",
+   "0x22a",
+   "0x1e5",
+   "0x1e5",
+   "0x1c0",
+   "0x234",
+   "0x23e",
+   "0x249"
+  ],
+  "targets": [
+   "0xab9a",
+   "0xaf44",
+   "0xaf44",
+   "0xaf44",
+   "0xaf44",
+   "0xaf44",
+   "0xaf44",
+   "0xaf44",
+   "0xaf44",
+   "0xafba",
+   "0xafce",
+   "0xaf44",
+   "0xaf44",
+   "0xaefa",
+   "0xafe2",
+   "0xaff6",
+   "0xb00c"
+  ],
+  "uniq": 8
+ },
+ "320_4b78": {
+  "entry": "0x4b78",
+  "guard": "subs r0,r1,#2; cmp r0,#7",
+  "index": "r1 (arg2)",
+  "span": [
+   2,
+   9
+  ],
+  "table": "0x4b94",
+  "words": [
+   "0x5034",
+   "0x5574",
+   "0x5574",
+   "0x5574",
+   "0x5076",
+   "0x5574",
+   "0x50ae",
+   "0x50d0"
+  ],
+  "uniq": 5,
+  "after": "0x00892173"
+ },
+ "320_50fc": {
+  "entry": "0x50fc",
+  "sit\u0435": "0x5158",
+  "guard": "subs r0,r1,#2; cmp r0,#0xc",
+  "index": "r1 (arg2)",
+  "span": [
+   2,
+   14
+  ],
+  "table": "0x5168",
+  "words": [
+   "0x56a2",
+   "0x561c",
+   "0x56da",
+   "0x56ee",
+   "0x5710",
+   "0x5704",
+   "0x5752",
+   "0x5704",
+   "0x5704",
+   "0x576a",
+   "0x5704",
+   "0x5704",
+   "0x57c8"
+  ],
+  "uniq": 9,
+  "after": "0x2e03461f"
+ },
+ "320_4eca": {
+  "entry": "0x4eca",
+  "guard": "subs r1,r0,#3; cmp r1,#0xe",
+  "index": "r0 (arg1) -> [r0][1]",
+  "span": [
+   3,
+   17
+  ],
+  "table": "0x4ee4",
+  "words": [
+   "0x550a",
+   "0x551a",
+   "0x554a",
+   "0x552c",
+   "0x554a",
+   "0x53ac",
+   "0x53ac",
+   "0x5504",
+   "0x5504",
+   "0x554a",
+   "0x554a",
+   "0x554a",
+   "0x554a",
+   "0x553c",
+   "0x5542"
+  ],
+  "uniq": 8,
+  "after": "0x200002a8 (literal of 0x4b78)"
+ }
+}

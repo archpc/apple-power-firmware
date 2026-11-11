@@ -386,3 +386,83 @@ like the dispatcher island, statically unreachable. Roughly 22.7 kB of the
 image (27 %) contains coherent `push {…,lr}` bodies outside the analysed
 function set; 4.4 kB are strings. Reachability of these islands is **OPEN**
 and bounds every claim in §11.
+
+## 12. Second investigation wave (liveness, successor, calibrated matcher)
+
+Delegated evidence: `delegated/liveness.md`, `delegated/successor.md`,
+`delegated/matcher.md` (+ scripts/results alongside). Independent spot-checks
+by the lead are marked below.
+
+### 12a. Liveness of the islands (3.1.8)
+
+- Base+delta relocation pattern: **REFUTED** by exhaustive word-pair scan
+  (`delta_scan.py`): zero co-located pairs whose difference equals any island
+  entry; zero anchored hits.
+- The callback mechanism exists and is used by reachable code: `0x1d00`
+  installs a 13-entry vtable (`0x13a2c`) at `port_obj+0x60`; 47 reachable
+  `ldr [rY,#0x60] → blx` sites all dispatch on `0x200002b0 + port*0x1cc`;
+  the vtable image words are all zero, i.e. runtime-filled. The islands are
+  never installed or called through this mechanism in-image.
+- The `"NVM0"` block at `0x10f4c` is a flat descriptor (masks + MMIO run +
+  3 odd code points), referenced only by the vector words at 0x4/0x8/0xc and
+  one literal inside the island itself (`0x12978`); `0xe000ed08` (VTOR) is
+  absent from the image, and the startup at `0x10` (90 instructions decoded)
+  never reads it.
+- Verdict per island: **no evidence of static reachability**; dead/stale-copy
+  not refuted (3.1.12 retains a counterpart). One positive internal link: the
+  large island calls `0x10` (`0x12960 bl 0x10`).
+- **Correction of a delegated "correction"**: the claim that `0xaf76`'s
+  stored `r1` is the containing function's argument is true only for a direct
+  call entering at `0xaf54`. On the table path the dispatcher jumps
+  `mov pc,r0` from `0xa9d6` straight into `0xaf72`, no prologue runs, and
+  `r1` is still the table base `0xa9d8` set at `0xa9d2` — the §11b reading
+  stands for that path. Both entries of `0xaf54` are now on record; which
+  runs is **OPEN** (liveness).
+- Environment note: Ghidra 12.1.4 remains installed at the canonical path;
+  the subagent's "no longer installed" report was an environment artifact.
+
+### 12b. 3.2.0 switch landscape and the successor question
+
+- The three inventoried switches (`0x4b78`, `0x50fc`, `0x4eca`) are decoded
+  and boundary-checked; none matches the 3.1.x dispatcher on index register,
+  grouping shape or callee set (callee overlap 1/19, 1/20, 1/12; LCS ≈ 2%).
+- Two further dispatch sites exist in uncovered 3.2.0 code (`0xa958`,
+  `0xab64`); the landscape was incomplete.
+- **The 3.1.x dispatcher's second-stage switch has a verified successor**:
+  `0xad2a` (3.1.8) / `0xad7e` (3.1.12) / `0xab64` (3.2.0) share the identical
+  guard `mov r3,r2; subs r3,#8; cmp r3,#0x10; bls` (lead-verified in all
+  three images), identical index chain and `add pc` table fetch, 17 cases
+  (span 8–24) in 3.2.0 vs a 17-byte byte-table in 3.1.x — same grouping
+  (1,8,1,1,2,1,1,1,1; 10/17 dominant), non-dominant offsets growing
+  monotonically. The only structural change is the index width
+  (`ldrb` → `ldrh` halfword table). **INFERRED, high confidence.**
+- The 14-case outer table has no 3.2.0 counterpart on current evidence:
+  **OPEN** whether its function was removed, renamed beyond recognition, or
+  lives in an uncovered island.
+- SVID-literal anchoring is a **negative** cross-check: the pair builder
+  tracks `0xc2b8 → 0xc30c → 0xc4ac`, but the 3.1.x dispatcher never calls
+  into the SVID region, so the literals cannot arbitrate the successor
+  question.
+
+### 12c. Calibrated matcher (§2 gate satisfied)
+
+`match_calibrated.py` fixes both recorded failure modes: mnemonics come from
+Ghidra body ranges (hard-fail on empty sequences) and calibration draws
+hard negatives from WITHIN each build. Calibration: 352 known-true
+3.1.8→3.1.12 pairs all score 1.0 (TPR 1.0); 41,103 within-build gated
+negative pairs, hardest non-identical negative 0.9829 → threshold 0.9830
+(cap rule < 1.0), FPR 0.0 on non-identical negatives; the only false
+positives are 197 exact-duplicate body pairs, handled by the ambiguity rule.
+
+3.1.12→3.2.0 at 0.983: **167 unique 1:1 pairs (155 non-stub), 208 ambiguous
+pairs over 48 duplicated-signature functions, 208 unmatched 3.2.0 functions
+(173 non-stub, largest `0xfbc8` 2,932 B)**. At 0.85: 195 unique (30
+"probable"), 337 ambiguous, 150 unmatched. 9.2 % of the first-pass pair set
+sat on duplicated signatures — the §11d greedy counts overstated resolvable
+matches by ~40 %. The §11d delta vs the audit rerun is explained exactly by
+`difflib autojunk` (verified both ways).
+
+Claim status: pair memberships are now confidence-graded; no semantic claim
+rests on any pair yet. Open: 16-byte size gate may suppress true
+correspondences for large unmatched functions; the 30 "probable" pairs need
+literal/callee-multiset confirmation before use.
