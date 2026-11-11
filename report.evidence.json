@@ -185,7 +185,7 @@
     {
      "type": "record",
      "path": "REPORT.md",
-     "quote": "e. - The meaning of the one changed Apple vendor constant (`0x05AC0002` \u2192 `0x05AC0000`) and of the two new control-message dispatc"
+     "quote": "e. - The meaning of the one changed Apple vendor constant (`0x05AC0002` \u2192 `0x05AC0000`) and of the two candidate tables of 15 and"
     },
     {
      "type": "record",
@@ -545,6 +545,79 @@
     }
    ],
    "open_reason": "unsettled on available evidence; see DIFF.md limitations"
+  },
+  {
+   "id": "C23",
+   "kind": "open",
+   "statement": "The entry-point question is OPEN: offset 0x10 is the empirical start, not a proven entry, and 0x1111c holds peripheral addresses.",
+   "where": "REPORT.md",
+   "refs": [
+    {
+     "type": "record",
+     "path": "FIRMWARE.md",
+     "quote": "Which code executes first"
+    },
+    {
+     "type": "record",
+     "path": "REPORT.md",
+     "quote": "the entry-point question"
+    }
+   ],
+   "open_reason": "unsettled on available evidence; see DIFF.md limitations"
+  },
+  {
+   "id": "C24",
+   "kind": "observed",
+   "statement": "The 140 W control image does not corroborate a base-zero layout for the MagSafe images.",
+   "where": "REPORT.md",
+   "refs": [
+    {
+     "type": "record",
+     "path": "FIRMWARE.md",
+     "quote": ", `0x0000ec71`, `0x0000ec71`, code at `0x10`. **It does not corroborate the base-0 reading.** That image's payload length is `0xea00`, and `0x"
+    },
+    {
+     "type": "record",
+     "path": "REPORT.md",
+     "quote": "o mapping for that image without ruling out other bases. It does not corroborate the base-zero reading, and this report does not use it as s"
+    }
+   ]
+  },
+  {
+   "id": "C25",
+   "kind": "observed",
+   "statement": "The three firmware objects are not equally established: the adapter value is host-reported only, and the cable version is a single in-file source consistent with register 0x49.",
+   "where": "REPORT.md",
+   "refs": [
+    {
+     "type": "record",
+     "path": "FIRMWARE.md",
+     "quote": "ence/firmware-acquisition-notes.md`. **The 70 W adapter (fw 1030030) has no publicly obtainable firmware.** Negative result con"
+    },
+    {
+     "type": "record",
+     "path": "REPORT.md",
+     "quote": "70 W adapter | `1030030` | the brick, ID 0x701c | These are not equally established. The HPM and cable values are host-observed; the adapter's"
+    }
+   ]
+  },
+  {
+   "id": "C26",
+   "kind": "derived",
+   "statement": "3.2.0 contains 10 detected mov-pc dispatch sites, not 15.",
+   "where": "README.md",
+   "refs": [
+    {
+     "type": "record",
+     "path": "evidence/dispatcher-census.json",
+     "quote": "\", \"0xea96\", \"0xe81a\", \"0xe8d6\", \"0xe82e\", \"0xf478\" ] } ], \"3.2.0\": [ { \"site\": \"0x267a\", \"table\": \"0x267c\", \"cases\": 10, \"un"
+    },
+    {
+     "type": "record",
+     "path": "README.md",
+     "quote": "C0000`. Meaning OPEN. - **Dispatcher census** (REPRODUCED): 14 / 14 / 10 `mov pc` dispatch sites; a 14-case table present in both 3."
+    }
+   ]
   }
  ]
 }
