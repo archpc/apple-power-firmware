@@ -1,0 +1,591 @@
+{
+ "schema": "claim-inventory/1",
+ "note": "Canonical claim set for the whole project. Every entry lists each document that repeats or depends on it, with a short verbatim fragment used to locate the statement. verify_claims.py checks presence, label agreement near each occurrence, numeric agreement, negative scope, and absence of withdrawn claims from conclusions.",
+ "labels": [
+  "OBSERVED",
+  "REPRODUCED",
+  "INFERRED",
+  "UNVERIFIED",
+  "REFUTED",
+  "OPEN"
+ ],
+ "claims": [
+  {
+   "id": "C01",
+   "statement": "The charger negotiates 20 V at 3.390 A (67.80 W) on the MagSafe port.",
+   "label": "OBSERVED",
+   "primary": {
+    "path": "evidence/ioaccessorymanager.txt",
+    "quote": "67800"
+   },
+   "occurrences": [
+    {
+     "doc": "REPORT.md",
+     "quote": "67.80 W"
+    },
+    {
+     "doc": "HARDWARE.md",
+     "quote": "67.80 W"
+    },
+    {
+     "doc": "README.md",
+     "quote": "67.80 W"
+    },
+    {
+     "doc": "PROTOCOL.md",
+     "quote": "67.80 W"
+    }
+   ],
+   "relations": {
+    "depends_on": [
+     "C02"
+    ]
+   },
+   "disposition": "valid"
+  },
+  {
+   "id": "C02",
+   "statement": "Four HPM controllers are present at RID 0, 1, 2 and 5; RID 5 carries the MagSafe port.",
+   "label": "OBSERVED",
+   "primary": {
+    "path": "evidence/hpm-regs.json",
+    "quote": "rid"
+   },
+   "occurrences": [
+    {
+     "doc": "HARDWARE.md",
+     "quote": "RID 0, 1, 2"
+    },
+    {
+     "doc": "REPORT.md",
+     "quote": "RID 0, 1, 2"
+    }
+   ],
+   "relations": {},
+   "disposition": "valid"
+  },
+  {
+   "id": "C03",
+   "statement": "HPM controller firmware FW003.115.00, the MagSafe cable at 3.2.0 and the adapter value 1030030 are three distinct objects, not revisions of one image.",
+   "label": "OBSERVED",
+   "primary": {
+    "path": "evidence/applehpm-decompiled.md",
+    "quote": "115.00"
+   },
+   "occurrences": [
+    {
+     "doc": "HARDWARE.md",
+     "quote": "FW003.115.00"
+    },
+    {
+     "doc": "REPORT.md",
+     "quote": "FW003.115.00"
+    },
+    {
+     "doc": "README.md",
+     "quote": "1030030"
+    },
+    {
+     "doc": "FIRMWARE.md",
+     "quote": "1030030"
+    }
+   ],
+   "relations": {},
+   "disposition": "valid"
+  },
+  {
+   "id": "C04",
+   "statement": "The UARP SuperBinary container is a 44-byte header with 40-byte payload records; dataOffset plus dataLength reconciles in all four files.",
+   "label": "REPRODUCED",
+   "primary": {
+    "path": "scripts/uarp_superbinary.py",
+    "quote": "payloadDataOffset"
+   },
+   "occurrences": [
+    {
+     "doc": "README.md",
+     "quote": "44-byte"
+    }
+   ],
+   "relations": {},
+   "disposition": "valid"
+  },
+  {
+   "id": "C05",
+   "statement": "Three MagSafe 3 releases were acquired and each SHA-1 matches Apple's manifest _Measurement.",
+   "label": "OBSERVED",
+   "primary": {
+    "path": "firmware/MANIFEST.txt",
+    "quote": "uarp"
+   },
+   "occurrences": [
+    {
+     "doc": "FIRMWARE.md",
+     "quote": "_Measurement"
+    },
+    {
+     "doc": "REPORT.md",
+     "quote": "_Measurement"
+    },
+    {
+     "doc": "README.md",
+     "quote": "_Measurement"
+    }
+   ],
+   "relations": {
+    "depends_on": [
+     "C04"
+    ]
+   },
+   "disposition": "valid"
+  },
+  {
+   "id": "C06",
+   "statement": "The power-negotiation table content (5/9/15/20 V at 3.00 A) is identical in all builds while its address moves.",
+   "label": "REPRODUCED",
+   "primary": {
+    "path": "evidence/pdo-decode.txt",
+    "quote": "20.00V/3.00A"
+   },
+   "occurrences": [
+    {
+     "doc": "DIFF.md",
+     "quote": "0x13764"
+    },
+    {
+     "doc": "README.md",
+     "quote": "3.00 A"
+    },
+    {
+     "doc": "TESTING.md",
+     "quote": "3.00 A"
+    }
+   ],
+   "relations": {},
+   "numeric": [
+    "0x136E4",
+    "0x13764",
+    "0x13894"
+   ],
+   "disposition": "corrected"
+  },
+  {
+   "id": "C07",
+   "statement": "Exactly one Apple SVID literal changes across the three releases: 0x05AC0002 disappears and 0x05AC0000 gains an occurrence.",
+   "label": "OBSERVED",
+   "primary": {
+    "path": "DIFF.md",
+    "quote": "0x05AC0000"
+   },
+   "occurrences": [
+    {
+     "doc": "DIFF.md",
+     "quote": "0x05AC0002"
+    },
+    {
+     "doc": "REPORT.md",
+     "quote": "0x05AC0002"
+    },
+    {
+     "doc": "README.md",
+     "quote": "0x05AC0002"
+    }
+   ],
+   "relations": {
+    "depends_on": [
+     "C14"
+    ]
+   },
+   "disposition": "valid"
+  },
+  {
+   "id": "C08",
+   "statement": "Between 3.1.12 and 3.2.0 the compared bodies share 11 non-trivial literals, lose 7 and gain 1; 28 is present only in 3.2.0.",
+   "label": "REPRODUCED",
+   "primary": {
+    "path": "evidence/functionmatch/literal_sets.txt",
+    "quote": "only b"
+   },
+   "occurrences": [
+    {
+     "doc": "DIFF.md",
+     "quote": "(11 values)"
+    }
+   ],
+   "relations": {
+    "supersedes": "C08-prior"
+   },
+   "bans": [
+    "28 in the shared",
+    "28 shared"
+   ],
+   "disposition": "corrected"
+  },
+  {
+   "id": "C09",
+   "statement": "The vector word at 0x0001111d points to 0x1111c, which is constant data and not a reset handler.",
+   "label": "REFUTED",
+   "primary": {
+    "path": "FIRMWARE.md",
+    "quote": "0x1111c"
+   },
+   "occurrences": [
+    {
+     "doc": "FIRMWARE.md",
+     "quote": "0x1111c"
+    }
+   ],
+   "relations": {
+    "supersedes": "C09-prior"
+   },
+   "bans": [
+    "0x1111c is a reset handler",
+    "0x1111c is the reset handler"
+   ],
+   "disposition": "corrected"
+  },
+  {
+   "id": "C10",
+   "statement": "The 140 W control image's pointers 0xec89 and 0xec71 exceed its 0xea00 payload, which rules out a base-zero mapping only; a non-zero base such as 0x400 would place them inside.",
+   "label": "OBSERVED",
+   "primary": {
+    "path": "FIRMWARE.md",
+    "quote": "0xea00"
+   },
+   "occurrences": [
+    {
+     "doc": "FIRMWARE.md",
+     "quote": "0xea00"
+    }
+   ],
+   "relations": {
+    "supersedes": "C10-prior"
+   },
+   "bans": [
+    "under any base",
+    "cannot address the payload"
+   ],
+   "disposition": "corrected"
+  },
+  {
+   "id": "C11",
+   "statement": "The frame header formula (sop<<4)|ceil(bytes/4) reproduces the observed 0x21 for SOP selector 2 and a 4-byte payload; the meaning of the sop field outside the observed selector set is open.",
+   "label": "REPRODUCED",
+   "primary": {
+    "path": "PROTOCOL.md",
+    "quote": "(2 << 4) | ceil(4/4)"
+   },
+   "occurrences": [
+    {
+     "doc": "PROTOCOL.md",
+     "quote": "0x21"
+    }
+   ],
+   "relations": {},
+   "disposition": "open",
+   "bans": [
+    "yields `0x01`, **not** the observed",
+    "only `0x21` and the observed VDO count"
+   ]
+  },
+  {
+   "id": "C12",
+   "statement": "A 14-case mov-pc dispatch table with 6 unique targets and 8 of 14 cases to one target is present in both 3.1.x builds and is not detected in 3.2.0.",
+   "label": "OBSERVED",
+   "primary": {
+    "path": "evidence/dispatcher-census.json",
+    "quote": "cases"
+   },
+   "occurrences": [
+    {
+     "doc": "DIFF.md",
+     "quote": "14-case"
+    },
+    {
+     "doc": "README.md",
+     "quote": "14-case"
+    }
+   ],
+   "relations": {
+    "same_as": [
+     "C12b"
+    ]
+   },
+   "disposition": "valid"
+  },
+  {
+   "id": "C12b",
+   "statement": "The 15-case and 13-case tables in 3.2.0 are candidates only; no correspondence to the 3.1.x switch is shown.",
+   "label": "OPEN",
+   "primary": {
+    "path": "DIFF.md",
+    "quote": "0x0554A"
+   },
+   "occurrences": [
+    {
+     "doc": "DIFF.md",
+     "quote": "0x05704"
+    }
+   ],
+   "relations": {
+    "depends_on": [
+     "C12"
+    ]
+   },
+   "disposition": "open"
+  },
+  {
+   "id": "C13",
+   "statement": "Claims that 3.2.0 replaced or reorganised the dispatcher, or is a rebuild rather than a patch, are withdrawn.",
+   "label": "REFUTED",
+   "primary": {
+    "path": "DIFF.md",
+    "quote": "dispatcher disappeared"
+   },
+   "occurrences": [
+    {
+     "doc": "REPORT.md",
+     "quote": "rebuild, not patch",
+     "context": "quoting_retraction"
+    }
+   ],
+   "relations": {
+    "supersedes": [
+     "C13-prior",
+     "C15-prior"
+    ]
+   },
+   "bans": [
+    "is a rebuild, not a patch",
+    "replaced the dispatcher"
+   ],
+   "disposition": "withdrawn"
+  },
+  {
+   "id": "C14",
+   "statement": "The Apple SVID literal sites are not established as a UVDM builder; that identification remains unverified.",
+   "label": "UNVERIFIED",
+   "primary": {
+    "path": "DIFF.md",
+    "quote": "UVDM builder"
+   },
+   "occurrences": [
+    {
+     "doc": "DIFF.md",
+     "quote": "UVDM builder"
+    }
+   ],
+   "relations": {},
+   "bans": [
+    "the UVDM builder changed",
+    "not in the builder itself"
+   ],
+   "disposition": "valid"
+  },
+  {
+   "id": "C15",
+   "statement": "The 5.9 % / 73.1 % aligned-window overlap figures measure layout; the inference from them to a rewrite is refuted.",
+   "label": "REFUTED",
+   "primary": {
+    "path": "DIFF.md",
+    "quote": "5.9 %"
+   },
+   "occurrences": [
+    {
+     "doc": "DIFF.md",
+     "quote": "5.9 %"
+    },
+    {
+     "doc": "REPORT.md",
+     "quote": "5.9 %"
+    }
+   ],
+   "relations": {},
+   "bans": [
+    "therefore rewritten",
+    "proves a rewrite"
+   ],
+   "disposition": "corrected"
+  },
+  {
+   "id": "C16",
+   "statement": "Ghidra function coverage is 38.8 / 39.4 / 43.3 % of image bytes, and the switch and literal sites lie outside the analysed set.",
+   "label": "REPRODUCED",
+   "primary": {
+    "path": "scripts/coverage.py",
+    "quote": "EXPECTED"
+   },
+   "occurrences": [
+    {
+     "doc": "DIFF.md",
+     "quote": "38.8 %"
+    },
+    {
+     "doc": "REPORT.md",
+     "quote": "38.8"
+    },
+    {
+     "doc": "README.md",
+     "quote": "38.8"
+    },
+    {
+     "doc": "TESTING.md",
+     "quote": "38.8"
+    }
+   ],
+   "relations": {
+    "supersedes": "C16-prior"
+   },
+   "numeric": [
+    "38.8",
+    "39.4",
+    "43.3"
+   ],
+   "bans": [
+    "38.5",
+    "39.2 %"
+   ],
+   "disposition": "corrected"
+  },
+  {
+   "id": "C17",
+   "statement": "Hard-reset handling change is refuted: Hard_Reset has no MessageType, so a 9-22 message-type switch cannot speak to it.",
+   "label": "REFUTED",
+   "primary": {
+    "path": "DIFF.md",
+    "quote": "Hard_Reset"
+   },
+   "occurrences": [
+    {
+     "doc": "DIFF.md",
+     "quote": "Hard_Reset"
+    }
+   ],
+   "relations": {
+    "supersedes": "C17-prior"
+   },
+   "bans": [
+    "hard-reset handling changed"
+   ],
+   "disposition": "withdrawn"
+  },
+  {
+   "id": "C18",
+   "statement": "No soft-to-hard reset escalation ladder was found; the question stays open across all three images.",
+   "label": "OPEN",
+   "primary": {
+    "path": "DIFF.md",
+    "quote": "escalation"
+   },
+   "occurrences": [
+    {
+     "doc": "DIFF.md",
+     "quote": "escalation"
+    }
+   ],
+   "relations": {},
+   "disposition": "open"
+  },
+  {
+   "id": "C19",
+   "statement": "70 W adapter firmware was not found by three enumeration methods (mesu path probes, Pallas lookup with a control type, and a broad type sweep); this is a scoped negative, not proof of nonexistence.",
+   "label": "OBSERVED",
+   "primary": {
+    "path": "evidence/firmware-acquisition-notes.md",
+    "quote": "Pallas"
+   },
+   "occurrences": [
+    {
+     "doc": "FIRMWARE.md",
+     "quote": "Pallas",
+     "scope": "three"
+    },
+    {
+     "doc": "NEXT.md",
+     "quote": "Pallas"
+    },
+    {
+     "doc": "README.md",
+     "quote": "Pallas"
+    }
+   ],
+   "relations": {},
+   "disposition": "valid"
+  },
+  {
+   "id": "C20",
+   "statement": "Signature enforcement below the manifest hash, anti-rollback, and whether the Mode 7 read verb can touch flash are all open.",
+   "label": "OPEN",
+   "primary": {
+    "path": "SECURITY.md",
+    "quote": "Mode 7"
+   },
+   "occurrences": [
+    {
+     "doc": "SECURITY.md",
+     "quote": "Mode 7"
+    },
+    {
+     "doc": "REPORT.md",
+     "quote": "Mode 7"
+    },
+    {
+     "doc": "NEXT.md",
+     "quote": "Mode 7"
+    }
+   ],
+   "relations": {},
+   "disposition": "open"
+  },
+  {
+   "id": "C21",
+   "statement": "hpmdiagnose reads the full HPM register file unprivileged; access is entitlement-gated, not root-gated.",
+   "label": "OBSERVED",
+   "primary": {
+    "path": "evidence/hpmdiagnose-raw.txt",
+    "quote": "RID"
+   },
+   "occurrences": [
+    {
+     "doc": "HARDWARE.md",
+     "quote": "entitlement"
+    },
+    {
+     "doc": "SECURITY.md",
+     "quote": "entitlement"
+    },
+    {
+     "doc": "REPORT.md",
+     "quote": "entitlement"
+    }
+   ],
+   "relations": {},
+   "disposition": "valid"
+  },
+  {
+   "id": "C22",
+   "statement": "Semantic equivalence of 3.2.0 to 3.1.12 is undeterminable at the achieved coverage and is open.",
+   "label": "OPEN",
+   "primary": {
+    "path": "DIFF.md",
+    "quote": "OPEN"
+   },
+   "occurrences": [
+    {
+     "doc": "REPORT.md",
+     "quote": "semantically equivalent"
+    },
+    {
+     "doc": "DIFF.md",
+     "quote": "semantically equivalent"
+    }
+   ],
+   "relations": {
+    "depends_on": [
+     "C16"
+    ]
+   },
+   "disposition": "open"
+  }
+ ]
+}

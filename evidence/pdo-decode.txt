@@ -1,0 +1,16 @@
+== aligned 16-byte window overlap
+  3.1.8   vs 3.1.12    3774 shared   73.1% of first
+  3.1.12  vs 3.2.0      303 shared    5.9% of first
+  3.1.8   vs 3.2.0      267 shared    5.2% of first
+== Apple SVID literals (little-endian occurrences)
+  3.1.8   0x05AC8106=1  0x05AC0005=2  0x05AC0002=1  0x05AC0000=6
+  3.1.12  0x05AC8106=1  0x05AC0005=2  0x05AC0002=1  0x05AC0000=6
+  3.2.0   0x05AC8106=1  0x05AC0005=2  0x05AC0002=0  0x05AC0000=7
+== Thumb idioms
+  3.1.8   subs r0,#9=2  cmp r0,#0xd=4
+  3.1.12  subs r0,#9=2  cmp r0,#0xd=4
+  3.2.0   subs r0,#9=0  cmp r0,#0xd=3
+== fixed-PDO table (20 V / 3 A word, all copies)
+  3.1.8   @0x136E4: 5.00V/3.00A  9.00V/3.00A  15.00V/3.00A  20.00V/3.00A
+  3.1.12  @0x13764: 5.00V/3.00A  9.00V/3.00A  15.00V/3.00A  20.00V/3.00A
+  3.2.0   @0x13894: 5.00V/3.00A  9.00V/3.00A  15.00V/3.00A  20.00V/3.00A

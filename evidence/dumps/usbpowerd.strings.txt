@@ -1,0 +1,142 @@
+USBPowerDevice received an invalid service
+%@: power sink cannot increase
+resetting %@ failed
+reset %@
+destroying %@
+USBPowerDevice has not been destroyed
+%@: scheduling reset
+%@: scheduling power sink increase
+failed to initialize
+failed to create dispatch queue
+failed to create notification port
+com.apple.usb.powerSinkDevice 0x%016llx
+unexpected com.apple.iokit.matching event %s
+$HOME not set, falling back to using getpwuid
+failed to get passwd entry for uid %u
+failed to resolve user's home directory: %{darwin.errno}d
+failed to initialize temporary directory: %{darwin.errno}d
+failed to resolve temporary directory: %{darwin.errno}d
+failed to initialize cache directory: %{darwin.errno}d
+failed to resolve cache directory: %{darwin.errno}d
+Failed to enter sandbox: %{public}s
+signal %d
+terminated %@
+discovered %@
+attempting to reallocate power for %@
+no power reduction for power pool ID 0x%llx
+%@: smcPoolID 0x%016llx poolID 0x%016llx %s
+dealloc
+T@"NSObject<OS_dispatch_queue>",&,N,V_dispatchQueue
+registryEntryID
+T@"NSObject<OS_dispatch_source>",&,N,V_restorePowerSinkTimer
+service
+T@"NSString",R,N,V_locationID
+.cxx_destruct
+destroy
+T@"NSObject<OS_dispatch_source>",&,N,V_resetTimer
+resetWithError:
+T@"NSObject<OS_os_transaction>",&,N,V_transaction
+setTransaction:
+T@"NSString",R,N,V_name
+TI,N,V_service
+TI,R,N,V_chargingPriorityDelay
+TQ,R,N,V_powerPoolID
+TQ,R,N,V_registryEntryID
+TS,N
+TS,N,V_highPowerSinkCapability
+TS,R,N
+_chargingPriorityDelay
+_dispatchQueue
+_highPowerSinkCapability
+_locationID
+_name
+_powerPoolID
+_registryEntryID
+_resetTimer
+_restorePowerSinkTimer
+_service
+_transaction
+addObject:
+allocatedBusCurrent
+cStringUsingEncoding:
+chargingPriorityDelay
+countByEnumeratingWithState:objects:count:
+description
+dispatchQueue
+failedPower
+highPowerSinkCapability
+init
+initWithIOService:queue:error:interestHandler:
+initWithService:dispatchQueue:
+isEqual:
+locationID
+lowPowerSinkCapability
+maximumBusCurrent
+name
+numberWithShort:
+objectForKey:
+powerPoolID
+powerSinkCapability
+reducePowerSinkCapability
+removeAllObjects
+removeObject:
+reset
+resetTimer
+restorePowerSinkCapability
+restorePowerSinkTimer
+setDispatchQueue:
+setHighPowerSinkCapability:
+setPowerSinkCapability:
+setResetTimer:
+setRestorePowerSinkTimer:
+setService:
+stringWithCString:encoding:
+stringWithFormat:
+transaction
+unsignedLongLongValue
+unsignedShortValue
+updatePowerSinkCapability
+IOService
+idVendor
+idProduct
+v8@?0
+UsbBusCurrentPoolID
+AppleUSBHostResources
+%@@%@: power pool ID 0x%016llx
+%@: failed power %d mA
+%@: power sink capability %d mA port limit %d mA
+UsbPowerSinkCapability
+kUSBBusCurrentAllocation
+kUSBWakePortCurrentLimit
+kUSBFailedRequestedPower
+com.apple.usbpowerd
+com.apple.iokit.matching
+v16@?0@"NSObject<OS_xpc_object>"8
+com.apple.usb.powerSinkDevice
+IOMatchLaunchServiceID
+IOServiceTerminate
+IOUSBHostDevice
+IOServicePublish
+AppleBusPowerController
+IOGeneralInterest
+HOME
+TMPDIR
+DARWIN_CACHE_DIR
+UsbSmcBusCurrentPoolID
+kIOUSBHostMessageReallocateExtraCurrent
+USBPowerDevice
+@28@0:8I16@20
+v16@0:8
+B24@0:8@16
+@16@0:8
+B16@0:8
+v20@0:8S16
+S16@0:8
+I16@0:8
+v20@0:8I16
+Q16@0:8
+v24@0:8@16
+@"NSString"
+@"NSObject<OS_os_transaction>"
+@"NSObject<OS_dispatch_queue>"
+@"NSObject<OS_dispatch_source>"

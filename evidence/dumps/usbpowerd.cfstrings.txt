@@ -1,0 +1,14 @@
+# usbpowerd __cfstring table (arm64e)
+# file=<home>/.hermes/cache/scratch/usbpowerd.arm64e
+# __cfstring va_base=0x1000080e0 file_off=0x80e0
+0x1000080e0  idVendor
+0x100008100  idProduct
+0x100008120  UsbBusCurrentPoolID
+0x100008140  %@@%@: power pool ID 0x%016llx
+0x100008160  %@: failed power %d mA
+0x100008180  %@: power sink capability %d mA port limit %d mA
+0x1000081a0  UsbPowerSinkCapability
+0x1000081c0  kUSBBusCurrentAllocation
+0x1000081e0  kUSBWakePortCurrentLimit
+0x100008200  kUSBFailedRequestedPower
+0x100008220  UsbSmcBusCurrentPoolID

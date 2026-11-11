@@ -1,0 +1,82 @@
+# usbcupdater __cfstring table (arm64e)
+# file=<home>/.hermes/cache/scratch/usbcupdater.arm64e
+# __cfstring va_base=0x10000c0c0 file_off=0xc0c0
+0x10000c0c0  board-id
+0x10000c0e0  board-rev
+0x10000c100  Config.plist
+0x10000c120  Error reading plist: No files to support boardID: %@
+0x10000c140  Error reading plist: No config file for this project
+0x10000c160  Error reading plist: %@, format: %lu
+0x10000c180  RID
+0x10000c1a0  UID
+0x10000c1c0  Vendor ID
+0x10000c1e0  Ridge Silicon Vendor ID
+0x10000c200  Device ID
+0x10000c220  Ridge Silicon Device ID
+0x10000c240  Revision ID
+0x10000c260  Ridge Silicon Revision
+0x10000c280  Device Model Name
+0x10000c2a0  Device Model ID
+0x10000c2c0  Device Model Revision
+0x10000c2e0  Firmware Mode
+0x10000c300  Ridge UID
+0x10000c320  ROM Version
+0x10000c340  EEPROM Revision
+0x10000c360  Version
+0x10000c380  Engineering Version
+0x10000c3a0  Depth
+0x10000c3c0  Route String
+0x10000c3e0  Port Silicon Vendor ID
+0x10000c400  Port Silicon Device ID
+0x10000c420  Port Silicon Revision
+0x10000c440  Revision
+0x10000c460  Port OTP Revision
+0x10000c480  Address
+0x10000c4a0  Port Address
+0x10000c4c0  UUID
+0x10000c4e0  Port UUID
+0x10000c500  Existing Min Version
+0x10000c520  Existing Max Version
+0x10000c540  MinBoardRevision
+0x10000c560  MaxBoardRevision
+0x10000c580  Unexpected format for config plist file.  Aborting
+0x10000c5a0  LegacyThunderbolt
+0x10000c5c0  Personality Type
+0x10000c5e0  Thunderbolt
+0x10000c600  LegacyUSBC
+0x10000c620  USBC
+0x10000c640  boot-args
+0x10000c660   
+0x10000c680  =
+0x10000c6a0  usbcupdater_bypass_usbc_updates
+0x10000c6c0  0
+0x10000c6e0  usbcupdater_bypassversioncheck
+0x10000c700  %@/%@/
+0x10000c720  USBCUpdater
+0x10000c740  Firmware
+0x10000c760  Priority
+0x10000c780  SetNVRAM
+0x10000c7a0  ClearNVRAM
+0x10000c7c0  /usr/sbin/bless
+0x10000c7e0  -verbose
+0x10000c800  -mount
+0x10000c820  /
+0x10000c840  ThorUtil.efi
+0x10000c860  HPMUtil.efi
+0x10000c880  -firmware
+0x10000c8a0  -folder
+0x10000c8c0  TBTH
+0x10000c8e0  -options
+0x10000c900  -g
+0x10000c920  -o
+0x10000c940  -sr
+0x10000c960  %u
+0x10000c980  -ee
+0x10000c9a0  -fs
+0x10000c9c0  efi-apple-payload%u-data
+0x10000c9e0  -payload
+0x10000ca00  -os
+0x10000ca20  u
+0x10000ca40  -f
+0x10000ca60  -noreset
+0x10000ca80  BlessArguments

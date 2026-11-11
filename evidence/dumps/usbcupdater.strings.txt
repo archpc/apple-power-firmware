@@ -1,0 +1,167 @@
+@z@!
+IODeviceTree:/
+IODeviceTree
+board-id
+board-rev
+Mac-
+Config.plist
+Error reading plist: No files to support boardID: %@
+Error reading plist: No config file for this project
+Error reading plist: %@, format: %lu
+Vendor ID
+Ridge Silicon Vendor ID
+Device ID
+Ridge Silicon Device ID
+Revision ID
+Ridge Silicon Revision
+Device Model Name
+Device Model ID
+Device Model Revision
+Firmware Mode
+Ridge UID
+ROM Version
+EEPROM Revision
+Version
+Engineering Version
+IOThunderboltSwitch
+Depth
+Route String
+AppleHPMDevice
+Port Silicon Vendor ID
+Port Silicon Device ID
+Port Silicon Revision
+Revision
+Port OTP Revision
+Address
+Port Address
+UUID
+Port UUID
+IOService
+Existing Min Version
+Existing Max Version
+** No current firmware version?
+** minversion bad object type in personality
+** Min firmware version not met.  Aborting
+** maxversion bad object type in personality
+** Max firmware version not met.  Aborting
+MinBoardRevision
+MaxBoardRevision
+** Missing port silicon revision key(s)
+** Missing port OTP revision key(s) **
+** Missing port UUID(s)
+Unexpected format for config plist file.  Aborting
+LegacyThunderbolt
+Personality Type
+Thunderbolt
+LegacyUSBC
+USBC
+verbose
+payload
+preflight
+subupdater
+bypassVersion
+IODeviceTree:/options
+boot-args
+usbcupdater_bypass_usbc_updates
+usbcupdater_bypassversioncheck
+vp:Xs
+%@/%@/
+USBCUpdater
+Board ID:                %llX
+Board ID String:         %s
+Board Revision:          %u
+Personalities Directory: %s
+Current hardware:
+Firmware
+Priority
+SetNVRAM
+ClearNVRAM
+PERSONALITY_TYPE:               %s
+CONFIG_PORT_ADDRESS:            %u
+RID:                            %u
+CONFIG_MODEL_NAME:              %s
+CONFIG_MODEL_ID:                %u
+CONFIG_MODEL_REVISION:          %u
+CONFIG_PORT_UUID:               %s
+CONFIG_PORT_SILICON_VENDOR_ID:  %u
+CONFIG_PORT_SILICON_DEVICE_ID:  %u
+CONFIG_PORT_SILICON_REVISION:   %u
+CONFIG_PORT_OTP_REVISION:       %u
+CONFIG_RIDGE_UID:               0x%llX
+CONFIG_RIDGE_SILICON_VENDOR_ID: %u
+CONFIG_RIDGE_SILICON_DEVICE_ID: %u
+CONFIG_RIDGE_SILICON_REVISION:  %u
+CONFIG_RIDGE_FIRMWARE_MODE:     %u
+CONFIG_FIRMWARE_NAME:           %s
+CONFIG_VERSION:                 %1.02f
+CONFIG_PRIORITY:                %u
+CONFIG_NVRAM_TO_SET:
+CONFIG_NVRAM_TO_CLEAR:
+/usr/sbin/bless
+-verbose
+-mount
+ThorUtil.efi
+HPMUtil.efi
+-firmware
+-folder
+TBTH
+-options
+efi-apple-payload%u-data
+-payload
+*** No supported platform type? (was using %s)***
+-noreset
+"%s"
+BlessArguments
+Exit status: %u
+No supported hardware on this platform?
+Identified the following matches:
+Bless Invocation:
+Resulting FirmwareUpdateLauncher Plist:
+USB-C Updates bypassed because usbcupdater_bypass_usbc_updates boot arg was set
+contentsAtPath:
+addEntriesFromDictionary:
+stringByAppendingPathComponent:
+UTF8String
+numberWithBool:
+addObject:
+addObjectsFromArray:
+appendString:
+array
+arrayWithCapacity:
+boolValue
+compare:
+componentsSeparatedByString:
+count
+countByEnumeratingWithState:objects:count:
+dataWithPropertyList:format:options:error:
+defaultManager
+description
+dictionary
+dictionaryWithCapacity:
+fileExistsAtPath:
+floatValue
+getBytes:length:
+initWithData:encoding:
+intValue
+length
+mutableCopy
+numberWithDouble:
+numberWithInt:
+numberWithInteger:
+numberWithUnsignedChar:
+numberWithUnsignedInteger:
+objectAtIndexedSubscript:
+objectForKey:
+objectForKeyedSubscript:
+propertyListWithData:options:format:error:
+rangeOfString:
+setObject:forKey:
+setObject:forKeyedSubscript:
+string
+stringWithCString:encoding:
+stringWithFormat:
+stringWithUTF8String:
+unsignedIntValue
+unsignedIntegerValue
+unsignedLongLongValue
+unsignedLongValue
