@@ -466,3 +466,72 @@ Claim status: pair memberships are now confidence-graded; no semantic claim
 rests on any pair yet. Open: 16-byte size gate may suppress true
 correspondences for large unmatched functions; the 30 "probable" pairs need
 literal/callee-multiset confirmation before use.
+
+## 13. Third wave: update transport and security bounding
+
+Delegated evidence: `delegated/vdm/` (SPEC.md), `delegated/security/`
+(hash_test.py/.log, field_matrix, crypto_scan). Lead independently
+reproduced the load-bearing claims (marked below); the flagged image/payload
+offset convention: **the flat base0 images equal `payload[0x180:]`** — the
+384-byte C99 header is the payload's first 0x180 bytes (verified byte-exact
+on 3.1.8). Delegated offset tables are image-space; add 0x180 for payload
+space.
+
+### 13a. Update transport (host side OBSERVED, cable side OBSERVED)
+
+- `VDMs` is a 4CC command tag, one of many: `hpmIECSCommand` revs an
+  arbitrary 4CC and polls for `!CMD`; `hpmIECSSendVDM` appends the tag via a
+  second call. UARP uses `CFUa`/`CFUp`/`CFUs` as runtime 4CC arguments (0
+  static hits in the kext — earlier "CFUp 11x" was the false positive
+  `CPUF`). CFUa descriptors carry `_sopType` bits 31:30; the stored value is
+  **OPEN**.
+- Cable side, all three builds: a real SVDM dispatcher exists at 3.1.8
+  `0xb34c` (prologue verified by lead): SVID compare via `lsrs r0,r4,#0x10`
+  against `0x05AC` (pool `0xb59c`), structured/unstructured split on bit 15,
+  unstructured handler `0xb64c` accepting 1–5 VDOs with **no 4CC compare**.
+  Composes `0x05AC8106` (Discover Identity) at `0xc2ce` (3.1.12 `0xc344`,
+  3.2.0 `0xc4e4`). `VDMs`/`CFU`/`UARP` strings: 0 hits in all three images.
+- Reading: the update TLV transport is not visible above the 4CC-tag layer
+  in the cable images; whether CFU is consumed below the app image (PD
+  PHY/ROM) is **OPEN**. A single passive CC capture during an update would
+  settle endpoint, envelope and chunk size at once (no experiment run).
+
+### 13b. Integrity: the C99 header is a two-record hash chain (REPRODUCED)
+
+Lead re-derived all five relations byte-exactly on all three payloads:
+
+- `sha256(payload[0x180 : 0x180+lenf]) == field@0x110` and
+  `crc32(body) == field@0x108` (body = the shipped firmware image)
+- `sha256(payload[0x100 : 0x180+lenf]) == field@0x0c` (record 3 = header
+  prefix + body)
+- `sha256(payload[tail .. EOF]) == field@0x30` (record 4, the second
+  crypto-bearing module; tail = `0x13e34/0x13eb4/0x14084`)
+- `sha256(payload[0:0xa0]) == field@0xe0` (header self-hash)
+
+FIRMWARE.md §6's "header contents not recovered" is **superseded**: the
+header carries a complete SHA-256/CRC-32 hash tree over the image, record 3
+and record 4, plus its own self-hash. Unexplained remain `0xa0..0xdf`
+(64 B) and the `0x17c` trailer word.
+
+### 13c. Crypto inventory (REPRODUCED)
+
+SHA-256 (FIPS 180-4 K table + IV, twice per image) and a complete secp256r1
+parameter block (p, b, Gx, Gy, n — lead-verified byte-exact at payload
+`0x1336c` et seq. for 3.1.8) are present. No RSA, AES, secp256k1. The
+64-byte `0xa0..0xdf` field is range-valid as an ECDSA (r,s) but not
+on-curve: the embedded-public-key reading is **REFUTED**; its role is
+**OPEN**. The crypto block sits outside the analysed function set
+(uncovered island) — enclosing function unidentified.
+
+### 13d. Anti-rollback and update path
+
+- No version-threshold constant or `cmp.w` exists in any image; at 46–56 %
+  coverage "no anti-rollback" is **NOT claimed** — **OPEN**, byte-granular
+  or register-register compares are indistinguishable statically.
+- `0xd904` (3.1.8; `0xd984`/`0xdb40` successors) is a table-driven flash
+  programmer: 18 address/value records, 256-B transfer splits, command +
+  3-byte-address writes to `0x40070240` with per-byte status polling
+  (`&0x1f <= 0xe`), erase commands `0x20/0x52/0xD8` at 4 kB alignment,
+  guarded to address `< 0x40000`. No hashing or compare inside it; integrity
+  enforcement therefore lives elsewhere (the hash chain of §13b is the
+  candidate, but nothing OBSERVED wires them together yet).
