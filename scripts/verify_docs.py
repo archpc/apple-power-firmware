@@ -85,7 +85,7 @@ def main():
                                  open(d, encoding="utf-8").read()):
                 # firmware binaries are excluded from the repository by design;
                 # their provenance lives in firmware/MANIFEST.txt
-                if "/images/" in m.group(1) or "/payloads/" in m.group(1):
+                if m.group(1).startswith("firmware/") and "MANIFEST" not in m.group(1):
                     continue
                 if not os.path.exists(m.group(1)):
                     missing.add(m.group(1))
