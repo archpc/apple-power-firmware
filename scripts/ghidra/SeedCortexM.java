@@ -21,13 +21,19 @@ public class SeedCortexM extends GhidraScript {
 
         List<Long> seeds = new ArrayList<>();
         Set<Long> clearSet = new HashSet<>();
+        Map<Long, Long> expLenMap = new HashMap<>();
+        Map<Long, String> expTypeMap = new HashMap<>();
         BufferedReader r = new BufferedReader(new FileReader(seedsCsv));
         for (String line; (line = r.readLine()) != null; ) {
             line = line.trim(); if (line.isEmpty() || line.startsWith("#")) continue;
-            String t = line.split(",")[0].replaceFirst("(?i)^0x", "");
-            long a = Long.parseLong(t, 16);
+            String[] parts = line.split(",");
+            long a = Long.parseLong(parts[0].replaceFirst("(?i)^0x", ""), 16);
             seeds.add(a);
-            if (line.toLowerCase().contains(",clear")) clearSet.add(a);
+            if (line.toLowerCase().contains(",clear")) {
+                clearSet.add(a);
+                expLenMap.put(a, Long.parseLong(parts[2]));
+                expTypeMap.put(a, parts[3]);
+            }
         }
         r.close();
 
@@ -37,14 +43,27 @@ public class SeedCortexM extends GhidraScript {
             Function pre = fm.getFunctionContaining(addr);
             disassemble(addr);
             if (getInstructionAt(addr) == null && clearSet.contains(a)) {
-                // Precise clear of exactly the unit the diagnosis showed sitting here.
+                // Precise clear, gated on agreement with the recorded diagnosis:
+                // unit start must equal the seed, and length/type must match the
+                // expected values carried in the CSV. Any mismatch aborts the clear.
                 CodeUnit cu = currentProgram.getListing().getCodeUnitAt(addr);
-                int len = (cu == null) ? 1 : cu.getLength();
-                log.println("  clear before: " + (cu == null ? "none" : cu.toString()));
-                clearListing(addr, addr.add(len));
-                disassemble(addr);
-                Instruction ni = getInstructionAt(addr);
-                log.println("  clear after : " + (ni != null ? ni.toString() : "STILL FAILED"));
+                Long expLen = expLenMap.get(a);
+                String expType = expTypeMap.get(a);
+                String before = (cu == null) ? "none" : cu.toString();
+                boolean ok = cu != null
+                    && cu.getAddress().getOffset() == a
+                    && expLen != null && cu.getLength() == expLen
+                    && expType != null && expType.equals(cu instanceof Instruction ? "instruction" : "data");
+                if (!ok) {
+                    log.println("  clear ABORTED for 0x" + Long.toHexString(a)
+                        + " | before=" + before + " | expected len=" + expLen + " type=" + expType);
+                } else {
+                    log.println("  clear before: 0x" + Long.toHexString(a) + " " + before);
+                    clearListing(addr, addr.add(cu.getLength() - 1));
+                    disassemble(addr);
+                    Instruction ni = getInstructionAt(addr);
+                    log.println("  clear after : " + (ni != null ? ni.toString() : "STILL FAILED"));
+                }
             }
             boolean hasIns = getInstructionAt(addr) != null;
             Function f = getFunctionAt(addr);
