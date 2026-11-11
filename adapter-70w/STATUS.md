@@ -26,8 +26,9 @@ As of 2026-11-11. Research branch only; not merged.
 
 - **No firmware image obtainable.** The only software read primitive (`CFUa`)
   is reachable only through `accessoryupdaterd`, which rejects clients without
-  the Apple-private `com.apple.accessoryupdater.uarp` entitlement. Page 27 is
-  already read on connect: cable returns 6, adapter returns unknown.
+  the Apple-private `com.apple.accessoryupdater.uarp` entitlement. Page 27
+  reads work for the cable (6); the adapter class never queries it, so it is
+  untested there.
 - **Physical dump** requires opening a sealed mains adapter and a chip
   protection byte in OPEN state; PROTECTED erases on recovery, KILL is terminal.
   Prohibited and unsafe.

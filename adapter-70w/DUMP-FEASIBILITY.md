@@ -69,26 +69,16 @@ accMode7AddressSpaceRead: 0x100002b30
   VDO), 28 (logs and log control), 40 (analytics). **No path walks application
   flash**; firmware movement is write-only via the `CFUs` stream.
 
-**Passive evidence that the primitive works outside update mode.** The host
-already exercises it. `accessoryupdaterd` logs `HW Revision updated (null) -> 6`
-for the attached A2363 cable and `HW Revision updated (null) -> unknown` for the
-A2743, seconds apart on the same connection. The cable's hardware-version query
-reads page 27 through this path with no update session, so the mechanism is
-live. For the adapter the field comes back unknown, which is consistent with
-either no page-27 response or a value the host does not map. It does not show
-that other pages are unreadable, and it means a manual page-27 read would add
-nothing.
-
-**No third-party client can issue the read.** The transport is owned by
-`accessoryupdaterd`, whose launchd plist registers the Mach services
-`com.apple.MobileAccessoryUpdater`, `com.apple.accessoryupdater.uarp` and
-`com.apple.accessoryupdater.uarp.standaloneCommandListener` (OBSERVED). The
-daemon imports `_clientHasEntitlement`, `_xpc_dictionary_get_audit_token` and
-`_getaudit_addr`, and logs `Client is not entitled` and `Connection from PID %d
-does not have the correct entitlement`. The required entitlements
-(`com.apple.accessoryupdater.uarp`; `com.apple.USBCEntitlement` plus
-`AppleHPMUserClient` for the HPM user client) are Apple-private. A process we
-can build cannot pass that check.
+**Passive evidence that the primitive works outside update mode — for the
+cable.** `accessoryupdaterd` logs `HW Revision updated (null) -> 6` for the
+attached A2363 cable, and `UARPMagSafeCable -queryHardwareVersion` reads page 27
+through this path with no update session. The mechanism is therefore live for
+that accessory class. For the A2743 it logs `unknown`, but
+**`UARPPowerAdapter` implements no `hardwareVersion` or `queryHardwareVersion`**
+(its method list is `initWithHPM:supportsAccMode7:`, `activeFwVersion`,
+`prepareFirmwareVersion`, `solicitLogs`, `solicitAnalytics`, …). The `unknown`
+is a default, not evidence that a read was attempted or failed. **Page 27 on the
+adapter is untested.**
 
 Two hard limits follow from that arithmetic:
 
@@ -159,9 +149,11 @@ mains-powered adapter. **Prohibited by the task rules and unsafe.**
    `~/.hermes/scripts/a2743-asset-watch.sh`, log
    `~/.hermes/cache/a2743-asset-watch.log`). If Apple publishes, capture the
    asset and verify against its manifest `_Measurement`.
-2. **Page 27 — already answered passively.** The host reads it on every
-   connect: cable returns 6, adapter returns unknown. Repeating it by hand adds
-   no information, and we cannot issue it anyway without the entitlement.
+2. **Page 27 — untested on the adapter.** The cable proves the primitive works
+   outside update mode; the adapter class never queries it, so `unknown` proves
+   nothing. A single 4-byte read of page 27 on a spare unit remains the smallest
+   experiment. It is blocked today because no non-Apple process can pass the
+   entitlement check.
 3. **Approval-gated, bounded — the only remaining software experiment:** one
    read of a single page outside 1/27/28/40, on a spare unit, to learn whether
    the map is a flash window. Stop at the first error; never enter Mode 7 and

@@ -28,8 +28,8 @@ Ordered by value per unit of cost. Nothing here is authorized by this document.
 6. **CFUa read outside the known pages.** The primitive is ungated host-side but
    reachable only through `accessoryupdaterd`, which rejects clients without the
    Apple-private `com.apple.accessoryupdater.uarp` entitlement. Page 27 is
-   already read on connect (cable 6, adapter unknown), so the open question is
-   whether any page maps flash. Blocked by entitlement before policy; would need
+   untested on the adapter (the cable's read returns 6; the adapter class has no
+   hardware-version query), so the open question is whether any page maps flash. Blocked by entitlement before policy; would need
    an Apple-signed caller and explicit approval, on a spare unit.
 
 ## Needs hardware or a second unit
